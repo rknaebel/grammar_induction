@@ -1,3 +1,4 @@
 Semantic Parsing - Grammar Induction Project
 
-Description follows later...
+data/ includes source corpora and alignments
+extract/ includes script to extract plain text corpora from corpus.xml file
