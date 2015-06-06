@@ -14,14 +14,22 @@ from pyparsing import *
 
 
 def transform(term):
+    if isinstance(term, list):
+        term = [t for t in term if t not in (",",)]
+    if (len(term) == 1 and isinstance(term[0], unicode)):
+        return term
+    if all(isinstance(t,unicode) for t in term[1]):
+        return ["{}({})".format(term[0],",".join(t for t in term[1] if str(t) not in (",",) ))]
     res = []
-    if term == ",":
-        return res
-    if not isinstance(term, list) or len(term) == 1:
-        return [term]
-    if term[0] in ("countryid", "stateid", "cityid"):
-        return [term[0] + "(" + "".join("".join(map(str, term[1:]))) + ")"]
-    argLength = len(term[1])
+    #if term == ",":
+        #return res
+    #if not isinstance(term, list) or len(term) == 1:
+        #return [term]
+    #if term[0] in ("countryid", "stateid", "cityid"):
+        #return [term[0] + "(" + "".join("".join(map(str, term[1:]))) + ")"]
+    
+    
+    argLength = len(term[1:])
     res.append(term[0]+"("+",".join("X" for _ in range(argLength))+")")
     for subTerm in term[1:]:
         res = res + transform(subTerm)
