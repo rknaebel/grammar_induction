@@ -1,0 +1,119 @@
+/*
+    IRTG based on geoquery and alignments
+*/
+
+interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+//interpretation g: de.up.ling.irtg.algebra.graph.GraphAlgebra
+
+/*# Sentence pair (34) source length 3 target length 5 alignment score : 0.74663*/
+/*how large is alaska ? */
+/*NULL ({ 3 5 }) answer(X) ({ 1 }) size(X) ({ 2 }) stateid('alaska') ({ 4 }) */
+
+S! -> answer(X)
+[s] *(how, ?1)
+//[g]
+
+X -> size(X)
+[s] *(large, *(is, ?1))
+//[g]
+ 
+X -> alaska
+[s] alaska
+//[g]
+
+/*# Sentence pair (35) source length 3 target length 5 alignment score : 0.74663*/
+/*how large is texas ? */
+/*NULL ({ 3 5 }) answer(X) ({ 1 }) size(X) ({ 2 }) stateid('texas') ({ 4 }) */
+X -> texas
+[s] texas
+
+/*# Sentence pair (36) source length 6 target length 9 alignment score : 0.952665*/
+/*how large is the largest city in alaska ? */
+/*NULL ({ 3 4 9 }) answer(X) ({ 1 }) size(X) ({ 2 }) largest(X) ({ 5 }) city(X) ({ 6 }) loc_2(X) ({ 7 }) stateid('alaska') ({ 8 }) */
+
+X -> largest(X)
+[s] *(the, *(largest, ?1))
+
+X -> city(X)
+[s] *(city, ?1)
+
+X -> loc_2(X)
+[s] *(in, ?1)
+
+/*# Sentence pair (40) source length 6 target length 9 alignment score : 0.659177*/
+/*how long is the longest river in california ? */
+/*NULL ({ 4 9 }) answer(X) ({ 1 }) len(X) ({ 2 3 }) longest(X) ({ 5 }) river(X) ({ 6 }) loc_2(X) ({ 7 }) stateid('california') ({ 8 }) */
+
+X -> len(X)
+[s] *(long, *(is, ?1))
+
+X -> longest(X)
+[s] *(the, *(longest, ?1))
+
+X -> river(X)
+[s] *(river, ?1)
+
+X -> california
+[s] california
+
+/*# Sentence pair (41) source length 6 target length 10 alignment score : 0.80956*/
+/*how long is the longest river in the usa ? */
+/*NULL ({ 4 8 10 }) answer(X) ({ 1 }) len(X) ({ 2 3 }) longest(X) ({ 5 }) river(X) ({ 6 }) loc_2(X) ({ 7 }) countryid('usa') ({ 9 }) */
+
+X -> usa
+[s] *(the, usa)
+
+/*# Sentence pair (42) source length 3 target length 6 alignment score : 0.919295*/
+/*how long is the mississippi ? */
+/*NULL ({ 4 6 }) answer(X) ({ 1 }) len(X) ({ 2 3 }) riverid('mississippi') ({ 5 }) */
+
+X -> mississippi
+[s] *(the, mississippi)
+
+/*# Sentence pair (43) source length 4 target length 7 alignment score : 0.963947*/
+/*how long is the mississippi river ? */
+/*NULL ({ 4 7 }) answer(X) ({ 1 }) len(X) ({ 2 3 }) river(X) ({ 6 }) riverid('mississippi') ({ 5 }) */
+
+X -> river_2(X)
+[s] *(?1, river)
+
+/*# Sentence pair (45) source length 4 target length 7 alignment score : 0.963947*/
+/*how long is the missouri river ? */
+/*NULL ({ 4 7 }) answer(X) ({ 1 }) len(X) ({ 2 3 }) river(X) ({ 6 }) riverid('missouri') ({ 5 }) */
+
+X -> missouri
+[s] *(the, missouri)
+
+/*# Sentence pair (49) source length 6 target length 10 alignment score : 0.800523*/
+/*how long is the shortest river in the usa ? */
+/*NULL ({ 4 8 10 }) answer(X) ({ 1 }) len(X) ({ 2 3 }) shortest(X) ({ 5 }) river(X) ({ 6 }) loc_2(X) ({ 7 }) countryid('usa') ({ 9 }) */
+
+X -> shortest(X)
+[s] *(the, *(shortest, ?1))
+
+/*# Sentence pair (50) source length 6 target length 8 alignment score : 0.999536*/
+/*how many big cities are in pennsylvania ? */
+/*NULL ({ 5 8 }) answer(X) ({ 1 }) count(X) ({ 2 }) major(X) ({ 3 }) city(X) ({ 4 }) loc_2(X) ({ 6 }) stateid('pennsylvania') ({ 7 }) */
+
+X -> count(X)
+[s] *(many, ?1)
+
+X -> major(X)
+[s] *(big, ?1)
+
+X -> city_2(X)
+[s] *(cities, ?1)
+
+X -> loc_3(X)
+[s] *(are, *(in, ?1)) // thats not so cool :(
+
+/*# Sentence pair (52) source length 5 target length 7 alignment score : 0.99987*/
+/*how many cities are in louisiana ? */
+/*NULL ({ 4 7 }) answer(X) ({ 1 }) count(X) ({ 2 }) city(X) ({ 3 }) loc_2(X) ({ 5 }) stateid('louisiana') ({ 6 }) */
+
+X -> louisiana
+[s] louisiana
+
+
+
+

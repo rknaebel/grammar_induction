@@ -1,0 +1,19 @@
+/*
+    IRTG based on geoquery and alignments
+*/
+
+interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+//interpretation g: de.up.ling.irtg.algebra.graph.GraphAlgebra
+
+
+S! -> answer(X)
+[s] *(how, ?1)
+//[g]
+
+X -> size(X)
+[s] *(large, *(is, ?1))
+//[g]
+
+X -> stateid[alaska]
+[s] alaska
+//[g]
