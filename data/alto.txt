@@ -1,880 +1,1763 @@
+# interpretation string: de.up.ling.irtg.algebra.StringAlgebra
+# interpretation string: de.up.ling.irtg.algebra.StringAlgebra
+
+give me the cities in virginia .
 answer(X) city(X) loc_2(X) stateid('virginia')
+what are the high points of states surrounding mississippi ?
 answer(X) high_point_1(X) state(X) next_to_2(X) stateid('mississippi')
+name the rivers in arkansas .
 answer(X) river(X) loc_2(X) stateid('arkansas')
+name all the rivers in colorado .
 answer(X) river(X) loc_2(X) stateid('colorado')
+can you tell me the capital of texas ?
 answer(X) capital(X) loc_2(X) stateid('texas')
+could you tell me what is the highest point in the state of oregon ?
 answer(X) highest(X) place(X) loc_2(X) state(X) stateid('oregon')
+count the states which have elevations lower than what alabama has .
 answer(X) count(X) state(X) low_point_2(X) lower_2(X) low_point_1(X) stateid('alabama')
+give me all the states of usa .
 answer(X) state(X) loc_2(X) countryid('usa')
+give me the cities in texas .
 answer(X) city(X) loc_2(X) stateid('texas')
+give me the cities in usa .
 answer(X) city(X) loc_2(X) countryid('usa')
+give me the cities in virginia .
 answer(X) city(X) loc_2(X) stateid('virginia')
+give me the cities which are in texas .
 answer(X) city(X) loc_2(X) stateid('texas')
+give me the lakes in california .
 answer(X) lake(X) loc_2(X) stateid('california')
+give me the largest state .
 answer(X) largest(X) state(all)
+give me the longest river that passes through the us .
 answer(X) longest(X) river(X) traverse_2(X) countryid('usa')
+give me the number of rivers in california .
 answer(X) count(X) river(X) loc_2(X) stateid('california')
+give me the states that border utah .
 answer(X) state(X) next_to_2(X) stateid('utah')
+how big is alaska ?
 answer(X) size(X) stateid('alaska')
+how big is massachusetts ?
 answer(X) size(X) stateid('massachusetts')
+how big is new mexico ?
 answer(X) size(X) stateid('new mexico')
+how big is north dakota ?
 answer(X) size(X) stateid('north dakota')
+how big is texas ?
 answer(X) size(X) stateid('texas')
+how big is the city of new york ?
 answer(X) size(X) city(X) cityid('new york',_)
+how high are the highest points of all the states ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) state(all)
+how high is guadalupe peak ?
 answer(X) elevation_1(X) placeid('guadalupe peak')
+how high is mount mckinley ?
 answer(X) elevation_1(X) placeid('mount mckinley')
+how high is the highest point in america ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) countryid('usa')
+how high is the highest point in montana ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) stateid('montana')
+how high is the highest point in the largest state ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) largest(X) state(all)
+how high is the highest point of alabama ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) stateid('alabama')
+how high is the highest point of delaware ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) stateid('delaware')
+how high is the highest point of florida ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) stateid('florida')
+how high is the highest point of louisiana ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) stateid('louisiana')
+how large is alaska ?
 answer(X) size(X) stateid('alaska')
+how large is texas ?
 answer(X) size(X) stateid('texas')
+how large is the largest city in alaska ?
 answer(X) size(X) largest(X) city(X) loc_2(X) stateid('alaska')
+how long is rio grande ?
 answer(X) len(X) riverid('rio grande')
+how long is the colorado river ?
 answer(X) len(X) river(X) riverid('colorado')
+how long is the delaware river ?
 answer(X) len(X) river(X) riverid('delaware')
+how long is the longest river in california ?
 answer(X) len(X) longest(X) river(X) loc_2(X) stateid('california')
+how long is the longest river in the usa ?
 answer(X) len(X) longest(X) river(X) loc_2(X) countryid('usa')
+how long is the mississippi ?
 answer(X) len(X) riverid('mississippi')
+how long is the mississippi river ?
 answer(X) len(X) river(X) riverid('mississippi')
+how long is the mississippi river in miles ?
 answer(X) len(X) river(X) riverid('mississippi')
+how long is the missouri river ?
 answer(X) len(X) river(X) riverid('missouri')
+how long is the north platte river ?
 answer(X) len(X) river(X) riverid('north platte')
+how long is the ohio river ?
 answer(X) len(X) river(X) riverid('ohio')
+how long is the rio grande river ?
 answer(X) len(X) river(X) riverid('rio grande')
+how long is the shortest river in the usa ?
 answer(X) len(X) shortest(X) river(X) loc_2(X) countryid('usa')
+how many big cities are in pennsylvania ?
 answer(X) count(X) major(X) city(X) loc_2(X) stateid('pennsylvania')
+how many capitals does rhode island have ?
 answer(X) count(X) capital(X) loc_2(X) stateid('rhode island')
+how many cities are in louisiana ?
 answer(X) count(X) city(X) loc_2(X) stateid('louisiana')
+how many cities are in montana ?
 answer(X) count(X) city(X) loc_2(X) stateid('montana')
+how many cities are there in the united states ?
 answer(X) count(X) city(X) loc_2(X) countryid('usa')
+how many cities are there in the us ?
 answer(X) count(X) city(X) loc_2(X) countryid('usa')
+how many cities are there in us ?
 answer(X) count(X) city(X) loc_2(X) countryid('usa')
+how many cities are there in usa ?
 answer(X) count(X) city(X) loc_2(X) countryid('usa')
+how many cities does texas have ?
 answer(X) count(X) city(X) loc_2(X) stateid('texas')
+how many cities does the usa have ?
 answer(X) count(X) city(X) loc_2(X) countryid('usa')
+how many cities named austin are there in the usa ?
 answer(X) count(X) intersection(X) city(X,X,X) cityid('austin',_) l(o) countryid('usa')
+how many citizens does the biggest city have in the usa ?
 answer(X) population_1(X) largest(X) city(all)
+how many citizens in alabama ?
 answer(X) population_1(X) stateid('alabama')
+how many citizens in boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+how many citizens live in california ?
 answer(X) population_1(X) stateid('california')
+how many colorado rivers are there ?
 answer(X) count(X) river(X) riverid('colorado')
+how many inhabitants does montgomery have ?
 answer(X) population_1(X) cityid('montgomery',_)
+how many major cities are in arizona ?
 answer(X) count(X) major(X) city(X) loc_2(X) stateid('arizona')
+how many major cities are in florida ?
 answer(X) count(X) major(X) city(X) loc_2(X) stateid('florida')
+how many major cities are in states bordering nebraska ?
 answer(X) count(X) major(X) city(X) loc_2(X) state(X) next_to_2(X) stateid('nebraska')
+how many major cities are in states bordering utah ?
 answer(X) count(X) major(X) city(X) loc_2(X) state(X) next_to_2(X) stateid('utah')
+how many major cities are in texas ?
 answer(X) count(X) major(X) city(X) loc_2(X) stateid('texas')
+how many major cities are there ?
 answer(X) count(X) major(X) city(all)
+how many major cities are there in oregon ?
 answer(X) count(X) major(X) city(X) loc_2(X) stateid('oregon')
+how many major rivers cross ohio ?
 answer(X) count(X) major(X) river(X) traverse_2(X) stateid('ohio')
+how many people are in the state of nevada ?
 answer(X) population_1(X) state(X) stateid('nevada')
+how many people are there in iowa ?
 answer(X) population_1(X) stateid('iowa')
+how many people are there in new york ?
 answer(X) population_1(X) stateid('new york')
+how many people in boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+how many people live in austin ?
 answer(X) population_1(X) cityid('austin',_)
+how many people live in austin texas ?
 answer(X) population_1(X) cityid('austin','tx')
+how many people live in california ?
 answer(X) population_1(X) stateid('california')
+how many people live in chicago ?
 answer(X) population_1(X) cityid('chicago',_)
+how many people live in detroit ?
 answer(X) population_1(X) cityid('detroit',_)
+how many people live in hawaii ?
 answer(X) population_1(X) stateid('hawaii')
+how many people live in houston ?
 answer(X) population_1(X) cityid('houston',_)
+how many people live in kalamazoo ?
 answer(X) population_1(X) cityid('kalamazoo',_)
+how many people live in kansas ?
 answer(X) population_1(X) stateid('kansas')
+how many people live in minneapolis minnesota ?
 answer(X) population_1(X) cityid('minneapolis','mn')
+how many people live in mississippi ?
 answer(X) population_1(X) stateid('mississippi')
+how many people live in montana ?
 answer(X) population_1(X) stateid('montana')
+how many people live in new hampshire ?
 answer(X) population_1(X) stateid('new hampshire')
+how many people live in new mexico ?
 answer(X) population_1(X) stateid('new mexico')
+how many people live in new york ?
 answer(X) population_1(X) stateid('new york')
+how many people live in rhode island ?
 answer(X) population_1(X) stateid('rhode island')
+how many people live in riverside ?
 answer(X) population_1(X) cityid('riverside',_)
+how many people live in san francisco ?
 answer(X) population_1(X) cityid('san francisco',_)
+how many people live in south dakota ?
 answer(X) population_1(X) stateid('south dakota')
+how many people live in spokane washington ?
 answer(X) population_1(X) cityid('spokane','wa')
+how many people live in texas ?
 answer(X) population_1(X) stateid('texas')
+how many people live in the biggest city in new york state ?
 answer(X) population_1(X) largest(X) city(X) loc_2(X) state(X) stateid('new york')
+how many people live in the capital of georgia ?
 answer(X) population_1(X) capital(X) loc_2(X) stateid('georgia')
+how many people live in the capital of texas ?
 answer(X) population_1(X) capital(X) loc_2(X) stateid('texas')
+how many people live in the smallest state bordering wyoming ?
 answer(X) population_1(X) smallest(X) state(X) next_to_2(X) stateid('wyoming')
+how many people live in the state with the largest population density ?
 answer(X) population_1(X) largest_one(X) density_1(X) state(all)
+how many people live in the united states ?
 answer(X) population_1(X) countryid('usa')
+how many people live in washington ?
 answer(X) population_1(X) stateid('washington')
+how many people live in washington dc ?
 answer(X) population_1(X) cityid('washington','dc')
+how many people lived in austin ?
 answer(X) population_1(X) cityid('austin',_)
+how many people reside in utah ?
 answer(X) population_1(X) stateid('utah')
+how many people stay in utah ?
 answer(X) population_1(X) stateid('utah')
+how many residents live in texas ?
 answer(X) population_1(X) stateid('texas')
+how many rivers are called colorado ?
 answer(X) count(X) river(X) riverid('colorado')
+how many rivers are found in colorado ?
 answer(X) count(X) river(X) loc_2(X) stateid('colorado')
+how many rivers are in colorado ?
 answer(X) count(X) river(X) loc_2(X) stateid('colorado')
+how many rivers are in iowa ?
 answer(X) count(X) river(X) loc_2(X) stateid('iowa')
+how many rivers are in missouri ?
 answer(X) count(X) river(X) loc_2(X) stateid('missouri')
+how many rivers are in new york ?
 answer(X) count(X) river(X) loc_2(X) stateid('new york')
+how many rivers are in the state that has the most rivers ?
 answer(X) count(X) river(X) loc_2(X) most(X) state(X) loc_1(X) river(all)
+how many rivers are in the state with the highest point ?
 answer(X) count(X) river(X) loc_2(X) state(X) loc_1(X) highest(X) place(all)
+how many rivers are in the state with the largest population ?
 answer(X) count(X) river(X) loc_2(X) largest_one(X) population_1(X) state(all)
+how many rivers are there in idaho ?
 answer(X) count(X) river(X) loc_2(X) stateid('idaho')
+how many rivers are there in texas ?
 answer(X) count(X) river(X) loc_2(X) stateid('texas')
+how many rivers are there in us ?
 answer(X) count(X) river(X) loc_2(X) countryid('usa')
+how many rivers do not traverse the state with the capital albany ?
 answer(X) count(X) exclude(X) river(all)
+how many rivers does alaska have ?
 answer(X) count(X) river(X) loc_2(X) stateid('alaska')
+how many rivers does colorado have ?
 answer(X) count(X) river(X) loc_2(X) stateid('colorado')
+how many rivers in texas are longer than the red ?
 answer(X) count(X) intersection(X) river(X,X,X) loc_2(X) stateid('texas') l(o) riverid('red')
+how many rivers in washington ?
 answer(X) count(X) river(X) loc_2(X) stateid('washington')
+how many rivers run through texas ?
 answer(X) count(X) river(X) traverse_2(X) stateid('texas')
+how many rivers run through the states bordering colorado ?
 answer(X) count(X) river(X) traverse_2(X) state(X) next_to_2(X) stateid('colorado')
+how many square kilometers in the us ?
 answer(X) area_1(X) countryid('usa')
+how many states are in the united states ?
 answer(X) count(X) state(X) loc_2(X) countryid('usa')
+how many states are in the usa ?
 answer(X) count(X) state(X) loc_2(X) countryid('usa')
+how many states are next to major rivers ?
 answer(X) count(X) state(X) next_to_2(X) major(X) river(all)
+how many states are there ?
 answer(X) count(X) state(all)
+how many states are there in the usa ?
 answer(X) count(X) state(X) loc_2(X) countryid('usa')
+how many states are there in united states ?
 answer(X) count(X) state(X) loc_2(X) countryid('usa')
+how many states border alaska ?
 answer(X) count(X) state(X) next_to_2(X) stateid('alaska')
+how many states border at least one other state ?
 answer(X) count(X) state(X) next_to_2(X) state(all)
+how many states border colorado and border new mexico ?
 answer(X) count(X) state(X) intersection(X) next_to_2(X,X,X) stateid('colorado') n(e) stateid('new mexico')
+how many states border hawaii ?
 answer(X) count(X) state(X) next_to_2(X) stateid('hawaii')
+how many states border iowa ?
 answer(X) count(X) state(X) next_to_2(X) stateid('iowa')
+how many states border on the state whose capital is boston ?
 answer(X) count(X) state(X) next_to_2(X) state(X) loc_1(X) capital(X) cityid('boston',_)
+how many states border tennessee ?
 answer(X) count(X) state(X) next_to_2(X) stateid('tennessee')
+how many states border texas ?
 answer(X) count(X) state(X) next_to_2(X) stateid('texas')
+how many states border the largest state ?
 answer(X) count(X) state(X) next_to_2(X) largest(X) state(all)
+how many states border the mississippi river ?
 answer(X) count(X) state(X) next_to_2(X) river(X) riverid('mississippi')
+how many states border the state that borders the most states ?
 answer(X) count(X) state(X) next_to_2(X) most(X) state(X) next_to_2(X) state(all)
+how many states border the state with the largest population ?
 answer(X) count(X) state(X) next_to_2(X) largest_one(X) population_1(X) state(all)
+how many states do not have rivers ?
 answer(X) count(X) exclude(X) state(all)
+how many states does iowa border ?
 answer(X) count(X) state(X) next_to_1(X) stateid('iowa')
+how many states does missouri border ?
 answer(X) count(X) state(X) next_to_1(X) stateid('missouri')
+how many states does tennessee border ?
 answer(X) count(X) state(X) next_to_1(X) stateid('tennessee')
+how many states does the colorado river flow through ?
 answer(X) count(X) state(X) traverse_1(X) river(X) riverid('colorado')
+how many states does the colorado river run through ?
 answer(X) count(X) state(X) traverse_1(X) river(X) riverid('colorado')
+how many states does the mississippi river run through ?
 answer(X) count(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+how many states does the mississippi run through ?
 answer(X) count(X) state(X) traverse_1(X) riverid('mississippi')
+how many states does the missouri river run through ?
 answer(X) count(X) state(X) traverse_1(X) river(X) riverid('missouri')
+how many states does usa have ?
 answer(X) count(X) state(X) loc_2(X) countryid('usa')
+how many states have a city called rochester ?
 answer(X) count(X) state(X) loc_1(X) city(X) cityid('rochester',_)
+how many states have a city named springfield ?
 answer(X) count(X) state(X) loc_1(X) city(X) cityid('springfield',_)
+how many states have a higher point than the highest point of the state with the largest capital city in the us ?
 answer(X) count(X) state(X) loc_1(X) place(X) higher_2(X) highest(X) place(X) loc_2(X) state(X) loc_1(X) largest(X) capital(X) city(X) loc_2(X) countryid('usa')
+how many states have cities named austin ?
 answer(X) count(X) state(X) loc_1(X) city(X) cityid('austin',_)
+how many states have cities or towns named springfield ?
 answer(X) count(X) state(X) loc_1(X) city(X) cityid('springfield',_)
+how many states have major rivers ?
 answer(X) count(X) state(X) loc_1(X) major(X) river(all)
+how many states in the us does the shortest river run through ?
 answer(X) count(X) intersection(X) state(X,X,X) loc_2(X) countryid('usa') ,(t) shortest(X) river(all)
+how much population does texas have ?
 answer(X) population_1(X) stateid('texas')
+how tall is mount mckinley ?
 answer(X) elevation_1(X) placeid('mount mckinley')
+how tall is the highest point in montana ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) stateid('montana')
+in what state is mount mckinley ?
 answer(X) state(X) loc_1(X) placeid('mount mckinley')
+in which state does the highest point in usa exist ?
 answer(X) state(X) loc_1(X) highest(X) place(X) loc_2(X) countryid('usa')
+in which state is rochester ?
 answer(X) state(X) loc_1(X) cityid('rochester',_)
+iowa borders how many states ?
 answer(X) count(X) state(X) next_to_1(X) stateid('iowa')
+list the states .
 answer(X) state(all)
+name all the lakes of us .
 answer(X) lake(X) loc_2(X) countryid('usa')
+name all the rivers in colorado .
 answer(X) river(X) loc_2(X) stateid('colorado')
+name the 50 capitals in the usa .
 answer(X) capital(X) loc_2(X) countryid('usa')
+name the longest river in us .
 answer(X) longest(X) river(X) loc_2(X) countryid('usa')
+name the major lakes in michigan .
 answer(X) major(X) lake(X) loc_2(X) stateid('michigan')
+name the major rivers in florida .
 answer(X) major(X) river(X) loc_2(X) stateid('florida')
+name the rivers in arkansas .
 answer(X) river(X) loc_2(X) stateid('arkansas')
+name the states which have no surrounding states .
 answer(X) exclude(X) state(all)
+number of citizens in boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+number of people in boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+number of states bordering iowa ?
 answer(X) count(X) state(X) next_to_2(X) stateid('iowa')
+of the states washed by the mississippi river which has the lowest point ?
 answer(X) state(X) loc_1(X) lowest(X) place(X) loc_2(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+people in boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+population of boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+rivers in new york ?
 answer(X) river(X) loc_2(X) stateid('new york')
+sacramento is the capital of which state ?
 answer(X) state(X) loc_1(X) capital(X) cityid('sacramento',_)
+san antonio is in what state ?
 answer(X) state(X) loc_1(X) cityid('san antonio',_)
+show major cities in colorado .
 answer(X) major(X) city(X) loc_2(X) stateid('colorado')
+show me all the major lakes in the us .
 answer(X) major(X) lake(X) loc_2(X) countryid('usa')
+state the state with the largest area .
 answer(X) largest_one(X) area_1(X) state(all)
+states bordering iowa ?
 answer(X) state(X) next_to_2(X) stateid('iowa')
+tell me what cities are in texas .
 answer(X) city(X) loc_2(X) stateid('texas')
+through which states does the longest river in texas run ?
 answer(X) state(X) traverse_1(X) longest(X) river(X) loc_2(X) stateid('texas')
+through which states does the mississippi flow ?
 answer(X) state(X) traverse_1(X) riverid('mississippi')
+through which states does the mississippi run ?
 answer(X) state(X) traverse_1(X) riverid('mississippi')
+what are all the rivers in texas ?
 answer(X) river(X) loc_2(X) stateid('texas')
+what are major rivers in texas ?
 answer(X) major(X) river(X) loc_2(X) stateid('texas')
+what are the biggest rivers in texas ?
 answer(X) longest(X) river(X) loc_2(X) stateid('texas')
+what are the capital cities of the states which border texas ?
 answer(X) capital(X) city(X) loc_2(X) state(X) next_to_2(X) stateid('texas')
+what is the capital city in texas ?
 answer(X) capital(X) city(X) loc_2(X) stateid('texas')
+what are the capitals of states that border missouri ?
 answer(X) capital(X) loc_2(X) state(X) next_to_2(X) stateid('missouri')
+what are the capitals of the states that border texas ?
 answer(X) capital(X) loc_2(X) state(X) next_to_2(X) stateid('texas')
+what are the cities in california ?
 answer(X) city(X) loc_2(X) stateid('california')
+what are the cities in states through which the mississippi runs ?
 answer(X) city(X) loc_2(X) state(X) traverse_1(X) riverid('mississippi')
+what are the cities of the state with the highest point ?
 answer(X) city(X) loc_2(X) state(X) loc_1(X) highest(X) place(all)
+what are the highest points of all the states ?
 answer(X) highest(X) place(X) loc_2(X) state(all)
+what are the highest points of states surrounding mississippi ?
 answer(X) highest(X) place(X) loc_2(X) state(X) next_to_2(X) stateid('mississippi')
+what are the lakes in states bordering texas ?
 answer(X) lake(X) loc_2(X) state(X) next_to_2(X) stateid('texas')
+what are the largest cities in the states that border the largest state ?
 answer(X) largest(X) city(X) loc_2(X) state(X) next_to_2(X) largest(X) state(all)
+what are the major cities in alabama ?
 answer(X) major(X) city(X) loc_2(X) stateid('alabama')
+what are the major cities in alaska ?
 answer(X) major(X) city(X) loc_2(X) stateid('alaska')
+what are the major cities in california ?
 answer(X) major(X) city(X) loc_2(X) stateid('california')
+what are the major cities in delaware ?
 answer(X) major(X) city(X) loc_2(X) stateid('delaware')
+what are the major cities in kansas ?
 answer(X) major(X) city(X) loc_2(X) stateid('kansas')
+what are the major cities in missouri ?
 answer(X) major(X) city(X) loc_2(X) stateid('missouri')
+what are the major cities in new mexico ?
 answer(X) major(X) city(X) loc_2(X) stateid('new mexico')
+what are the major cities in new york ?
 answer(X) major(X) city(X) loc_2(X) stateid('new york')
+what are the major cities in north carolina ?
 answer(X) major(X) city(X) loc_2(X) stateid('north carolina')
+what are the major cities in ohio ?
 answer(X) major(X) city(X) loc_2(X) stateid('ohio')
+what are the major cities in oklahoma ?
 answer(X) major(X) city(X) loc_2(X) stateid('oklahoma')
+what are the major cities in rhode island ?
 answer(X) major(X) city(X) loc_2(X) stateid('rhode island')
+what are the major cities in states through which the mississippi runs ?
 answer(X) major(X) city(X) loc_2(X) state(X) traverse_1(X) riverid('mississippi')
+what are the major cities in texas ?
 answer(X) major(X) city(X) loc_2(X) stateid('texas')
+what are the major cities in the largest state ?
 answer(X) major(X) city(X) loc_2(X) largest(X) state(all)
+what are the major cities in the smallest state in the us ?
 answer(X) major(X) city(X) loc_2(X) smallest(X) state(X) loc_2(X) countryid('usa')
+what are the major cities in the state of california ?
 answer(X) major(X) city(X) loc_2(X) state(X) stateid('california')
+what are the major cities in the states through which the major river in virginia runs ?
 answer(X) major(X) city(X) loc_2(X) state(X) traverse_1(X) major(X) river(X) loc_2(X) stateid('virginia')
+what are the major cities in the usa ?
 answer(X) major(X) city(X) loc_2(X) countryid('usa')
+what are the major cities in vermont ?
 answer(X) major(X) city(X) loc_2(X) stateid('vermont')
+what are the major cities in wyoming ?
 answer(X) major(X) city(X) loc_2(X) stateid('wyoming')
+what are the major cities of texas ?
 answer(X) major(X) city(X) loc_2(X) stateid('texas')
+what are the major cities of the united states ?
 answer(X) major(X) city(X) loc_2(X) countryid('usa')
+what are the major cities of the us ?
 answer(X) major(X) city(X) loc_2(X) countryid('usa')
+what are the major lakes in united states ?
 answer(X) major(X) lake(X) loc_2(X) countryid('usa')
+what are the major rivers in ohio ?
 answer(X) major(X) river(X) loc_2(X) stateid('ohio')
+what are the major rivers in the us ?
 answer(X) major(X) river(X) loc_2(X) countryid('usa')
+what are the names of the major cities in illinois ?
 answer(X) major(X) city(X) loc_2(X) stateid('illinois')
+what are the neighboring states for michigan ?
 answer(X) state(X) next_to_2(X) stateid('michigan')
+what are the population densities of each us state ?
 answer(X) density_1(X) state(all)
+what is the population of mississippi ?
 answer(X) population_1(X) stateid('mississippi')
+what are the populations of all the major cities in montana ?
 answer(X) population_1(X) major(X) city(X) loc_2(X) stateid('montana')
+what are the populations of states through which the mississippi river runs ?
 answer(X) population_1(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what are the populations of states through which the mississippi river runs ?
 answer(X) population_1(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what are the populations of states through which the mississippi runs ?
 answer(X) population_1(X) state(X) traverse_1(X) riverid('mississippi')
+what are the populations of states through which the mississippi runs ?
 answer(X) population_1(X) state(X) traverse_1(X) riverid('mississippi')
+what are the populations of states which border texas ?
 answer(X) population_1(X) state(X) next_to_2(X) stateid('texas')
+what are the populations of the major cities of texas ?
 answer(X) population_1(X) major(X) city(X) loc_2(X) stateid('texas')
+what are the populations of the states through which the mississippi river runs ?
 answer(X) population_1(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what are the populations of the states through which the mississippi river runs ?
 answer(X) population_1(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what are the populations of the states through which the mississippi runs ?
 answer(X) population_1(X) state(X) traverse_1(X) riverid('mississippi')
+what are the populations of the states through which the mississippi runs ?
 answer(X) population_1(X) state(X) traverse_1(X) riverid('mississippi')
+what are the rivers in alaska ?
 answer(X) river(X) loc_2(X) stateid('alaska')
+what are the rivers in the state of indiana ?
 answer(X) river(X) loc_2(X) state(X) stateid('indiana')
+what are the rivers in the state of texas ?
 answer(X) river(X) loc_2(X) state(X) stateid('texas')
+what are the rivers of montana ?
 answer(X) river(X) loc_2(X) stateid('montana')
+what are the states ?
 answer(X) state(all)
+what are the states that border the state with the greatest population ?
 answer(X) state(X) next_to_2(X) largest_one(X) population_1(X) state(all)
+what are the states that the potomac runs through ?
 answer(X) state(X) traverse_1(X) riverid('potomac')
+what are the states through which the longest river runs ?
 answer(X) state(X) traverse_1(X) longest(X) river(all)
+what can you tell me about the population of missouri ?
 answer(X) population_1(X) stateid('missouri')
+what capital has the largest population ?
 answer(X) largest_one(X) population_1(X) capital(all)
+what capital is the largest in the us ?
 answer(X) largest(X) capital(X) loc_2(X) countryid('usa')
+what cities are located in pennsylvania ?
 answer(X) city(X) loc_2(X) stateid('pennsylvania')
+what cities in california ?
 answer(X) city(X) loc_2(X) stateid('california')
+what cities in texas have the highest number of citizens ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('texas')
+what cities in texas have the highest populations ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('texas')
+what city has the largest population ?
 answer(X) largest_one(X) population_1(X) city(all)
+what city has the least population ?
 answer(X) smallest_one(X) population_1(X) city(all)
+what city has the most people ?
 answer(X) largest_one(X) population_1(X) city(all)
+what city in the united states has the highest population density ?
 answer(X) largest_one(X) density_1(X) city(X) loc_2(X) countryid('usa')
+what is capital of iowa ?
 answer(X) capital(X) loc_2(X) stateid('iowa')
+what is capital of the state with the lowest point ?
 answer(X) capital(X) loc_2(X) state(X) loc_1(X) lowest(X) place(all)
+what is largest capital ?
 answer(X) largest(X) capital(all)
+what is the adjacent state of california ?
 answer(X) state(X) next_to_2(X) stateid('california')
+what is the area of alaska ?
 answer(X) area_1(X) stateid('alaska')
+what is the area of all the states combined ?
 answer(X) sum(X) area_1(X) state(all)
+what is the area of california ?
 answer(X) area_1(X) stateid('california')
+what is the area of florida ?
 answer(X) area_1(X) stateid('florida')
+what is the area of idaho ?
 answer(X) area_1(X) stateid('idaho')
+what is the area of maine ?
 answer(X) area_1(X) stateid('maine')
+what is the area of maryland in square kilometers ?
 answer(X) area_1(X) stateid('maryland')
+what is the area of new mexico ?
 answer(X) area_1(X) stateid('new mexico')
+what is the area of ohio ?
 answer(X) area_1(X) stateid('ohio')
+what is the area of seattle ?
 answer(X) area_1(X) cityid('seattle',_)
+what is the area of south carolina ?
 answer(X) area_1(X) stateid('south carolina')
+what is the area of texas ?
 answer(X) area_1(X) stateid('texas')
+what is the area of the largest state ?
 answer(X) area_1(X) largest(X) state(all)
+what is the area of the smallest state ?
 answer(X) area_1(X) smallest(X) state(all)
+what is the area of the state with the capital albany ?
 answer(X) area_1(X) state(X) loc_1(X) capital(X) cityid('albany',_)
+what is the area of the state with the smallest population density ?
 answer(X) area_1(X) smallest_one(X) density_1(X) state(all)
+what is the area of the states ?
 answer(X) area_1(X) state(all)
+what is the area of the texas state ?
 answer(X) area_1(X) state(X) stateid('texas')
+what is the area of wisconsin ?
 answer(X) area_1(X) stateid('wisconsin')
+what is the average population of the us by state ?
 answer(X) density_1(X) countryid('usa')
+what is the average population per square km in pennsylvania ?
 answer(X) density_1(X) stateid('pennsylvania')
+what is the average population per square km in the us ?
 answer(X) density_1(X) countryid('usa')
+what is the biggest american city in a state with a river ?
 answer(X) largest(X) city(X) loc_2(X) state(X) loc_1(X) river(all)
+what is the biggest capital city in the us ?
 answer(X) largest(X) capital(X) city(X) loc_2(X) countryid('usa')
+what is the biggest city in arizona ?
 answer(X) largest(X) city(X) loc_2(X) stateid('arizona')
+what is the biggest city in georgia ?
 answer(X) largest(X) city(X) loc_2(X) stateid('georgia')
+what is the biggest city in kansas ?
 answer(X) largest(X) city(X) loc_2(X) stateid('kansas')
+what is the biggest city in louisiana ?
 answer(X) largest(X) city(X) loc_2(X) stateid('louisiana')
+what is the biggest city in nebraska ?
 answer(X) largest(X) city(X) loc_2(X) stateid('nebraska')
+what is the biggest city in oregon ?
 answer(X) largest(X) city(X) loc_2(X) stateid('oregon')
+what is the biggest city in texas ?
 answer(X) largest(X) city(X) loc_2(X) stateid('texas')
+what is the biggest city in the smallest state ?
 answer(X) largest(X) city(X) loc_2(X) smallest(X) state(all)
+what is the biggest city in the us ?
 answer(X) largest(X) city(X) loc_2(X) countryid('usa')
+what is the biggest city in the usa ?
 answer(X) largest(X) city(X) loc_2(X) countryid('usa')
+what is the biggest city in usa ?
 answer(X) largest(X) city(X) loc_2(X) countryid('usa')
+what is the biggest city in wyoming ?
 answer(X) largest(X) city(X) loc_2(X) stateid('wyoming')
+what is the biggest river in illinois ?
 answer(X) longest(X) river(X) loc_2(X) stateid('illinois')
+what is the biggest state ?
 answer(X) largest(X) state(all)
+what is the biggest state in continental us ?
 answer(X) largest(X) state(X) loc_2(X) countryid('usa')
+what is the biggest state in the usa ?
 answer(X) largest(X) state(X) loc_2(X) countryid('usa')
+what is the capital city of the largest state in the us ?
 answer(X) capital(X) city(X) loc_2(X) largest(X) state(X) loc_2(X) countryid('usa')
+what is the capital of california ?
 answer(X) capital(X) loc_2(X) stateid('california')
+what is the capital of colorado ?
 answer(X) capital(X) loc_2(X) stateid('colorado')
+what is the capital of georgia ?
 answer(X) capital(X) loc_2(X) stateid('georgia')
+what is the capital of hawaii ?
 answer(X) capital(X) loc_2(X) stateid('hawaii')
+what is the capital of illinois ?
 answer(X) capital(X) loc_2(X) stateid('illinois')
+what is the capital of indiana ?
 answer(X) capital(X) loc_2(X) stateid('indiana')
+what is the capital of iowa ?
 answer(X) capital(X) loc_2(X) stateid('iowa')
+what is the capital of maine ?
 answer(X) capital(X) loc_2(X) stateid('maine')
+what is the capital of maryland ?
 answer(X) capital(X) loc_2(X) stateid('maryland')
+what is the capital of massachusetts ?
 answer(X) capital(X) loc_2(X) stateid('massachusetts')
+what is the capital of michigan ?
 answer(X) capital(X) loc_2(X) stateid('michigan')
+what is the capital of new hampshire ?
 answer(X) capital(X) loc_2(X) stateid('new hampshire')
+what is the capital of new jersey ?
 answer(X) capital(X) loc_2(X) stateid('new jersey')
+what is the capital of new york ?
 answer(X) capital(X) loc_2(X) stateid('new york')
+what is the capital of north dakota ?
 answer(X) capital(X) loc_2(X) stateid('north dakota')
+what is the capital of ohio ?
 answer(X) capital(X) loc_2(X) stateid('ohio')
+what is the capital of pennsylvania ?
 answer(X) capital(X) loc_2(X) stateid('pennsylvania')
+what is the capital of states that have cities named durham ?
 answer(X) capital(X) loc_2(X) state(X) loc_1(X) city(X) cityid('durham',_)
+what is the capital of texas ?
 answer(X) capital(X) loc_2(X) stateid('texas')
+what is the capital of the alabama state ?
 answer(X) capital(X) loc_2(X) state(X) stateid('alabama')
+what is the capital of the florida state ?
 answer(X) capital(X) loc_2(X) state(X) stateid('florida')
+what is the capital of the largest state ?
 answer(X) capital(X) loc_2(X) largest(X) state(all)
+what is the capital of the smallest state ?
 answer(X) capital(X) loc_2(X) smallest(X) state(all)
+what is the capital of the state texas ?
 answer(X) capital(X) loc_2(X) state(X) stateid('texas')
+what is the capital of the state that borders the most states ?
 answer(X) capital(X) loc_2(X) most(X) state(X) next_to_2(X) state(all)
+what is the capital of the state that borders the state that borders texas ?
 answer(X) capital(X) loc_2(X) state(X) next_to_2(X) state(X) next_to_2(X) stateid('texas')
+what is the capital of the state with the highest elevation ?
 answer(X) capital(X) loc_2(X) state(X) loc_1(X) highest(X) place(all)
+what is the capital of the state with the highest point ?
 answer(X) capital(X) loc_2(X) state(X) loc_1(X) highest(X) place(all)
+what is the capital of the state with the largest population ?
 answer(X) capital(X) loc_2(X) largest_one(X) population_1(X) state(all)
+what is the capital of the state with the largest population density ?
 answer(X) capital(X) loc_2(X) largest_one(X) density_1(X) state(all)
+what is the capital of the state with the longest river ?
 answer(X) capital(X) loc_2(X) state(X) loc_1(X) longest(X) river(all)
+what is the capital of the state with the most inhabitants ?
 answer(X) capital(X) loc_2(X) largest_one(X) population_1(X) state(all)
+what is the capital of utah ?
 answer(X) capital(X) loc_2(X) stateid('utah')
+what is the capital of vermont ?
 answer(X) capital(X) loc_2(X) stateid('vermont')
+what is the capital of washington ?
 answer(X) capital(X) loc_2(X) stateid('washington')
+what is the city in texas with the largest population ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('texas')
+what is the city with the smallest population ?
 answer(X) smallest_one(X) population_1(X) city(all)
+what is the combined area of all 50 states ?
 answer(X) sum(X) area_1(X) state(all)
+what is the combined population of all 50 states ?
 answer(X) sum(X) population_1(X) state(all)
+what is the density of texas ?
 answer(X) density_1(X) stateid('texas')
+what is the density of the new york ?
 answer(X) density_1(X) stateid('new york')
+what is the elevation of death valley ?
 answer(X) elevation_1(X) placeid('death valley')
+what is the elevation of the highest point in the usa ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the height of mount mckinley ?
 answer(X) elevation_1(X) placeid('mount mckinley')
+what is the height of the highest mountain in texas ?
 answer(X) elevation_1(X) highest(X) mountain(X) loc_2(X) stateid('texas')
+what is the height of the highest point in the usa ?
 answer(X) elevation_1(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the high point of wyoming ?
 answer(X) high_point_1(X) stateid('wyoming')
+what is the highest elevation in new mexico ?
 answer(X) highest(X) place(X) loc_2(X) stateid('new mexico')
+what is the highest elevation in south carolina ?
 answer(X) highest(X) place(X) loc_2(X) stateid('south carolina')
+what is the highest elevation in texas ?
 answer(X) highest(X) place(X) loc_2(X) stateid('texas')
+what is the highest elevation in the united states ?
 answer(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the highest mountain in alaska ?
 answer(X) highest(X) mountain(X) loc_2(X) stateid('alaska')
+what is the highest mountain in texas ?
 answer(X) highest(X) mountain(X) loc_2(X) stateid('texas')
+what is the highest mountain in the us ?
 answer(X) highest(X) mountain(X) loc_2(X) countryid('usa')
+what is the highest mountain in us ?
 answer(X) highest(X) mountain(X) loc_2(X) countryid('usa')
+what is the highest point in colorado ?
 answer(X) highest(X) place(X) loc_2(X) stateid('colorado')
+what is the highest point in delaware ?
 answer(X) highest(X) place(X) loc_2(X) stateid('delaware')
+what is the highest point in each state whose lowest point is sea level ?
 answer(X) highest(X) place(X) loc_2(X) state(X) loc_1(X) place(X) elevation_2(0)
+what is the highest point in florida ?
 answer(X) highest(X) place(X) loc_2(X) stateid('florida')
+what is the highest point in iowa ?
 answer(X) highest(X) place(X) loc_2(X) stateid('iowa')
+what is the highest point in kansas ?
 answer(X) highest(X) place(X) loc_2(X) stateid('kansas')
+what is the highest point in maine ?
 answer(X) highest(X) place(X) loc_2(X) stateid('maine')
+what is the highest point in montana ?
 answer(X) highest(X) place(X) loc_2(X) stateid('montana')
+what is the highest point in nevada in meters ?
 answer(X) highest(X) place(X) loc_2(X) stateid('nevada')
+what is the highest point in new mexico ?
 answer(X) highest(X) place(X) loc_2(X) stateid('new mexico')
+what is the highest point in ohio ?
 answer(X) highest(X) place(X) loc_2(X) stateid('ohio')
+what is the highest point in rhode island ?
 answer(X) highest(X) place(X) loc_2(X) stateid('rhode island')
+what is the highest point in states bordering georgia ?
 answer(X) highest(X) place(X) loc_2(X) state(X) next_to_2(X) stateid('georgia')
+what is the highest point in texas ?
 answer(X) highest(X) place(X) loc_2(X) stateid('texas')
+what is the highest point in the country ?
 answer(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the highest point in the smallest state ?
 answer(X) highest(X) place(X) loc_2(X) smallest(X) state(all)
+what is the highest point in the state with capital austin ?
 answer(X) highest(X) place(X) loc_2(X) state(X) loc_1(X) capital(X) cityid('austin',_)
+what is the highest point in the state with capital des moines ?
 answer(X) highest(X) place(X) loc_2(X) state(X) loc_1(X) capital(X) cityid('des moines',_)
+what is the highest point in the state with the capital des moines ?
 answer(X) highest(X) place(X) loc_2(X) state(X) loc_1(X) capital(X) cityid('des moines',_)
+what is the highest point in the state with the most rivers ?
 answer(X) highest(X) place(X) loc_2(X) most(X) state(X) traverse_1(X) river(all)
+what is the highest point in the state with the smallest population ?
 answer(X) highest(X) place(X) loc_2(X) smallest_one(X) population_1(X) state(all)
+what is the highest point in the states bordering colorado ?
 answer(X) highest(X) place(X) loc_2(X) state(X) next_to_2(X) stateid('colorado')
+what is the highest point in the united states ?
 answer(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the highest point in the us ?
 answer(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the highest point in the usa ?
 answer(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the highest point in virginia ?
 answer(X) highest(X) place(X) loc_2(X) stateid('virginia')
+what is the highest point in wyoming ?
 answer(X) highest(X) place(X) loc_2(X) stateid('wyoming')
+what is the highest point of the state with the largest area ?
 answer(X) highest(X) place(X) loc_2(X) largest_one(X) area_1(X) state(all)
+what is the highest point of the state with the smallest population density ?
 answer(X) highest(X) place(X) loc_2(X) smallest_one(X) density_1(X) state(all)
+what is the highest point of the usa ?
 answer(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the largest capital ?
 answer(X) largest(X) capital(all)
+what is the largest capital city in the usa ?
 answer(X) largest(X) capital(X) city(X) loc_2(X) countryid('usa')
+what is the largest city in a state that borders texas ?
 answer(X) largest(X) city(X) loc_2(X) state(X) next_to_2(X) stateid('texas')
+what is the largest city in alabama ?
 answer(X) largest(X) city(X) loc_2(X) stateid('alabama')
+what is the largest city in california ?
 answer(X) largest(X) city(X) loc_2(X) stateid('california')
+what is the largest city in michigan ?
 answer(X) largest(X) city(X) loc_2(X) stateid('michigan')
+what is the largest city in minnesota by population ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('minnesota')
+what is the largest city in missouri ?
 answer(X) largest(X) city(X) loc_2(X) stateid('missouri')
+what is the largest city in rhode island ?
 answer(X) largest(X) city(X) loc_2(X) stateid('rhode island')
+what is the largest city in smallest state through which the mississippi runs ?
 answer(X) largest(X) city(X) loc_2(X) smallest(X) state(X) traverse_1(X) riverid('mississippi')
+what is the largest city in states that border california ?
 answer(X) largest(X) city(X) loc_2(X) state(X) next_to_2(X) stateid('california')
+what is the largest city in texas ?
 answer(X) largest(X) city(X) loc_2(X) stateid('texas')
+what is the largest city in the smallest state in the usa ?
 answer(X) largest(X) city(X) loc_2(X) smallest(X) state(X) loc_2(X) countryid('usa')
+what is the largest city in wisconsin ?
 answer(X) largest(X) city(X) loc_2(X) stateid('wisconsin')
+what is the largest city of kansas ?
 answer(X) largest(X) city(X) loc_2(X) stateid('kansas')
+what is the largest of the states that the rio grande runs through ?
 answer(X) largest(X) state(X) traverse_1(X) riverid('rio grande')
+what is the largest river in washington state ?
 answer(X) longest(X) river(X) loc_2(X) state(X) stateid('washington')
+what is the largest state ?
 answer(X) largest(X) state(all)
+what is the largest state bordering arkansas ?
 answer(X) largest(X) state(X) next_to_2(X) stateid('arkansas')
+what is the largest state bordering texas ?
 answer(X) largest(X) state(X) next_to_2(X) stateid('texas')
+what is the largest state capital in population ?
 answer(X) largest_one(X) population_1(X) capital_1(X) state(all)
+what is the largest state in the us ?
 answer(X) largest(X) state(X) loc_2(X) countryid('usa')
+what is the largest state in usa ?
 answer(X) largest(X) state(X) loc_2(X) countryid('usa')
+what is the largest state that borders california ?
 answer(X) largest(X) state(X) next_to_2(X) stateid('california')
+what is the largest state that borders texas ?
 answer(X) largest(X) state(X) next_to_2(X) stateid('texas')
+what is the largest state that borders the state with the highest population ?
 answer(X) largest(X) state(X) next_to_2(X) largest_one(X) population_1(X) state(all)
+what is the largest state that borders the state with the lowest point in the usa ?
 answer(X) largest(X) state(X) next_to_2(X) state(X) loc_1(X) lowest(X) place(X) loc_2(X) countryid('usa')
+what is the largest state traversed by the mississippi river ?
 answer(X) largest(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what is the least populous state ?
 answer(X) smallest_one(X) population_1(X) state(all)
+what is the length of the colorado river ?
 answer(X) len(X) river(X) riverid('colorado')
+what is the length of the colorado river in texas ?
 answer(X) len(X) intersection(X) riverid('colorado')
+what is the length of the longest river in the usa ?
 answer(X) len(X) longest(X) river(X) loc_2(X) countryid('usa')
+what is the length of the longest river that runs through texas ?
 answer(X) len(X) longest(X) river(X) traverse_2(X) stateid('texas')
+what is the length of the mississippi river ?
 answer(X) len(X) river(X) riverid('mississippi')
+what is the length of the river that flows through the most states ?
 answer(X) len(X) most(X) river(X) traverse_2(X) state(all)
+what is the length of the river that runs through the most number of states ?
 answer(X) len(X) most(X) river(X) traverse_2(X) state(all)
+what is the length of the river that runs through the most states ?
 answer(X) len(X) most(X) river(X) traverse_2(X) state(all)
+what is the length of the river that traverses the most states ?
 answer(X) len(X) most(X) river(X) traverse_2(X) state(all)
+what is the longest river ?
 answer(X) longest(X) river(all)
+what is the longest river flowing through new york ?
 answer(X) longest(X) river(X) traverse_2(X) stateid('new york')
+what is the longest river in america ?
 answer(X) longest(X) river(X) loc_2(X) countryid('usa')
+what is the longest river in california ?
 answer(X) longest(X) river(X) loc_2(X) stateid('california')
+what is the longest river in florida ?
 answer(X) longest(X) river(X) loc_2(X) stateid('florida')
+what is the longest river in mississippi ?
 answer(X) longest(X) river(X) loc_2(X) stateid('mississippi')
+what is the longest river in new york ?
 answer(X) longest(X) river(X) loc_2(X) stateid('new york')
+what is the longest river in pennsylvania ?
 answer(X) longest(X) river(X) loc_2(X) stateid('pennsylvania')
+what is the longest river in texas ?
 answer(X) longest(X) river(X) loc_2(X) stateid('texas')
+what is the longest river in the largest state ?
 answer(X) longest(X) river(X) loc_2(X) largest(X) state(all)
+what is the longest river in the smallest state in the usa ?
 answer(X) longest(X) river(X) loc_2(X) smallest(X) state(X) loc_2(X) countryid('usa')
+what is the longest river in the state with the highest point ?
 answer(X) longest(X) river(X) loc_2(X) state(X) loc_1(X) highest(X) place(all)
+what is the longest river in the state with the most major cities ?
 answer(X) longest(X) river(X) loc_2(X) most(X) state(X) loc_1(X) major(X) city(all)
+what is the longest river in the states that border nebraska ?
 answer(X) longest(X) river(X) loc_2(X) state(X) next_to_2(X) stateid('nebraska')
+what is the longest river in the united states ?
 answer(X) longest(X) river(X) loc_2(X) countryid('usa')
+what is the longest river in the us ?
 answer(X) longest(X) river(X) loc_2(X) countryid('usa')
+what is the longest river that does not run through texas ?
 answer(X) longest(X) exclude(X) river(all)
+what is the longest river that flows through a state that borders indiana ?
 answer(X) longest(X) river(X) traverse_2(X) state(X) next_to_2(X) stateid('indiana')
+what is the longest river that flows through colorado ?
 answer(X) longest(X) river(X) traverse_2(X) stateid('colorado')
+what is the longest river that passes the states that border the state that borders the most states ?
 answer(X) longest(X) river(X) traverse_2(X) state(X) next_to_2(X) most(X) state(X) next_to_2(X) state(all)
+what is the longest river that runs through a state that borders tennessee ?
 answer(X) longest(X) river(X) traverse_2(X) state(X) next_to_2(X) stateid('tennessee')
+what is the lowest elevation in pennsylvania ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('pennsylvania')
+what is the lowest point in arkansas ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('arkansas')
+what is the lowest point in california ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('california')
+what is the lowest point in louisiana ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('louisiana')
+what is the lowest point in massachusetts ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('massachusetts')
+what is the lowest point in mississippi ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('mississippi')
+what is the lowest point in nebraska in meters ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('nebraska')
+what is the lowest point in oregon ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('oregon')
+what is the lowest point in texas ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('texas')
+what is the lowest point in the state of california ?
 answer(X) lowest(X) place(X) loc_2(X) state(X) stateid('california')
+what is the lowest point in the state of texas ?
 answer(X) lowest(X) place(X) loc_2(X) state(X) stateid('texas')
+what is the lowest point in the united states ?
 answer(X) lowest(X) place(X) loc_2(X) countryid('usa')
+what is the lowest point in usa ?
 answer(X) lowest(X) place(X) loc_2(X) countryid('usa')
+what is the lowest point in wisconsin ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('wisconsin')
+what is the lowest point of all states through which the colorado river runs through ?
 answer(X) lowest(X) place(X) loc_2(X) state(X) traverse_1(X) river(X) riverid('colorado')
+what is the lowest point of colorado ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('colorado')
+what is the lowest point of the state with the largest area ?
 answer(X) lowest(X) place(X) loc_2(X) largest_one(X) area_1(X) state(all)
+what is the lowest point of the us ?
 answer(X) lowest(X) place(X) loc_2(X) countryid('usa')
+what is the major cities in montana ?
 answer(X) major(X) city(X) loc_2(X) stateid('montana')
+what is the maximum elevation of san francisco ?
 answer(X) highest(X) place(X) loc_2(X) cityid('san francisco',_)
+what is the most dense state in the usa ?
 answer(X) largest_one(X) density_1(X) state(X) loc_2(X) countryid('usa')
+what is the most populated capital in the usa ?
 answer(X) largest_one(X) population_1(X) capital(X) loc_2(X) countryid('usa')
+what is the most populated state bordering oklahoma ?
 answer(X) largest_one(X) population_1(X) state(X) next_to_2(X) stateid('oklahoma')
+what is the most populous city ?
 answer(X) largest_one(X) population_1(X) city(all)
+what is the most populous city in texas ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('texas')
+what is the most populous city in wyoming ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('wyoming')
+what is the most populous state ?
 answer(X) largest_one(X) population_1(X) state(all)
+what is the most populous state in the us ?
 answer(X) largest_one(X) population_1(X) state(X) loc_2(X) countryid('usa')
+what is the most populous state through which the mississippi runs ?
 answer(X) largest_one(X) population_1(X) state(X) traverse_1(X) riverid('mississippi')
+what is the name of the state with the lowest point ?
 answer(X) state(X) loc_1(X) lowest(X) place(all)
+what is the number of neighboring states for kentucky ?
 answer(X) count(X) state(X) next_to_2(X) stateid('kentucky')
+what is the population density in the state with capital austin ?
 answer(X) density_1(X) state(X) loc_1(X) capital(X) cityid('austin',_)
+what is the population density of maine ?
 answer(X) density_1(X) stateid('maine')
+what is the population density of south dakota ?
 answer(X) density_1(X) stateid('south dakota')
+what is the population density of texas ?
 answer(X) density_1(X) stateid('texas')
+what is the population density of the largest state ?
 answer(X) density_1(X) largest(X) state(all)
+what is the population density of the smallest state ?
 answer(X) density_1(X) smallest(X) state(all)
+what is the population density of the state with the smallest area ?
 answer(X) density_1(X) smallest_one(X) area_1(X) state(all)
+what is the population density of the state with the smallest population ?
 answer(X) density_1(X) smallest_one(X) population_1(X) state(all)
+what is the population density of wyoming ?
 answer(X) density_1(X) stateid('wyoming')
+what is the population in boston ?
 answer(X) population_1(X) cityid('boston',_)
+what is the population of alaska ?
 answer(X) population_1(X) stateid('alaska')
+what is the population of arizona ?
 answer(X) population_1(X) stateid('arizona')
+what is the population of atlanta ?
 answer(X) population_1(X) cityid('atlanta',_)
+what is the population of atlanta ga ?
 answer(X) population_1(X) cityid('atlanta','ga')
+what is the population of austin ?
 answer(X) population_1(X) cityid('austin',_)
+what is the population of austin texas ?
 answer(X) population_1(X) cityid('austin','tx')
+what is the population of boston massachusetts ?
 answer(X) population_1(X) cityid('boston','ma')
+what is the population of boulder ?
 answer(X) population_1(X) cityid('boulder',_)
+what is the population of california ?
 answer(X) population_1(X) stateid('california')
+what is the population of dallas ?
 answer(X) population_1(X) cityid('dallas',_)
+what is the population of denver ?
 answer(X) population_1(X) cityid('denver',_)
+what is the population of erie pennsylvania ?
 answer(X) population_1(X) cityid('erie','pa')
+what is the population of hawaii ?
 answer(X) population_1(X) stateid('hawaii')
+what is the population of houston ?
 answer(X) population_1(X) cityid('houston',_)
+what is the population of idaho ?
 answer(X) population_1(X) stateid('idaho')
+what is the population of illinois ?
 answer(X) population_1(X) stateid('illinois')
+what is the population of maine ?
 answer(X) population_1(X) stateid('maine')
+what is the population of maryland ?
 answer(X) population_1(X) stateid('maryland')
+what is the population of minnesota ?
 answer(X) population_1(X) stateid('minnesota')
+what is the population of montana ?
 answer(X) population_1(X) stateid('montana')
+what is the population of new mexico ?
 answer(X) population_1(X) stateid('new mexico')
+what is the population of new york ?
 answer(X) population_1(X) stateid('new york')
+what is the population of new york city ?
 answer(X) population_1(X) city(X) cityid('new york',_)
+what is the population of oregon ?
 answer(X) population_1(X) stateid('oregon')
+what is the population of portland maine ?
 answer(X) population_1(X) cityid('portland','me')
+what is the population of rhode island ?
 answer(X) population_1(X) stateid('rhode island')
+what is the population of sacramento ?
 answer(X) population_1(X) cityid('sacramento',_)
+what is the population of san antonio ?
 answer(X) population_1(X) cityid('san antonio',_)
+what is the population of seattle ?
 answer(X) population_1(X) cityid('seattle',_)
+what is the population of seattle washington ?
 answer(X) population_1(X) cityid('seattle','wa')
+what is the population of south dakota ?
 answer(X) population_1(X) stateid('south dakota')
+what is the population of springfield missouri ?
 answer(X) population_1(X) cityid('springfield','mo')
+what is the population of springfield south dakota ?
 answer(X) population_1(X) cityid('springfield','sd')
+what is the population of tempe arizona ?
 answer(X) population_1(X) cityid('tempe','az')
+what is the population of texas ?
 answer(X) population_1(X) stateid('texas')
+what is the population of the capital of the largest state ?
 answer(X) population_1(X) capital(X) loc_2(X) largest(X) state(all)
+what is the population of the capital of the largest state through which the mississippi runs ?
 answer(X) population_1(X) capital(X) loc_2(X) largest(X) state(X) traverse_1(X) riverid('mississippi')
+what is the population of the capital of the smallest state ?
 answer(X) population_1(X) capital(X) loc_2(X) smallest(X) state(all)
+what is the population of the largest city in the state with the largest area ?
 answer(X) population_1(X) largest(X) city(X) loc_2(X) largest_one(X) area_1(X) state(all)
+what is the population of the largest state ?
 answer(X) population_1(X) largest(X) state(all)
+what is the population of the largest state that borders texas ?
 answer(X) population_1(X) largest(X) state(X) next_to_2(X) stateid('texas')
+what is the population of the major cities in wisconsin ?
 answer(X) population_1(X) major(X) city(X) loc_2(X) stateid('wisconsin')
+what is the population of the smallest state ?
 answer(X) smallest(X) population_1(X) state(all)
+what is the population of the state that borders the most states ?
 answer(X) population_1(X) most(X) state(X) next_to_2(X) state(all)
+what is the population of the state with the highest population density ?
 answer(X) population_1(X) largest_one(X) density_1(X) state(all)
+what is the population of the state with the largest area ?
 answer(X) population_1(X) largest_one(X) area_1(X) state(all)
+what is the population of tucson ?
 answer(X) population_1(X) cityid('tucson',_)
+what is the population of utah ?
 answer(X) population_1(X) stateid('utah')
+what is the population of washington ?
 answer(X) population_1(X) stateid('washington')
+what is the population of washington dc ?
 answer(X) population_1(X) cityid('washington','dc')
+what is the river that cross over ohio ?
 answer(X) river(X) traverse_2(X) stateid('ohio')
+what is the shortest river ?
 answer(X) shortest(X) river(all)
+what is the shortest river in alaska ?
 answer(X) shortest(X) river(X) loc_2(X) stateid('alaska')
+what is the shortest river in iowa ?
 answer(X) shortest(X) river(X) loc_2(X) stateid('iowa')
+what is the shortest river in nebraska ?
 answer(X) shortest(X) river(X) loc_2(X) stateid('nebraska')
+what is the shortest river in texas ?
 answer(X) shortest(X) river(X) loc_2(X) stateid('texas')
+what is the shortest river in the united states ?
 answer(X) shortest(X) river(X) loc_2(X) countryid('usa')
+what is the shortest river in the us ?
 answer(X) shortest(X) river(X) loc_2(X) countryid('usa')
+what is the shortest river in the usa ?
 answer(X) shortest(X) river(X) loc_2(X) countryid('usa')
+what is the size of california ?
 answer(X) size(X) stateid('california')
+what is the size of florida ?
 answer(X) size(X) stateid('florida')
+what is the size of texas ?
 answer(X) size(X) stateid('texas')
+what is the size of the capital of texas ?
 answer(X) size(X) capital(X) loc_2(X) stateid('texas')
+what is the size of the largest state in the usa ?
 answer(X) size(X) largest(X) state(X) loc_2(X) countryid('usa')
+what is the smallest city in alaska ?
 answer(X) smallest(X) city(X) loc_2(X) stateid('alaska')
+what is the smallest city in arkansas ?
 answer(X) smallest(X) city(X) loc_2(X) stateid('arkansas')
+what is the smallest city in hawaii ?
 answer(X) smallest(X) city(X) loc_2(X) stateid('hawaii')
+what is the smallest city in the largest state ?
 answer(X) smallest(X) city(X) loc_2(X) largest(X) state(all)
+what is the smallest city in the us ?
 answer(X) smallest(X) city(X) loc_2(X) countryid('usa')
+what is the smallest city in the usa ?
 answer(X) smallest(X) city(X) loc_2(X) countryid('usa')
+what is the smallest city in washington ?
 answer(X) smallest(X) city(X) loc_2(X) stateid('washington')
+what is the smallest city of the smallest state in the us ?
 answer(X) smallest(X) city(X) loc_2(X) smallest(X) state(X) loc_2(X) countryid('usa')
+what is the smallest state bordering ohio ?
 answer(X) smallest(X) state(X) next_to_2(X) stateid('ohio')
+what is the smallest state bordering wyoming ?
 answer(X) smallest(X) state(X) next_to_2(X) stateid('wyoming')
+what is the smallest state by area ?
 answer(X) smallest_one(X) area_1(X) state(all)
+what is the smallest state in the usa ?
 answer(X) smallest(X) state(X) loc_2(X) countryid('usa')
+what is the smallest state that borders texas ?
 answer(X) smallest(X) state(X) next_to_2(X) stateid('texas')
+what is the smallest state that borders the most states ?
 answer(X) smallest(X) most(X) state(X) next_to_2(X) state(all)
+what is the smallest state that the mississippi river runs through ?
 answer(X) smallest(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what is the smallest state through which the longest river runs ?
 answer(X) smallest(X) state(X) traverse_1(X) longest(X) river(all)
+what is the state that contains the highest point ?
 answer(X) state(X) loc_1(X) highest(X) place(all)
+what is the state with the highest elevation in the united states ?
 answer(X) state(X) loc_1(X) highest(X) place(X) loc_2(X) countryid('usa')
+what is the state with the largest area ?
 answer(X) largest_one(X) area_1(X) state(all)
+what is the state with the largest density in usa ?
 answer(X) largest_one(X) density_1(X) state(X) loc_2(X) countryid('usa')
+what is the state with the largest population density ?
 answer(X) largest_one(X) density_1(X) state(all)
+what is the state with the lowest point ?
 answer(X) state(X) loc_1(X) lowest(X) place(all)
+what is the state with the lowest population ?
 answer(X) smallest_one(X) population_1(X) state(all)
+what is the state with the lowest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+what is the state with the smallest area ?
 answer(X) smallest_one(X) area_1(X) state(all)
+what is the tallest mountain in america ?
 answer(X) highest(X) mountain(X) loc_2(X) countryid('usa')
+what is the tallest mountain in the united states ?
 answer(X) highest(X) mountain(X) loc_2(X) countryid('usa')
+what is the total area of the usa ?
 answer(X) area_1(X) countryid('usa')
+what is the total length of all rivers in the usa ?
 answer(X) sum(X) len(X) river(all)
+what is the total population of the states that border texas ?
 answer(X) sum(X) population_1(X) state(X) next_to_2(X) stateid('texas')
+what length is the mississippi ?
 answer(X) len(X) riverid('mississippi')
+what major cities are located in pennsylvania ?
 answer(X) major(X) city(X) loc_2(X) stateid('pennsylvania')
+what major rivers run through illinois ?
 answer(X) major(X) river(X) traverse_2(X) stateid('illinois')
+what mountains are in alaska ?
 answer(X) mountain(X) loc_2(X) stateid('alaska')
+what river flows through kansas ?
 answer(X) river(X) traverse_2(X) stateid('kansas')
+what river flows through texas ?
 answer(X) river(X) traverse_2(X) stateid('texas')
+what river flows through the most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+what river is the longest one in the united states ?
 answer(X) longest(X) river(X) loc_2(X) countryid('usa')
+what river runs through illinois ?
 answer(X) river(X) traverse_2(X) stateid('illinois')
+what river runs through the most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+what river runs through the state with the most cities ?
 answer(X) river(X) traverse_2(X) most(X) state(X) loc_1(X) city(all)
+what river runs through virginia ?
 answer(X) river(X) traverse_2(X) stateid('virginia')
+what river traverses the most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+what river traverses the state which borders the most states ?
 answer(X) river(X) traverse_2(X) most(X) state(X) next_to_2(X) state(all)
+what rivers are in nevada ?
 answer(X) river(X) loc_2(X) stateid('nevada')
+what rivers are in new mexico ?
 answer(X) river(X) loc_2(X) stateid('new mexico')
+what rivers are in oregon ?
 answer(X) river(X) loc_2(X) stateid('oregon')
+what rivers are in states that border texas ?
 answer(X) river(X) loc_2(X) state(X) next_to_2(X) stateid('texas')
+what rivers are in texas ?
 answer(X) river(X) loc_2(X) stateid('texas')
+what rivers are in utah ?
 answer(X) river(X) loc_2(X) stateid('utah')
+what rivers are there in texas ?
 answer(X) river(X) loc_2(X) stateid('texas')
+what rivers do not run through tennessee ?
 answer(X) exclude(X) river(all)
+what rivers flow though colorado ?
 answer(X) river(X) traverse_2(X) stateid('colorado')
+what rivers flow through missouri ?
 answer(X) river(X) traverse_2(X) stateid('missouri')
+what rivers flow through states that alabama borders ?
 answer(X) river(X) traverse_2(X) state(X) next_to_1(X) stateid('alabama')
+what rivers flow through states that border the state with the largest population ?
 answer(X) river(X) traverse_2(X) state(X) next_to_2(X) largest_one(X) population_1(X) state(all)
+what rivers flow through the largest state ?
 answer(X) river(X) traverse_2(X) largest(X) state(all)
+what rivers flow through the state with the largest population ?
 answer(X) river(X) traverse_2(X) largest_one(X) population_1(X) state(all)
+what rivers run through arizona ?
 answer(X) river(X) traverse_2(X) stateid('arizona')
+what rivers run through austin texas ?
 answer(X) river(X) traverse_2(X) cityid('austin','tx')
+what rivers run through colorado ?
 answer(X) river(X) traverse_2(X) stateid('colorado')
+what rivers run through louisiana ?
 answer(X) river(X) traverse_2(X) stateid('louisiana')
+what rivers run through maine ?
 answer(X) river(X) traverse_2(X) stateid('maine')
+what rivers run through new york ?
 answer(X) river(X) traverse_2(X) stateid('new york')
+what rivers run through the state with the lowest point in the usa ?
 answer(X) river(X) traverse_2(X) state(X) loc_1(X) lowest(X) place(X) loc_2(X) countryid('usa')
+what rivers run through the states that border the state with the capital atlanta ?
 answer(X) river(X) traverse_2(X) state(X) next_to_2(X) state(X) loc_1(X) capital(X) cityid('atlanta',_)
+what rivers run through west virginia ?
 answer(X) river(X) traverse_2(X) stateid('west virginia')
+what rivers traverses the state which borders the most states ?
 answer(X) river(X) traverse_2(X) most(X) state(X) next_to_2(X) state(all)
+what state bordering nevada has the largest population ?
 answer(X) largest_one(X) population_1(X) state(X) next_to_2(X) stateid('nevada')
+what state borders michigan ?
 answer(X) state(X) next_to_2(X) stateid('michigan')
+what state borders most other states ?
 answer(X) most(X) state(X) next_to_2(X) state(all)
+what state borders new york ?
 answer(X) state(X) next_to_2(X) stateid('new york')
+what state borders the least states ?
 answer(X) fewest(X) state(X) next_to_2(X) state(all)
+what state borders the least states excluding alaska and excluding hawaii ?
 answer(X) fewest(X) state(X) next_to_2(X) exclude(X) exclude(X,X,X) state(all) s(t) 'hawaii'
+what state borders the most states ?
 answer(X) most(X) state(X) next_to_2(X) state(all)
+what state borders the state with the smallest population ?
 answer(X) state(X) next_to_2(X) smallest_one(X) population_1(X) state(all)
+what state contains the highest point in the us ?
 answer(X) state(X) loc_1(X) highest(X) place(X) loc_2(X) countryid('usa')
+what state contains the highest point of those the colorado river traverses ?
 answer(X) state(X) loc_1(X) highest(X) place(X) loc_2(X) state(X) traverse_1(X) river(X) riverid('colorado')
+what state has highest elevation ?
 answer(X) state(X) loc_1(X) highest(X) place(all)
+what state has no rivers ?
 answer(X) exclude(X) state(all)
+what state has the capital salem ?
 answer(X) state(X) loc_1(X) capital(X) cityid('salem',_)
+what state has the city flint ?
 answer(X) state(X) loc_1(X) city(X) cityid('flint',_)
+what state has the city with the largest population ?
 answer(X) state(X) loc_1(X) largest_one(X) population_1(X) city(all)
+what state has the city with the most population ?
 answer(X) state(X) loc_1(X) largest_one(X) population_1(X) city(all)
+what state has the greatest population density ?
 answer(X) largest_one(X) density_1(X) state(all)
+what state has the highest elevation ?
 answer(X) state(X) loc_1(X) highest(X) place(all)
+what state has the highest population ?
 answer(X) largest_one(X) population_1(X) state(all)
+what state has the highest population density ?
 answer(X) largest_one(X) density_1(X) state(all)
+what state has the largest area ?
 answer(X) largest_one(X) area_1(X) state(all)
+what state has the largest capital ?
 answer(X) state(X) loc_1(X) largest(X) capital(all)
+what state has the largest city ?
 answer(X) state(X) loc_1(X) largest(X) city(all)
+what state has the largest population ?
 answer(X) largest_one(X) population_1(X) state(all)
+what state has the largest population density ?
 answer(X) largest_one(X) density_1(X) state(all)
+what state has the largest urban population ?
 answer(X) largest_one(X) population_1(X) state(all)
+what state has the least population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+what state has the longest river ?
 answer(X) state(X) loc_1(X) longest(X) river(all)
+what state has the lowest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+what state has the most cities ?
 answer(X) most(X) state(X) loc_1(X) city(all)
+what state has the most major cities ?
 answer(X) most(X) state(X) loc_1(X) major(X) city(all)
+what state has the most major rivers running through it ?
 answer(X) most(X) state(X) traverse_1(X) major(X) river(all)
+what state has the most people ?
 answer(X) largest_one(X) population_1(X) state(all)
+what state has the most rivers ?
 answer(X) most(X) state(X) loc_1(X) river(all)
+what state has the most rivers running through it ?
 answer(X) most(X) state(X) traverse_1(X) river(all)
+what state has the shortest river ?
 answer(X) state(X) loc_1(X) shortest(X) river(all)
+what state has the smallest area ?
 answer(X) smallest_one(X) area_1(X) state(all)
+what state has the smallest capital ?
 answer(X) state(X) loc_1(X) smallest(X) capital(all)
+what state has the smallest population ?
 answer(X) smallest_one(X) population_1(X) state(all)
+what state has the smallest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+what state has the smallest urban population ?
 answer(X) smallest_one(X) population_1(X) state(all)
+what state has the sparsest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+what state is austin in ?
 answer(X) state(X) loc_1(X) cityid('austin',_)
+what state is austin the capital of ?
 answer(X) state(X) loc_1(X) capital(X) cityid('austin',_)
+what state is boston in ?
 answer(X) state(X) loc_1(X) cityid('boston',_)
+what state is columbus the capital of ?
 answer(X) state(X) loc_1(X) capital(X) cityid('columbus',_)
+what state is dallas in ?
 answer(X) state(X) loc_1(X) cityid('dallas',_)
+what state is des moines located in ?
 answer(X) state(X) loc_1(X) cityid('des moines',_)
+what state is miami in ?
 answer(X) state(X) loc_1(X) cityid('miami',_)
+what state is pittsburgh in ?
 answer(X) state(X) loc_1(X) cityid('pittsburgh',_)
+what state is the biggest ?
 answer(X) largest(X) state(all)
+what state is the largest in population ?
 answer(X) largest_one(X) population_1(X) state(all)
+what state is the state with the most rivers ?
 answer(X) state(X) most(X) state(X) loc_1(X) river(all)
+what state that borders texas has the highest population ?
 answer(X) largest_one(X) population_1(X) state(X) next_to_2(X) stateid('texas')
+what state that borders texas is the largest ?
 answer(X) largest(X) state(X) next_to_2(X) stateid('texas')
+what state which the mississippi runs through has the largest population ?
 answer(X) largest_one(X) population_1(X) state(X) traverse_1(X) riverid('mississippi')
+what states are next to arizona ?
 answer(X) state(X) next_to_2(X) stateid('arizona')
+what states are next to texas ?
 answer(X) state(X) next_to_2(X) stateid('texas')
+what states are next to the mississippi ?
 answer(X) state(X) next_to_2(X) stateid('mississippi')
+what states border alaska ?
 answer(X) state(X) next_to_2(X) stateid('alaska')
+what states border arkansas ?
 answer(X) state(X) next_to_2(X) stateid('arkansas')
+what states border delaware ?
 answer(X) state(X) next_to_2(X) stateid('delaware')
+what states border florida ?
 answer(X) state(X) next_to_2(X) stateid('florida')
+what states border georgia ?
 answer(X) state(X) next_to_2(X) stateid('georgia')
+what states border hawaii ?
 answer(X) state(X) next_to_2(X) stateid('hawaii')
+what states border indiana ?
 answer(X) state(X) next_to_2(X) stateid('indiana')
+what states border kentucky ?
 answer(X) state(X) next_to_2(X) stateid('kentucky')
+what states border michigan ?
 answer(X) state(X) next_to_2(X) stateid('michigan')
+what states border missouri ?
 answer(X) state(X) next_to_2(X) stateid('missouri')
+what states border montana ?
 answer(X) state(X) next_to_2(X) stateid('montana')
+what states border new hampshire ?
 answer(X) state(X) next_to_2(X) stateid('new hampshire')
+what states border new jersey ?
 answer(X) state(X) next_to_2(X) stateid('new jersey')
+what states border ohio ?
 answer(X) state(X) next_to_2(X) stateid('ohio')
+what states border rhode island ?
 answer(X) state(X) next_to_2(X) stateid('rhode island')
+what states border states that border colorado ?
 answer(X) state(X) next_to_2(X) state(X) next_to_2(X) stateid('colorado')
+what states border states that border mississippi ?
 answer(X) state(X) next_to_2(X) state(X) next_to_2(X) stateid('mississippi')
+what states border states that border states that border florida ?
 answer(X) state(X) next_to_2(X) state(X) next_to_2(X) state(X) next_to_2(X) stateid('florida')
+what states border states that border states that border states that border texas ?
 answer(X) state(X) next_to_2(X) state(X) next_to_2(X) state(X) next_to_2(X) state(X) next_to_2(X) stateid('texas')
+what states border states that border the state with the largest population ?
 answer(X) state(X) next_to_2(X) state(X) next_to_2(X) largest_one(X) population_1(X) state(all)
+what states border states that the mississippi runs through ?
 answer(X) state(X) next_to_2(X) state(X) traverse_1(X) riverid('mississippi')
+what states border states that the ohio runs through ?
 answer(X) state(X) next_to_2(X) state(X) traverse_1(X) riverid('ohio')
+what states border states which the mississippi runs through ?
 answer(X) state(X) next_to_2(X) state(X) traverse_1(X) riverid('mississippi')
+what states border texas ?
 answer(X) state(X) next_to_2(X) stateid('texas')
+what states border texas and have a major river ?
 answer(X) intersection(X) state(X,X,X) next_to_2(X) stateid('texas') l(o) major(X) river(all)
+what states border the mississippi river ?
 answer(X) state(X) next_to_2(X) river(X) riverid('mississippi')
+what states border the most populous state ?
 answer(X) state(X) next_to_2(X) largest_one(X) population_1(X) state(all)
+what states border the state that borders the most states ?
 answer(X) state(X) next_to_2(X) most(X) state(X) next_to_2(X) state(all)
+what states border the state with the most cities ?
 answer(X) state(X) next_to_2(X) most(X) state(X) loc_1(X) city(all)
+what states border the state with the most major cities ?
 answer(X) state(X) next_to_2(X) most(X) state(X) loc_1(X) major(X) city(all)
+what states border the state with the smallest area ?
 answer(X) state(X) next_to_2(X) smallest_one(X) area_1(X) state(all)
+what states border the states with the most cities ?
 answer(X) state(X) next_to_2(X) most(X) state(X) loc_1(X) city(all)
+what states border wisconsin ?
 answer(X) state(X) next_to_2(X) stateid('wisconsin')
+what state 's capital is dover ?
 answer(X) state(X) capital_2(X) cityid('dover',_)
+what states contain at least one major rivers ?
 answer(X) state(X) loc_1(X) major(X) river(all)
+what states does the colorado river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('colorado')
+what states does the delaware river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('delaware')
+what states does the mississippi river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+what states does the mississippi run through ?
 answer(X) state(X) traverse_1(X) riverid('mississippi')
+what states does the missouri river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('missouri')
+what states does the missouri run through ?
 answer(X) state(X) traverse_1(X) riverid('missouri')
+what states does the ohio river go through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('ohio')
+what states does the ohio river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('ohio')
+what states does the shortest river run through ?
 answer(X) state(X) traverse_1(X) shortest(X) river(all)
+what states have a capital that is the highest point in the state ?
 answer(X) state(X) loc_1(X) capital(X) highest(X) place(all)
+what states have a city named austin ?
 answer(X) state(X) loc_1(X) city(X) cityid('austin',_)
+what states have cities named austin ?
 answer(X) state(X) loc_1(X) city(X) cityid('austin',_)
+what states have cities named dallas ?
 answer(X) state(X) loc_1(X) city(X) cityid('dallas',_)
+what states have cities named plano ?
 answer(X) state(X) loc_1(X) city(X) cityid('plano',_)
+what states have cities named portland ?
 answer(X) state(X) loc_1(X) city(X) cityid('portland',_)
+what states have cities named rochester ?
 answer(X) state(X) loc_1(X) city(X) cityid('rochester',_)
+what states have cities named salt lake city ?
 answer(X) state(X) loc_1(X) city(X) cityid('salt lake city',_)
+what states have no bordering state ?
 answer(X) exclude(X) state(all)
+what states have rivers named colorado ?
 answer(X) state(X) loc_1(X) river(X) riverid('colorado')
+what states have rivers running through them ?
 answer(X) state(X) traverse_1(X) river(all)
+what states have towns named springfield ?
 answer(X) state(X) loc_1(X) city(X) cityid('springfield',_)
+what state 's high point is higher than that of colorado ?
 answer(X) state(X) high_point_2(X) higher_2(X) high_point_1(X) stateid('colorado')
+what states in the united states have a city of springfield ?
 answer(X) intersection(X) state(X,X,X) loc_2(X) countryid('usa') l(o) city(X) cityid('springfield',_)
+what states neighbor maine ?
 answer(X) state(X) next_to_2(X) stateid('maine')
+what states surround kentucky ?
 answer(X) state(X) next_to_2(X) stateid('kentucky')
+what texas city has the largest population ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('texas')
+what 's the largest city ?
 answer(X) largest(X) city(all)
+where are mountains ?
 answer(X) loc_1(X) mountain(all)
+where is austin ?
 answer(X) loc_1(X) cityid('austin',_)
+where is baton rouge ?
 answer(X) loc_1(X) cityid('baton rouge',_)
+where is dallas ?
 answer(X) loc_1(X) cityid('dallas',_)
+where is fort wayne ?
 answer(X) loc_1(X) cityid('fort wayne',_)
+where is houston ?
 answer(X) loc_1(X) cityid('houston',_)
+where is indianapolis ?
 answer(X) loc_1(X) cityid('indianapolis',_)
+where is massachusetts ?
 answer(X) loc_1(X) stateid('massachusetts')
+where is mount whitney ?
 answer(X) loc_1(X) placeid('mount whitney')
+where is mount whitney located ?
 answer(X) loc_1(X) placeid('mount whitney')
+where is new hampshire ?
 answer(X) loc_1(X) stateid('new hampshire')
+where is new orleans ?
 answer(X) loc_1(X) cityid('new orleans',_)
+where is portland ?
 answer(X) loc_1(X) cityid('portland',_)
+where is san diego ?
 answer(X) loc_1(X) cityid('san diego',_)
+where is san jose ?
 answer(X) loc_1(X) cityid('san jose',_)
+where is scotts valley ?
 answer(X) loc_1(X) cityid('scotts valley',_)
+where is springfield ?
 answer(X) loc_1(X) cityid('springfield',_)
+where is the chattahoochee river ?
 answer(X) loc_1(X) river(X) riverid('chattahoochee')
+where is the highest mountain of the united states ?
 answer(X) highest(X) mountain(X) loc_2(X) countryid('usa')
+where is the highest point in hawaii ?
 answer(X) highest(X) place(X) loc_2(X) stateid('hawaii')
+where is the highest point in montana ?
 answer(X) highest(X) place(X) loc_2(X) stateid('montana')
+where is the lowest point in maryland ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('maryland')
+where is the lowest point in the us ?
 answer(X) lowest(X) place(X) loc_2(X) countryid('usa')
+where is the lowest spot in iowa ?
 answer(X) lowest(X) place(X) loc_2(X) stateid('iowa')
+where is the most populated area of new mexico ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('new mexico')
+where is the smallest city ?
 answer(X) loc_1(X) smallest(X) city(all)
+which capitals are in the states that border texas ?
 answer(X) capital(X) loc_2(X) state(X) next_to_2(X) stateid('texas')
+which capitals are not major cities ?
 answer(X) exclude(X) capital(all)
+which city in california has the largest population ?
 answer(X) largest_one(X) population_1(X) city(X) loc_2(X) stateid('california')
+which is the density of the state that the largest river in the united states runs through ?
 answer(X) density_1(X) state(X) traverse_1(X) longest(X) river(X) loc_2(X) countryid('usa')
+which is the highest peak not in alaska ?
 answer(X) highest(X) exclude(X) mountain(all)
+which is the longest river in usa ?
 answer(X) longest(X) river(X) loc_2(X) countryid('usa')
+which is the lowest point of the states that the mississippi runs through ?
 answer(X) lowest(X) place(X) loc_2(X) state(X) traverse_1(X) riverid('mississippi')
+which is the shortest river ?
 answer(X) shortest(X) river(all)
+which is the smallest state ?
 answer(X) smallest(X) state(all)
+which of the states bordering pennsylvania has the largest population ?
 answer(X) largest_one(X) population_1(X) state(X) next_to_2(X) stateid('pennsylvania')
+which river goes through the most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+which river runs through most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+which river runs through the most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+which river traverses most states ?
 answer(X) most(X) river(X) traverse_2(X) state(all)
+which rivers are in alaska ?
 answer(X) river(X) loc_2(X) stateid('alaska')
+which rivers do not run through texas ?
 answer(X) exclude(X) river(all)
+which rivers do not run through usa ?
 answer(X) exclude(X) river(all)
+which rivers flow through alaska ?
 answer(X) river(X) traverse_2(X) stateid('alaska')
+which rivers run through states bordering new mexico ?
 answer(X) river(X) traverse_2(X) state(X) next_to_2(X) stateid('new mexico')
+which rivers run through states that border the state with the capital austin ?
 answer(X) river(X) traverse_2(X) state(X) next_to_2(X) state(X) loc_1(X) capital(X) cityid('austin',_)
+which rivers run through states with fewest cities ?
 answer(X) river(X) traverse_2(X) fewest(X) state(X) loc_1(X) city(all)
+which rivers run through the state with the largest city in the us ?
 answer(X) river(X) traverse_2(X) state(X) loc_1(X) largest(X) city(X) loc_2(X) countryid('usa')
+which rivers run through the state with the lowest elevation in the usa ?
 answer(X) river(X) traverse_2(X) state(X) loc_1(X) lowest(X) place(X) loc_2(X) countryid('usa')
+which state border kentucky ?
 answer(X) state(X) next_to_2(X) stateid('kentucky')
+which state borders florida ?
 answer(X) state(X) next_to_2(X) stateid('florida')
+which state borders hawaii ?
 answer(X) state(X) next_to_2(X) stateid('hawaii')
+which state borders most states ?
 answer(X) most(X) state(X) next_to_2(X) state(all)
+which state borders the most states ?
 answer(X) most(X) state(X) next_to_2(X) state(all)
+which state capital has the smallest population ?
 answer(X) smallest_one(X) population_1(X) capital(all)
+which state contains most rivers ?
 answer(X) most(X) state(X) loc_1(X) river(all)
+which state has the biggest population ?
 answer(X) largest_one(X) population_1(X) state(all)
+which state has the greatest density ?
 answer(X) largest_one(X) density_1(X) state(all)
+which state has the greatest population ?
 answer(X) largest_one(X) population_1(X) state(all)
+which state has the highest elevation ?
 answer(X) state(X) loc_1(X) highest(X) place(all)
+which state has the highest peak in the country ?
 answer(X) state(X) loc_1(X) highest(X) place(all)
+which state has the highest point ?
 answer(X) state(X) loc_1(X) highest(X) place(all)
+which state has the highest population density ?
 answer(X) largest_one(X) density_1(X) state(all)
+which state has the largest city ?
 answer(X) state(X) loc_1(X) largest(X) city(all)
+which state has the largest density ?
 answer(X) largest_one(X) density_1(X) state(all)
+which state has the least population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+which state has the longest river ?
 answer(X) state(X) loc_1(X) longest(X) river(all)
+which state has the lowest elevation ?
 answer(X) state(X) loc_1(X) lowest(X) place(all)
+which state has the lowest point that borders idaho ?
 answer(X) state(X) loc_1(X) lowest(X) place(X) loc_2(X) next_to_2(X) stateid('idaho')
+which state has the lowest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+which state has the most major cities ?
 answer(X) most(X) state(X) loc_1(X) major(X) city(all)
+which state has the most major rivers ?
 answer(X) most(X) state(X) loc_1(X) major(X) river(all)
+which state has the most major rivers running through it ?
 answer(X) most(X) state(X) traverse_1(X) major(X) river(all)
+which state has the most people ?
 answer(X) largest_one(X) population_1(X) state(all)
+which state has the most population ?
 answer(X) largest_one(X) population_1(X) state(all)
+which state has the most rivers ?
 answer(X) most(X) state(X) loc_1(X) river(all)
+which state has the most rivers running through it ?
 answer(X) most(X) state(X) traverse_1(X) river(all)
+which state has the red river ?
 answer(X) state(X) loc_1(X) river(X) riverid('red')
+which state has the smallest area that borders texas ?
 answer(X) smallest_one(X) area_1(X) state(X) next_to_2(X) stateid('texas')
+which state has the smallest average urban population ?
 answer(X) smallest_one(X) density_1(X) state(all)
+which state has the smallest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+which state has the sparsest population density ?
 answer(X) smallest_one(X) density_1(X) state(all)
+which state is kalamazoo in ?
 answer(X) state(X) loc_1(X) cityid('kalamazoo',_)
+which state is mount mckinley in ?
 answer(X) state(X) loc_1(X) placeid('mount mckinley')
+which state is the city denver located in ?
 answer(X) state(X) loc_1(X) city(X) cityid('denver',_)
+which state is the largest city in montana in ?
 answer(X) state(X) loc_1(X) largest(X) city(X) loc_2(X) stateid('montana')
+which state is the smallest ?
 answer(X) smallest(X) state(all)
+which states adjoin alabama ?
 answer(X) state(X) next_to_2(X) stateid('alabama')
+which states border alabama ?
 answer(X) state(X) next_to_2(X) stateid('alabama')
+which states border alaska ?
 answer(X) state(X) next_to_2(X) stateid('alaska')
+which states border arizona ?
 answer(X) state(X) next_to_2(X) stateid('arizona')
+which states border colorado ?
 answer(X) state(X) next_to_2(X) stateid('colorado')
+which states border hawaii ?
 answer(X) state(X) next_to_2(X) stateid('hawaii')
+which states border illinois ?
 answer(X) state(X) next_to_2(X) stateid('illinois')
+which states border iowa ?
 answer(X) state(X) next_to_2(X) stateid('iowa')
+which states border kentucky ?
 answer(X) state(X) next_to_2(X) stateid('kentucky')
+which states border michigan ?
 answer(X) state(X) next_to_2(X) stateid('michigan')
+which states border new york ?
 answer(X) state(X) next_to_2(X) stateid('new york')
+which states border no other states ?
 answer(X) exclude(X) state(all)
+which states border south dakota ?
 answer(X) state(X) next_to_2(X) stateid('south dakota')
+which states border states through which the mississippi traverses ?
 answer(X) state(X) next_to_2(X) state(X) traverse_1(X) riverid('mississippi')
+which states border texas ?
 answer(X) state(X) next_to_2(X) stateid('texas')
+which states border the longest river in the usa ?
 answer(X) state(X) next_to_2(X) longest(X) river(X) loc_2(X) countryid('usa')
+which states border the missouri river ?
 answer(X) state(X) next_to_2(X) river(X) riverid('missouri')
+which states border the state with the smallest area ?
 answer(X) state(X) next_to_2(X) smallest_one(X) area_1(X) state(all)
+which state 's capital city is the largest ?
 answer(X) state(X) loc_1(X) largest(X) city(X) capital_1(X) state(all)
+which states do colorado river flow through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('colorado')
+which states does not border texas ?
 answer(X) exclude(X) state(all)
+which states does the chattahoochee river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('chattahoochee')
+which states does the colorado river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('colorado')
+which states does the longest river cross ?
 answer(X) state(X) traverse_1(X) longest(X) river(all)
+which states does the longest river run through ?
 answer(X) state(X) traverse_1(X) longest(X) river(all)
+which states does the mississippi river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('mississippi')
+which states does the mississippi run through ?
 answer(X) state(X) traverse_1(X) riverid('mississippi')
+which states does the missouri river pass through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('missouri')
+which states does the missouri river run through ?
 answer(X) state(X) traverse_1(X) river(X) riverid('missouri')
+which states have a major city named austin ?
 answer(X) state(X) loc_1(X) major(X) city(X) cityid('austin',_)
+which states have a river ?
 answer(X) state(X) loc_1(X) river(all)
+which states have cities named austin ?
 answer(X) state(X) loc_1(X) city(X) cityid('austin',_)
+which states have points higher than the highest point in colorado ?
 answer(X) state(X) loc_1(X) place(X) higher_2(X) highest(X) place(X) loc_2(X) stateid('colorado')
+which states have points that are higher than the highest point in texas ?
 answer(X) state(X) loc_1(X) place(X) higher_2(X) highest(X) place(X) loc_2(X) stateid('texas')
+which states lie on the largest river in the united states ?
 answer(X) state(X) traverse_1(X) longest(X) river(X) loc_2(X) countryid('usa')
-answer(X) largest_one(X) density_1(X) city(all)
+which us city has the highest population density 
+answer(X) largest_one(X) density_1(X) city(all
