@@ -28,7 +28,10 @@ def main():
     raw_string = soup("nl")  
     for item in raw_string:
         if item["lang"] == "en":
-            string.append(item.string.replace("\n",""))
+            item = item.string
+            item = item.replace(" ?","")
+            item = item.replace(" .","")
+            string.append(item.replace("\n",""))
     
     string_txt = open("../data/string.txt", "w")
     # changes casing to all lower case for word alignment
