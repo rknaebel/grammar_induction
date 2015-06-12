@@ -16,7 +16,7 @@ def main():
     alto = []
     
     # append header
-    header = "#IRTG\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n# interpretation t: de.up.ling.irtg.algebra.StringAlgebra"
+    header = "# IRTG unannotated corpus file, v1.0\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n# interpretation t: de.up.ling.irtg.algebra.StringAlgebra"
     
     alto.append(header)
     alto.append("")
@@ -31,7 +31,7 @@ def main():
         alto.append(string[i])
         alto.append(funql_geo[i])
        
-    alto_txt = open("../data/alto.txt", "w")
+    alto_txt = open("../data/alto.irtg", "w")
     alto_txt.write(list_to_txt(alto))
     alto_txt.close()
 
