@@ -16,24 +16,20 @@ def main():
     alto = []
     
     # append header
-    string_header = "# interpretation string: de.up.ling.irtg.algebra.StringAlgebra"
-    funql_header = "# interpretation string: de.up.ling.irtg.algebra.StringAlgebra"
+    header = "#IRTG\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n# interpretation t: de.up.ling.irtg.algebra.StringAlgebra"
     
-    alto.append(string_header)
-    alto.append(funql_header)
+    alto.append(header)
     alto.append("")
   
     # read strings and geoquery files
     string = open("../data/string.txt").read().split("\n")
    
     # variable-free geoquery
-    funql_geo = open("../data/geo-funql.test.txt").read().split("\n")
+    funql_geo = open("../data/geo-funql.txt").read().split("\n")
     
     for i in range(len(string)):
         alto.append(string[i])
         alto.append(funql_geo[i])
-    
-    print alto
        
     alto_txt = open("../data/alto.txt", "w")
     alto_txt.write(list_to_txt(alto))
