@@ -877,4 +877,4 @@
 (SBARQ (WHNP (WDT Which) (NNS states)) (SQ (VP (VBP have) (NP (NP (NNS points)) (ADJP (ADJP (JJR higher)) (PP (IN than) (NP (NP (DT the) (JJS highest) (NN point)) (PP (IN in) (NP (NNP Colorado))))))))))
 (SBARQ (WHNP (WDT Which) (NNS states)) (SQ (VP (VBP have) (NP (NP (NNS points)) (SBAR (WHNP (WDT that)) (S (VBP are) (ADJP (ADJP (JJR higher)) (PP (IN than) (NP (NP (DT the) (JJS highest) (NN point)) (PP (IN in) (NP (NNP Texas))))))))))))
 (SBARQ (WHNP (WDT Which) (NNS states)) (SQ (VP (VBP lie) (PP (IN on) (NP (NP (DT the) (JJS largest) (NN river)) (PP (IN in) (NP (DT the) (NNP United) (NNPS States))))))))
-(SBARQ (WHNP (WDT Which) (NNP US) (NN city)) (SQ (VP (VBZ has) (NP (DT the) (JJS highest) (NN population) (NN density))))
+(SBARQ (WHNP (WDT Which) (NNP US) (NN city)) (SQ (VP (VBZ has) (NP (DT the) (JJS highest) (NN population) (NN density)))))
