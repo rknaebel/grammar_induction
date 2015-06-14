@@ -14,13 +14,12 @@ from pyparsing import *
 import ply.lex as lex
 import ply.yacc as yacc
 
+from FunqlTerms import *
+
 
 class GeoLexer(object):
     def __init__(self):
         self.build()
-    
-    reserved = {
-    }
         
     tokens = (
         'COMMA', # ,
@@ -29,40 +28,35 @@ class GeoLexer(object):
         'NUMBER', # 1234
         'RPAREN', # )
         'STRING',
-    ) + tuple(reserved.values())
+        'BLANK', #_
+    )
 
-    t_COMMA = r','
+    t_COMMA  = r','
     t_LPAREN = r'\('
     t_RPAREN = r'\)'
+    t_BLANK  = r'_'
     
     def t_IDENTIFIER(self, t):
         r'[A-Za-z][-A-Za-z_0-9]*'
-        #t.type = GeoLexer.reserved.get(t.value.lower(), 'IDENTIFIER')
         return t
 
     def t_STRING(self, t):
-        r'''["'][-_a-zA-Z]*["']'''
-        #t.type = 
+        r'''["'][^()'"]*["']'''
         return t
-    
-    #def t_VAR(self, t):
-    #    r'\?[A-Za-z][A-Za-z_0-9]*'
-    #    return t
 
     def t_NUMBER(self, t):
         r'[0-9]+(\.[0-9]+)?'
-        t.value = float(t.value)
+        t.value = int(t.value)
         return t
 
     t_ignore = ' \t\v\r'
-    #t_comment_ignore = ' \t\v\r'
 
     def t_newline(self, t):
         r'\n'
         t.lexer.lineno += 1
 
     def t_error(self, t):
-        print "PDDL Lexer: Illegal character " + t.value[0]
+        print "FunQL Lexer: Illegal character " + t.value[0]
         t.lexer.skip(1)
     
     def build(self, **kwargs):
@@ -84,27 +78,29 @@ class GeoParser(object):
         self.lexer = lexer.lexer
         self.parser = yacc.yacc(module=self)
     
-    def parse(self, pddl):
-        return self.parser.parse(pddl, self.lexer)
+    def parse(self, funql):
+        return self.parser.parse(funql, self.lexer)
+    
+    def lex(self, data):
+        self.lexer.input(data)
+        while True:
+            tok = self.lexer.token()
+            if not tok: break
+            print tok
     
     start = 'funql'    # the start symbol in our grammar
 
-    ############################################################################
-    ##
-    ## PDDL Domain Definition
-    ##
-    ############################################################################
     def p_geoTerm(self, p):
         r'funql : function'
         p[0] = p[1]
 
     def p_function(self, p):
         r'function : IDENTIFIER LPAREN args RPAREN'
-        p[0] = (p[1], p[2])
+        p[0] = FunqlTerm(p[1], p[3])
 
     def p_function_empty(self, p):
         r'function : IDENTIFIER'
-        p[0] = p[1]
+        p[0] = FunqlConst(p[1])
 
     def p_args(self, p):
         r'args : argument'
@@ -112,16 +108,26 @@ class GeoParser(object):
         
     def p_args2(self, p):
         r'args : argument COMMA args'
-        p[0] = [p[1]] + p[2]
+        p[0] = [p[1]] + p[3]
     
     def p_argument(self, p):
         r'argument : function'
         p[0] = p[1]
     
+    def p_argument_str(self, p):
+        r'argument : STRING'
+        p[0] = FunqlConst(p[1])
+    
+    def p_argument_blank(self, p):
+        r'argument : BLANK'
+        p[0] = FunqlConst('_')
+    
+    def p_argument_num(self, p):
+        r'argument : NUMBER'
+        p[0] = FunqlConst(str(p[1]))
 
     def p_error(self, p):
         print "Parse Error: ", p.value, " at lexeme ", p.lineno, p.lexpos
-
 
 def transform(term):
     if isinstance(term, list):
@@ -139,6 +145,9 @@ def transform(term):
     
     return res
 
+def parseFunql(term):
+    parser = GeoParser()
+    return parser.parse(term)
 #
 # Just for testing the script without anything else
 #
@@ -163,15 +172,14 @@ def main():
     parser = GeoParser()
     
     for s in geo_funql:
-        #s = "answer(loc(virgina))"
-        #print s
-        #parse = OneOrMore(nestedExpr()).parseString("("+s+")").asList()[0]
-        parser.lexer.lex(s)
+        print s
+        parser.lex(s)
         parse = parser.parse(s)
-        raw_input()
-        #print ">>", parse
-        #print " ".join(transform(parse))
-        #print ">> ", parse(s)
+        print parse.toMR()
+        if str(parse) != s:
+            print ">>", parse
+            raw_input()
+    
 
 
 if __name__ == "__main__":

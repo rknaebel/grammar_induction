@@ -10,13 +10,14 @@ These can then be used as parallel corpora
 """
 
 from bs4 import BeautifulSoup
+from parseMR import parseFunql
 
 def list_to_txt(xml_list):
     txt = ""
     for item in xml_list:
         txt = txt + item + "\n"
     # have to remove last newline for Giza++
-    return txt[:(len(txt)-2)]
+    return txt[:(len(txt)-1)]
 
 
 def main():
@@ -54,7 +55,10 @@ def main():
     raw_geo_funql = soup("mrl")
     for item in raw_geo_funql:
         if item["lang"] == "geo-funql":
-            geo_funql.append(item.string.replace("\n",""))
+            parsed = parseFunql(item.string.replace("\n",""))
+            print parsed
+            print parsed.toMR()
+            geo_funql.append(parsed.toMR())
     
     geo_funql_txt = open("../data/geo-funql.txt", "w")
     geo_funql_txt.write(list_to_txt(geo_funql))
