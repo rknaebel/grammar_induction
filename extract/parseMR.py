@@ -173,7 +173,7 @@ def main():
     
     for s in geo_funql:
         print s
-        parser.lex(s)
+        #parser.lex(s)
         parse = parser.parse(s)
         print parse.toMR()
         if str(parse) != s:
