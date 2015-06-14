@@ -1,61 +1,1383 @@
-# IRTG unannotated corpus file, v1.0
-#
-# interpretation s: de.up.ling.irtg.algebra.StringAlgebra
-# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
+/* Induced grammar from aligned sentences
+s = tokenized string from geoquery corpus
+t = tree elements from geoquery function query language (variable-free)*/
 
-X -> s2402(X)
+interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
+
+X -> s5879(X)
+[s] kalamazoo
+[t] 'kalamazoo'
+
+X -> s6155(X)
+[s] ?1
+[t] longest(?1)
+
+X -> s411(X)
+[s] *(many, ?1)
+[t] population_1(?1)
+
+X -> s34(X)
+[s] *(point, ?1)
+[t] place(?1)
+
+X -> s964(X)
+[s] tennessee
+[t] 'tennessee'
+
+X -> s512(X)
+[s] *(there, ?1)
+[t] stateid(?1)
+
+X -> s12(X)
+[s] mississippi
+[t] 'mississippi'
+
+X -> s4250(X)
+[s] *(traverses, ?1)
+[t] traverse_2(?1)
+
+X -> s1184(X)
+[s] *(does, ?1)
+[t] loc_1(?1)
+
+X -> s83(X)
+[s] california
+[t] 'california'
+
+X -> s2597(X)
+[s] ?1
+[t] 0
+
+X -> s864(X)
+[s] ?1
+[t] area_1(?1)
+
+X -> s15(X)
+[s] *(rivers, ?1)
+[t] river(?1)
+
+X -> s682(X)
+[s] washington
+[t] 'washington'
+
+X -> s2(X)
+[s] *(cities, ?1)
+[t] city(?1)
+
+X -> s688(X)
+[s] dc
+[t] 'dc'
+
+X -> s1835(X)
+[s] *(that, ?1)
+[t] traverse_1(?1)
+
+X -> s94(X)
+[s] *(the, ?1)
+[t] countryid(?1)
+
+X -> s2863(X)
+[s] ?1
+[t] 'minnesota'
+
+X -> s5267(X)
+[s] *('s, ?1)
+[t] high_point_2(?1)
+
+X -> s1563(X)
+[s] oklahoma
+[t] 'oklahoma'
+
+X -> s1188(X)
+[s] *(exist, ?1)
+[t] countryid(?1)
+
+S! -> s1262(X)
+[s] *(number, ?1)
+[t] answer(?1)
+
+X -> s311(X)
+[s] *(is, ?1)
+[t] ?1
+
+X -> s5506(X)
+[s] ?1
+[t] mountain(?1)
+
+X -> s3085(X)
+[s] number
+[t] all
+
+X -> s330(X)
+[s] ?1
+[t] 'rhode+island'
+
+X -> s33(X)
+[s] *(highest, ?1)
+[t] highest(?1)
+
+X -> s218(X)
+[s] *(large, ?1)
+[t] size(?1)
+
+X -> s5101(X)
+[s] dover
+[t] 'dover'
+
+X -> s629(X)
+[s] washington
+[t] 'wa'
+
+X -> s758(X)
+[s] *(has, ?1)
+[t] loc_1(?1)
+
+X -> s3750(X)
+[s] tempe
+[t] 'tempe'
+
+X -> s812(X)
+[s] ?1
+[t] 'albany'
+
+X -> s1978(X)
+[s] ?1
+[t] 'maryland'
+
+S! -> s26(X)
+[s] *(can, ?1)
+[t] answer(?1)
+
+X -> s1721(X)
+[s] *(populations, ?1)
+[t] population_1(?1)
+
+X -> s665(X)
+[s] wyoming
+[t] 'wyoming'
+
+X -> s2783(X)
 [s] *(in, ?1)
 [t] ?1
 
-X -> s9121(X)
-[s] *(a, ?1)
+X -> s37(X)
+[s] *(of, ?1)
+[t] stateid(?1)
+
+X -> s412(X)
+[s] in
+[t] cityid(?1,?2)
+
+X -> s145(X)
+[s] *(points, ?1)
+[t] place(?1)
+
+X -> s174(X)
+[s] montana
+[t] 'montana'
+
+X -> s4782(X)
+[s] miami
+[t] 'miami'
+
+X -> s508(X)
+[s] ?1
+[t] 'iowa'
+
+X -> s4761(X)
+[s] columbus
+[t] 'columbus'
+
+X -> s455(X)
+[s] *(bordering, ?1)
+[t] next_to_2(?1)
+
+X -> s2010(X)
+[s] of
+[t] all
+
+X -> s1878(X)
+[s] *(citizens, ?1)
+[t] population_1(?1)
+
+X -> s43(X)
+[s] ?1
+[t] low_point_2(?1)
+
+X -> s4118(X)
+[s] *(lowest, ?1)
+[t] smallest_one(?1)
+
+X -> s611(X)
+[s] ?1
+[t] 'riverside'
+
+X -> s7513(X)
+[s] *(that, ?1)
 [t] ?1
+
+X -> s926(X)
+[s] and
+[t] intersection(?1,?2)
+
+X -> s5(X)
+[s] virginia
+[t] 'virginia'
+
+X -> s661(X)
+[s] *(smallest, ?1)
+[t] smallest(?1)
+
+X -> s4031(X)
+[s] ?1
+[t] smallest_one(?1)
+
+X -> s138(X)
+[s] of
+[t] cityid(?1,?2)
+
+X -> s5099(X)
+[s] ?1
+[t] capital_2(?1)
+
+X -> s5239(X)
+[s] have
+[t] all
+
+X -> s323(X)
+[s] pennsylvania
+[t] 'pennsylvania'
+
+X -> s576(X)
+[s] minnesota
+[t] 'mn'
+
+X -> s6154(X)
+[s] *(lie, ?1)
+[t] traverse_1(?1)
+
+X -> s3422(X)
+[s] *(dense, ?1)
+[t] density_1(?1)
+
+X -> s503(X)
+[s] nevada
+[t] 'nevada'
+
+X -> s3927(X)
+[s] *(size, ?1)
+[t] size(?1)
+
+X -> s41(X)
+[s] ?1
+[t] count(?1)
+
+X -> s3241(X)
+[s] *(have, ?1)
+[t] ?1
+
+X -> s199(X)
+[s] delaware
+[t] 'delaware'
+
+X -> s4513(X)
+[s] *(those, ?1)
+[t] traverse_1(?1)
+
+X -> s44(X)
+[s] *(count, ?1)
+[t] lower_2(?1)
+
+X -> s36(X)
+[s] *(state, ?1)
+[t] state(?1)
+
+X -> s2032(X)
+[s] with
+[t] all
+
+X -> s5324(X)
+[s] ?1
+[t] 'baton+rouge'
+
+X -> s128(X)
+[s] ?1
+[t] 'north+dakota'
+
+X -> s430(X)
+[s] ?1
+[t] 'montgomery'
+
+X -> s804(X)
+[s] ?1
+[t] exclude(?1,?2)
+
+X -> s328(X)
+[s] *(does, ?1)
+[t] loc_2(?1)
+
+X -> s5260(X)
+[s] *(towns, ?1)
+[t] city(?1)
+
+X -> s191(X)
+[s] *(all, ?1)
+[t] ?1
+
+X -> s47(X)
+[s] alabama
+[t] 'alabama'
+
+X -> s1107(X)
+[s] ?1
+[t] higher_2(?1)
+
+X -> s457(X)
+[s] nebraska
+[t] 'nebraska'
+
+X -> s1148(X)
+[s] does
+[t] intersection(?1,?2)
+
+X -> s92(X)
+[s] *(river, ?1)
+[t] river(?1)
+
+X -> s350(X)
+[s] *(united, ?1)
+[t] countryid(?1)
+
+S! -> s110(X)
+[s] *(how, ?1)
+[t] answer(?1)
+
+X -> s4445(X)
+[s] *(borders, ?1)
+[t] next_to_2(?1)
+
+X -> s1902(X)
+[s] has
+[t] all
+
+X -> s2501(X)
+[s] *(mountain, ?1)
+[t] mountain(?1)
+
+S! -> s1182(X)
+[s] *(which, ?1)
+[t] answer(?1)
+
+X -> s2048(X)
+[s] wisconsin
+[t] 'wisconsin'
+
+X -> s3630(X)
+[s] pennsylvania
+[t] 'pa'
+
+X -> s2172(X)
+[s] illinois
+[t] 'illinois'
+
+X -> s2966(X)
+[s] ?1
+[t] capital_1(?1)
+
+X -> s670(X)
+[s] ?1
+[t] density_1(?1)
+
+X -> s3739(X)
+[s] missouri
+[t] 'mo'
+
+X -> s2712(X)
+[s] ?1
+[t] 'des+moines'
+
+X -> s1638(X)
+[s] vermont
+[t] 'vermont'
+
+X -> s1288(X)
+[s] *(which, ?1)
+[t] traverse_1(?1)
+
+X -> s786(X)
+[s] idaho
+[t] 'idaho'
+
+S! -> s1205(X)
+[s] *(list, ?1)
+[t] answer(?1)
+
+X -> s390(X)
+[s] there
+[t] intersection(?1,?2)
+
+X -> s2933(X)
+[s] *(runs, ?1)
+[t] riverid(?1)
 
 X -> s02(X)
 [s] *(the, ?1)
 [t] ?1
 
-X -> s44611(X)
+X -> s118(X)
+[s] massachusetts
+[t] 'massachusetts'
+
+X -> s1973(X)
+[s] maine
+[t] 'maine'
+
+X -> s1239(X)
+[s] michigan
+[t] 'michigan'
+
+X -> s6097(X)
+[s] *(pass, ?1)
+[t] riverid(?1)
+
+X -> s699(X)
+[s] ?1
+[t] 'utah'
+
+X -> s2422(X)
+[s] *(inhabitants, ?1)
+[t] population_1(?1)
+
+X -> s497(X)
+[s] ?1
+[t] 'ohio'
+
+X -> s38(X)
+[s] ?1
+[t] 'oregon'
+
+X -> s435(X)
+[s] *(major, ?1)
+[t] major(?1)
+
+X -> s28(X)
+[s] *(of, ?1)
+[t] loc_2(?1)
+
+X -> s1051(X)
+[s] *(run, ?1)
+[t] riverid(?1)
+
+X -> s113(X)
+[s] alaska
+[t] 'alaska'
+
+X -> s3430(X)
+[s] *(populated, ?1)
+[t] population_1(?1)
+
+X -> s1700(X)
+[s] ?1
+[t] 'michigan'
+
+X -> s3319(X)
+[s] ?1
+[t] 'nebraska'
+
+X -> s4136(X)
+[s] *(tallest, ?1)
+[t] highest(?1)
+
+X -> s5478(X)
+[s] not
+[t] exclude(?1,?2)
+
+X -> s9151(X)
+[s] *(at, ?1)
+[t] ?1
+
+X -> s393(X)
+[s] austin
+[t] 'austin'
+
+X -> s106(X)
+[s] ?1
+[t] next_to_2(?1)
+
+X -> s215(X)
+[s] louisiana
+[t] 'louisiana'
+
+X -> s518(X)
+[s] boulder
+[t] 'boulder'
+
+X -> s3413(X)
+[s] ?1
+[t] highest(?1)
+
+X -> s283(X)
+[s] ?1
+[t] 'mississippi'
+
+X -> s1950(X)
+[s] ?1
+[t] sum(?1)
+
+X -> s392(X)
+[s] named
+[t] cityid(?1,?2)
+
+X -> s45(X)
+[s] *(has, ?1)
+[t] low_point_1(?1)
+
+X -> s3500(X)
+[s] ?1
+[t] 'kentucky'
+
+X -> s1942(X)
+[s] ?1
+[t] 'california'
+
+X -> s1694(X)
+[s] ?1
+[t] 'illinois'
+
+X -> s1087(X)
+[s] *(have, ?1)
+[t] loc_1(?1)
+
+X -> s575(X)
+[s] minneapolis
+[t] 'minneapolis'
+
+X -> s4188(X)
+[s] *(mountains, ?1)
+[t] mountain(?1)
+
+X -> s80(X)
+[s] *(lakes, ?1)
+[t] lake(?1)
+
+X -> s403(X)
+[s] usa
+[t] all
+
+X -> s98(X)
+[s] *(number, ?1)
+[t] count(?1)
+
+X -> s2481(X)
+[s] *(elevation, ?1)
+[t] elevation_1(?1)
+
+S! -> s1326(X)
+[s] *(show, ?1)
+[t] answer(?1)
+
+X -> s4(X)
+[s] ?1
+[t] stateid(?1)
+
+X -> s2183(X)
+[s] *(continental, ?1)
+[t] countryid(?1)
+
+X -> s1041(X)
+[s] ?1
+[t] traverse_1(?1)
+
+X -> s628(X)
+[s] spokane
+[t] 'spokane'
+
+X -> s3751(X)
+[s] arizona
+[t] 'az'
+
+X -> s2482(X)
+[s] *(of, ?1)
+[t] placeid(?1)
+
+X -> s401(X)
+[s] *(biggest, ?1)
+[t] largest(?1)
+
+X -> s53(X)
+[s] usa
+[t] 'usa'
+
+X -> s1806(X)
+[s] indiana
+[t] 'indiana'
+
+X -> s4898(X)
+[s] kentucky
+[t] 'kentucky'
+
+X -> s10(X)
+[s] *(surrounding, ?1)
+[t] next_to_2(?1)
+
+X -> s2279(X)
+[s] ?1
+[t] 'new+jersey'
+
+X -> s111(X)
+[s] *(big, ?1)
+[t] size(?1)
+
+X -> s777(X)
+[s] *(population, ?1)
+[t] population_1(?1)
+
+X -> s3452(X)
+[s] *(there, ?1)
+[t] ?1
+
+X -> s311(X)
+[s] *(shortest, ?1)
+[t] shortest(?1)
+
+X -> s4546(X)
+[s] flint
+[t] 'flint'
+
+X -> s541(X)
+[s] ?1
+[t] 'chicago'
+
+X -> s59(X)
+[s] texas
+[t] 'texas'
+
+X -> s236(X)
+[s] *(long, ?1)
+[t] len(?1)
+
+X -> s489(X)
+[s] oregon
+[t] 'oregon'
+
+X -> s295(X)
+[s] ?1
+[t] 'north+platte'
+
+X -> s1090(X)
+[s] ?1
+[t] 'rochester'
+
+X -> s207(X)
+[s] florida
+[t] 'florida'
+
+X -> s1993(X)
+[s] seattle
+[t] 'seattle'
+
+X -> s301(X)
+[s] ohio
+[t] 'ohio'
+
+S! -> s1(X)
+[s] *(give, ?1)
+[t] answer(?1)
+
+X -> s2858(X)
+[s] *(largest, ?1)
+[t] largest_one(?1)
+
+X -> s1224(X)
+[s] *(50, ?1)
+[t] countryid(?1)
+
+X -> s5386(X)
+[s] ?1
+[t] 'san+diego'
+
+X -> s1624(X)
+[s] ?1
+[t] 'virginia'
+
+X -> s5287(X)
+[s] *(neighbor, ?1)
+[t] next_to_2(?1)
+
+X -> s3034(X)
+[s] ?1
+[t] len(?1)
+
+X -> s4526(X)
+[s] no
+[t] exclude(?1,?2)
+
+X -> s5450(X)
+[s] *(spot, ?1)
+[t] place(?1)
+
+X -> s351(X)
+[s] states
+[t] 'usa'
+
+X -> s553(X)
+[s] hawaii
+[t] 'hawaii'
+
+X -> s2029(X)
+[s] *(smallest, ?1)
+[t] smallest_one(?1)
+
+X -> s2381(X)
+[s] *(elevation, ?1)
+[t] place(?1)
+
+X -> s143(X)
 [s] *(high, ?1)
+[t] elevation_1(?1)
+
+X -> s921(X)
+[s] least
+[t] all
+
+X -> s1999(X)
+[s] ?1
+[t] 'south+carolina'
+
+X -> s53041(X)
+[s] *('s, ?1)
 [t] ?1
 
-X -> s6342(X)
+X -> s547(X)
+[s] detroit
+[t] 'detroit'
+
+X -> s3617(X)
+[s] dallas
+[t] 'dallas'
+
+X -> s10831(X)
+[s] *(a, ?1)
+[t] ?1
+
+X -> s1323(X)
+[s] ?1
+[t] 'san+antonio'
+
+X -> s3666(X)
+[s] minnesota
+[t] 'minnesota'
+
+X -> s3868(X)
 [s] *(that, ?1)
+[t] traverse_2(?1)
+
+X -> s1849(X)
+[s] ?1
+[t] 'missouri'
+
+X -> s3601(X)
+[s] massachusetts
+[t] 'ma'
+
+X -> s64(X)
+[s] ?1
+[t] countryid(?1)
+
+X -> s623(X)
+[s] ?1
+[t] 'south+dakota'
+
+X -> s93(X)
+[s] ?1
+[t] traverse_2(?1)
+
+X -> s723(X)
+[s] *(which, ?1)
 [t] ?1
 
-X -> s161(X)
+S! -> s14(X)
+[s] *(name, ?1)
+[t] answer(?1)
+
+X -> s1195(X)
+[s] rochester
+[t] 'rochester'
+
+X -> s153(X)
+[s] ?1
+[t] 'guadalupe+peak'
+
+X -> s137(X)
+[s] *(city, ?1)
+[t] city(?1)
+
+X -> s1043(X)
+[s] *(flow, ?1)
+[t] riverid(?1)
+
+X -> s5348(X)
+[s] indianapolis
+[t] 'indianapolis'
+
+X -> s123(X)
+[s] ?1
+[t] 'new+mexico'
+
+X -> s570(X)
+[s] kansas
+[t] 'kansas'
+
+X -> s5408(X)
+[s] *(is, ?1)
+[t] loc_1(?1)
+
+X -> s3629(X)
+[s] erie
+[t] 'erie'
+
+X -> s18(X)
+[s] arkansas
+[t] 'arkansas'
+
+X -> s5392(X)
+[s] ?1
+[t] 'san+jose'
+
+S! -> s7(X)
+[s] *(what, ?1)
+[t] answer(?1)
+
+X -> s1135(X)
+[s] ?1
+[t] 'springfield'
+
+X -> s1342(X)
+[s] *(area, ?1)
+[t] area_1(?1)
+
+X -> s1263(X)
+[s] *(of, ?1)
+[t] population_1(?1)
+
+X -> s108(X)
+[s] utah
+[t] 'utah'
+
+X -> s3698(X)
+[s] portland
+[t] 'portland'
+
+X -> s1201(X)
+[s] *(borders, ?1)
+[t] next_to_1(?1)
+
+X -> s166(X)
+[s] america
+[t] 'usa'
+
+X -> s5233(X)
+[s] ?1
+[t] 'salt+lake+city'
+
+X -> s140(X)
+[s] ?1
+[t] _
+
+X -> s1885(X)
+[s] *(highest, ?1)
+[t] largest_one(?1)
+
+X -> s4470(X)
+[s] ?1
+[t] fewest(?1)
+
+X -> s8(X)
+[s] ?1
+[t] high_point_1(?1)
+
+X -> s152(X)
+[s] ?1
+[t] placeid(?1)
+
+X -> s52(X)
 [s] *(all, ?1)
+[t] countryid(?1)
+
+X -> s836(X)
+[s] ?1
+[t] longer(?1)
+
+X -> s4076(X)
+[s] *(contains, ?1)
+[t] loc_1(?1)
+
+X -> s1196(X)
+[s] in
+[t] _
+
+X -> s413(X)
+[s] ?1
+[t] 'boulder'
+
+X -> s2483(X)
+[s] ?1
+[t] 'death+valley'
+
+X -> s5893(X)
+[s] ?1
+[t] 'denver'
+
+X -> s9152(X)
+[s] *(one, ?1)
 [t] ?1
+
+X -> s289(X)
+[s] missouri
+[t] 'missouri'
+
+X -> s1899(X)
+[s] *(least, ?1)
+[t] smallest_one(?1)
+
+X -> s139(X)
+[s] ?1
+[t] 'new+york'
+
+X -> s318(X)
+[s] *(many, ?1)
+[t] count(?1)
+
+X -> s95(X)
+[s] us
+[t] 'usa'
+
+X -> s3421(X)
+[s] *(most, ?1)
+[t] largest_one(?1)
+
+X -> s158(X)
+[s] ?1
+[t] 'mount+mckinley'
+
+X -> s3029(X)
+[s] *(populous, ?1)
+[t] population_1(?1)
+
+X -> s5727(X)
+[s] *(country, ?1)
+[t] place(?1)
+
+X -> s3560(X)
+[s] boston
+[t] 'boston'
+
+X -> s5293(X)
+[s] *(surround, ?1)
+[t] next_to_2(?1)
+
+X -> s3583(X)
+[s] ga
+[t] 'ga'
+
+X -> s3022(X)
+[s] *(traversed, ?1)
+[t] traverse_1(?1)
+
+X -> s2312(X)
+[s] durham
+[t] 'durham'
+
+X -> s953(X)
+[s] ?1
+[t] loc_1(?1)
+
+X -> s9(X)
+[s] *(states, ?1)
+[t] state(?1)
+
+X -> s481(X)
+[s] there
+[t] all
+
+X -> s1549(X)
+[s] ?1
+[t] 'north+carolina'
+
+X -> s5209(X)
+[s] plano
+[t] 'plano'
+
+X -> s1335(X)
+[s] ?1
+[t] lake(?1)
+
+X -> s3699(X)
+[s] maine
+[t] 'me'
+
+X -> s838(X)
+[s] red
+[t] 'red'
+
+S! -> s5310(X)
+[s] *(where, ?1)
+[t] answer(?1)
+
+X -> s5398(X)
+[s] ?1
+[t] 'scotts+valley'
+
+X -> s439(X)
+[s] arizona
+[t] 'arizona'
+
+X -> s1837(X)
+[s] ?1
+[t] 'potomac'
+
+X -> s5364(X)
+[s] ?1
+[t] 'mount+whitney'
+
+S! -> s1340(X)
+[s] *(state, ?1)
+[t] answer(?1)
+
+X -> s1099(X)
+[s] springfield
+[t] 'springfield'
+
+X -> s4538(X)
+[s] salem
+[t] 'salem'
+
+X -> s1282(X)
+[s] ?1
+[t] state(?1)
+
+X -> s2066(X)
+[s] ?1
+[t] largest(?1)
+
+X -> s650(X)
+[s] georgia
+[t] 'georgia'
+
+X -> s327(X)
+[s] *(capitals, ?1)
+[t] capital(?1)
+
+X -> s429(X)
+[s] ?1
+[t] cityid(?1,?2)
+
+X -> s61(X)
+[s] *(are, ?1)
+[t] ?1
+
+X -> s722(X)
+[s] ?1
+[t] 'colorado'
+
+X -> s564(X)
+[s] ?1
+[t] 'kalamazoo'
+
+X -> s3491(X)
+[s] ?1
+[t] lowest(?1)
+
+X -> s3623(X)
+[s] denver
+[t] 'denver'
+
+X -> s1868(X)
+[s] ?1
+[t] 'pennsylvania'
+
+X -> s736(X)
+[s] iowa
+[t] 'iowa'
+
+X -> s669(X)
+[s] ?1
+[t] largest_one(?1)
+
+X -> s2596(X)
+[s] ?1
+[t] elevation_2(?1)
+
+X -> s86(X)
+[s] *(largest, ?1)
+[t] largest(?1)
+
+X -> s1164(X)
+[s] *(tall, ?1)
+[t] elevation_1(?1)
+
+X -> s2255(X)
+[s] maryland
+[t] 'maryland'
+
+X -> s27(X)
+[s] *(capital, ?1)
+[t] capital(?1)
 
 X -> s01(X)
 [s] *(me, ?1)
 [t] ?1
 
-X -> s261(X)
-[s] *(is, ?1)
-[t] ?1
+X -> s531(X)
+[s] texas
+[t] 'tx'
 
-X -> s53(X)
-[s] *(?, ?1)
-[t] ?1
+X -> s756(X)
+[s] *(most, ?1)
+[t] most(?1)
 
-X -> s3002(X)
-[s] *(there, ?1)
-[t] ?1
+X -> s1844(X)
+[s] runs
+[t] all
 
-X -> s03(X)
-[s] *(., ?1)
-[t] ?1
+X -> s5178(X)
+[s] state
+[t] all
 
-X -> s51(X)
-[s] *(are, ?1)
-[t] ?1
+X -> s237(X)
+[s] ?1
+[t] riverid(?1)
 
-X -> s2811(X)
-[s] *(have, ?1)
-[t] ?1
+X -> s2494(X)
+[s] *(height, ?1)
+[t] elevation_1(?1)
 
-X -> s813(X)
+X -> s88(X)
+[s] ?1
+[t] all
+
+X -> s5248(X)
+[s] *(named, ?1)
+[t] riverid(?1)
+
+X -> s963(X)
 [s] *(of, ?1)
 [t] ?1
+
+X -> s2471(X)
+[s] *(density, ?1)
+[t] density_1(?1)
+
+X -> s1369(X)
+[s] *(does, ?1)
+[t] traverse_1(?1)
+
+X -> s912(X)
+[s] *(border, ?1)
+[t] next_to_2(?1)
+
+X -> s5374(X)
+[s] ?1
+[t] 'new+orleans'
+
+X -> s2639(X)
+[s] ?1
+[t] 'nevada'
+
+X -> s4169(X)
+[s] *(length, ?1)
+[t] len(?1)
+
+X -> s1284(X)
+[s] *(lowest, ?1)
+[t] lowest(?1)
+
+X -> s4463(X)
+[s] *(least, ?1)
+[t] fewest(?1)
+
+X -> s30(X)
+[s] ?1
+[t] 'texas'
+
+X -> s2683(X)
+[s] country
+[t] 'usa'
+
+X -> s1316(X)
+[s] sacramento
+[t] 'sacramento'
+
+X -> s5411(X)
+[s] chattahoochee
+[t] 'chattahoochee'
+
+X -> s4729(X)
+[s] *(sparsest, ?1)
+[t] smallest_one(?1)
+
+X -> s2024(X)
+[s] albany
+[t] 'albany'
+
+S! -> s1274(X)
+[s] ?1
+[t] answer(?1)
+
+X -> s3576(X)
+[s] atlanta
+[t] 'atlanta'
+
+X -> s3847(X)
+[s] tucson
+[t] 'tucson'
+
+X -> s400(X)
+[s] ?1
+[t] population_1(?1)
+
+X -> s2937(X)
+[s] *(largest, ?1)
+[t] longest(?1)
+
+X -> s24(X)
+[s] colorado
+[t] 'colorado'
+
+X -> s148(X)
+[s] all
+[t] all
+
+X -> s4789(X)
+[s] ?1
+[t] 'pittsburgh'
+
+X -> s5336(X)
+[s] ?1
+[t] 'fort+wayne'
+
+X -> s1269(X)
+[s] *(people, ?1)
+[t] population_1(?1)
+
+X -> s5301(X)
+[s] ?1
+[t] loc_2(?1)
+
+X -> s364(X)
+[s] *(there, ?1)
+[t] countryid(?1)
+
+X -> s2486(X)
+[s] ?1
+[t] elevation_1(?1)
+
+X -> s5106(X)
+[s] *(contain, ?1)
+[t] loc_1(?1)
+
+X -> s3(X)
+[s] *(in, ?1)
+[t] loc_2(?1)
+
+X -> s767(X)
+[s] *(with, ?1)
+[t] loc_1(?1)
+
+X -> s4424(X)
+[s] ?1
+[t] 'west+virginia'
+
+X -> s714(X)
+[s] *(called, ?1)
+[t] riverid(?1)
+
+X -> s3745(X)
+[s] ?1
+[t] 'sd'
+
+X -> s4161(X)
+[s] *(total, ?1)
+[t] sum(?1)
+
+X -> s238(X)
+[s] ?1
+[t] 'rio+grande'
+
+X -> s11571(X)
+[s] *(does, ?1)
+[t] ?1
+
+X -> s319(X)
+[s] *(big, ?1)
+[t] major(?1)
+
+X -> s1393(X)
+[s] *(biggest, ?1)
+[t] longest(?1)
+
+X -> s5912(X)
+[s] *(adjoin, ?1)
+[t] next_to_2(?1)
+
+X -> s5625(X)
+[s] *(fewest, ?1)
+[t] fewest(?1)
+
+X -> s91(X)
+[s] *(longest, ?1)
+[t] longest(?1)
+
+X -> s558(X)
+[s] houston
+[t] 'houston'
+
+X -> s6071(X)
+[s] cross
+[t] all
+
+X -> s1179(X)
+[s] *(mount, ?1)
+[t] placeid(?1)
+
+X -> s5458(X)
+[s] *(area, ?1)
+[t] city(?1)
+
+X -> s5255(X)
+[s] them
+[t] all
+
+X -> s956(X)
+[s] ?1
+[t] 'boston'
+
+X -> s1290(X)
+[s] *(washed, ?1)
+[t] riverid(?1)
+
+X -> s591(X)
+[s] ?1
+[t] 'new+hampshire'
+
+X -> s1020(X)
+[s] ?1
+[t] next_to_1(?1)
+
+X -> s617(X)
+[s] ?1
+[t] 'san+francisco'
+
+X -> s4515(X)
+[s] *(traverses, ?1)
+[t] riverid(?1)
+
+X -> s5359(X)
+[s] whitney
+[t] 'mount+whitney'
+
+X -> s831(X)
+[s] ?1
+[t] intersection(?1,?2)
 
