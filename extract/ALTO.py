@@ -3,6 +3,7 @@
 """
 Convert individual files to a combined ALTO corpus
 """
+from bs4 import BeautifulSoup
 
 def list_to_txt(xml_list):
     txt = ""
@@ -25,11 +26,19 @@ def main():
     string = open("../data/string.txt").read().split("\n")
    
     # variable-free geoquery
-    funql_geo = open("../data/geo-funql.txt").read().split("\n")
+    
+    soup = BeautifulSoup(open("../data/corpus.xml"), "xml")
+    geo_funql = []
+    raw_geo_funql = soup("mrl")
+    for item in raw_geo_funql:
+        if item["lang"] == "geo-funql":
+            geo_funql.append(item.string.replace("\n",""))
+    
+    #funql_geo = open("../data/geo-funql.txt").read().split("\n")
     
     for i in range(len(string)):
         alto.append(string[i])
-        alto.append(funql_geo[i])
+        alto.append(geo_funql[i])
        
     alto_txt = open("../data/alto.irtg", "w")
     alto_txt.write(list_to_txt(alto))
