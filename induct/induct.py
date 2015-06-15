@@ -15,8 +15,10 @@ class Rule(object):
     
     # the __hash__ and __eq__ is used to idenfity duplicate rules later
     def __hash__(self):
-        return hash(('[s]', self.s,
-                     '[t]', self.t))
+        return hash((self.s,self.t))
+    
+    def __str__(self):
+        return "{}\n[s] {}\n[t] {}".format(self.label, self.s, self.t)
     
     def __eq__(self, other):
         return self.s == other.s and self.t == other.t
@@ -83,7 +85,7 @@ def extract_alignments(string, funql):
     return alignments
 
 def generate_rules(aligned_tokens):
-    rules = []
+    rules = set()
     
     for i in range(len(aligned_tokens)):
         tok = aligned_tokens[i] # token is a list like ['NULL', 'me', 'the]
@@ -93,7 +95,7 @@ def generate_rules(aligned_tokens):
                 rule.label = "X -> s" + str(i) + str(j+1) + "(X)"
                 rule.s = "*(" + tok[j+1] + ", ?1)"
                 rule.t = "?1"
-                rules.append(rule)
+                rules.add(rule)
         elif tok[0] == "answer(X)": # specifically for answer(X)
             rule = Rule()                
             rule.label = "S! -> s" + str(i) + "(X)"
@@ -104,7 +106,7 @@ def generate_rules(aligned_tokens):
             else:
                 rule.s = "?1"
             rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)")    
-            rules.append(rule)
+            rules.add(rule)
         elif "X)" not in tok[0]: # if the funql representation is a leaf node
             rule = Rule()
             rule.label = "X -> s" + str(i) + "(X)"
@@ -113,7 +115,7 @@ def generate_rules(aligned_tokens):
             else:
                 rule.s = "?1"
             rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            rules.append(rule)
+            rules.add(rule)
         else:          
             rule = Rule()
             rule.label = "X -> s" + str(i) + "(X)"
@@ -124,26 +126,15 @@ def generate_rules(aligned_tokens):
             else: # TODO what about funql representations mapped to multiple string tokens, also when they're not next to each other?
                 rule.s = "?1"
             rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            rules.append(rule)
+            rules.add(rule)
             
     # just for testing
     print "The rules for the first sentence are:\n"
-    for i in range(0,7):        
-        print rules[i].label
-        print rules[i].s
-        print rules[i].t
-        print ""
+    for i,item in enumerate(rules):        
+        print item, "\n"
+        if i > 10: break
     
-    # remove duplicate rules
-    rules = list(set(rules))
-    printable = []
-    for i in range(len(rules)):
-        printable.append(rules[i].label)
-        printable.append("[s] " + rules[i].s)
-        printable.append("[t] " + rules[i].t)
-        printable.append("")
-    
-    return printable
+    return rules
 
 def main():
     grammar = []
@@ -160,9 +151,9 @@ def main():
     
     # get just the lines with actual alignments, not the summary line
     for i in range(len(raw_alignments)):
-        if (i+2)%3==0:
+        if i%3 == 1:
             string.append(raw_alignments[i])
-        elif (i+1)%3==0:
+        elif i%3 == 2:
             funql.append(raw_alignments[i])
         else:
             pass
@@ -180,7 +171,7 @@ def main():
 
     # write grammar to file
     grammar_irtg = open("../data/grammar.irtg", "w")
-    grammar_irtg.write(list_to_txt(grammar))
+    grammar_irtg.write("\n".join(map(str,grammar)))
     grammar_irtg.close()
 
 if __name__ == "__main__":
