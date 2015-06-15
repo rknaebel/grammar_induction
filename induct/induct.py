@@ -5,13 +5,19 @@ Induct grammar from sentence alignments between tokenized strings and tokenized 
 """
 
 import re
+import collections
+
+from pprint import pprint
 
 # class for a rule object with a label, string, and tree representation
 class Rule(object):
+    count = 0
     def __init__(self):
         self.label = None
         self.s = None
         self.t = None
+        self.i = Rule.count
+        Rule.count += 1
     
     # the __hash__ and __eq__ is used to idenfity duplicate rules later
     def __hash__(self):
@@ -28,111 +34,92 @@ class FunqlTok(object):
     def __init__(self):
         self.funql = None
         self.s_index = None
-
-# general function to transform a list to text
-def list_to_txt(unlist):
-    txt = ""
-    for item in unlist:
-        txt = txt + item + "\n"
-    return txt 
+    
+    def __str__(self):
+        return "{}-{}".format(self.funql,self.s_index)
+    __repr__ = __str__
 
 # function to extract the alignments with list of string and funql sentences
 def extract_alignments(string, funql):
-    funql_list = []
     
-    # remove brackets and replace empty brackets with 0
-    for item in funql:
-        funql_list.append(item.replace("({ })","({ 0 })").replace(" ({ ",", ").split(" }) "))
-
     funql_tokens = []
     
-    # split each funql sentence into tokens
-    for sentence in funql_list:
-        sentence = sentence[:len(sentence)-1]
+    for item in funql:
+        alignment = re.findall(r"([\w_()'_+,]+)\s*\(\{((\s*\d+\s*)*)\}\)", item.replace("({ })","({ 0 })"))
         funql_tok_sent = []
-        for phrase in sentence:
+        for phrase in alignment:
             funql_tok = FunqlTok()
-            phrase = phrase.split(", ")
             funql_tok.funql = phrase[0]
-            funql_tok.s_index = phrase[1]
-            funql_tok.s_index = [int(i) for i in funql_tok.s_index.split(" ")]
+            funql_tok.s_index = map(int,phrase[1].strip().split(" "))
             funql_tok_sent.append(funql_tok)
-        
         funql_tokens.append(funql_tok_sent)
-            
+    
     print "A list of the string token indexes for the first funql representation", funql_tokens[0][0].funql, ":\n", funql_tokens[0][0].s_index, "\n"
     
-    string_tokens = []
-    
-    for sentence in string:
-        sentence = sentence[:len(sentence)-1]
-        string_tokens.append(sentence.split(" "))
+    string_tokens = [sentence[:-1].split(" ") for sentence in string]
     
     # compare string tokens to funql tokens to get alignments
-    alignments = []
+    alignments = collections.defaultdict(set)
     
-    for i in range(len(string_tokens)):
-        for j in range(len(funql_tokens[i])):
-            alignment = []
-            alignment.append(funql_tokens[i][j].funql)
-            for k in range(len(string_tokens[i])):
-                for l in range(len(funql_tokens[i][j].s_index)):
-                    if k + 1 == funql_tokens[i][j].s_index[l]:
-                        alignment.append(string_tokens[i][k])
-            
-            alignments.append(alignment)
-    print "A list of the first 5 alignments, where the 0 index is always the funql representation and indexes 1: are the string tokens:\n", alignments[0:6]
+    for i,funql_token in enumerate(funql_tokens):
+        for token in funql_token:
+            for idx in token.s_index:
+                word = string_tokens[i][idx-1]
+                alignments[token.funql].add(word)
+
+    print "A list of the first 5 alignments, where the 0 index is always the funql representation and indexes 1: are the string tokens:\n", alignments
     return alignments
 
-def generate_rules(aligned_tokens):
+def generate_rules(alignment):
     rules = set()
     
-    for i in range(len(aligned_tokens)):
-        tok = aligned_tokens[i] # token is a list like ['NULL', 'me', 'the]
-        if tok[0] == "NULL": # for string tokens not aligned to funql representations
-            for j in range(len(tok[1:])):
+    for i,(tok, words) in enumerate(alignment.iteritems()):
+        #print i, tok, words
+        #raw_input()
+        for word in words:
+            if tok == "NULL": # for string tokens not aligned to funql representations
                 rule = Rule()
-                rule.label = "X -> s" + str(i) + str(j+1) + "(X)"
-                rule.s = "*(" + tok[j+1] + ", ?1)"
+                rule.label = "X -> s" + str(rule.i) + "(X)"
+                rule.s = "*(" + word + ", ?1)"
                 rule.t = "?1"
                 rules.add(rule)
-        elif tok[0] == "answer(X)": # specifically for answer(X)
-            rule = Rule()                
-            rule.label = "S! -> s" + str(i) + "(X)"
-            if len(tok) == 1:
-                rule.s = "?1"
-            elif len(tok) == 2:
-                rule.s = "*(" + tok[1] + ", ?1)"
-            else:
-                rule.s = "?1"
-            rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)")    
-            rules.add(rule)
-        elif "X)" not in tok[0]: # if the funql representation is a leaf node
-            rule = Rule()
-            rule.label = "X -> s" + str(i) + "(X)"
-            if len(tok) == 2:
-                rule.s = tok[1]
-            else:
-                rule.s = "?1"
-            rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            rules.add(rule)
-        else:          
-            rule = Rule()
-            rule.label = "X -> s" + str(i) + "(X)"
-            if len(tok) == 1:
-                rule.s = "?1"
-            elif len(tok) == 2:
-                rule.s = "*(" + tok[1] + ", ?1)"
-            else: # TODO what about funql representations mapped to multiple string tokens, also when they're not next to each other?
-                rule.s = "?1"
-            rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            rules.add(rule)
+            elif tok == "answer(X)": # specifically for answer(X)
+                rule = Rule()                
+                rule.label = "S! -> s" +  str(rule.i) + "(X)"
+                if len(tok) == 1:
+                    rule.s = "?1"
+                elif len(tok) == 2:
+                    rule.s = "*(" + tok[1] + ", ?1)"
+                else:
+                    rule.s = "?1"
+                rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)")    
+                rules.add(rule)
+            elif "X)" not in tok: # if the funql representation is a leaf node
+                rule = Rule()
+                rule.label = "X -> s" +  str(rule.i) + "(X)"
+                if len(tok) == 2:
+                    rule.s = tok[1]
+                else:
+                    rule.s = "?1"
+                rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
+                rules.add(rule)
+            else:          
+                rule = Rule()
+                rule.label = "X -> s" +  str(rule.i) + "(X)"
+                if len(tok) == 1:
+                    rule.s = "?1"
+                elif len(tok) == 2:
+                    rule.s = "*(" + tok[1] + ", ?1)"
+                else: # TODO what about funql representations mapped to multiple string tokens, also when they're not next to each other?
+                    rule.s = "?1"
+                rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
+                rules.add(rule)
             
     # just for testing
     print "The rules for the first sentence are:\n"
     for i,item in enumerate(rules):        
         print item, "\n"
-        if i > 10: break
+        #if i > 10: break
     
     return rules
 
@@ -163,12 +150,11 @@ def main():
     print "The first funql representation in the file is:\n", funql[0], "\n"
     
     # get aligned tokens from sentences
-    aligned_tokens = extract_alignments(string, funql)
+    alignment = extract_alignments(string, funql)
     
     # get list of rules from function and add to grammar
-    for item in generate_rules(aligned_tokens):
-        grammar.append(item)  
-
+    grammar = generate_rules(alignment)
+    
     # write grammar to file
     grammar_irtg = open("../data/grammar.irtg", "w")
     grammar_irtg.write("\n".join(map(str,grammar)))
