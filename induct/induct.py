@@ -6,20 +6,25 @@ Induct grammar from sentence alignments between tokenized strings and tokenized 
 
 import re
 
-## class for a rule object with a label, string, and tree representation
-#class Rule(object):
-    #def __init__(self):
-        #self.label = None
-        #self.s = None
-        #self.t = None
+# class for a rule object with a label, string, and tree representation
+class Rule(object):
+    count = 0
+    def __init__(self):
+        self.label = None
+        self.s = None
+        self.t = None
+        self.i = Rule.count
+        Rule.count += 1
     
-    ## the __hash__ and __eq__ is used to idenfity duplicate rules later
-    #def __hash__(self):
-        #return hash(('[s]', self.s,
-                     #'[t]', self.t))
+    # the __hash__ and __eq__ is used to idenfity duplicate rules later
+    def __hash__(self):
+        return hash((self.s,self.t))
     
-    #def __eq__(self, other):
-        #return self.s == other.s and self.t == other.t
+    def __str__(self):
+        return "{}\n[s] {}\n[t] {}".format(self.label, self.s, self.t)
+    
+    def __eq__(self, other):
+        return self.s == other.s and self.t == other.t
     
 ## functional token object with the functional token and the index of the string tokens aligned to it
 #class FunqlTok(object):
@@ -35,42 +40,42 @@ import re
     #return txt 
 
 # function to extract the alignments with list of string and funql sentences
-def extract_alignments(string, funql):
-    funql_tokens = []
+#def extract_alignments(string, funql):
+    #funql_tokens = []
     
-    for item in funql:
-        alignment = re.findall(r"([\w_()'_+,]+)\s*\(\{((\s*\d+\s*)*)\}\)", item.replace("({ })","({ 0 })"))
-        funql_tok_sent = []
-        for phrase in alignment:
-            funql_tok = FunqlTok()
-            funql_tok.funql = phrase[0]
-            funql_tok.s_index = map(int,phrase[1].strip().split(" "))
-            funql_tok_sent.append(funql_tok)
-        funql_tokens.append(funql_tok_sent)
+    #for item in funql:
+        #alignment = re.findall(r"([\w_()'_+,]+)\s*\(\{((\s*\d+\s*)*)\}\)", item.replace("({ })","({ 0 })"))
+        #funql_tok_sent = []
+        #for phrase in alignment:
+            #funql_tok = FunqlTok()
+            #funql_tok.funql = phrase[0]
+            #funql_tok.s_index = map(int,phrase[1].strip().split(" "))
+            #funql_tok_sent.append(funql_tok)
+        #funql_tokens.append(funql_tok_sent)
             
-    print "A list of the string token indexes for the first funql representation", funql_tokens[0][0].funql, ":\n", funql_tokens[0][0].s_index, "\n"
+    #print "A list of the string token indexes for the first funql representation", funql_tokens[0][0].funql, ":\n", funql_tokens[0][0].s_index, "\n"
     
-    string_tokens = []
+    #string_tokens = []
     
-    for sentence in string:
-        sentence = sentence[:len(sentence)-1]
-        string_tokens.append(sentence.split(" "))
+    #for sentence in string:
+        #sentence = sentence[:len(sentence)-1]
+        #string_tokens.append(sentence.split(" "))
     
-    # compare string tokens to funql tokens to get alignments
-    alignments = []
+    ## compare string tokens to funql tokens to get alignments
+    #alignments = []
     
-    for i in range(len(string_tokens)):
-        for j in range(len(funql_tokens[i])):
-            alignment = []
-            alignment.append(funql_tokens[i][j].funql)
-            for k in range(len(string_tokens[i])):
-                for l in range(len(funql_tokens[i][j].s_index)):
-                    if k + 1 == funql_tokens[i][j].s_index[l]:
-                        alignment.append(string_tokens[i][k])
+    #for i in range(len(string_tokens)):
+        #for j in range(len(funql_tokens[i])):
+            #alignment = []
+            #alignment.append(funql_tokens[i][j].funql)
+            #for k in range(len(string_tokens[i])):
+                #for l in range(len(funql_tokens[i][j].s_index)):
+                    #if k + 1 == funql_tokens[i][j].s_index[l]:
+                        #alignment.append(string_tokens[i][k])
             
-            alignments.append(alignment)
-    print "A list of the first 5 alignments, where the 0 index is always the funql representation and indexes 1: are the string tokens:\n", alignments[0:6]
-    return alignments
+            #alignments.append(alignment)
+    #print "A list of the first 5 alignments, where the 0 index is always the funql representation and indexes 1: are the string tokens:\n", alignments[0:6]
+    #return alignments
 
 def generate_rules(aligned_tokens):
     rules = []
@@ -143,7 +148,7 @@ class IntervalTree:
         self.childNodes = []
         self.alignment = []
 
-    def induceIRTG(self, sentence):
+    def induceIrtgRules(self, sentence):
         pass
 
     def setAlignment(self,xs):
@@ -161,7 +166,6 @@ class IntervalTree:
             self.interval = (max(min(minInterval, minChilds), 0), max(maxInterval, maxChilds))
         else:
             self.interval = (max(0, minInterval), maxInterval)
-        
         
 
     def __str__(self):
