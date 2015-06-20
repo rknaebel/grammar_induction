@@ -25,19 +25,6 @@ class Rule(object):
     
     def __eq__(self, other):
         return self.s == other.s and self.t == other.t
-    
-## functional token object with the functional token and the index of the string tokens aligned to it
-#class FunqlTok(object):
-    #def __init__(self):
-        #self.funql = None
-        #self.s_index = None
-
-## general function to transform a list to text
-#def list_to_txt(unlist):
-    #txt = ""
-    #for item in unlist:
-        #txt = txt + item + "\n"
-    #return txt 
 
 # function to extract the alignments with list of string and funql sentences
 #def extract_alignments(string, funql):
@@ -77,68 +64,68 @@ class Rule(object):
     #print "A list of the first 5 alignments, where the 0 index is always the funql representation and indexes 1: are the string tokens:\n", alignments[0:6]
     #return alignments
 
-def generate_rules(aligned_tokens):
-    rules = []
+#def generate_rules(aligned_tokens):
+    #rules = []
     
-    for i in range(len(aligned_tokens)):
-        tok = aligned_tokens[i] # token is a list like ['NULL', 'me', 'the]
-        if tok[0] == "NULL": # for string tokens not aligned to funql representations
-            for j in range(len(tok[1:])):
-                rule = Rule()
-                rule.label = "X -> s" + str(i) + str(j+1) + "(X)"
-                rule.s = "*(" + tok[j+1] + ", ?1)"
-                rule.t = "?1"
-                rules.append(rule)
-        elif tok[0] == "answer(X)": # specifically for answer(X)
-            rule = Rule()                
-            rule.label = "S! -> s" + str(i) + "(X)"
-            if len(tok) == 1:
-                rule.s = "?1"
-            elif len(tok) == 2:
-                rule.s = "*(" + tok[1] + ", ?1)"
-            else:
-                rule.s = "?1"
-            rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)")    
-            rules.append(rule)
-        elif "X)" not in tok[0]: # if the funql representation is a leaf node
-            rule = Rule()
-            rule.label = "X -> s" + str(i) + "(X)"
-            if len(tok) == 2:
-                rule.s = tok[1]
-            else:
-                rule.s = "?1"
-            rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            rules.append(rule)
-        else:          
-            rule = Rule()
-            rule.label = "X -> s" + str(i) + "(X)"
-            if len(tok) == 1:
-                rule.s = "?1"
-            elif len(tok) == 2:
-                rule.s = "*(" + tok[1] + ", ?1)"
-            else: # TODO what about funql representations mapped to multiple string tokens, also when they're not next to each other?
-                rule.s = "?1"
-            rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            rules.append(rule)
+    #for i in range(len(aligned_tokens)):
+        #tok = aligned_tokens[i] # token is a list like ['NULL', 'me', 'the]
+        #if tok[0] == "NULL": # for string tokens not aligned to funql representations
+            #for j in range(len(tok[1:])):
+                #rule = Rule()
+                #rule.label = "X -> s" + str(i) + str(j+1) + "(X)"
+                #rule.s = "*(" + tok[j+1] + ", ?1)"
+                #rule.t = "?1"
+                #rules.append(rule)
+        #elif tok[0] == "answer(X)": # specifically for answer(X)
+            #rule = Rule()                
+            #rule.label = "S! -> s" + str(i) + "(X)"
+            #if len(tok) == 1:
+                #rule.s = "?1"
+            #elif len(tok) == 2:
+                #rule.s = "*(" + tok[1] + ", ?1)"
+            #else:
+                #rule.s = "?1"
+            #rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)")    
+            #rules.append(rule)
+        #elif "X)" not in tok[0]: # if the funql representation is a leaf node
+            #rule = Rule()
+            #rule.label = "X -> s" + str(i) + "(X)"
+            #if len(tok) == 2:
+                #rule.s = tok[1]
+            #else:
+                #rule.s = "?1"
+            #rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
+            #rules.append(rule)
+        #else:          
+            #rule = Rule()
+            #rule.label = "X -> s" + str(i) + "(X)"
+            #if len(tok) == 1:
+                #rule.s = "?1"
+            #elif len(tok) == 2:
+                #rule.s = "*(" + tok[1] + ", ?1)"
+            #else: # TODO what about funql representations mapped to multiple string tokens, also when they're not next to each other?
+                #rule.s = "?1"
+            #rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
+            #rules.append(rule)
             
-    # just for testing
-    print "The rules for the first sentence are:\n"
-    for i in range(0,7):        
-        print rules[i].label
-        print rules[i].s
-        print rules[i].t
-        print ""
+    ## just for testing
+    #print "The rules for the first sentence are:\n"
+    #for i in range(0,7):        
+        #print rules[i].label
+        #print rules[i].s
+        #print rules[i].t
+        #print ""
     
-    # remove duplicate rules
-    rules = list(set(rules))
-    printable = []
-    for i in range(len(rules)):
-        printable.append(rules[i].label)
-        printable.append("[s] " + rules[i].s)
-        printable.append("[t] " + rules[i].t)
-        printable.append("")
+    ## remove duplicate rules
+    #rules = list(set(rules))
+    #printable = []
+    #for i in range(len(rules)):
+        #printable.append(rules[i].label)
+        #printable.append("[s] " + rules[i].s)
+        #printable.append("[t] " + rules[i].t)
+        #printable.append("")
     
-    return printable
+    #return printable
 
 
 class IntervalTree:
@@ -147,6 +134,9 @@ class IntervalTree:
         self.interval = (0,0)
         self.childNodes = []
         self.alignment = []
+
+    def sortChildNodes(self):
+        self.childNodes.sort(key=lambda t: t.interval[0])
 
     def induceIrtgRules(self, sentence):
         pass
@@ -175,15 +165,6 @@ class IntervalTree:
         else:
             return "{}{}".format(self.name,interval)
 
-class TreeAlignment:
-    pass
-
-
-
-
-
-
-
 
 def main():
     grammar = []
@@ -194,7 +175,13 @@ def main():
     grammar.append("")
   
     # read alignments and save to string and funql lists
-    raw_alignments = open("../data/string2geo.A3.finalNBEST").read().split("\n")
+    #raw_alignments = open("../data/string2geo.A3.finalNBEST").read().split("\n")
+    raw_alignments = """# Sentence pair (1) source length 4 target length 6 alignment score : 0.950072
+give me the cities in virginia 
+NULL ({ 2 3 }) answer(X) ({ 1 }) city(X) ({ 4 }) loc_2(X) ({ 5 }) stateid('virginia') ({ 6 }) 
+# Sentence pair (2) source length 5 target length 9 alignment score : 0.902057
+what are the high points of states surrounding mississippi 
+NULL ({ 2 3 }) answer(X) ({ 1 }) high_point_1(X) ({ 4 5 6 }) state(X) ({ 7 }) next_to_2(X) ({ }) stateid('mississippi') ({ 8 9 }) """.split("\n")
     string = []
     funql = []
     
@@ -207,7 +194,10 @@ def main():
         else:
             pass
 
+    ruleSet = set()
+
     for (s,f) in zip(string,funql):
+        s = dict(enumerate(s))
         print ">", s
         print ">", f
         alignment = re.findall(r"([^ ]+)\s*\(\{((\s*\d\s*)*)\}\)", f.replace("({ })","({ 0 })"))
@@ -231,41 +221,46 @@ def main():
                 for _ in range(node[1]):
                     n = treeBuffer.pop()
                     t.childNodes.append(n)
+                t.sortChildNodes()
             t.setAlignment(node[2])
             treeBuffer.append(t)
-        
-        print treeBuffer[0]
+        tree = treeBuffer[0]
 
-        
-                
+        #def generateRules(sentence,tree):
+            #if not tree.childNodes:
+                #print tree.interval
+                #words = [sentence[i] for i in range(*tree.interval)]
+                #print words
+                #for i in range(*tree.interval):
+                    #if i in sentence: del sentence[i]
+                #return (sentence, words)
+            #else:
+                #for node in tree.childNodes:
+                    #(words, derivation) = generateRules(sentence,node)
+                    #print ">", node
+                    
+        treeBuffer = [tree]
+        while treeBuffer:
+            r = Rule()
+            node = treeBuffer.pop()
+            treeBuffer.extend(node.childNodes)
+            interval = range(*node.interval)
+            for node in node.childNodes:
+                start, end = node.interval
+                startPos, endPos = interval.index(start), interval.index(end-1)
+                interval = interval[:startPos] + [-1] + interval[endPos+1:]
+            print " ".join(s[i] for i in interval if i >= 0)
+            
+            
+            
         print alignment
+        print tree
         raw_input()
-        #break
-
+        break
     
-
-
-
-
-
-
-
-
-
-
-
-
-    # just for testing
-    #print "The first string in the file is:\n", string[0], "\n"
-    #print "The first funql representation in the file is:\n", funql[0], "\n"
     
-    ## get aligned tokens from sentences
-    #aligned_tokens = extract_alignments(string, funql)
     
-    ## get list of rules from function and add to grammar
-    #for item in generate_rules(aligned_tokens):
-        #grammar.append(item)
-
+    
     ## write grammar to file
     #grammar_irtg = open("../data/grammar.irtg", "w")
     #grammar_irtg.write(list_to_txt(grammar))
