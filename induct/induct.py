@@ -6,56 +6,46 @@ Induct grammar from sentence alignments between tokenized strings and tokenized 
 
 import re
 
-# class for a rule object with a label, string, and tree representation
-class Rule(object):
-    def __init__(self):
-        self.label = None
-        self.s = None
-        self.t = None
+## class for a rule object with a label, string, and tree representation
+#class Rule(object):
+    #def __init__(self):
+        #self.label = None
+        #self.s = None
+        #self.t = None
     
-    # the __hash__ and __eq__ is used to idenfity duplicate rules later
-    def __hash__(self):
-        return hash(('[s]', self.s,
-                     '[t]', self.t))
+    ## the __hash__ and __eq__ is used to idenfity duplicate rules later
+    #def __hash__(self):
+        #return hash(('[s]', self.s,
+                     #'[t]', self.t))
     
-    def __eq__(self, other):
-        return self.s == other.s and self.t == other.t
+    #def __eq__(self, other):
+        #return self.s == other.s and self.t == other.t
     
-# functional token object with the functional token and the index of the string tokens aligned to it
-class FunqlTok(object):
-    def __init__(self):
-        self.funql = None
-        self.s_index = None
+## functional token object with the functional token and the index of the string tokens aligned to it
+#class FunqlTok(object):
+    #def __init__(self):
+        #self.funql = None
+        #self.s_index = None
 
-# general function to transform a list to text
-def list_to_txt(unlist):
-    txt = ""
-    for item in unlist:
-        txt = txt + item + "\n"
-    return txt 
+## general function to transform a list to text
+#def list_to_txt(unlist):
+    #txt = ""
+    #for item in unlist:
+        #txt = txt + item + "\n"
+    #return txt 
 
 # function to extract the alignments with list of string and funql sentences
 def extract_alignments(string, funql):
-    funql_list = []
-    
-    # remove brackets and replace empty brackets with 0
-    for item in funql:
-        funql_list.append(item.replace("({ })","({ 0 })").replace(" ({ ",", ").split(" }) "))
-
     funql_tokens = []
     
-    # split each funql sentence into tokens
-    for sentence in funql_list:
-        sentence = sentence[:len(sentence)-1]
+    for item in funql:
+        alignment = re.findall(r"([\w_()'_+,]+)\s*\(\{((\s*\d+\s*)*)\}\)", item.replace("({ })","({ 0 })"))
         funql_tok_sent = []
-        for phrase in sentence:
+        for phrase in alignment:
             funql_tok = FunqlTok()
-            phrase = phrase.split(", ")
             funql_tok.funql = phrase[0]
-            funql_tok.s_index = phrase[1]
-            funql_tok.s_index = [int(i) for i in funql_tok.s_index.split(" ")]
+            funql_tok.s_index = map(int,phrase[1].strip().split(" "))
             funql_tok_sent.append(funql_tok)
-        
         funql_tokens.append(funql_tok_sent)
             
     print "A list of the string token indexes for the first funql representation", funql_tokens[0][0].funql, ":\n", funql_tokens[0][0].s_index, "\n"
@@ -145,6 +135,52 @@ def generate_rules(aligned_tokens):
     
     return printable
 
+
+class IntervalTree:
+    def __init__(self):
+        self.name = ""
+        self.interval = (0,0)
+        self.childNodes = []
+        self.alignment = []
+
+    def induceIRTG(self, sentence):
+        pass
+
+    def setAlignment(self,xs):
+        xs = sorted(xs)
+        self.alignment = xs
+        minInterval = xs[ 0]-1
+        maxInterval = xs[-1]
+        # TODO:
+        # Im using max(..., 0) to have at least index 0
+        # this is used for unaligned words so far, but will be changed
+        # later to have intervalls within surrounding semantic representations
+        if self.childNodes:
+            minChilds = min(self.childNodes, key=lambda t: t.interval[0]).interval[0]
+            maxChilds = max(self.childNodes, key=lambda t: t.interval[1]).interval[1]
+            self.interval = (max(min(minInterval, minChilds), 0), max(maxInterval, maxChilds))
+        else:
+            self.interval = (max(0, minInterval), maxInterval)
+        
+        
+
+    def __str__(self):
+        interval = "[{},{}]".format(self.interval[0],self.interval[1])
+        if self.childNodes:
+            return "{}{}({})".format(self.name,interval, ",".join(str(t) for t in self.childNodes))
+        else:
+            return "{}{}".format(self.name,interval)
+
+class TreeAlignment:
+    pass
+
+
+
+
+
+
+
+
 def main():
     grammar = []
       
@@ -161,27 +197,75 @@ def main():
     # get just the lines with actual alignments, not the summary line
     for i in range(len(raw_alignments)):
         if (i+2)%3==0:
-            string.append(raw_alignments[i])
+            string.append(raw_alignments[i].split())
         elif (i+1)%3==0:
             funql.append(raw_alignments[i])
         else:
             pass
-    
-    # just for testing
-    print "The first string in the file is:\n", string[0], "\n"
-    print "The first funql representation in the file is:\n", funql[0], "\n"
-    
-    # get aligned tokens from sentences
-    aligned_tokens = extract_alignments(string, funql)
-    
-    # get list of rules from function and add to grammar
-    for item in generate_rules(aligned_tokens):
-        grammar.append(item)  
 
-    # write grammar to file
-    grammar_irtg = open("../data/grammar.irtg", "w")
-    grammar_irtg.write(list_to_txt(grammar))
-    grammar_irtg.close()
+    for (s,f) in zip(string,funql):
+        print ">", s
+        print ">", f
+        alignment = re.findall(r"([^ ]+)\s*\(\{((\s*\d\s*)*)\}\)", f.replace("({ })","({ 0 })"))
+        funqls = []
+        for a in alignment[1:]:
+            funql = [a[0], 0, []]
+            if funql[0].count('X') > 0:
+                funql[1] = funql[0].count('X')
+                funql[0] = funql[0][:funql[0].find("(")]
+            funql[2] = tuple(int(idx) for idx in a[1].split())
+            funqls.append(funql)
+
+        # parse listed tree items from right to left (shift reduce)
+        treeBuffer = []
+        for node in reversed(funqls):
+            t = IntervalTree()
+            t.name = node[0]
+            if node[1] == 0:
+                pass
+            else:
+                for _ in range(node[1]):
+                    n = treeBuffer.pop()
+                    t.childNodes.append(n)
+            t.setAlignment(node[2])
+            treeBuffer.append(t)
+        
+        print treeBuffer[0]
+
+        
+                
+        print alignment
+        raw_input()
+        #break
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    # just for testing
+    #print "The first string in the file is:\n", string[0], "\n"
+    #print "The first funql representation in the file is:\n", funql[0], "\n"
+    
+    ## get aligned tokens from sentences
+    #aligned_tokens = extract_alignments(string, funql)
+    
+    ## get list of rules from function and add to grammar
+    #for item in generate_rules(aligned_tokens):
+        #grammar.append(item)
+
+    ## write grammar to file
+    #grammar_irtg = open("../data/grammar.irtg", "w")
+    #grammar_irtg.write(list_to_txt(grammar))
+    #grammar_irtg.close()
 
 if __name__ == "__main__":
     main()
