@@ -30,7 +30,7 @@ class Rule(object):
         return hash((self.s,self.t))
     
     def __str__(self):
-        return "{}\n[s] {}\n[t] {}".format(self.label, self.s, self.t)
+        return "{}\n[s] {}\n[t] {}\n".format(self.label, self.s, self.t)
 
     def __repr__(self):
         return "({}-[s]:{}-[t]:{})".format(self.label, self.s, self.t)
@@ -80,13 +80,6 @@ class IntervalTree:
 
 
 def main():
-    grammar = []
-      
-    # append header
-    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra"
-    grammar.append(header)
-    grammar.append("")
-  
     # read alignments and save to string and funql lists
     raw_alignments = open("../data/string2geo.A3.finalNBEST").read().split("\n")
     
@@ -106,8 +99,8 @@ def main():
 
     for (s,f) in zip(string,funql):
         s = dict(enumerate(s))
-        print ">", s
-        print ">", f
+        #print ">", s
+        #print ">", f
         alignment = re.findall(r"([^ ]+)\s*\(\{((\s*\d\s*)*)\}\)", f.replace("({ })","({ 0 })"))
         funqls = []
         for a in alignment[1:]:
@@ -133,61 +126,71 @@ def main():
             t.setAlignment(node[2])
             treeBuffer.append(t)
         tree = treeBuffer[0]
-        
-        #
-        # Rule generation
-        #
-        rules = set()
-        treeBuffer = [tree]
-        while treeBuffer:
-            r = Rule()
-            node = treeBuffer.pop()
-            treeBuffer.extend(node.childNodes)
+        try:
             #
-            # create rule label
+            # Rule generation
             #
-            if node.name == "answer":
-                r.createLabel("S!", len(node.childNodes))
-            else:
-                r.createLabel("X", len(node.childNodes))
-            #
-            # create string representation
-            #
-            interval = range(*node.interval)
-            for node in node.childNodes:
-                print node
-                print interval
-                start, end = node.interval
-                startPos, endPos = interval.index(start), interval.index(end-1)
-                interval = interval[:startPos] + [-1] + interval[endPos+1:]
-            stringRule  = s[interval[0]] if interval[0] >= 0 else "?1" 
-            varIdx      =   1  if s[0] >= 0 else   2 
-            for i in interval[1:]:
-                if i >= 0:
-                    stringRule = "*({},{})".format(stringRule, s[i])
+            rules = set()
+            treeBuffer = [tree]
+            while treeBuffer:
+                r = Rule()
+                node = treeBuffer.pop()
+                treeBuffer.extend(node.childNodes)
+                #
+                # create rule label
+                #
+                if node.name == "answer":
+                    r.createLabel("S!", len(node.childNodes))
                 else:
-                    stringRule = "*({},?{})".format(stringRule, varIdx)
-                    varIdx += 1
-            #print " ".join(s[i] for i in interval if i >= 0)
-            r.s = stringRule
-            #
-            # create meaning representation
-            #
-            r.createMeaning(node.name,len(node.childNodes))
+                    r.createLabel("X", len(node.childNodes))
+                #
+                # create string representation
+                #
+                interval = range(*node.interval)
+                for node in node.childNodes:
+                    #print node
+                    #print interval
+                    #print node.childNodes
+                    start, end = node.interval
+                    startPos, endPos = interval.index(start), interval.index(end-1)
+                    interval = interval[:startPos] + [-1] + interval[endPos+1:]
+                stringRule  = s[interval[0]] if interval[0] >= 0 else "?1" 
+                varIdx      =   1  if s[0] >= 0 else   2 
+                for i in interval[1:]:
+                    if i >= 0:
+                        stringRule = "*({},{})".format(stringRule, s[i])
+                    else:
+                        stringRule = "*({},?{})".format(stringRule, varIdx)
+                        varIdx += 1
+                #print " ".join(s[i] for i in interval if i >= 0)
+                r.s = stringRule
+                #
+                # create meaning representation
+                #
+                r.createMeaning(node.name,len(node.childNodes))
+                
+                rules.add(r)
             
-            rules.add(r)
+            ruleSet = ruleSet | rules
         
-        ruleSet = ruleSet | rules
+        except Exception:
+            pass
     
-    for rule in ruleSet:
-        print rule, "\n"
+    #for rule in ruleSet:
+    #    print rule, "\n"
+    print len(ruleSet), "rules extracted"
     
+
+
+    # append header
+    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
     
-    
-    ## write grammar to file
-    #grammar_irtg = open("../data/grammar.irtg", "w")
-    #grammar_irtg.write(list_to_txt(grammar))
-    #grammar_irtg.close()
+    # write grammar to file
+    grammar_irtg = open("../data/grammar.irtg", "w")
+    grammar_irtg.write(header)
+    for r in ruleSet:
+        grammar_irtg.write(str(r)+"\n")
+    grammar_irtg.close()
 
 if __name__ == "__main__":
     main()
