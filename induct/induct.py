@@ -15,6 +15,15 @@ class Rule(object):
         self.t = None
         self.i = Rule.count
         Rule.count += 1
+
+    def createLabel(self, start, argnum):
+        self.label = start + " -> s" + str(self.i) + ("({})".format(",".join(["X"]*argnum)) if argnum > 0 else "")
+
+    def createMeaning(self, name, argnum):
+        if argnum > 0:
+            self.t = name + "({})".format(",".join("?"+str(i+1) for i in range(argnum)))
+        else:
+            self.t = name
     
     # the __hash__ and __eq__ is used to idenfity duplicate rules later
     def __hash__(self):
@@ -22,110 +31,12 @@ class Rule(object):
     
     def __str__(self):
         return "{}\n[s] {}\n[t] {}".format(self.label, self.s, self.t)
+
+    def __repr__(self):
+        return "({}-[s]:{}-[t]:{})".format(self.label, self.s, self.t)
     
     def __eq__(self, other):
         return self.s == other.s and self.t == other.t
-
-# function to extract the alignments with list of string and funql sentences
-#def extract_alignments(string, funql):
-    #funql_tokens = []
-    
-    #for item in funql:
-        #alignment = re.findall(r"([\w_()'_+,]+)\s*\(\{((\s*\d+\s*)*)\}\)", item.replace("({ })","({ 0 })"))
-        #funql_tok_sent = []
-        #for phrase in alignment:
-            #funql_tok = FunqlTok()
-            #funql_tok.funql = phrase[0]
-            #funql_tok.s_index = map(int,phrase[1].strip().split(" "))
-            #funql_tok_sent.append(funql_tok)
-        #funql_tokens.append(funql_tok_sent)
-            
-    #print "A list of the string token indexes for the first funql representation", funql_tokens[0][0].funql, ":\n", funql_tokens[0][0].s_index, "\n"
-    
-    #string_tokens = []
-    
-    #for sentence in string:
-        #sentence = sentence[:len(sentence)-1]
-        #string_tokens.append(sentence.split(" "))
-    
-    ## compare string tokens to funql tokens to get alignments
-    #alignments = []
-    
-    #for i in range(len(string_tokens)):
-        #for j in range(len(funql_tokens[i])):
-            #alignment = []
-            #alignment.append(funql_tokens[i][j].funql)
-            #for k in range(len(string_tokens[i])):
-                #for l in range(len(funql_tokens[i][j].s_index)):
-                    #if k + 1 == funql_tokens[i][j].s_index[l]:
-                        #alignment.append(string_tokens[i][k])
-            
-            #alignments.append(alignment)
-    #print "A list of the first 5 alignments, where the 0 index is always the funql representation and indexes 1: are the string tokens:\n", alignments[0:6]
-    #return alignments
-
-#def generate_rules(aligned_tokens):
-    #rules = []
-    
-    #for i in range(len(aligned_tokens)):
-        #tok = aligned_tokens[i] # token is a list like ['NULL', 'me', 'the]
-        #if tok[0] == "NULL": # for string tokens not aligned to funql representations
-            #for j in range(len(tok[1:])):
-                #rule = Rule()
-                #rule.label = "X -> s" + str(i) + str(j+1) + "(X)"
-                #rule.s = "*(" + tok[j+1] + ", ?1)"
-                #rule.t = "?1"
-                #rules.append(rule)
-        #elif tok[0] == "answer(X)": # specifically for answer(X)
-            #rule = Rule()                
-            #rule.label = "S! -> s" + str(i) + "(X)"
-            #if len(tok) == 1:
-                #rule.s = "?1"
-            #elif len(tok) == 2:
-                #rule.s = "*(" + tok[1] + ", ?1)"
-            #else:
-                #rule.s = "?1"
-            #rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)")    
-            #rules.append(rule)
-        #elif "X)" not in tok[0]: # if the funql representation is a leaf node
-            #rule = Rule()
-            #rule.label = "X -> s" + str(i) + "(X)"
-            #if len(tok) == 2:
-                #rule.s = tok[1]
-            #else:
-                #rule.s = "?1"
-            #rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            #rules.append(rule)
-        #else:          
-            #rule = Rule()
-            #rule.label = "X -> s" + str(i) + "(X)"
-            #if len(tok) == 1:
-                #rule.s = "?1"
-            #elif len(tok) == 2:
-                #rule.s = "*(" + tok[1] + ", ?1)"
-            #else: # TODO what about funql representations mapped to multiple string tokens, also when they're not next to each other?
-                #rule.s = "?1"
-            #rule.t = tok[0].replace("(X)","(?1)").replace("(X,X)","(?1,?2)").replace("(X,X,X)","(?1,?2,?3)") 
-            #rules.append(rule)
-            
-    ## just for testing
-    #print "The rules for the first sentence are:\n"
-    #for i in range(0,7):        
-        #print rules[i].label
-        #print rules[i].s
-        #print rules[i].t
-        #print ""
-    
-    ## remove duplicate rules
-    #rules = list(set(rules))
-    #printable = []
-    #for i in range(len(rules)):
-        #printable.append(rules[i].label)
-        #printable.append("[s] " + rules[i].s)
-        #printable.append("[t] " + rules[i].t)
-        #printable.append("")
-    
-    #return printable
 
 
 class IntervalTree:
@@ -165,6 +76,8 @@ class IntervalTree:
         else:
             return "{}{}".format(self.name,interval)
 
+    __repr__ = __str__
+
 
 def main():
     grammar = []
@@ -175,13 +88,8 @@ def main():
     grammar.append("")
   
     # read alignments and save to string and funql lists
-    #raw_alignments = open("../data/string2geo.A3.finalNBEST").read().split("\n")
-    raw_alignments = """# Sentence pair (1) source length 4 target length 6 alignment score : 0.950072
-give me the cities in virginia 
-NULL ({ 2 3 }) answer(X) ({ 1 }) city(X) ({ 4 }) loc_2(X) ({ 5 }) stateid('virginia') ({ 6 }) 
-# Sentence pair (2) source length 5 target length 9 alignment score : 0.902057
-what are the high points of states surrounding mississippi 
-NULL ({ 2 3 }) answer(X) ({ 1 }) high_point_1(X) ({ 4 5 6 }) state(X) ({ 7 }) next_to_2(X) ({ }) stateid('mississippi') ({ 8 9 }) """.split("\n")
+    raw_alignments = open("../data/string2geo.A3.finalNBEST").read().split("\n")
+    
     string = []
     funql = []
     
@@ -225,39 +133,54 @@ NULL ({ 2 3 }) answer(X) ({ 1 }) high_point_1(X) ({ 4 5 6 }) state(X) ({ 7 }) ne
             t.setAlignment(node[2])
             treeBuffer.append(t)
         tree = treeBuffer[0]
-
-        #def generateRules(sentence,tree):
-            #if not tree.childNodes:
-                #print tree.interval
-                #words = [sentence[i] for i in range(*tree.interval)]
-                #print words
-                #for i in range(*tree.interval):
-                    #if i in sentence: del sentence[i]
-                #return (sentence, words)
-            #else:
-                #for node in tree.childNodes:
-                    #(words, derivation) = generateRules(sentence,node)
-                    #print ">", node
-                    
+        
+        #
+        # Rule generation
+        #
+        rules = set()
         treeBuffer = [tree]
         while treeBuffer:
             r = Rule()
             node = treeBuffer.pop()
             treeBuffer.extend(node.childNodes)
+            #
+            # create rule label
+            #
+            if node.name == "answer":
+                r.createLabel("S!", len(node.childNodes))
+            else:
+                r.createLabel("X", len(node.childNodes))
+            #
+            # create string representation
+            #
             interval = range(*node.interval)
             for node in node.childNodes:
+                print node
+                print interval
                 start, end = node.interval
                 startPos, endPos = interval.index(start), interval.index(end-1)
                 interval = interval[:startPos] + [-1] + interval[endPos+1:]
-            print " ".join(s[i] for i in interval if i >= 0)
+            stringRule  = s[interval[0]] if interval[0] >= 0 else "?1" 
+            varIdx      =   1  if s[0] >= 0 else   2 
+            for i in interval[1:]:
+                if i >= 0:
+                    stringRule = "*({},{})".format(stringRule, s[i])
+                else:
+                    stringRule = "*({},?{})".format(stringRule, varIdx)
+                    varIdx += 1
+            #print " ".join(s[i] for i in interval if i >= 0)
+            r.s = stringRule
+            #
+            # create meaning representation
+            #
+            r.createMeaning(node.name,len(node.childNodes))
             
-            
-            
-        print alignment
-        print tree
-        raw_input()
-        break
+            rules.add(r)
+        
+        ruleSet = ruleSet | rules
     
+    for rule in ruleSet:
+        print rule, "\n"
     
     
     
