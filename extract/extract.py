@@ -32,12 +32,18 @@ def main():
             item = item.string
             item = item.replace(" ?","")
             item = item.replace(" .","")
-            string.append(item.replace("\n",""))
+            string.append(item.replace("\n",""))  
     
     string_txt = open("../data/string.txt", "w")
     # changes casing to all lower case for word alignment
     string_txt.write(list_to_txt(string).lower())
     string_txt.close()
+    
+    string_irtg = open("../data/string.irtg", "w")
+    header = "#IRTG\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n\n"
+    string_txt = list_to_txt(string).lower()
+    string_irtg.write(header + string_txt)
+    string_irtg.close()
     
     # extract syntax
     syntax = []
@@ -52,17 +58,41 @@ def main():
     
     # extract variable-free gequery
     geo_funql = []
+    geo_funql_gold = []
     raw_geo_funql = soup("mrl")
     for item in raw_geo_funql:
         if item["lang"] == "geo-funql":
+            geo_funql_gold.append(item.string.replace("\n",""))
             parsed = parseFunql(item.string.replace("\n",""))
-            print parsed
-            print parsed.toMR()
+            #print parsed
+            #print parsed.toMR()
             geo_funql.append(parsed.toMR())
     
     geo_funql_txt = open("../data/geo-funql.txt", "w")
     geo_funql_txt.write(list_to_txt(geo_funql))
     geo_funql_txt.close()
+    
+    geo_funql_gold_txt = open("../data/geo-funql.gold", "w")
+    geo_funql_gold_txt.write(list_to_txt(geo_funql_gold))
+    geo_funql_gold_txt.close()    
+
+    ## extract parsed trees
+    try:
+        parsed = open("../data/string.parsed").read().split("\n")
+        string = []
+    
+        # get just the lines with actual parsed trees
+        for i in range(5,len(parsed)):
+            if (i+3)%4==0:
+                string.append(parsed[i])
+            else:
+                pass
+        
+        parsed_txt = open("../data/geo-funql.parsed", "w")
+        parsed_txt.write(list_to_txt(string))
+        parsed_txt.close()    
+    except:
+        pass
 
 
 if __name__ == "__main__":
