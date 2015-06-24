@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 
 """
-Reads in the geoquery corpus and writes three text files:
-1. Strings
-2. Syntax trees
-3. Variable free semantic representation (functional query language)
+Reads in the geoquery corpus and writes these:
+1. string.txt for bulk parsing in Alto
+2. syntax.txt (not used, but perhaps interesting at some point)
+3. geo-funql.txt
+4. geo-funql.gold gold standard for EVALB evaluation
+5. geo-funql.eval parsed version for EVALB evaluation
+6. string_funql.txt combined corpus for EM training
 
 These can then be used as parallel corpora
 """
@@ -24,7 +27,7 @@ def main():
 
     soup = BeautifulSoup(open("../data/corpus.xml"), "xml")
     
-    # extract strings
+    # 1. extract strings
     string = []
     raw_string = soup("nl")  
     for item in raw_string:
@@ -35,17 +38,13 @@ def main():
             string.append(item.replace("\n",""))  
     
     string_txt = open("../data/string.txt", "w")
+    header = "# IRTG unannotated corpus file, v1.0\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n\n"
     # changes casing to all lower case for word alignment
-    string_txt.write(list_to_txt(string).lower())
+    string = list_to_txt(string).lower()
+    string_txt.write(header + string)
     string_txt.close()
-    
-    string_irtg = open("../data/string.irtg", "w")
-    header = "#IRTG\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n\n"
-    string_txt = list_to_txt(string).lower()
-    string_irtg.write(header + string_txt)
-    string_irtg.close()
-    
-    # extract syntax
+        
+    # 2. extract syntax
     syntax = []
     raw_syntax = soup("syn")
     for item in raw_syntax:
@@ -56,7 +55,7 @@ def main():
     syntax_txt.write(list_to_txt(syntax))
     syntax_txt.close()
     
-    # extract variable-free gequery
+    # 3. extract variable-free gequery
     geo_funql = []
     geo_funql_gold = []
     raw_geo_funql = soup("mrl")
@@ -72,11 +71,12 @@ def main():
     geo_funql_txt.write(list_to_txt(geo_funql))
     geo_funql_txt.close()
     
+    # 4. gold standard file, version without ''
     geo_funql_gold_txt = open("../data/geo-funql.gold", "w")
-    geo_funql_gold_txt.write(list_to_txt(geo_funql_gold))
+    geo_funql_gold_txt.write(list_to_txt(geo_funql_gold).replace("'","_"))
     geo_funql_gold_txt.close()    
 
-    ## extract parsed trees
+    # 5. extract parsed trees, version for evaluation without ''
     try:
         parsed = open("../data/string.parsed").read().split("\n")
         string = []
@@ -88,12 +88,47 @@ def main():
             else:
                 pass
         
-        parsed_txt = open("../data/geo-funql.parsed", "w")
-        parsed_txt.write(list_to_txt(string))
+        parsed_txt = open("../data/geo-funql.eval", "w")
+        parsed_txt.write(list_to_txt(string).replace("'","_"))
         parsed_txt.close()    
     except:
         pass
 
+    # 6. combined corpus for EM training
+    alto = []
+    
+    # append header
+    header = "# IRTG unannotated corpus file, v1.0\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra"
+    
+    alto.append(header)
+    alto.append("")
+  
+    # extract strings
+    #soup = BeautifulSoup(open("../data/corpus.xml"), "xml")
+    string = []
+    raw_string = soup("nl")  
+    for item in raw_string:
+        if item["lang"] == "en":
+            item = item.string
+            item = item.replace(" ?","")
+            item = item.replace(" .","")
+            item = item.replace("50","\"50\"")
+            string.append(item.replace("\n",""))
+   
+    # variable-free geoquery
+    geo_funql = []
+    raw_geo_funql = soup("mrl")
+    for item in raw_geo_funql:
+        if item["lang"] == "geo-funql":
+            geo_funql.append(item.string.replace("\n","").replace("0","\"0\""))
+    
+    for i in range(len(string)):
+        alto.append(string[i].lower())
+        alto.append(geo_funql[i])
+            
+    alto_txt = open("../data/string_funql.txt", "w")
+    alto_txt.write(list_to_txt(alto))
+    alto_txt.close()
 
 if __name__ == "__main__":
     main()

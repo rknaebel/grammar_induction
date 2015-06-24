@@ -1,3 +1,7 @@
+# IRTG unannotated corpus file, v1.0
+#
+# interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+
 give me the cities in virginia
 what are the high points of states surrounding mississippi
 name the rivers in arkansas
