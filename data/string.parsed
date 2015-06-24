@@ -1,0 +1,351 @@
+# IRTG annotated corpus file, v1.0
+# 
+# interpretation t: class de.up.ling.irtg.algebra.TreeAlgebra
+# interpretation s: class de.up.ling.irtg.algebra.StringAlgebra
+
+answer(stateid(virginia))
+[give, me, the, cities, in, virginia]
+s0(s3)
+
+answer(next_to_2(stateid(mississippi)))
+[what, are, the, high, points, of, states, surrounding, mississippi]
+s8(s23(s24))
+
+answer(loc_2(stateid(arkansas)))
+[name, the, rivers, in, arkansas]
+s8(s51(s48))
+
+answer(stateid(colorado))
+[name, all, the, rivers, in, colorado]
+s69(s72)
+
+answer(stateid(texas))
+[can, you, tell, me, the, capital, of, texas]
+s8(s88)
+
+answer(stateid(oregon))
+[could, you, tell, me, what, is, the, highest, point, in, the, state, of, oregon]
+s8(s110)
+
+answer(lower_2(low_point_1(stateid(alabama))))
+[count, the, states, which, have, elevations, lower, than, what, alabama, has]
+s8(s139(s140(s141)))
+
+answer(countryid(usa))
+[give, me, all, the, states, of, usa]
+s0(s181)
+
+answer(stateid(texas))
+[give, me, the, cities, in, texas]
+s0(s197)
+
+answer(countryid(usa))
+[give, me, the, cities, in, usa]
+s0(s217)
+
+answer(stateid(virginia))
+[give, me, the, cities, in, virginia]
+s0(s3)
+
+answer(stateid(texas))
+[give, me, the, cities, which, are, in, texas]
+s0(s265)
+
+answer(stateid(california))
+[give, me, the, lakes, in, california]
+s0(s281)
+
+answer(state(all))
+[give, me, the, largest, state]
+s174(s10187)
+
+answer(countryid(usa))
+[give, me, the, longest, river, that, passes, through, the, us]
+s0(s318)
+
+answer(stateid(california))
+[give, me, the, number, of, rivers, in, california]
+s0(s348)
+
+answer(stateid(utah))
+[give, me, the, states, that, border, utah]
+s0(s361)
+
+answer(size(stateid(alaska)))
+[how, big, is, alaska]
+s8(s386(s376))
+
+answer(size(stateid(massachusetts)))
+[how, big, is, massachusetts]
+s8(s386(s390))
+
+answer(size(stateid('new mexico')))
+[how, big, is, new, mexico]
+s8(s386(s405))
+
+answer(size(stateid('north dakota')))
+[how, big, is, north, dakota]
+s8(s386(s420))
+
+answer(size(cityid(austin,tx)))
+[how, big, is, texas]
+s8(s386(s12484))
+
+answer(size(city(stateid('new york'))))
+[how, big, is, the, city, of, new, york]
+s374(s449(s450(s7806)))
+
+answer(loc_2(countryid(usa)))
+[how, high, are, the, highest, points, of, all, the, states]
+s8(s478(s2903))
+
+answer(placeid('guadalupe peak'))
+[how, high, is, guadalupe, peak]
+s507(s512)
+
+answer(elevation_1(placeid('mount mckinley')))
+[how, high, is, mount, mckinley]
+s8(s505(s515))
+
+answer(loc_2(countryid(usa)))
+[how, high, is, the, highest, point, in, america]
+s8(s580(s10809))
+
+answer(stateid(montana))
+[how, high, is, the, highest, point, in, montana]
+s507(s9036)
+
+answer(loc_2(state(all)))
+[how, high, is, the, highest, point, in, the, largest, state]
+s8(s544(s10187))
+
+answer(loc_2(stateid(alabama)))
+[how, high, is, the, highest, point, of, alabama]
+s8(s638(s141))
+
+answer(loc_2(riverid(delaware)))
+[how, high, is, the, highest, point, of, delaware]
+s8(s638(s838))
+
+answer(loc_2(stateid(florida)))
+[how, high, is, the, highest, point, of, florida]
+s8(s638(s687))
+
+answer(loc_2(stateid(louisiana)))
+[how, high, is, the, highest, point, of, louisiana]
+s8(s638(s717))
+
+answer(size(stateid(alaska)))
+[how, large, is, alaska]
+s8(s754(s376))
+
+answer(size(cityid(austin,tx)))
+[how, large, is, texas]
+s8(s754(s12484))
+
+answer(loc_2(stateid(alaska)))
+[how, large, is, the, largest, city, in, alaska]
+s8(s781(s376))
+
+answer(elevation_1(riverid('rio grande')))
+[how, long, is, rio, grande]
+s827(s508(s802))
+
+answer(len(river(stateid(colorado))))
+[how, long, is, the, colorado, river]
+s8(s832(s817(s68)))
+
+answer(len(river(riverid(delaware))))
+[how, long, is, the, delaware, river]
+s8(s832(s817(s838)))
+
+answer(stateid(california))
+[how, long, is, the, longest, river, in, california]
+s827(s10829)
+
+answer(loc_2(countryid(usa)))
+[how, long, is, the, longest, river, in, the, usa]
+s8(s883(s2928))
+
+answer(len(riverid(mississippi)))
+[how, long, is, the, mississippi]
+s8(s832(s917))
+
+answer(len(riverid(mississippi)))
+[how, long, is, the, mississippi, river]
+s8(s832(s945))
+
+answer(len(riverid(mississippi)))
+[how, long, is, the, mississippi, river, in, miles]
+s8(s832(s953))
+
+answer(len(river(stateid(missouri))))
+[how, long, is, the, missouri, river]
+s8(s832(s817(s2439)))
+
+answer(river(len(riverid('north platte'))))
+[how, long, is, the, north, platte, river]
+s8(s817(s832(s993)))
+
+answer(len(river(riverid(ohio))))
+[how, long, is, the, ohio, river]
+s8(s832(s817(s1013)))
+
+answer(len(river(riverid('rio grande'))))
+[how, long, is, the, rio, grande, river]
+s8(s832(s817(s802)))
+
+answer(countryid(usa))
+[how, long, is, the, shortest, river, in, the, usa]
+s827(s13502)
+
+answer(loc_2(stateid(pennsylvania)))
+[how, many, big, cities, are, in, pennsylvania]
+s8(s1095(s1096))
+
+answer(loc_2(stateid('rhode island')))
+[how, many, capitals, does, rhode, island, have]
+s8(s1132(s1133))
+
+answer(loc_2(stateid(louisiana)))
+[how, many, cities, are, in, louisiana]
+s8(s1142(s717))
+
+answer(loc_2(stateid(montana)))
+[how, many, cities, are, in, montana]
+s8(s1152(s581))
+
+answer(loc_2(countryid(usa)))
+[how, many, cities, are, there, in, the, united, states]
+s8(s1197(s1188))
+
+answer(loc_2(countryid(usa)))
+[how, many, cities, are, there, in, the, us]
+s8(s1197(s308))
+
+answer(loc_2(countryid(usa)))
+[how, many, cities, are, there, in, us]
+s8(s1152(s1238))
+
+answer(city(countryid(usa)))
+[how, many, cities, are, there, in, usa]
+s1733(s1186(s7368))
+
+answer(city(stateid(texas)))
+[how, many, cities, does, texas, have]
+s1733(s5(s1298))
+
+answer(city(countryid(usa)))
+[how, many, cities, does, the, usa, have]
+s1733(s5(s1328))
+
+answer(intersection(city(cityid(austin,_)),countryid(usa)))
+[how, many, cities, named, austin, are, there, in, the, usa]
+s8(s1357(s5(s1340),s2928))
+
+answer(largest(city(all)))
+[how, many, citizens, does, the, biggest, city, have, in, the, usa]
+s1733(s1371(s1372))
+
+answer(stateid(alabama))
+[how, many, citizens, in, alabama]
+s1733(s1391)
+
+answer(cityid(boulder,_))
+[how, many, citizens, in, boulder]
+s1733(s1406)
+
+answer(stateid(california))
+[how, many, citizens, live, in, california]
+s1733(s1421)
+
+answer(riverid(colorado))
+[how, many, colorado, rivers, are, there]
+s1733(s1437)
+
+answer(cityid(montgomery,_))
+[how, many, inhabitants, does, montgomery, have]
+s1733(s1456)
+
+answer(loc_2(stateid(arizona)))
+[how, many, major, cities, are, in, arizona]
+s8(s1479(s1474))
+
+answer(loc_2(stateid(florida)))
+[how, many, major, cities, are, in, florida]
+s8(s1479(s687))
+
+answer(next_to_2(stateid(nebraska)))
+[how, many, major, cities, are, in, states, bordering, nebraska]
+s8(s1551(s1552))
+
+answer(next_to_2(stateid(utah)))
+[how, many, major, cities, are, in, states, bordering, utah]
+s8(s1551(s1592))
+
+answer(loc_2(cityid(austin,tx)))
+[how, many, major, cities, are, in, texas]
+s8(s1479(s12484))
+
+answer(loc_2(city(all)))
+[how, many, major, cities, are, there]
+s8(s1491(s1653))
+
+answer(loc_2(stateid(oregon)))
+[how, many, major, cities, are, there, in, oregon]
+s8(s1673(s1662))
+
+answer(traverse_2(riverid(ohio)))
+[how, many, major, rivers, cross, ohio]
+s8(s1709(s1013))
+
+answer(population_1(state(stateid(nevada))))
+[how, many, people, are, in, the, state, of, nevada]
+s1733(s1734(s1727(s1728)))
+
+answer(population_1(stateid(iowa)))
+[how, many, people, are, there, in, iowa]
+s374(s1741(s1742))
+
+answer(population_1(cityid('new york',_)))
+[how, many, people, are, there, in, new, york]
+s374(s1741(s455))
+
+answer(cityid(boulder,_))
+[how, many, people, in, boulder]
+s1733(s1778)
+
+answer(population_1(cityid(austin,_)))
+[how, many, people, live, in, austin]
+s374(s1783(s1784))
+
+answer(population_1(cityid(austin,tx)))
+[how, many, people, live, in, austin, texas]
+s374(s1783(s1799))
+
+answer(population_1(stateid(california)))
+[how, many, people, live, in, california]
+s374(s1783(s273))
+
+answer(cityid(chicago,_))
+[how, many, people, live, in, chicago]
+s1733(s1838)
+
+answer(cityid(detroit,_))
+[how, many, people, live, in, detroit]
+s1733(s1853)
+
+answer(population_1(stateid(hawaii)))
+[how, many, people, live, in, hawaii]
+s374(s1783(s1859))
+
+answer(population_1(cityid(houston,_)))
+[how, many, people, live, in, houston]
+s374(s1783(s1877))
+
+answer(population_1(cityid(kalamazoo,_)))
+[how, many, people, live, in, kalamazoo]
+s374(s1783(s1892))
+
+answer(population_1(stateid(kansas)))
+[how, man
