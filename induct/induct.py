@@ -187,11 +187,11 @@ def main():
     header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
     
     # write grammar to file
-    grammar_irtg = open("../data/grammar.irtg", "w")
-    grammar_irtg.write(header)
-    for r in ruleSet:
-        grammar_irtg.write(str(r)+"\n")
-    grammar_irtg.close()
+    #grammar_irtg = open("../data/grammar.irtg", "w")
+    #grammar_irtg.write(header)
+    #for r in ruleSet:
+    #    grammar_irtg.write(str(r)+"\n")
+    #grammar_irtg.close()
 
 if __name__ == "__main__":
     main()
