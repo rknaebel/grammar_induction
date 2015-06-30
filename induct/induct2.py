@@ -73,8 +73,8 @@ class Interval:
         
         startpos, endpos = erg.interval[pos].index(start), erg.interval[pos].index(end)
         # what if startpos == 0 or endpos == len(erg.interval) ???
-        before = erg.interval[:pos] + [erg.interval[pos][:startpos]] if erg.interval[pos][:startpos] else []
-        after = erg.interval[pos+1:] + [erg.interval[pos][endpos+1:]] if erg.interval[pos][endpos+1:] else []
+        before = erg.interval[:pos]   + ([erg.interval[pos][:startpos]] if erg.interval[pos][:startpos] else [])
+        after  = erg.interval[pos+1:] + ([erg.interval[pos][endpos+1:]] if erg.interval[pos][endpos+1:] else [])
         
         erg.interval = before + [[]] + after
 
@@ -159,6 +159,12 @@ def getStringRule(interval, string):
             varIdx += 1
     return stringRule.replace("\'s",'\"\'s\"').replace("50","\"50\"")
 
+def getMeaningRule(name, argnum):
+    if argnum > 0:
+        return name.replace("+"," ").replace("0","\"0\"") + "({})".format(",".join("?"+str(i+1) for i in range(argnum)))
+    else:
+        return name.replace("+"," ").replace("0","\"0\"")
+
 def mergeTreeNodes(n1, n2):
     treeNode = IntervalTree()
     
@@ -169,8 +175,8 @@ def induceRule(tree, s):
     """
     rules = set()
     treeBuffer = [tree]
-    try:
-        while treeBuffer:
+    while treeBuffer:
+        try:
             r = Rule()
             node = treeBuffer.pop()
             treeBuffer.extend(node.childNodes)
@@ -195,27 +201,28 @@ def induceRule(tree, s):
             #
             # create meaning representation
             #
-            r.createMeaning(node.name,len(node.childNodes))
+            r.t = getMeaningRule(node.name,len(node.childNodes))
             #print "n:", node
             #print "n.s:", r.s
             #print "n.t:", r.t
             #print r.t
+            
             if len(node.childNodes) != interval.flatten().count(-1):
-                print "childs:", node.childNodes
-                print "interval", interval
+                #print "childs:", node.childNodes
+                #print "interval", interval
                 raise Exception("Invalid number of arguments")
+            if r.s in ("?1", "*(?1,?2)"):
+                raise Exception("deleting homomorphism...")
             
             rules.add(r)
-    except Exception as e:
-        print traceback.format_exc()
-        #raw_input()
-        return set()
+        except Exception as e:
+            #print traceback.format_exc()
+            #raw_input()
+            pass
+
     return rules
 
-def main():
-    # read alignments and save to string and funql lists
-    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
-    
+def separateInput(raw_alignments):
     string = []
     funql = []
     
@@ -227,13 +234,22 @@ def main():
             funql.append(raw_alignments[i])
         else:
             pass
+    
+    return string, funql
 
+
+def main():
+    # read alignments and save to string and funql lists
+    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
+    
+    string, funql = separateInput(raw_alignments)
+    
     ruleSet = set()
 
     for (s,f) in zip(string,funql):
         funqls  = extractMeanings(f)
         tree    = shiftReduceParse(funqls)
-        #print ">>", tree
+        print ">>", tree
         #print ">>", f
         #print ">>", funqls
         #raw_input()
