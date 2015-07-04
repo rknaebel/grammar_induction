@@ -97,6 +97,7 @@ class Interval:
 def shiftReduceParse(linearTree):
     """ 
     parse listed tree items from right to left (shift reduce)
+    returns a tree or None, if some nodes are not aligned
     """
     treeBuffer = []
     for node in reversed(linearTree):
@@ -114,6 +115,8 @@ def shiftReduceParse(linearTree):
         
         # unaligned words 
         if node[2] == (0,):
+            return None
+            
             if t.childNodes:
                 minInterval = min(child.interval.start for child in t.childNodes)
                 maxInterval = max(child.interval.end   for child in t.childNodes)
@@ -210,9 +213,11 @@ def induceRule(tree, s):
             if len(node.childNodes) != interval.flatten().count(-1):
                 #print "childs:", node.childNodes
                 #print "interval", interval
-                raise Exception("Invalid number of arguments")
+                print "Invalid number of arguments"
+                continue
             if r.s in ("?1", "*(?1,?2)"):
-                raise Exception("deleting homomorphism...")
+                print "deleting homomorphism..."
+                continue
             
             rules.add(r)
         except Exception as e:
@@ -249,6 +254,7 @@ def main():
     for (s,f) in zip(string,funql):
         funqls  = extractMeanings(f)
         tree    = shiftReduceParse(funqls)
+        if not tree: continue
         print ">>", tree
         #print ">>", f
         #print ">>", funqls
