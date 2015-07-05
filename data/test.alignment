@@ -1,0 +1,3 @@
+# Sentence pair (1) source length 4 target length 6 alignment score : 0.950072
+a b c d e f g 
+NULL ({ 2 3 5 }) a(X) ({ 1 }) b(X,X) ({ 4 }) c ({ 6 }) d ({ 7 }) 

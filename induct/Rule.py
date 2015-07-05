@@ -15,15 +15,9 @@ class Rule(object):
         self.t = None
         self.i = Rule.count
         Rule.count += 1
-
+    
     def createLabel(self, start, argnum):
         self.label = start + " -> s" + str(self.i) + ("({})".format(",".join(["X"]*argnum)) if argnum > 0 else "")
-
-    def createMeaning(self, name, argnum):
-        if argnum > 0:
-            self.t = name.replace("+"," ").replace("0","\"0\"") + "({})".format(",".join("?"+str(i+1) for i in range(argnum)))
-        else:
-            self.t = name.replace("+"," ").replace("0","\"0\"")
     
     # the __hash__ and __eq__ is used to idenfity duplicate rules later
     def __hash__(self):

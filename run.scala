@@ -12,4 +12,4 @@ new File("charts.zip").delete()
 val writer = new PrintWriter(new File("data/weighten_alto.irtg"))
 writer.write(irtg.toString)
 writer.close
-    
+
