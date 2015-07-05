@@ -9,6 +9,9 @@ import re
 
 from Rule import Rule
 
+DELETES = 0
+INVALIDS = 0
+
 
 class IntervalTree:
     def __init__(self):
@@ -170,12 +173,22 @@ def getMeaningRule(name, argnum):
 
 def mergeTreeNodes(n1, n2):
     treeNode = IntervalTree()
-    
+
+def splitTree1(node):
+    interval = node.interval
+    for child in node.childNodes:
+        interval = interval.without(child.interval)
+    return interval
+
+def splitTree2(cNode, pNode):
+    pass
 
 def induceRule(tree, s):
     """
     Rule Generation
     """
+    global INVALIDS, DELETES
+    
     rules = set()
     treeBuffer = [tree]
     while treeBuffer:
@@ -193,36 +206,27 @@ def induceRule(tree, s):
             #
             # create string representation
             #
-            interval = node.interval
-            for child in node.childNodes:
-                #print "node:", node
-                #print "interval", interval
-                #print "childs:", node.childNodes
-                #print "child.interval:", child.interval
-                interval = interval.without(child.interval)
+            interval = splitTree1(node)
             r.s = getStringRule(interval, s)
             #
             # create meaning representation
             #
             r.t = getMeaningRule(node.name,len(node.childNodes))
-            #print "n:", node
-            #print "n.s:", r.s
-            #print "n.t:", r.t
-            #print r.t
             
             if len(node.childNodes) != interval.flatten().count(-1):
-                #print "childs:", node.childNodes
-                #print "interval", interval
-                print "Invalid number of arguments"
+                #print "Invalid number of arguments"
+                INVALIDS += 1
                 continue
             if r.s in ("?1", "*(?1,?2)"):
-                print "deleting homomorphism..."
+                #print "deleting homomorphism..."
+                DELETES += 1
                 continue
             
             rules.add(r)
+
         except Exception as e:
-            #print traceback.format_exc()
-            #raw_input()
+            print traceback.format_exc()
+            raw_input()
             pass
 
     return rules
@@ -255,7 +259,7 @@ def main():
         funqls  = extractMeanings(f)
         tree    = shiftReduceParse(funqls)
         if not tree: continue
-        print ">>", tree
+        #print ">>", tree
         #print ">>", f
         #print ">>", funqls
         #raw_input()
@@ -265,6 +269,8 @@ def main():
     #for rule in ruleSet:
     #    print rule, "\n"
     print len(ruleSet), "rules extracted"
+    print DELETES, "deleting homorphisms"
+    print INVALIDS, "invalid argument exceptions"
     
     # append header
     header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
