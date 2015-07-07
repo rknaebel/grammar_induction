@@ -13,6 +13,7 @@ from IntervalTree import Interval
 
 DELETES = 0
 INVALIDS = 0
+EXCEPTIONS = 0
 
 def shiftReduceParse(linearTree):
     """ 
@@ -52,6 +53,7 @@ def shiftReduceParse(linearTree):
                 minInterval, maxInterval = min(minInterval,childInterval.start), max(maxInterval,childInterval.end)
             
             t.interval = Interval(minInterval, maxInterval)
+            t.alignment = node[2]
             
         treeBuffer.append(t)
     return treeBuffer[0]
@@ -100,7 +102,7 @@ def splitTree1(node):
 def splitTree2(cNode, pNode):
     pass
 
-def induceRule(tree, s):
+def induceRule1(tree, s):
     """
     Rule Generation
     """
@@ -148,6 +150,77 @@ def induceRule(tree, s):
 
     return rules
 
+def induceRule2(tree, s):
+    """
+    Rule Generation
+    """
+    global INVALIDS, DELETES, EXCEPTIONS
+    
+    rules = set()
+    treeBuffer = [(tree,tree.interval)]
+
+    try:
+        while treeBuffer:
+            r = Rule()
+            node, nodeInterval = treeBuffer.pop()
+            if len(node.alignment) == 1:
+                alignedWord = node.alignment[0]
+                tmpInterval = Interval(nodeInterval.first(), alignedWord)
+            else:
+                minWord, maxWord = min(node.alignment), max(node.alignment)
+                tmpInterval = Interval(minWord-1, maxWord)
+            
+            childsInterval = nodeInterval.without(tmpInterval)
+            interval = tmpInterval
+            
+            if node.childNodes:
+                splitIdx = node.childNodes[0].interval.last()
+                tmpInterval = Interval(childsInterval.first(),splitIdx+1)
+                
+                treeBuffer.append((node.childNodes[0],tmpInterval))
+                for child in node.childNodes[1:]:
+                    oldSplit = splitIdx
+                    splitIdx = child.interval.last()
+                    tmpInterval = Interval(oldSplit+1,splitIdx+1)
+                    treeBuffer.append((child,tmpInterval))
+            
+            for _ in range(len(node.childNodes)): interval.addPlaceholder()
+            
+            #
+            # create rule label
+            #
+            if node.name == "answer":
+                r.createLabel("S!", len(node.childNodes))
+            else:
+                r.createLabel("X", len(node.childNodes))
+            #
+            # create string representation
+            #
+            r.s = getStringRule(interval, s)
+            #
+            # create meaning representation
+            #
+            r.t = getMeaningRule(node.name,len(node.childNodes))
+            
+            if len(node.childNodes) != interval.flatten().count(-1):
+                #print "Invalid number of arguments"
+                INVALIDS += 1
+                continue
+            if r.s in ("?1", "*(?1,?2)"):
+                #print "deleting homomorphism..."
+                DELETES += 1
+                continue
+            
+            rules.add(r)
+
+    except Exception as e:
+        #print traceback.format_exc()
+        #raw_input()
+        EXCEPTIONS += 1
+        pass
+
+    return rules
+
 def separateInput(raw_alignments):
     string = []
     funql = []
@@ -163,11 +236,7 @@ def separateInput(raw_alignments):
     
     return string, funql
 
-
-def main():
-    # read alignments and save to string and funql lists
-    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
-    
+def ruleInduction(raw_alignments, induceMethod=induceRule1):
     string, funql = separateInput(raw_alignments)
     
     ruleSet = set()
@@ -176,27 +245,29 @@ def main():
         funqls  = extractMeanings(f)
         tree    = shiftReduceParse(funqls)
         if not tree: continue
-        #print ">>", tree
-        #print ">>", f
-        #print ">>", funqls
-        #raw_input()
-        rules   = induceRule(tree, s)
+        rules   = induceMethod(tree, s)
         ruleSet = ruleSet | rules
-    
-    #for rule in ruleSet:
-    #    print rule, "\n"
-    print len(ruleSet), "rules extracted"
-    print DELETES, "deleting homorphisms"
-    print INVALIDS, "invalid argument exceptions"
-    
-    # append header
+
+    return ruleSet
+
+def storeRules(filename, ruleSet):
     header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
     # write grammar to file
-    grammar_irtg = open("../data/grammar.irtg", "w")
+    grammar_irtg = open(filename, "w")
     grammar_irtg.write(header)
     for r in ruleSet:
         grammar_irtg.write(str(r)+"\n")
     grammar_irtg.close()
+
+def main():
+    # read alignments and save to string and funql lists
+    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
+    
+    ruleSet1 = ruleInduction(raw_alignments, induceRule1)
+    storeRules("../data/grammar1.irtg", ruleSet1)
+    
+    ruleSet2 = ruleInduction(raw_alignments, induceRule2)
+    storeRules("../data/grammar2.irtg", ruleSet2)
 
 if __name__ == "__main__":
     main()

@@ -44,9 +44,15 @@ class Interval:
         for interval in self.interval:
             for element in interval:
                 yield element
+
+    def subset(self, start, end):
+        pass
+
+    def addPlaceholder(self):
+        self.interval.append([])
     
     def first(self):
-        return self.interval[0][0]
+        return filter(lambda x: x>= 0, self.flatten())[0]
     
     def last(self):
         return self.interval[-1][-1]
