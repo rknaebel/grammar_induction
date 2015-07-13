@@ -140,8 +140,8 @@ def induceRule1(tree, s):
                 continue
             if r.s in ("?1", "*(?1,?2)"):
                 #print "deleting homomorphism..."
-                print r
-                raw_input()
+                #print r
+                #raw_input()
                 DELETES += 1
                 continue
             
