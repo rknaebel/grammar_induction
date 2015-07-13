@@ -116,8 +116,10 @@ def induceRule1(tree, s):
         try:
             r = Rule()
             node, label = treeBuffer.pop()
+            
             arguments = [LabelDict[child.name] for child in node.childNodes]
-
+            arguments = ['X'] * len(node.childNodes)
+            
             for idx,child in enumerate(node.childNodes):
                 treeBuffer.append((child,arguments[idx]))
             #
@@ -171,8 +173,8 @@ def induceRule2(tree, s):
         while treeBuffer:
             r = Rule()
             node, nodeInterval, label = treeBuffer.pop()
-            #arguments = ['X'] * len(node.childNodes)
-            arguments = [LabelDict[child.name] for child in node.childNodes]
+            arguments = ['X'] * len(node.childNodes)
+            #arguments = [LabelDict[child.name] for child in node.childNodes]
 
             if len(node.alignment) == 1:
                 alignedWord = node.alignment[0]
@@ -279,12 +281,12 @@ def main():
     raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
     
     ruleSet1 = ruleInduction(raw_alignments, induceRule1)
-    #storeRules("../data/grammar1.irtg", ruleSet1)
+    storeRules("../data/grammar1.irtg", ruleSet1)
     
-    #ruleSet2 = ruleInduction(raw_alignments, induceRule2)
-    #storeRules("../data/grammar2.irtg", ruleSet2)
+    ruleSet2 = ruleInduction(raw_alignments, induceRule2)
+    storeRules("../data/grammar2.irtg", ruleSet2)
 
-    #storeRules("../data/grammar3.irtg", ruleSet1 | ruleSet2)
+    storeRules("../data/grammar3.irtg", ruleSet1 | ruleSet2)
     
     print "number of exceptions:", EXCEPTIONS
     print "number of invalids:", INVALIDS

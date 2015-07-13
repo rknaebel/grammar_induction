@@ -1,0 +1,4408 @@
+# IRTG annotated corpus file, v1.0
+# 
+# Parsed from null
+# at Tue Jul 14 00:43:24 CEST 2015
+# 
+# interpretation t: class de.up.ling.irtg.algebra.TreeAlgebra
+# interpretation s: class de.up.ling.irtg.algebra.StringAlgebra
+
+# parse_time=5ms
+answer(city(loc_2(stateid(virginia))))
+give me the cities in virginia
+s13517(s13518(s13519(s13524)))
+
+# parse_time=2ms
+answer(high_point_1(state(next_to_2(stateid(mississippi)))))
+what are the high points of states surrounding mississippi
+s16609(s13533(s14541(s13535(s13536))))
+
+# parse_time=2ms
+answer(river(loc_2(stateid(arkansas))))
+name the rivers in arkansas
+s13541(s13542(s13519(s13540)))
+
+# parse_time=2ms
+answer(river(loc_2(stateid(colorado))))
+name all the rivers in colorado
+s13537(s13546(s13519(s13548)))
+
+# could not parse: Instance{inputObjects={s=[can, you, tell, me, the, capital, of, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(highest(place(loc_2(state(stateid(oregon))))))
+could you tell me what is the highest point in the state of oregon
+s13560(s13561(s13562(s13519(s13564(s21595)))))
+
+# could not parse: Instance{inputObjects={s=[count, the, states, which, have, elevations, lower, than, what, alabama, has]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_2(countryid(usa))))
+give me all the states of usa
+s13517(s13585(s13586(s13587)))
+
+# parse_time=2ms
+answer(city(loc_2(stateid(texas))))
+give me the cities in texas
+s13517(s13518(s13519(s13603)))
+
+# parse_time=2ms
+answer(city(loc_2(countryid(usa))))
+give me the cities in usa
+s13517(s13518(s13519(s13587)))
+
+# parse_time=1ms
+answer(city(loc_2(stateid(virginia))))
+give me the cities in virginia
+s13517(s13518(s13519(s13524)))
+
+# parse_time=2ms
+answer(city(loc_2(stateid(texas))))
+give me the cities which are in texas
+s13517(s13518(s13648(s13603)))
+
+# parse_time=2ms
+answer(loc_2(stateid(california)))
+give me the lakes in california
+s13596(s13680(s13669))
+
+# parse_time=2ms
+answer(largest(state(all)))
+give me the largest state
+s13596(s13692(s13684))
+
+# parse_time=3ms
+answer(longest(river(traverse_2(countryid(usa)))))
+give me the longest river that passes through the us
+s13596(s14092(s13696(s13697(s13698))))
+
+# parse_time=2ms
+answer(count(loc_2(river(loc_2(stateid(california))))))
+give me the number of rivers in california
+s13517(s13720(s13586(s13542(s13519(s13669)))))
+
+# parse_time=2ms
+answer(state(next_to_2(stateid(utah))))
+give me the states that border utah
+s13596(s15446(s13741(s13742)))
+
+# parse_time=0ms
+answer(size(stateid(alaska)))
+how big is alaska
+s13758(s13765(s13766))
+
+# parse_time=0ms
+answer(size(stateid(massachusetts)))
+how big is massachusetts
+s13758(s13765(s13778))
+
+# parse_time=0ms
+answer(size(stateid('new mexico')))
+how big is new mexico
+s13758(s13765(s13781))
+
+# parse_time=0ms
+answer(size(stateid('north dakota')))
+how big is north dakota
+s13758(s13765(s13793))
+
+# parse_time=0ms
+answer(size(stateid(texas)))
+how big is texas
+s13758(s13765(s13603))
+
+# parse_time=3ms
+answer(size(city(cityid('new york',_))))
+how big is the city of new york
+s13758(s13765(s23611(s13818)))
+
+# parse_time=3ms
+answer(elevation_1(highest(place(loc_2(state(all))))))
+how high are the highest points of all the states
+s13758(s13848(s13849(s13838(s13586(s13840)))))
+
+# parse_time=0ms
+answer(elevation_1(placeid('guadalupe peak')))
+how high is guadalupe peak
+s13758(s13857(s13855))
+
+# parse_time=0ms
+answer(elevation_1(placeid('mount mckinley')))
+how high is mount mckinley
+s13758(s13857(s13867))
+
+# parse_time=3ms
+answer(elevation_1(highest(place(loc_2(countryid(usa))))))
+how high is the highest point in america
+s13758(s13857(s13849(s13562(s13519(s13882)))))
+
+# parse_time=3ms
+answer(elevation_1(highest(place(loc_2(stateid(montana))))))
+how high is the highest point in montana
+s13758(s13857(s13849(s13562(s13519(s13900)))))
+
+# parse_time=3ms
+answer(elevation_1(highest(place(loc_2(largest(state(all)))))))
+how high is the highest point in the largest state
+s13758(s13857(s13849(s13562(s13519(s13692(s13684))))))
+
+# parse_time=3ms
+answer(elevation_1(highest(place(loc_2(stateid(alabama))))))
+how high is the highest point of alabama
+s13758(s13857(s13849(s13562(s13586(s13939)))))
+
+# parse_time=2ms
+answer(elevation_1(highest(place(loc_2(stateid(delaware))))))
+how high is the highest point of delaware
+s13758(s13857(s13849(s13562(s13586(s13957)))))
+
+# parse_time=2ms
+answer(elevation_1(highest(place(stateid(florida)))))
+how high is the highest point of florida
+s13758(s13857(s13849(s13562(s17707))))
+
+# parse_time=2ms
+answer(elevation_1(highest(place(loc_2(stateid(louisiana))))))
+how high is the highest point of louisiana
+s13758(s13857(s13849(s13562(s13586(s13993)))))
+
+# parse_time=0ms
+answer(size(stateid(alaska)))
+how large is alaska
+s13758(s14013(s13766))
+
+# parse_time=0ms
+answer(size(stateid(texas)))
+how large is texas
+s13758(s14013(s13603))
+
+# parse_time=3ms
+answer(size(largest(city(loc_2(stateid(alaska))))))
+how large is the largest city in alaska
+s13758(s14013(s13692(s14030(s13519(s13766)))))
+
+# parse_time=1ms
+answer(len(riverid('rio grande')))
+how long is rio grande
+s13758(s14049(s14047))
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, colorado, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, delaware, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(len(longest(river(loc_2(stateid(california))))))
+how long is the longest river in california
+s13758(s14049(s14092(s13696(s13519(s13669)))))
+
+# parse_time=3ms
+answer(len(longest(river(loc_2(countryid(usa))))))
+how long is the longest river in the usa
+s13758(s14049(s14092(s13696(s13519(s14107)))))
+
+# parse_time=1ms
+answer(len(stateid(mississippi)))
+how long is the mississippi
+s13758(s14067(s13536))
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(len(riverid(mississippi)))
+how long is the mississippi river in miles
+s13758(s14067(s14153))
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, missouri, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, north, platte, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, ohio, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, rio, grande, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(len(shortest(river(loc_2(countryid(usa))))))
+how long is the shortest river in the usa
+s13758(s14049(s14231(s13696(s13519(s14107)))))
+
+# parse_time=1ms
+answer(count(size(city(loc_2(stateid(pennsylvania))))))
+how many big cities are in pennsylvania
+s13758(s14248(s13759(s14250(s13656(s14252)))))
+
+# parse_time=0ms
+answer(count(capital(loc_2(stateid('rhode island')))))
+how many capitals does rhode island have
+s13758(s14248(s14260(s14261(s14262))))
+
+# parse_time=1ms
+answer(count(city(loc_2(stateid(louisiana)))))
+how many cities are in louisiana
+s13758(s14248(s14250(s13656(s13993))))
+
+# parse_time=1ms
+answer(count(city(loc_2(stateid(montana)))))
+how many cities are in montana
+s13758(s14248(s14250(s13656(s13900))))
+
+# parse_time=3ms
+answer(count(city(countryid(usa))))
+how many cities are there in the united states
+s13758(s14248(s14285(s14307)))
+
+# parse_time=2ms
+answer(count(city(loc_2(countryid(usa)))))
+how many cities are there in the us
+s13758(s14248(s14250(s14301(s13698))))
+
+# parse_time=1ms
+answer(count(city(countryid(usa))))
+how many cities are there in us
+s13758(s14248(s14285(s14341)))
+
+# parse_time=1ms
+answer(count(city(countryid(usa))))
+how many cities are there in usa
+s13758(s14248(s14285(s14358)))
+
+# parse_time=0ms
+answer(count(city(stateid(texas))))
+how many cities does texas have
+s13758(s14248(s14250(s16051)))
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, does, the, usa, have]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(count(intersection(cityid(boston,_),countryid(usa))))
+how many cities named austin are there in the usa
+s13758(s14248(s14396(s21244,s14107)))
+
+# parse_time=2ms
+answer(population_1(countryid(usa)))
+how many citizens does the biggest city have in the usa
+s13758(s14426(s14107))
+
+# parse_time=1ms
+answer(count(stateid(alabama)))
+how many citizens in alabama
+s13758(s14248(s14435))
+
+# parse_time=0ms
+answer(count(cityid(boulder,_)))
+how many citizens in boulder
+s13758(s14248(s14450))
+
+# parse_time=0ms
+answer(count(stateid(california)))
+how many citizens live in california
+s13758(s14248(s14465))
+
+# parse_time=0ms
+answer(count(river(riverid(colorado))))
+how many colorado rivers are there
+s13758(s14248(s14480(s14488)))
+
+# parse_time=0ms
+answer(count(cityid(montgomery,_)))
+how many inhabitants does montgomery have
+s13758(s14248(s14499))
+
+# parse_time=1ms
+answer(count(major(city(loc_2(stateid(arizona))))))
+how many major cities are in arizona
+s13758(s14248(s14514(s14250(s13656(s14517)))))
+
+# parse_time=1ms
+answer(count(major(city(loc_2(stateid(florida))))))
+how many major cities are in florida
+s13758(s14248(s14514(s14250(s13656(s13975)))))
+
+# parse_time=1ms
+answer(count(major(city(loc_2(state(next_to_2(stateid(nebraska))))))))
+how many major cities are in states bordering nebraska
+s13758(s14248(s14514(s14250(s13656(s14541(s14542(s14543)))))))
+
+# parse_time=1ms
+answer(count(major(city(loc_2(state(next_to_2(stateid(utah))))))))
+how many major cities are in states bordering utah
+s13758(s14248(s14514(s14250(s13656(s14541(s14542(s13742)))))))
+
+# parse_time=1ms
+answer(count(major(city(loc_2(stateid(texas))))))
+how many major cities are in texas
+s13758(s14248(s14514(s14250(s13656(s13603)))))
+
+# parse_time=0ms
+answer(count(major(city(all))))
+how many major cities are there
+s13758(s14248(s14514(s14587)))
+
+# parse_time=1ms
+answer(count(major(city(stateid(oregon)))))
+how many major cities are there in oregon
+s13758(s14248(s14514(s14285(s14607))))
+
+# parse_time=0ms
+answer(count(major(river(traverse_2(stateid(ohio))))))
+how many major rivers cross ohio
+s13758(s14248(s14514(s13542(s14623(s14624)))))
+
+# parse_time=3ms
+answer(population_1(state(stateid(nevada))))
+how many people are in the state of nevada
+s13758(s14638(s13564(s14632)))
+
+# parse_time=1ms
+answer(population_1(stateid(iowa)))
+how many people are there in iowa
+s13758(s14652(s15256))
+
+# parse_time=1ms
+answer(population_1(stateid('new york')))
+how many people are there in new york
+s13758(s14652(s14665))
+
+# parse_time=1ms
+answer(count(cityid(boulder,_)))
+how many people in boulder
+s13758(s14248(s14686))
+
+# parse_time=1ms
+answer(population_1(cityid(austin,_)))
+how many people live in austin
+s13758(s14943(s19324))
+
+# parse_time=0ms
+answer(population_1(cityid(austin,tx)))
+how many people live in austin texas
+s13758(s14943(s14707))
+
+# parse_time=0ms
+answer(population_1(stateid(california)))
+how many people live in california
+s13758(s14943(s13669))
+
+# parse_time=0ms
+answer(count(cityid(chicago,_)))
+how many people live in chicago
+s13758(s14248(s14746))
+
+# parse_time=0ms
+answer(count(cityid(detroit,_)))
+how many people live in detroit
+s13758(s14248(s14761))
+
+# parse_time=0ms
+answer(population_1(stateid(hawaii)))
+how many people live in hawaii
+s13758(s14943(s15613))
+
+# parse_time=0ms
+answer(population_1(cityid(houston,_)))
+how many people live in houston
+s13758(s14943(s21451))
+
+# parse_time=0ms
+answer(population_1(cityid(kalamazoo,_)))
+how many people live in kalamazoo
+s13758(s14943(s25881))
+
+# parse_time=0ms
+answer(population_1(stateid(kansas)))
+how many people live in kansas
+s13758(s14943(s16663))
+
+# parse_time=0ms
+answer(count(cityid(minneapolis,mn)))
+how many people live in minneapolis minnesota
+s13758(s14248(s14830))
+
+# parse_time=0ms
+answer(population_1(stateid(mississippi)))
+how many people live in mississippi
+s13758(s14943(s13536))
+
+# parse_time=0ms
+answer(population_1(stateid(montana)))
+how many people live in montana
+s13758(s14943(s13900))
+
+# parse_time=0ms
+answer(population_1(stateid('new hampshire')))
+how many people live in new hampshire
+s13758(s14943(s14872))
+
+# parse_time=0ms
+answer(population_1(stateid('new mexico')))
+how many people live in new mexico
+s13758(s14943(s13781))
+
+# parse_time=0ms
+answer(population_1(stateid('new york')))
+how many people live in new york
+s13758(s14943(s14665))
+
+# parse_time=0ms
+answer(population_1(stateid('rhode island')))
+how many people live in rhode island
+s13758(s14943(s14267))
+
+# parse_time=0ms
+answer(count(cityid(riverside,_)))
+how many people live in riverside
+s13758(s14248(s14938))
+
+# parse_time=0ms
+answer(population_1(cityid('san francisco',_)))
+how many people live in san francisco
+s13758(s14943(s14947))
+
+# parse_time=0ms
+answer(population_1(stateid('south dakota')))
+how many people live in south dakota
+s13758(s14943(s14962))
+
+# parse_time=0ms
+answer(population_1(cityid(spokane,wa)))
+how many people live in spokane washington
+s13758(s14943(s14980))
+
+# parse_time=1ms
+answer(population_1(stateid(texas)))
+how many people live in texas
+s13758(s14943(s13603))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, biggest, city, in, new, york, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(population_1(capital(loc_2(stateid(georgia)))))
+how many people live in the capital of georgia
+s13758(s14943(s16438(s13586(s15033))))
+
+# parse_time=3ms
+answer(population_1(capital(stateid(texas))))
+how many people live in the capital of texas
+s13758(s14943(s16438(s15058)))
+
+# parse_time=2ms
+answer(population_1(smallest(state(next_to_2(stateid(wyoming))))))
+how many people live in the smallest state bordering wyoming
+s13758(s14943(s16832(s15067(s14542(s15069)))))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, state, with, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(countryid(usa)))
+how many people live in the united states
+s13758(s14943(s15495))
+
+# parse_time=1ms
+answer(population_1(stateid(washington)))
+how many people live in washington
+s13758(s14943(s15412))
+
+# parse_time=0ms
+answer(population_1(cityid(washington,dc)))
+how many people live in washington dc
+s13758(s14943(s15140))
+
+# parse_time=0ms
+answer(population_1(cityid(austin,_)))
+how many people lived in austin
+s13758(s14630(s15155))
+
+# parse_time=0ms
+answer(count(stateid(utah)))
+how many people reside in utah
+s13758(s14248(s15176))
+
+# parse_time=0ms
+answer(count(stateid(utah)))
+how many people stay in utah
+s13758(s14248(s15191))
+
+# parse_time=0ms
+answer(count(stateid(texas)))
+how many residents live in texas
+s13758(s14248(s15200))
+
+# parse_time=0ms
+answer(count(river(riverid(colorado))))
+how many rivers are called colorado
+s13758(s14248(s13542(s15223)))
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(colorado)))))
+how many rivers are found in colorado
+s13758(s14248(s13542(s15231(s13548))))
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(colorado)))))
+how many rivers are in colorado
+s13758(s14248(s13542(s13656(s13548))))
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(iowa)))))
+how many rivers are in iowa
+s13758(s14248(s13542(s13656(s15256))))
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(missouri)))))
+how many rivers are in missouri
+s13758(s14248(s13542(s13656(s15266))))
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid('new york')))))
+how many rivers are in new york
+s13758(s14248(s13542(s13656(s14665))))
+
+# parse_time=2ms
+answer(count(river(state(next_to_2(loc_1(largest_one(river(all))))))))
+how many rivers are in the state that has the most rivers
+s13758(s14248(s13542(s14631(s13756(s23590(s24489(s15302)))))))
+
+# parse_time=2ms
+answer(count(river(state(loc_1(highest(place(all)))))))
+how many rivers are in the state with the highest point
+s13758(s14248(s13542(s14631(s15313(s13849(s15315))))))
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(idaho)))))
+how many rivers are there in idaho
+s13758(s14248(s13542(s14301(s15337))))
+
+# parse_time=1ms
+answer(count(river(loc_2(stateid(texas)))))
+how many rivers are there in texas
+s13758(s14248(s13542(s14301(s13603))))
+
+# parse_time=1ms
+answer(count(river(loc_2(countryid(usa)))))
+how many rivers are there in us
+s13758(s14248(s13542(s14301(s14346))))
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, do, not, traverse, the, state, with, the, capital, albany]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(alaska)))))
+how many rivers does alaska have
+s13758(s14248(s13542(s14261(s15379))))
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(colorado)))))
+how many rivers does colorado have
+s13758(s14248(s13542(s14261(s15390))))
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, in, texas, are, longer, than, the, red]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(count(river(loc_2(stateid(washington)))))
+how many rivers in washington
+s13758(s14248(s13542(s13519(s15412))))
+
+# parse_time=0ms
+answer(count(river(traverse_2(stateid(texas)))))
+how many rivers run through texas
+s13758(s14248(s13542(s15420(s13603))))
+
+# parse_time=1ms
+answer(count(river(traverse_2(state(next_to_2(stateid(colorado)))))))
+how many rivers run through the states bordering colorado
+s13758(s14248(s13542(s15420(s15446(s14542(s13548))))))
+
+# parse_time=1ms
+answer(area_1(countryid(usa)))
+how many square kilometers in the us
+s13758(s15476(s13698))
+
+# parse_time=1ms
+answer(count(state(loc_2(countryid(usa)))))
+how many states are in the united states
+s13758(s14248(s14541(s13656(s15495))))
+
+# parse_time=1ms
+answer(count(state(loc_2(countryid(usa)))))
+how many states are in the usa
+s13758(s14248(s14541(s13656(s14107))))
+
+# parse_time=0ms
+answer(count(state(next_to_2(major(river(all))))))
+how many states are next to major rivers
+s13758(s14248(s14541(s15515(s14514(s15302)))))
+
+# parse_time=0ms
+answer(count(state(all)))
+how many states are there
+s13758(s14248(s15529))
+
+# parse_time=2ms
+answer(count(state(loc_2(countryid(usa)))))
+how many states are there in the usa
+s13758(s14248(s14541(s14301(s14107))))
+
+# parse_time=1ms
+answer(count(state(loc_2(countryid(usa)))))
+how many states are there in united states
+s13758(s14248(s14541(s14301(s14302))))
+
+# parse_time=0ms
+answer(count(state(next_to_2(stateid(alaska)))))
+how many states border alaska
+s13758(s14248(s14541(s15569(s13766))))
+
+# parse_time=0ms
+answer(count(state(next_to_2(state(all)))))
+how many states border at least one other state
+s13758(s14248(s14541(s15569(s15590))))
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, colorado, and, border, new, mexico]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(count(state(next_to_2(stateid(hawaii)))))
+how many states border hawaii
+s13758(s14248(s14541(s15569(s15613))))
+
+# parse_time=0ms
+answer(count(state(next_to_2(stateid(iowa)))))
+how many states border iowa
+s13758(s14248(s14541(s15569(s15256))))
+
+# parse_time=2ms
+answer(count(state(next_to_2(longest(state(loc_1(cityid(boston,_))))))))
+how many states border on the state whose capital is boston
+s13758(s14248(s14541(s15569(s26325(s13564(s15624(s23955)))))))
+
+# parse_time=1ms
+answer(count(state(next_to_2(stateid(tennessee)))))
+how many states border tennessee
+s13758(s14248(s14541(s15569(s15631))))
+
+# parse_time=0ms
+answer(count(state(stateid(texas))))
+how many states border texas
+s13758(s14248(s14541(s16483)))
+
+# parse_time=1ms
+answer(count(state(next_to_2(largest(state(all))))))
+how many states border the largest state
+s13758(s14248(s14541(s15569(s13692(s13684)))))
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(count(state(next_to_2(state(next_to_2(largest_one(state(all))))))))
+how many states border the state that borders the most states
+s13758(s14248(s14541(s15569(s13564(s15662(s24489(s15526)))))))
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(count(state(loc_1(river(all)))))
+how many states do not have rivers
+s13758(s14248(s14541(s15715(s15302))))
+
+# parse_time=0ms
+answer(count(state(loc_2(stateid(iowa)))))
+how many states does iowa border
+s13758(s14248(s14541(s14261(s15747))))
+
+# parse_time=0ms
+answer(count(state(loc_2(stateid(missouri)))))
+how many states does missouri border
+s13758(s14248(s14541(s14261(s15756))))
+
+# parse_time=0ms
+answer(count(state(loc_2(stateid(tennessee)))))
+how many states does tennessee border
+s13758(s14248(s14541(s14261(s15783))))
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, colorado, river, flow, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, colorado, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, mississippi, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, mississippi, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, missouri, river, run, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(count(state(loc_2(countryid(usa)))))
+how many states does usa have
+s13758(s14248(s14541(s14261(s14385))))
+
+# parse_time=0ms
+answer(count(state(loc_1(city(cityid(rochester,_))))))
+how many states have a city called rochester
+s13758(s14248(s14541(s15919(s14030(s15915)))))
+
+# parse_time=1ms
+answer(count(state(loc_1(city(cityid(springfield,_))))))
+how many states have a city named springfield
+s13758(s14248(s14541(s15919(s14030(s15939)))))
+
+# parse_time=10ms
+answer(count(state(loc_1(higher_2(place(highest(place(state(loc_1(largest(capital(city(loc_2(countryid(usa)))))))))))))))
+how many states have a higher point than the highest point of the state with the largest capital city in the us
+s13758(s14248(s14541(s15919(s26269(s13562(s15964(s13562(s17885(s15313(s13692(s15970(s14030(s13519(s13698))))))))))))))
+
+# parse_time=1ms
+answer(count(state(loc_1(city(cityid(austin,_))))))
+how many states have cities named austin
+s13758(s14248(s14541(s15913(s14250(s14406)))))
+
+# parse_time=0ms
+answer(count(state(loc_1(city(cityid(springfield,_))))))
+how many states have cities or towns named springfield
+s13758(s14248(s14541(s15913(s14250(s16013)))))
+
+# parse_time=0ms
+answer(count(state(loc_1(major(river(all))))))
+how many states have major rivers
+s13758(s14248(s14541(s15913(s14514(s15302)))))
+
+# could not parse: Instance{inputObjects={s=[how, many, states, in, the, us, does, the, shortest, river, run, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(population_1(stateid(texas)))
+how much population does texas have
+s13758(s16062(s14375))
+
+# parse_time=0ms
+answer(elevation_1(placeid('mount mckinley')))
+how tall is mount mckinley
+s13758(s16068(s13867))
+
+# parse_time=2ms
+answer(elevation_1(highest(place(loc_2(stateid(montana))))))
+how tall is the highest point in montana
+s13758(s16068(s13849(s13562(s13519(s13900)))))
+
+# parse_time=1ms
+answer(state(loc_1(placeid('mount mckinley'))))
+in what state is mount mckinley
+s16098(s15067(s16096(s13867)))
+
+# parse_time=2ms
+answer(state(loc_2(highest(place(loc_2(countryid(usa)))))))
+in which state does the highest point in usa exist
+s16109(s15067(s14261(s13849(s13562(s13519(s16108))))))
+
+# parse_time=1ms
+answer(state(loc_1(cityid(rochester,_))))
+in which state is rochester
+s16109(s15067(s16096(s16126)))
+
+# parse_time=0ms
+answer(count(state(all)))
+iowa borders how many states
+s16131(s14248(s15526))
+
+# parse_time=1ms
+answer(state(all))
+list the states
+s16134(s16135)
+
+# parse_time=1ms
+answer(loc_2(countryid(usa)))
+name all the lakes of us
+s13556(s16154(s14346))
+
+# parse_time=1ms
+answer(river(loc_2(stateid(colorado))))
+name all the rivers in colorado
+s13537(s13546(s13519(s13548)))
+
+# parse_time=2ms
+answer(countryid(usa))
+name the 50 capitals in the usa
+s13541(s16186)
+
+# parse_time=1ms
+answer(longest(river(loc_2(countryid(usa)))))
+name the longest river in us
+s13537(s14092(s13696(s13519(s14346))))
+
+# parse_time=1ms
+answer(major(lake(loc_2(stateid(michigan)))))
+name the major lakes in michigan
+s13541(s14514(s16194(s13519(s16196))))
+
+# parse_time=1ms
+answer(major(river(loc_2(stateid(florida)))))
+name the major rivers in florida
+s13541(s14514(s13542(s13519(s13975))))
+
+# parse_time=1ms
+answer(river(loc_2(stateid(arkansas))))
+name the rivers in arkansas
+s13541(s13542(s13519(s13540)))
+
+# parse_time=1ms
+answer(state(next_to_2(state(all))))
+name the states which have no surrounding states
+s13541(s14541(s16222(s16223)))
+
+# parse_time=0ms
+answer(loc_2(cityid(boulder,_)))
+number of citizens in boulder
+s16235(s13586(s14450))
+
+# parse_time=1ms
+answer(loc_2(cityid(boulder,_)))
+number of people in boulder
+s16235(s13586(s14686))
+
+# parse_time=1ms
+answer(loc_2(state(next_to_2(stateid(iowa)))))
+number of states bordering iowa
+s16235(s13586(s14541(s14542(s15256))))
+
+# could not parse: Instance{inputObjects={s=[of, the, states, washed, by, the, mississippi, river, which, has, the, lowest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[people, in, boulder]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(cityid(boulder,_))
+population of boulder
+s16260(s21355)
+
+# could not parse: Instance{inputObjects={s=[rivers, in, new, york]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(capital(loc_2(next_to_2(state(all)))))
+sacramento is the capital of which state
+s16263(s16428(s13586(s16222(s13684))))
+
+# parse_time=1ms
+answer(state(all))
+san antonio is in what state
+s16265(s13684)
+
+# parse_time=0ms
+answer(major(city(loc_2(stateid(colorado)))))
+show major cities in colorado
+s16273(s14514(s14250(s13519(s13548))))
+
+# parse_time=2ms
+answer(major(lake(loc_2(countryid(usa)))))
+show me all the major lakes in the us
+s16273(s16279(s16194(s13519(s13698))))
+
+# could not parse: Instance{inputObjects={s=[state, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[states, bordering, iowa]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(city(loc_2(stateid(texas))))
+tell me what cities are in texas
+s16301(s14250(s13656(s13603)))
+
+# parse_time=2ms
+answer(state(loc_2(longest(river(loc_2(stateid(texas)))))))
+through which states does the longest river in texas run
+s16316(s14541(s14261(s14092(s13696(s13519(s16322))))))
+
+# could not parse: Instance{inputObjects={s=[through, which, states, does, the, mississippi, flow]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[through, which, states, does, the, mississippi, run]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(river(loc_2(stateid(texas))))
+what are all the rivers in texas
+s13532(s16362(s13519(s13603)))
+
+# parse_time=1ms
+answer(major(river(loc_2(stateid(texas)))))
+what are major rivers in texas
+s16373(s14514(s13542(s13519(s13603))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(stateid(texas)))))
+what are the biggest rivers in texas
+s13532(s16392(s13542(s13519(s13603))))
+
+# parse_time=3ms
+answer(capital(city(state(next_to_2(stateid(texas))))))
+what are the capital cities of the states which border texas
+s16609(s15970(s14250(s17259(s16411(s13603)))))
+
+# parse_time=3ms
+answer(capital(city(loc_2(stateid(texas)))))
+what is the capital city in texas
+s13532(s16428(s14030(s13519(s13603))))
+
+# parse_time=2ms
+answer(capital(loc_2(state(next_to_2(stateid(missouri))))))
+what are the capitals of states that border missouri
+s13532(s16443(s13586(s14541(s13741(s15266)))))
+
+# parse_time=2ms
+answer(capital(state(next_to_2(stateid(texas)))))
+what are the capitals of the states that border texas
+s13532(s16443(s17259(s13741(s13603))))
+
+# parse_time=2ms
+answer(city(loc_2(stateid(california))))
+what are the cities in california
+s16609(s14250(s13519(s13669)))
+
+# parse_time=3ms
+answer(city(loc_2(state(traverse_1(riverid(mississippi))))))
+what are the cities in states through which the mississippi runs
+s16609(s14250(s13519(s14541(s16500(s16501)))))
+
+# parse_time=4ms
+answer(city(state(loc_1(highest(place(all))))))
+what are the cities of the state with the highest point
+s16609(s14250(s17885(s15313(s13849(s15315)))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(state(all)))))
+what are the highest points of all the states
+s16373(s13849(s13838(s13586(s13840))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(state(next_to_2(stateid(mississippi)))))))
+what are the highest points of states surrounding mississippi
+s16373(s13849(s13838(s13586(s14541(s13535(s13536))))))
+
+# parse_time=2ms
+answer(lake(loc_2(state(next_to_2(stateid(texas))))))
+what are the lakes in states bordering texas
+s13532(s16559(s13519(s14541(s14542(s13603)))))
+
+# parse_time=3ms
+answer(largest(city(loc_2(state(next_to_2(largest(state(all))))))))
+what are the largest cities in the states that border the largest state
+s16373(s13692(s14250(s13519(s15446(s13741(s13692(s13684)))))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(alabama)))))
+what are the major cities in alabama
+s13532(s16600(s14250(s13519(s13939))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(alaska)))))
+what are the major cities in alaska
+s13532(s16600(s14250(s13519(s13766))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(california)))))
+what are the major cities in california
+s13532(s16600(s14250(s13519(s13669))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(delaware)))))
+what are the major cities in delaware
+s13532(s16600(s14250(s13519(s13957))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(kansas)))))
+what are the major cities in kansas
+s13532(s16600(s14250(s13519(s16663))))
+
+# parse_time=1ms
+answer(major(city(stateid(missouri))))
+what are the major cities in missouri
+s13532(s16600(s14250(s15271)))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid('new mexico')))))
+what are the major cities in new mexico
+s13532(s16600(s14250(s13519(s13781))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid('new york')))))
+what are the major cities in new york
+s13532(s16600(s14250(s13519(s14665))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid('north carolina')))))
+what are the major cities in north carolina
+s13532(s16600(s14250(s13519(s16723))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(ohio)))))
+what are the major cities in ohio
+s13532(s16600(s14250(s13519(s14624))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(oklahoma)))))
+what are the major cities in oklahoma
+s13532(s16600(s14250(s13519(s16748))))
+
+# parse_time=2ms
+answer(major(city(loc_2(stateid('rhode island')))))
+what are the major cities in rhode island
+s13532(s16600(s14250(s13519(s14267))))
+
+# parse_time=3ms
+answer(major(city(loc_2(state(traverse_1(riverid(mississippi)))))))
+what are the major cities in states through which the mississippi runs
+s13532(s16600(s14250(s13519(s14541(s16500(s16501))))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(texas)))))
+what are the major cities in texas
+s13532(s16600(s14250(s13519(s13603))))
+
+# parse_time=2ms
+answer(major(city(loc_2(largest(state(all))))))
+what are the major cities in the largest state
+s13532(s16600(s14250(s13519(s13692(s13684)))))
+
+# parse_time=3ms
+answer(major(city(loc_2(smallest(state(loc_2(countryid(usa))))))))
+what are the major cities in the smallest state in the us
+s13532(s16600(s14250(s13519(s16832(s15067(s13519(s13698)))))))
+
+# parse_time=2ms
+answer(major(city(loc_2(state(stateid(california))))))
+what are the major cities in the state of california
+s13532(s16600(s14250(s13519(s13564(s16849)))))
+
+# parse_time=4ms
+answer(major(city(loc_2(state(traverse_1(major(river(loc_2(stateid(virginia))))))))))
+what are the major cities in the states through which the major river in virginia runs
+s13532(s16600(s14250(s13519(s15446(s16506(s16193(s13696(s13519(s16877)))))))))
+
+# parse_time=2ms
+answer(major(city(loc_2(countryid(usa)))))
+what are the major cities in the usa
+s13532(s16600(s14250(s13519(s14107))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(vermont)))))
+what are the major cities in vermont
+s13532(s16600(s14250(s13519(s16913))))
+
+# parse_time=1ms
+answer(major(city(loc_2(stateid(wyoming)))))
+what are the major cities in wyoming
+s13532(s16600(s14250(s13519(s15069))))
+
+# parse_time=1ms
+answer(major(city(stateid(texas))))
+what are the major cities of texas
+s13532(s16600(s14250(s15058)))
+
+# parse_time=2ms
+answer(major(city(loc_2(countryid(usa)))))
+what are the major cities of the united states
+s13532(s16600(s14250(s13586(s15495))))
+
+# parse_time=2ms
+answer(major(city(loc_2(countryid(usa)))))
+what are the major cities of the us
+s13532(s16600(s14250(s13586(s13698))))
+
+# parse_time=2ms
+answer(major(lake(loc_2(countryid(usa)))))
+what are the major lakes in united states
+s13532(s16600(s16194(s13519(s14302))))
+
+# parse_time=1ms
+answer(major(river(loc_2(stateid(ohio)))))
+what are the major rivers in ohio
+s13532(s16600(s13542(s13519(s14624))))
+
+# parse_time=2ms
+answer(major(river(loc_2(countryid(usa)))))
+what are the major rivers in the us
+s13532(s16600(s13542(s13519(s13698))))
+
+# parse_time=2ms
+answer(major(city(loc_2(stateid(illinois)))))
+what are the names of the major cities in illinois
+s13532(s17035(s14250(s13519(s18267))))
+
+# parse_time=1ms
+answer(state(stateid(michigan)))
+what are the neighboring states for michigan
+s13532(s17054(s17056))
+
+# parse_time=1ms
+answer(density_1(state(all)))
+what are the population densities of each us state
+s13532(s17064(s13684))
+
+# parse_time=2ms
+answer(population_1(stateid(mississippi)))
+what is the population of mississippi
+s13532(s17082(s13536))
+
+# parse_time=2ms
+answer(population_1(major(city(loc_2(stateid(montana))))))
+what are the populations of all the major cities in montana
+s13532(s17091(s17092(s14250(s13519(s13900)))))
+
+# parse_time=2ms
+answer(population_1(state(traverse_2(next_to_2(river(stateid(virginia)))))))
+what are the populations of states through which the mississippi river runs
+s16609(s17085(s14541(s23132(s16222(s14156(s22998))))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_2(next_to_2(river(stateid(virginia)))))))
+what are the populations of states through which the mississippi river runs
+s16609(s17085(s14541(s23132(s16222(s14156(s22998))))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_1(riverid(mississippi)))))
+what are the populations of states through which the mississippi runs
+s16609(s17085(s14541(s16500(s16501))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_1(riverid(mississippi)))))
+what are the populations of states through which the mississippi runs
+s16609(s17085(s14541(s16500(s16501))))
+
+# parse_time=2ms
+answer(population_1(state(next_to_2(stateid(texas)))))
+what are the populations of states which border texas
+s16609(s17085(s14541(s16411(s13603))))
+
+# parse_time=2ms
+answer(population_1(major(city(stateid(texas)))))
+what are the populations of the major cities of texas
+s13532(s17091(s17235(s14250(s15058))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_2(next_to_2(river(stateid(virginia)))))))
+what are the populations of the states through which the mississippi river runs
+s16609(s17085(s15446(s23132(s16222(s14156(s22998))))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_2(next_to_2(river(stateid(virginia)))))))
+what are the populations of the states through which the mississippi river runs
+s16609(s17085(s15446(s23132(s16222(s14156(s22998))))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_1(riverid(mississippi)))))
+what are the populations of the states through which the mississippi runs
+s13532(s17091(s17259(s16500(s16501))))
+
+# parse_time=3ms
+answer(population_1(state(traverse_1(riverid(mississippi)))))
+what are the populations of the states through which the mississippi runs
+s13532(s17091(s17259(s16500(s16501))))
+
+# parse_time=2ms
+answer(river(loc_2(stateid(alaska))))
+what are the rivers in alaska
+s16609(s13542(s13519(s13766)))
+
+# parse_time=3ms
+answer(river(loc_2(state(stateid(indiana)))))
+what are the rivers in the state of indiana
+s16609(s13542(s13519(s13564(s17355))))
+
+# parse_time=2ms
+answer(river(loc_2(state(stateid(texas)))))
+what are the rivers in the state of texas
+s16609(s13542(s13519(s13564(s15058))))
+
+# parse_time=1ms
+answer(river(stateid(montana)))
+what are the rivers of montana
+s16609(s13542(s21535))
+
+# parse_time=1ms
+answer(state(all))
+what are the states
+s13532(s17394)
+
+# could not parse: Instance{inputObjects={s=[what, are, the, states, that, border, the, state, with, the, greatest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, states, that, the, potomac, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(traverse_1(longest(river(all)))))
+what are the states through which the longest river runs
+s16609(s14541(s16506(s14092(s17445))))
+
+# parse_time=1ms
+answer(population_1(stateid(missouri)))
+what can you tell me about the population of missouri
+s13532(s17474(s15266))
+
+# could not parse: Instance{inputObjects={s=[what, capital, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(capital(largest(loc_2(countryid(usa)))))
+what capital is the largest in the us
+s13532(s15970(s14029(s13519(s13698))))
+
+# parse_time=1ms
+answer(city(stateid(pennsylvania)))
+what cities are located in pennsylvania
+s13532(s14285(s17511))
+
+# parse_time=0ms
+answer(city(loc_2(stateid(california))))
+what cities in california
+s13532(s14250(s13519(s13669)))
+
+# parse_time=2ms
+answer(largest_one(population_1(population_1(stateid(alabama)))))
+what cities in texas have the highest number of citizens
+s13532(s17524(s17531(s16236(s14444))))
+
+# could not parse: Instance{inputObjects={s=[what, cities, in, texas, have, the, highest, populations]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, has, the, least, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, has, the, most, people]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, in, the, united, states, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(capital(loc_2(stateid(iowa))))
+what is capital of iowa
+s18284(s15970(s13586(s15256)))
+
+# parse_time=2ms
+answer(capital(state(loc_1(lowest(place(all))))))
+what is capital of the state with the lowest point
+s18284(s15970(s17885(s15313(s17634(s15315)))))
+
+# parse_time=0ms
+answer(largest(capital(all)))
+what is largest capital
+s18284(s14041(s17645))
+
+# parse_time=2ms
+answer(state(stateid(california)))
+what is the adjacent state of california
+s13532(s17650(s16849))
+
+# parse_time=2ms
+answer(area_1(stateid(alaska)))
+what is the area of alaska
+s13532(s17667(s13766))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, all, the, states, combined]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(area_1(stateid(california)))
+what is the area of california
+s13532(s17667(s13669))
+
+# parse_time=2ms
+answer(area_1(stateid(florida)))
+what is the area of florida
+s13532(s17667(s13975))
+
+# parse_time=2ms
+answer(area_1(stateid(idaho)))
+what is the area of idaho
+s13532(s17667(s15337))
+
+# parse_time=2ms
+answer(area_1(stateid(maine)))
+what is the area of maine
+s13532(s17667(s17743))
+
+# parse_time=2ms
+answer(area_1(stateid(maryland)))
+what is the area of maryland in square kilometers
+s13532(s17661(s17749))
+
+# parse_time=2ms
+answer(area_1(stateid('new mexico')))
+what is the area of new mexico
+s13532(s17667(s13781))
+
+# parse_time=2ms
+answer(area_1(stateid(ohio)))
+what is the area of ohio
+s13532(s17667(s14624))
+
+# parse_time=2ms
+answer(area_1(cityid(seattle,_)))
+what is the area of seattle
+s13532(s17661(s17794))
+
+# parse_time=2ms
+answer(area_1(stateid('south carolina')))
+what is the area of south carolina
+s13532(s17667(s17809))
+
+# parse_time=2ms
+answer(area_1(stateid(texas)))
+what is the area of texas
+s13532(s17667(s13603))
+
+# parse_time=3ms
+answer(area_1(largest(state(all))))
+what is the area of the largest state
+s13532(s17667(s13692(s13684)))
+
+# parse_time=3ms
+answer(area_1(smallest(state(all))))
+what is the area of the smallest state
+s13532(s17667(s16832(s13684)))
+
+# parse_time=4ms
+answer(area_1(state(loc_1(capital(cityid(albany,_))))))
+what is the area of the state with the capital albany
+s13532(s17667(s13564(s15313(s16438(s17882)))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, the, state, with, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(area_1(state(all)))
+what is the area of the states
+s13532(s17667(s16135))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, the, texas, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(area_1(stateid(wisconsin)))
+what is the area of wisconsin
+s13532(s17667(s17960))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, average, population, of, the, us, by, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(density_1(loc_2(stateid(pennsylvania))))
+what is the average population per square km in pennsylvania
+s22079(s17989(s13519(s14252)))
+
+# parse_time=2ms
+answer(density_1(loc_2(countryid(usa))))
+what is the average population per square km in the us
+s22079(s17989(s13519(s13698)))
+
+# parse_time=3ms
+answer(largest(city(loc_2(state(loc_1(river(all)))))))
+what is the biggest american city in a state with a river
+s13532(s18031(s18032(s13519(s18013(s15313(s18015))))))
+
+# parse_time=6ms
+answer(largest(capital(city(loc_2(countryid(usa))))))
+what is the biggest capital city in the us
+s13532(s18031(s15970(s14030(s13519(s13698)))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(stateid(arizona)))))
+what is the biggest city in arizona
+s13532(s18031(s14030(s13519(s14517))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(stateid(georgia)))))
+what is the biggest city in georgia
+s13532(s18031(s14030(s13519(s15033))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(stateid(kansas)))))
+what is the biggest city in kansas
+s13532(s18031(s14030(s13519(s16663))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(stateid(louisiana)))))
+what is the biggest city in louisiana
+s13532(s18031(s14030(s13519(s13993))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(stateid(nebraska)))))
+what is the biggest city in nebraska
+s13532(s18031(s14030(s13519(s14543))))
+
+# parse_time=4ms
+answer(largest(city(stateid(oregon))))
+what is the biggest city in oregon
+s13532(s18031(s14030(s14618)))
+
+# parse_time=4ms
+answer(largest(city(loc_2(stateid(texas)))))
+what is the biggest city in texas
+s13532(s18031(s14030(s13519(s13603))))
+
+# parse_time=5ms
+answer(largest(city(loc_2(smallest(state(all))))))
+what is the biggest city in the smallest state
+s13532(s18031(s14030(s13519(s16832(s13684)))))
+
+# parse_time=5ms
+answer(largest(city(loc_2(countryid(usa)))))
+what is the biggest city in the us
+s13532(s18031(s14030(s13519(s13698))))
+
+# parse_time=5ms
+answer(largest(city(loc_2(countryid(usa)))))
+what is the biggest city in the usa
+s13532(s18031(s14030(s13519(s14107))))
+
+# parse_time=3ms
+answer(largest(city(loc_2(countryid(usa)))))
+what is the biggest city in usa
+s13532(s18031(s14030(s13519(s13587))))
+
+# parse_time=3ms
+answer(largest(city(loc_2(stateid(wyoming)))))
+what is the biggest city in wyoming
+s13532(s18031(s14030(s13519(s15069))))
+
+# parse_time=3ms
+answer(largest(river(loc_2(stateid(illinois)))))
+what is the biggest river in illinois
+s13532(s18031(s13696(s13519(s18267))))
+
+# parse_time=2ms
+answer(largest(state(all)))
+what is the biggest state
+s13532(s18031(s13684))
+
+# parse_time=3ms
+answer(largest(state(loc_2(countryid(usa)))))
+what is the biggest state in continental us
+s13532(s18031(s15067(s13519(s18291))))
+
+# parse_time=4ms
+answer(largest(state(loc_2(countryid(usa)))))
+what is the biggest state in the usa
+s13532(s18031(s15067(s13519(s14107))))
+
+# parse_time=6ms
+answer(capital(city(largest(state(loc_2(countryid(usa)))))))
+what is the capital city of the largest state in the us
+s13532(s16428(s14030(s17843(s15067(s13519(s13698))))))
+
+# parse_time=3ms
+answer(capital(stateid(california)))
+what is the capital of california
+s13532(s16428(s16849))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(colorado))))
+what is the capital of colorado
+s13532(s16428(s13586(s13548)))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(georgia))))
+what is the capital of georgia
+s13532(s16428(s13586(s15033)))
+
+# parse_time=3ms
+answer(capital(stateid(hawaii)))
+what is the capital of hawaii
+s13532(s16428(s21430))
+
+# parse_time=3ms
+answer(capital(stateid(illinois)))
+what is the capital of illinois
+s13532(s16428(s21475))
+
+# parse_time=3ms
+answer(capital(stateid(indiana)))
+what is the capital of indiana
+s13532(s16428(s17355))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(iowa))))
+what is the capital of iowa
+s13532(s16428(s13586(s15256)))
+
+# parse_time=3ms
+answer(capital(stateid(maine)))
+what is the capital of maine
+s13532(s16428(s17737))
+
+# parse_time=3ms
+answer(capital(stateid(maryland)))
+what is the capital of maryland
+s13532(s16428(s21505))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(massachusetts))))
+what is the capital of massachusetts
+s13532(s16428(s13586(s13778)))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(michigan))))
+what is the capital of michigan
+s13532(s16428(s13586(s16196)))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid('new hampshire'))))
+what is the capital of new hampshire
+s13532(s16428(s13586(s14872)))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid('new jersey'))))
+what is the capital of new jersey
+s13532(s16428(s13586(s18475)))
+
+# parse_time=3ms
+answer(capital(cityid('new york',_)))
+what is the capital of new york
+s13532(s16428(s13818))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid('north dakota'))))
+what is the capital of north dakota
+s13532(s16428(s13586(s13793)))
+
+# parse_time=3ms
+answer(capital(stateid(ohio)))
+what is the capital of ohio
+s13532(s16428(s17782))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(pennsylvania))))
+what is the capital of pennsylvania
+s13532(s16428(s13586(s14252)))
+
+# parse_time=4ms
+answer(capital(loc_2(state(loc_1(city(cityid(durham,_)))))))
+what is the capital of states that have cities named durham
+s13532(s16428(s13586(s14541(s18540(s14250(s18549))))))
+
+# parse_time=3ms
+answer(capital(stateid(texas)))
+what is the capital of texas
+s13532(s16428(s15058))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, alabama, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, florida, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(capital(largest(state(all))))
+what is the capital of the largest state
+s13532(s16428(s17843(s13684)))
+
+# parse_time=4ms
+answer(capital(smallest(state(all))))
+what is the capital of the smallest state
+s13532(s16428(s17863(s13684)))
+
+# parse_time=4ms
+answer(capital(state(stateid(texas))))
+what is the capital of the state texas
+s13532(s16428(s17885(s13603)))
+
+# parse_time=5ms
+answer(capital(state(next_to_2(largest_one(state(all))))))
+what is the capital of the state that borders the most states
+s13532(s16428(s17885(s15662(s24489(s15526)))))
+
+# parse_time=6ms
+answer(capital(state(next_to_2(state(next_to_2(stateid(texas)))))))
+what is the capital of the state that borders the state that borders texas
+s13532(s16428(s17885(s15662(s13564(s15662(s13603))))))
+
+# parse_time=5ms
+answer(capital(state(loc_1(highest(place(all))))))
+what is the capital of the state with the highest elevation
+s13532(s16428(s17885(s15313(s13849(s18696)))))
+
+# parse_time=5ms
+answer(capital(state(loc_1(highest(place(all))))))
+what is the capital of the state with the highest point
+s13532(s16428(s17885(s15313(s13849(s15315)))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(capital(state(loc_1(longest(river(all))))))
+what is the capital of the state with the longest river
+s13532(s16428(s17885(s15313(s14092(s17458)))))
+
+# parse_time=4ms
+answer(capital(population_1(smallest_one(largest_one(state(all))))))
+what is the capital of the state with the most inhabitants
+s18284(s16438(s16236(s19381(s24489(s18749)))))
+
+# parse_time=2ms
+answer(capital(stateid(utah)))
+what is the capital of utah
+s13532(s16428(s22017))
+
+# parse_time=2ms
+answer(capital(loc_2(stateid(vermont))))
+what is the capital of vermont
+s13532(s16428(s13586(s16913)))
+
+# parse_time=2ms
+answer(capital(stateid(washington)))
+what is the capital of washington
+s13532(s16428(s22032))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, city, in, texas, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, city, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(sum(state(all)))
+what is the combined area of all 50 states
+s22079(s18813(s15526))
+
+# parse_time=4ms
+answer(sum(state(all)))
+what is the combined population of all 50 states
+s22079(s18833(s15526))
+
+# parse_time=2ms
+answer(density_1(stateid(texas)))
+what is the density of texas
+s13532(s18858(s13603))
+
+# parse_time=2ms
+answer(density_1(stateid('new york')))
+what is the density of the new york
+s22079(s18876(s14665))
+
+# parse_time=2ms
+answer(place(placeid('death valley')))
+what is the elevation of death valley
+s22079(s18997(s18892))
+
+# parse_time=4ms
+answer(elevation_1(highest(place(loc_2(countryid(usa))))))
+what is the elevation of the highest point in the usa
+s13532(s18885(s13849(s13562(s13519(s14107)))))
+
+# parse_time=2ms
+answer(elevation_1(placeid('mount mckinley')))
+what is the height of mount mckinley
+s13532(s18921(s13867))
+
+# parse_time=6ms
+answer(elevation_1(highest(mountain(loc_2(stateid(texas))))))
+what is the height of the highest mountain in texas
+s13532(s18921(s13849(s18935(s13519(s13603)))))
+
+# parse_time=6ms
+answer(elevation_1(highest(place(loc_2(countryid(usa))))))
+what is the height of the highest point in the usa
+s13532(s18921(s13849(s13562(s13519(s14107)))))
+
+# parse_time=3ms
+answer(high_point_1(stateid(wyoming)))
+what is the high point of wyoming
+s22079(s18981(s15069))
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid('new mexico')))))
+what is the highest elevation in new mexico
+s13532(s13561(s18997(s13519(s13781))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid('south carolina')))))
+what is the highest elevation in south carolina
+s13532(s13561(s18997(s13519(s17809))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid(texas)))))
+what is the highest elevation in texas
+s13532(s13561(s18997(s13519(s13603))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(countryid(usa)))))
+what is the highest elevation in the united states
+s13532(s13561(s18997(s13519(s15495))))
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(stateid(alaska)))))
+what is the highest mountain in alaska
+s13532(s13561(s18935(s13519(s13766))))
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(stateid(texas)))))
+what is the highest mountain in texas
+s13532(s13561(s18935(s13519(s13603))))
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(countryid(usa)))))
+what is the highest mountain in the us
+s13532(s13561(s18935(s13519(s13698))))
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(countryid(usa)))))
+what is the highest mountain in us
+s13532(s13561(s18935(s13519(s14346))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(colorado)))))
+what is the highest point in colorado
+s13532(s13561(s13562(s13519(s13548))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(delaware)))))
+what is the highest point in delaware
+s13532(s13561(s13562(s13519(s13957))))
+
+# parse_time=3ms
+answer(largest_one(place(loc_2(elevation_2('0')))))
+what is the highest point in each state whose lowest point is sea level
+s18284(s17560(s13562(s13519(s19137))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(florida)))))
+what is the highest point in florida
+s13532(s13561(s13562(s13519(s13975))))
+
+# parse_time=2ms
+answer(highest(place(stateid(iowa))))
+what is the highest point in iowa
+s13532(s13561(s13562(s15261)))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(kansas)))))
+what is the highest point in kansas
+s13532(s13561(s13562(s13519(s16663))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(maine)))))
+what is the highest point in maine
+s13532(s13561(s13562(s13519(s17743))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(montana)))))
+what is the highest point in montana
+s13532(s13561(s13562(s13519(s13900))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(nevada)))))
+what is the highest point in nevada in meters
+s13532(s13561(s13562(s13519(s19200))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid('new mexico')))))
+what is the highest point in new mexico
+s13532(s13561(s13562(s13519(s13781))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid(ohio)))))
+what is the highest point in ohio
+s13532(s13561(s13562(s13519(s14624))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid('rhode island')))))
+what is the highest point in rhode island
+s13532(s13561(s13562(s13519(s14267))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(state(next_to_2(stateid(georgia)))))))
+what is the highest point in states bordering georgia
+s13532(s13561(s13562(s13519(s14541(s14542(s15033))))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(texas)))))
+what is the highest point in texas
+s13532(s13561(s13562(s13519(s13603))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(countryid(usa)))))
+what is the highest point in the country
+s13532(s13561(s13562(s13519(s19289))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(smallest(state(all))))))
+what is the highest point in the smallest state
+s13532(s13561(s13562(s13519(s16832(s13684)))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(state(loc_1(capital(cityid(austin,_))))))))
+what is the highest point in the state with capital austin
+s13532(s13561(s13562(s13519(s13564(s15313(s15970(s19324)))))))
+
+# parse_time=4ms
+answer(highest(place(loc_2(state(loc_1(capital(cityid('des moines',_))))))))
+what is the highest point in the state with capital des moines
+s13532(s13561(s13562(s13519(s13564(s15313(s15970(s19332)))))))
+
+# parse_time=4ms
+answer(highest(place(loc_2(state(loc_1(capital(cityid('des moines',_))))))))
+what is the highest point in the state with the capital des moines
+s13532(s13561(s13562(s13519(s13564(s15313(s16438(s19332)))))))
+
+# parse_time=4ms
+answer(highest(place(loc_2(state(loc_1(largest_one(river(all))))))))
+what is the highest point in the state with the most rivers
+s13532(s13561(s13562(s13519(s13564(s15313(s24489(s15302)))))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, state, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(highest(place(loc_2(state(next_to_2(stateid(colorado)))))))
+what is the highest point in the states bordering colorado
+s13532(s13561(s13562(s13519(s15446(s14542(s13548))))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(countryid(usa)))))
+what is the highest point in the united states
+s13532(s13561(s13562(s13519(s15495))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(countryid(usa)))))
+what is the highest point in the us
+s13532(s13561(s13562(s13519(s13698))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(countryid(usa)))))
+what is the highest point in the usa
+s13532(s13561(s13562(s13519(s14107))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(virginia)))))
+what is the highest point in virginia
+s13532(s13561(s13562(s13519(s13524))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(wyoming)))))
+what is the highest point in wyoming
+s13532(s13561(s13562(s13519(s15069))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, of, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, of, the, state, with, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(highest(place(loc_2(countryid(usa)))))
+what is the highest point of the usa
+s13532(s13561(s13562(s13586(s14107))))
+
+# parse_time=1ms
+answer(largest(capital(all)))
+what is the largest capital
+s18284(s13692(s17645))
+
+# parse_time=3ms
+answer(largest(capital(city(loc_2(countryid(usa))))))
+what is the largest capital city in the usa
+s18284(s13692(s15970(s14030(s13519(s14107)))))
+
+# parse_time=3ms
+answer(largest(city(loc_2(state(next_to_2(stateid(texas)))))))
+what is the largest city in a state that borders texas
+s18284(s13692(s14030(s13519(s18013(s15662(s13603))))))
+
+# parse_time=3ms
+answer(largest(city(loc_2(stateid(alabama)))))
+what is the largest city in alabama
+s18284(s13692(s14030(s13519(s13939))))
+
+# parse_time=2ms
+answer(largest(city(loc_2(stateid(california)))))
+what is the largest city in california
+s18284(s13692(s14030(s13519(s13669))))
+
+# parse_time=2ms
+answer(largest(city(loc_2(stateid(michigan)))))
+what is the largest city in michigan
+s18284(s13692(s14030(s13519(s16196))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, minnesota, by, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(largest(city(stateid(missouri))))
+what is the largest city in missouri
+s18284(s13692(s14030(s15271)))
+
+# parse_time=2ms
+answer(largest(city(loc_2(stateid('rhode island')))))
+what is the largest city in rhode island
+s18284(s13692(s14030(s13519(s14267))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(smallest(state(traverse_1(riverid(mississippi))))))))
+what is the largest city in smallest state through which the mississippi runs
+s18284(s13692(s14030(s13519(s18186(s15067(s16500(s16501)))))))
+
+# parse_time=3ms
+answer(largest(city(loc_2(state(next_to_2(stateid(california)))))))
+what is the largest city in states that border california
+s18284(s13692(s14030(s13519(s14541(s13741(s13669))))))
+
+# parse_time=2ms
+answer(largest(city(loc_2(stateid(texas)))))
+what is the largest city in texas
+s18284(s13692(s14030(s13519(s13603))))
+
+# parse_time=4ms
+answer(largest(city(loc_2(smallest(state(loc_2(countryid(usa))))))))
+what is the largest city in the smallest state in the usa
+s18284(s13692(s14030(s13519(s16832(s15067(s13519(s14107)))))))
+
+# parse_time=2ms
+answer(largest(city(loc_2(stateid(wisconsin)))))
+what is the largest city in wisconsin
+s18284(s13692(s14030(s13519(s17960))))
+
+# parse_time=2ms
+answer(largest(city(loc_2(stateid(kansas)))))
+what is the largest city of kansas
+s18284(s13692(s14030(s13586(s16663))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, of, the, states, that, the, rio, grande, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, river, in, washington, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(largest(state(all)))
+what is the largest state
+s18284(s13692(s13684))
+
+# parse_time=2ms
+answer(largest(state(next_to_2(stateid(arkansas)))))
+what is the largest state bordering arkansas
+s18284(s13692(s15067(s14542(s13540))))
+
+# parse_time=2ms
+answer(largest(state(next_to_2(stateid(texas)))))
+what is the largest state bordering texas
+s18284(s13692(s15067(s14542(s13603))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, capital, in, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(largest(state(loc_2(countryid(usa)))))
+what is the largest state in the us
+s18284(s13692(s15067(s13519(s13698))))
+
+# parse_time=2ms
+answer(largest(state(loc_2(countryid(usa)))))
+what is the largest state in usa
+s18284(s13692(s15067(s13519(s13587))))
+
+# parse_time=2ms
+answer(largest(state(next_to_2(stateid(california)))))
+what is the largest state that borders california
+s18284(s13692(s15067(s15662(s13669))))
+
+# parse_time=2ms
+answer(largest(state(next_to_2(stateid(texas)))))
+what is the largest state that borders texas
+s18284(s13692(s15067(s15662(s13603))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, that, borders, the, state, with, the, highest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=5ms
+answer(largest(state(next_to_2(state(loc_1(lowest(place(loc_2(countryid(usa))))))))))
+what is the largest state that borders the state with the lowest point in the usa
+s18284(s13692(s15067(s15662(s13564(s15313(s17634(s13562(s13519(s14107)))))))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, traversed, by, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(smallest_one(population_1(state(all))))
+what is the least populous state
+s13532(s20051(s20052(s13684)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, colorado, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(len(population_1(river(loc_2(stateid(texas))))))
+what is the length of the colorado river in texas
+s22079(s22777(s16236(s15792(s13519(s13603)))))
+
+# parse_time=4ms
+answer(len(longest(river(loc_2(countryid(usa))))))
+what is the length of the longest river in the usa
+s13532(s20057(s14092(s13696(s13519(s14107)))))
+
+# parse_time=5ms
+answer(len(longest(river(traverse_2(stateid(texas))))))
+what is the length of the longest river that runs through texas
+s13532(s20057(s14092(s13696(s20099(s13603)))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(len(river(traverse_2(largest_one(state(all))))))
+what is the length of the river that flows through the most states
+s13532(s20066(s13696(s20144(s24489(s15526)))))
+
+# parse_time=5ms
+answer(len(population_1(most(population_1(state(all))))))
+what is the length of the river that runs through the most number of states
+s22079(s22777(s16236(s20184(s17525(s15526)))))
+
+# parse_time=5ms
+answer(len(river(traverse_2(largest_one(state(all))))))
+what is the length of the river that runs through the most states
+s13532(s20066(s13696(s20099(s24489(s15526)))))
+
+# parse_time=4ms
+answer(len(population_1(most(state(all)))))
+what is the length of the river that traverses the most states
+s22079(s22777(s16236(s20232(s15526))))
+
+# parse_time=2ms
+answer(longest(river(all)))
+what is the longest river
+s13532(s14086(s17458))
+
+# parse_time=2ms
+answer(longest(river(traverse_2(stateid('new york')))))
+what is the longest river flowing through new york
+s13532(s14086(s13696(s20272(s14665))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(countryid(usa)))))
+what is the longest river in america
+s13532(s14086(s13696(s13519(s13882))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(stateid(california)))))
+what is the longest river in california
+s13532(s14086(s13696(s13519(s13669))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(stateid(florida)))))
+what is the longest river in florida
+s13532(s14086(s13696(s13519(s13975))))
+
+# parse_time=3ms
+answer(longest(river(loc_2(stateid(mississippi)))))
+what is the longest river in mississippi
+s13532(s14086(s13696(s13519(s13536))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(stateid('new york')))))
+what is the longest river in new york
+s13532(s14086(s13696(s13519(s14665))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(stateid(pennsylvania)))))
+what is the longest river in pennsylvania
+s13532(s14086(s13696(s13519(s14252))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(stateid(texas)))))
+what is the longest river in texas
+s13532(s14086(s13696(s13519(s13603))))
+
+# parse_time=3ms
+answer(longest(river(loc_2(largest(state(all))))))
+what is the longest river in the largest state
+s13532(s14086(s13696(s13519(s13692(s13684)))))
+
+# parse_time=5ms
+answer(longest(river(loc_2(smallest(state(loc_2(countryid(usa))))))))
+what is the longest river in the smallest state in the usa
+s13532(s14086(s13696(s13519(s16832(s15067(s13519(s14107)))))))
+
+# parse_time=5ms
+answer(longest(river(loc_2(state(loc_1(highest(place(all))))))))
+what is the longest river in the state with the highest point
+s13532(s14086(s13696(s13519(s13564(s15313(s13849(s15315)))))))
+
+# parse_time=4ms
+answer(longest(river(loc_2(smallest_one(largest_one(major(city(all))))))))
+what is the longest river in the state with the most major cities
+s18284(s14092(s13696(s13519(s19381(s24489(s14514(s14583)))))))
+
+# parse_time=3ms
+answer(longest(river(loc_2(state(next_to_2(stateid(nebraska)))))))
+what is the longest river in the states that border nebraska
+s13532(s14086(s13696(s13519(s15446(s13741(s14543))))))
+
+# parse_time=3ms
+answer(longest(river(loc_2(countryid(usa)))))
+what is the longest river in the united states
+s13532(s14086(s13696(s13519(s15495))))
+
+# parse_time=2ms
+answer(longest(river(loc_2(countryid(usa)))))
+what is the longest river in the us
+s13532(s14086(s13696(s13519(s13698))))
+
+# parse_time=2ms
+answer(longest(river(stateid(texas))))
+what is the longest river that does not run through texas
+s18284(s14092(s13696(s20487)))
+
+# parse_time=3ms
+answer(longest(river(traverse_2(state(next_to_2(stateid(indiana)))))))
+what is the longest river that flows through a state that borders indiana
+s13532(s14086(s13696(s20144(s18013(s15662(s18395))))))
+
+# parse_time=2ms
+answer(longest(river(traverse_2(stateid(colorado)))))
+what is the longest river that flows through colorado
+s13532(s14086(s13696(s20144(s13548))))
+
+# parse_time=5ms
+answer(longest(river(traverse_2(state(next_to_2(state(next_to_2(largest_one(state(all))))))))))
+what is the longest river that passes the states that border the state that borders the most states
+s13532(s14086(s13696(s13712(s15446(s13741(s13564(s15662(s24489(s15526)))))))))
+
+# parse_time=3ms
+answer(longest(river(traverse_2(state(next_to_2(stateid(tennessee)))))))
+what is the longest river that runs through a state that borders tennessee
+s13532(s14086(s13696(s20099(s18013(s15662(s15631))))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(pennsylvania)))))
+what is the lowest elevation in pennsylvania
+s13532(s20645(s18997(s13519(s14252))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(arkansas)))))
+what is the lowest point in arkansas
+s13532(s20645(s13562(s13519(s13540))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(california)))))
+what is the lowest point in california
+s13532(s20645(s13562(s13519(s13669))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(louisiana)))))
+what is the lowest point in louisiana
+s13532(s20645(s13562(s13519(s13993))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(massachusetts)))))
+what is the lowest point in massachusetts
+s13532(s20645(s13562(s13519(s13778))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(mississippi)))))
+what is the lowest point in mississippi
+s13532(s20645(s13562(s13519(s13536))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(nebraska)))))
+what is the lowest point in nebraska in meters
+s13532(s20645(s13562(s13519(s20713))))
+
+# parse_time=2ms
+answer(lowest(place(stateid(oregon))))
+what is the lowest point in oregon
+s13532(s20645(s13562(s14618)))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(texas)))))
+what is the lowest point in texas
+s13532(s20645(s13562(s13519(s13603))))
+
+# parse_time=3ms
+answer(lowest(place(loc_2(state(stateid(california))))))
+what is the lowest point in the state of california
+s13532(s20645(s13562(s13519(s13564(s16849)))))
+
+# parse_time=3ms
+answer(lowest(place(loc_2(state(stateid(texas))))))
+what is the lowest point in the state of texas
+s13532(s20645(s13562(s13519(s13564(s15058)))))
+
+# parse_time=3ms
+answer(lowest(place(loc_2(countryid(usa)))))
+what is the lowest point in the united states
+s13532(s20645(s13562(s13519(s15495))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(countryid(usa)))))
+what is the lowest point in usa
+s13532(s20645(s13562(s13519(s13587))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(wisconsin)))))
+what is the lowest point in wisconsin
+s13532(s20645(s13562(s13519(s17960))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, of, all, states, through, which, the, colorado, river, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(colorado)))))
+what is the lowest point of colorado
+s13532(s20645(s13562(s13586(s13548))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, of, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(lowest(place(loc_2(countryid(usa)))))
+what is the lowest point of the us
+s13532(s20645(s13562(s13586(s13698))))
+
+# parse_time=2ms
+answer(major(city(loc_2(stateid(montana)))))
+what is the major cities in montana
+s22079(s14514(s14250(s13519(s13900))))
+
+# parse_time=3ms
+answer(highest(elevation_1(cityid('san francisco',_))))
+what is the maximum elevation of san francisco
+s13532(s20932(s18879(s14947)))
+
+# parse_time=3ms
+answer(largest_one(density_1(state(loc_2(countryid(usa))))))
+what is the most dense state in the usa
+s13532(s20942(s20943(s15067(s13519(s14107)))))
+
+# parse_time=3ms
+answer(largest_one(population_1(capital(loc_2(countryid(usa))))))
+what is the most populated capital in the usa
+s13532(s20942(s20949(s15970(s13519(s14107)))))
+
+# parse_time=2ms
+answer(largest_one(population_1(state(next_to_2(stateid(oklahoma))))))
+what is the most populated state bordering oklahoma
+s13532(s20942(s20949(s15067(s14542(s16748)))))
+
+# parse_time=1ms
+answer(largest_one(population_1(city(all))))
+what is the most populous city
+s13532(s20942(s20052(s20974)))
+
+# parse_time=2ms
+answer(largest_one(population_1(city(loc_2(stateid(texas))))))
+what is the most populous city in texas
+s13532(s20942(s20052(s14030(s13519(s13603)))))
+
+# parse_time=2ms
+answer(largest_one(population_1(city(loc_2(stateid(wyoming))))))
+what is the most populous city in wyoming
+s13532(s20942(s20052(s14030(s13519(s15069)))))
+
+# parse_time=1ms
+answer(largest_one(population_1(state(all))))
+what is the most populous state
+s13532(s20942(s20052(s13684)))
+
+# parse_time=2ms
+answer(largest_one(population_1(state(loc_2(countryid(usa))))))
+what is the most populous state in the us
+s13532(s20942(s20052(s15067(s13519(s13698)))))
+
+# parse_time=3ms
+answer(largest_one(population_1(state(traverse_1(riverid(mississippi))))))
+what is the most populous state through which the mississippi runs
+s13532(s20942(s20052(s15067(s16500(s16501)))))
+
+# parse_time=3ms
+answer(state(loc_1(lowest(place(all)))))
+what is the name of the state with the lowest point
+s13532(s21047(s15313(s17634(s15315))))
+
+# parse_time=2ms
+answer(population_1(state(stateid(kentucky))))
+what is the number of neighboring states for kentucky
+s22079(s17531(s21068(s21070)))
+
+# parse_time=4ms
+answer(density_1(state(loc_1(capital(cityid(austin,_))))))
+what is the population density in the state with capital austin
+s22079(s21090(s15067(s15313(s15970(s19324)))))
+
+# parse_time=3ms
+answer(density_1(stateid(maine)))
+what is the population density of maine
+s13532(s21108(s17737))
+
+# parse_time=3ms
+answer(density_1(stateid('south dakota')))
+what is the population density of south dakota
+s13532(s21108(s21115))
+
+# parse_time=3ms
+answer(density_1(stateid(texas)))
+what is the population density of texas
+s22079(s21099(s13603))
+
+# parse_time=4ms
+answer(density_1(largest(state(all))))
+what is the population density of the largest state
+s22079(s21099(s13692(s13684)))
+
+# parse_time=4ms
+answer(density_1(smallest(state(all))))
+what is the population density of the smallest state
+s22079(s21099(s16832(s13684)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, density, of, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, density, of, the, state, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid(wyoming)))
+what is the population density of wyoming
+s22079(s21099(s15069))
+
+# parse_time=3ms
+answer(population_1(cityid(boston,_)))
+what is the population in boston
+s13532(s17073(s21232))
+
+# parse_time=4ms
+answer(population_1(stateid(alaska)))
+what is the population of alaska
+s13532(s17082(s13766))
+
+# parse_time=3ms
+answer(population_1(stateid(arizona)))
+what is the population of arizona
+s13532(s17082(s14517))
+
+# parse_time=3ms
+answer(population_1(cityid(atlanta,_)))
+what is the population of atlanta
+s13532(s17082(s21286))
+
+# parse_time=3ms
+answer(population_1(cityid(atlanta,ga)))
+what is the population of atlanta ga
+s13532(s17073(s21292))
+
+# parse_time=3ms
+answer(population_1(cityid(austin,_)))
+what is the population of austin
+s13532(s17082(s19324))
+
+# parse_time=3ms
+answer(population_1(cityid(austin,tx)))
+what is the population of austin texas
+s13532(s17082(s14707))
+
+# parse_time=3ms
+answer(population_1(cityid(boston,ma)))
+what is the population of boston massachusetts
+s13532(s17073(s21343))
+
+# parse_time=3ms
+answer(population_1(cityid(boulder,_)))
+what is the population of boulder
+s13532(s17082(s14683))
+
+# parse_time=3ms
+answer(population_1(stateid(california)))
+what is the population of california
+s13532(s17082(s13669))
+
+# parse_time=3ms
+answer(population_1(cityid(dallas,_)))
+what is the population of dallas
+s13532(s17082(s21391))
+
+# parse_time=2ms
+answer(population_1(cityid(denver,_)))
+what is the population of denver
+s13532(s17073(s21400))
+
+# parse_time=2ms
+answer(population_1(cityid(erie,pa)))
+what is the population of erie pennsylvania
+s13532(s17073(s21415))
+
+# parse_time=2ms
+answer(population_1(stateid(hawaii)))
+what is the population of hawaii
+s13532(s17082(s15613))
+
+# parse_time=2ms
+answer(population_1(cityid(houston,_)))
+what is the population of houston
+s13532(s17082(s21451))
+
+# parse_time=3ms
+answer(population_1(stateid(idaho)))
+what is the population of idaho
+s13532(s17082(s15337))
+
+# parse_time=3ms
+answer(population_1(stateid(illinois)))
+what is the population of illinois
+s13532(s17082(s18267))
+
+# parse_time=2ms
+answer(population_1(stateid(maine)))
+what is the population of maine
+s13532(s17082(s17743))
+
+# parse_time=2ms
+answer(population_1(stateid(maryland)))
+what is the population of maryland
+s13532(s17082(s18429))
+
+# parse_time=3ms
+answer(population_1(stateid(minnesota)))
+what is the population of minnesota
+s13532(s17073(s21520))
+
+# parse_time=3ms
+answer(population_1(stateid(montana)))
+what is the population of montana
+s13532(s17082(s13900))
+
+# parse_time=2ms
+answer(population_1(stateid('new mexico')))
+what is the population of new mexico
+s13532(s17082(s13781))
+
+# parse_time=3ms
+answer(population_1(stateid('new york')))
+what is the population of new york
+s13532(s17082(s14665))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, new, york, city]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(population_1(stateid(oregon)))
+what is the population of oregon
+s13532(s17082(s14601))
+
+# parse_time=3ms
+answer(population_1(cityid(portland,me)))
+what is the population of portland maine
+s13532(s17073(s21610))
+
+# parse_time=2ms
+answer(population_1(stateid('rhode island')))
+what is the population of rhode island
+s13532(s17082(s14267))
+
+# parse_time=2ms
+answer(population_1(cityid(sacramento,_)))
+what is the population of sacramento
+s13532(s17073(s21637))
+
+# parse_time=3ms
+answer(population_1(cityid('san antonio',_)))
+what is the population of san antonio
+s13532(s17073(s21655))
+
+# parse_time=3ms
+answer(population_1(cityid(seattle,_)))
+what is the population of seattle
+s13532(s17073(s17794))
+
+# parse_time=4ms
+answer(population_1(cityid(seattle,wa)))
+what is the population of seattle washington
+s13532(s17073(s21679))
+
+# parse_time=3ms
+answer(population_1(stateid('south dakota')))
+what is the population of south dakota
+s13532(s17082(s14962))
+
+# parse_time=2ms
+answer(population_1(cityid(springfield,mo)))
+what is the population of springfield missouri
+s13532(s17073(s21709))
+
+# parse_time=3ms
+answer(population_1(cityid(springfield,sd)))
+what is the population of springfield south dakota
+s13532(s17073(s21724))
+
+# parse_time=3ms
+answer(population_1(cityid(tempe,az)))
+what is the population of tempe arizona
+s13532(s17073(s21739))
+
+# parse_time=3ms
+answer(population_1(stateid(texas)))
+what is the population of texas
+s13532(s17082(s13603))
+
+# parse_time=5ms
+answer(population_1(capital(largest(state(all)))))
+what is the population of the capital of the largest state
+s13532(s17082(s16438(s17843(s13684))))
+
+# parse_time=6ms
+answer(population_1(capital(largest(state(traverse_1(riverid(mississippi)))))))
+what is the population of the capital of the largest state through which the mississippi runs
+s13532(s17082(s16438(s17843(s15067(s16500(s16501))))))
+
+# parse_time=5ms
+answer(population_1(capital(smallest(state(all)))))
+what is the population of the capital of the smallest state
+s13532(s17082(s16438(s17863(s13684))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, largest, city, in, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(population_1(largest(state(all))))
+what is the population of the largest state
+s13532(s17082(s13692(s13684)))
+
+# parse_time=3ms
+answer(population_1(largest(state(next_to_2(stateid(texas))))))
+what is the population of the largest state that borders texas
+s13532(s17082(s13692(s15067(s15662(s13603)))))
+
+# parse_time=4ms
+answer(population_1(major(city(loc_2(stateid(wisconsin))))))
+what is the population of the major cities in wisconsin
+s13532(s17082(s16193(s14250(s13519(s17960)))))
+
+# parse_time=4ms
+answer(population_1(smallest(state(all))))
+what is the population of the smallest state
+s13532(s17082(s16832(s13684)))
+
+# parse_time=4ms
+answer(population_1(state(next_to_2(largest_one(state(all))))))
+what is the population of the state that borders the most states
+s13532(s17082(s13564(s15662(s24489(s15526)))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, state, with, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(population_1(cityid(tucson,_)))
+what is the population of tucson
+s13532(s17073(s22002))
+
+# parse_time=2ms
+answer(population_1(stateid(utah)))
+what is the population of utah
+s13532(s17082(s13742))
+
+# parse_time=3ms
+answer(population_1(stateid(washington)))
+what is the population of washington
+s13532(s17082(s15412))
+
+# parse_time=2ms
+answer(population_1(cityid(washington,dc)))
+what is the population of washington dc
+s13532(s17082(s15140))
+
+# parse_time=2ms
+answer(river(next_to_2(stateid(ohio))))
+what is the river that cross over ohio
+s22079(s13696(s13756(s22060)))
+
+# parse_time=1ms
+answer(shortest(river(all)))
+what is the shortest river
+s13532(s14225(s17458))
+
+# parse_time=2ms
+answer(shortest(river(loc_2(stateid(alaska)))))
+what is the shortest river in alaska
+s13532(s14225(s13696(s13519(s13766))))
+
+# parse_time=2ms
+answer(shortest(river(stateid(iowa))))
+what is the shortest river in iowa
+s13532(s14225(s13696(s15261)))
+
+# parse_time=2ms
+answer(shortest(river(loc_2(stateid(nebraska)))))
+what is the shortest river in nebraska
+s13532(s14225(s13696(s13519(s14543))))
+
+# parse_time=2ms
+answer(shortest(river(loc_2(stateid(texas)))))
+what is the shortest river in texas
+s13532(s14225(s13696(s13519(s13603))))
+
+# parse_time=3ms
+answer(shortest(river(loc_2(countryid(usa)))))
+what is the shortest river in the united states
+s13532(s14225(s13696(s13519(s15495))))
+
+# parse_time=3ms
+answer(shortest(river(loc_2(countryid(usa)))))
+what is the shortest river in the us
+s13532(s14225(s13696(s13519(s13698))))
+
+# parse_time=3ms
+answer(shortest(river(loc_2(countryid(usa)))))
+what is the shortest river in the usa
+s13532(s14225(s13696(s13519(s14107))))
+
+# parse_time=2ms
+answer(size(stateid(california)))
+what is the size of california
+s13532(s22215(s13669))
+
+# parse_time=2ms
+answer(size(stateid(florida)))
+what is the size of florida
+s13532(s22215(s13975))
+
+# parse_time=2ms
+answer(size(stateid(texas)))
+what is the size of texas
+s13532(s22215(s13603))
+
+# parse_time=3ms
+answer(size(capital(stateid(texas))))
+what is the size of the capital of texas
+s13532(s22215(s16438(s15058)))
+
+# parse_time=4ms
+answer(size(largest(state(loc_2(countryid(usa))))))
+what is the size of the largest state in the usa
+s13532(s22215(s13692(s15067(s13519(s14107)))))
+
+# parse_time=2ms
+answer(smallest(city(loc_2(stateid(alaska)))))
+what is the smallest city in alaska
+s18284(s16832(s14030(s13519(s13766))))
+
+# parse_time=2ms
+answer(smallest(city(loc_2(stateid(arkansas)))))
+what is the smallest city in arkansas
+s18284(s16832(s14030(s13519(s13540))))
+
+# parse_time=2ms
+answer(smallest(city(loc_2(stateid(hawaii)))))
+what is the smallest city in hawaii
+s18284(s16832(s14030(s13519(s15613))))
+
+# parse_time=4ms
+answer(smallest(city(loc_2(largest(state(all))))))
+what is the smallest city in the largest state
+s18284(s16832(s14030(s13519(s13692(s13684)))))
+
+# parse_time=3ms
+answer(smallest(city(loc_2(countryid(usa)))))
+what is the smallest city in the us
+s18284(s16832(s14030(s13519(s13698))))
+
+# parse_time=3ms
+answer(smallest(city(loc_2(countryid(usa)))))
+what is the smallest city in the usa
+s18284(s16832(s14030(s13519(s14107))))
+
+# parse_time=2ms
+answer(smallest(city(loc_2(stateid(washington)))))
+what is the smallest city in washington
+s18284(s16832(s14030(s13519(s15412))))
+
+# parse_time=4ms
+answer(smallest(city(smallest(state(loc_2(countryid(usa)))))))
+what is the smallest city of the smallest state in the us
+s18284(s16832(s14030(s17863(s15067(s13519(s13698))))))
+
+# parse_time=2ms
+answer(smallest(state(next_to_2(stateid(ohio)))))
+what is the smallest state bordering ohio
+s18284(s16832(s15067(s14542(s14624))))
+
+# parse_time=2ms
+answer(smallest(state(next_to_2(stateid(wyoming)))))
+what is the smallest state bordering wyoming
+s18284(s16832(s15067(s14542(s15069))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, by, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(smallest(state(loc_2(countryid(usa)))))
+what is the smallest state in the usa
+s18284(s16832(s15067(s13519(s14107))))
+
+# parse_time=2ms
+answer(smallest(state(next_to_2(stateid(texas)))))
+what is the smallest state that borders texas
+s18284(s16832(s15067(s15662(s13603))))
+
+# parse_time=3ms
+answer(smallest(state(next_to_2(largest_one(state(all))))))
+what is the smallest state that borders the most states
+s18284(s16832(s15067(s15662(s24489(s15526)))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, that, the, mississippi, river, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(smallest(state(traverse_1(longest(river(all))))))
+what is the smallest state through which the longest river runs
+s18284(s16832(s15067(s16506(s14092(s17445)))))
+
+# parse_time=3ms
+answer(state(loc_1(highest(place(all)))))
+what is the state that contains the highest point
+s22079(s15067(s22565(s13849(s15315))))
+
+# parse_time=4ms
+answer(state(loc_1(highest(place(loc_2(countryid(usa)))))))
+what is the state with the highest elevation in the united states
+s22079(s15067(s15313(s13849(s18997(s13519(s15495))))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(loc_2(countryid(usa))))
+what is the state with the largest density in usa
+s13532(s22614(s13519(s13587)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(loc_1(lowest(place(all)))))
+what is the state with the lowest point
+s22079(s15067(s15313(s17634(s15315))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, lowest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, lowest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(countryid(usa)))))
+what is the tallest mountain in america
+s13532(s22683(s18935(s13519(s13882))))
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(countryid(usa)))))
+what is the tallest mountain in the united states
+s13532(s22683(s18935(s13519(s15495))))
+
+# parse_time=2ms
+answer(area_1(countryid(usa)))
+what is the total area of the usa
+s13532(s22722(s14107))
+
+# parse_time=3ms
+answer(sum(len(lake(river(loc_2(countryid(usa)))))))
+what is the total length of all rivers in the usa
+s13532(s22736(s20060(s16153(s13542(s13519(s14107))))))
+
+# parse_time=3ms
+answer(sum(population_1(state(next_to_2(stateid(texas))))))
+what is the total population of the states that border texas
+s13532(s22736(s21854(s14541(s13741(s13603)))))
+
+# parse_time=1ms
+answer(len(stateid(mississippi)))
+what length is the mississippi
+s13532(s22783(s13536))
+
+# parse_time=0ms
+answer(major(city(stateid(pennsylvania))))
+what major cities are located in pennsylvania
+s13532(s14514(s14285(s17511)))
+
+# parse_time=0ms
+answer(major(river(traverse_2(stateid(illinois)))))
+what major rivers run through illinois
+s13532(s14514(s13542(s15420(s18267))))
+
+# parse_time=0ms
+answer(mountain(loc_2(stateid(alaska))))
+what mountains are in alaska
+s13532(s22832(s13519(s13766)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(kansas))))
+what river flows through kansas
+s13532(s13696(s20168(s16663)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(texas))))
+what river flows through texas
+s13532(s13696(s20168(s13603)))
+
+# parse_time=1ms
+answer(river(traverse_2(largest_one(state(all)))))
+what river flows through the most states
+s13532(s13696(s20168(s24489(s15526))))
+
+# parse_time=3ms
+answer(longest(loc_2(countryid(usa))))
+what river is the longest one in the united states
+s13532(s22892(s22894(s15495)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(illinois))))
+what river runs through illinois
+s13532(s13696(s20123(s18267)))
+
+# parse_time=1ms
+answer(river(traverse_2(largest_one(state(all)))))
+what river runs through the most states
+s13532(s13696(s20123(s24489(s15526))))
+
+# parse_time=2ms
+answer(river(traverse_2(most(city(all)))))
+what river runs through the state with the most cities
+s13532(s13696(s22974(s22975(s14583))))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(virginia))))
+what river runs through virginia
+s13532(s13696(s20123(s13524)))
+
+# parse_time=1ms
+answer(most(state(all)))
+what river traverses the most states
+s13532(s23000(s15526))
+
+# parse_time=2ms
+answer(river(traverse_2(state(next_to_2(next_to_2(largest_one(state(all))))))))
+what river traverses the state which borders the most states
+s13532(s13696(s23007(s15067(s16222(s18688(s24489(s15526)))))))
+
+# parse_time=0ms
+answer(river(loc_2(stateid(nevada))))
+what rivers are in nevada
+s13532(s13542(s13656(s14628)))
+
+# parse_time=0ms
+answer(river(loc_2(stateid('new mexico'))))
+what rivers are in new mexico
+s13532(s13542(s13656(s13781)))
+
+# parse_time=0ms
+answer(river(loc_2(stateid(oregon))))
+what rivers are in oregon
+s13532(s13542(s13656(s14601)))
+
+# parse_time=1ms
+answer(river(loc_2(state(next_to_2(stateid(texas))))))
+what rivers are in states that border texas
+s13532(s13542(s13656(s14541(s13741(s13603)))))
+
+# parse_time=0ms
+answer(river(loc_2(stateid(texas))))
+what rivers are in texas
+s13532(s13542(s13656(s13603)))
+
+# parse_time=0ms
+answer(river(loc_2(stateid(utah))))
+what rivers are in utah
+s13532(s13542(s13656(s13742)))
+
+# parse_time=0ms
+answer(river(loc_2(stateid(texas))))
+what rivers are there in texas
+s13532(s13542(s14301(s13603)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(tennessee))))
+what rivers do not run through tennessee
+s13532(s13542(s23142(s15631)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(colorado))))
+what rivers flow though colorado
+s13532(s13542(s23160(s13548)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(missouri))))
+what rivers flow through missouri
+s13532(s13542(s23168(s15266)))
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, states, that, alabama, borders]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, states, that, border, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(river(traverse_2(largest(state(all)))))
+what rivers flow through the largest state
+s13532(s13542(s23168(s13692(s13684))))
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(arizona))))
+what rivers run through arizona
+s13532(s13542(s15420(s14517)))
+
+# parse_time=0ms
+answer(river(traverse_2(cityid(austin,tx))))
+what rivers run through austin texas
+s13532(s13542(s15420(s14707)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(colorado))))
+what rivers run through colorado
+s13532(s13542(s15420(s13548)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(louisiana))))
+what rivers run through louisiana
+s13532(s13542(s15420(s13993)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid(maine))))
+what rivers run through maine
+s13532(s13542(s15420(s17743)))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid('new york'))))
+what rivers run through new york
+s13532(s13542(s15420(s14665)))
+
+# parse_time=3ms
+answer(river(traverse_2(state(loc_1(lowest(place(loc_2(countryid(usa)))))))))
+what rivers run through the state with the lowest point in the usa
+s13532(s13542(s15420(s13564(s15313(s17634(s13562(s13519(s14107))))))))
+
+# parse_time=3ms
+answer(river(traverse_2(state(next_to_2(state(loc_1(capital(cityid(atlanta,_)))))))))
+what rivers run through the states that border the state with the capital atlanta
+s13532(s13542(s15420(s15446(s13741(s13564(s15313(s16438(s21286))))))))
+
+# parse_time=0ms
+answer(river(traverse_2(stateid('west virginia'))))
+what rivers run through west virginia
+s13532(s13542(s15420(s23469)))
+
+# parse_time=2ms
+answer(river(traverse_2(state(next_to_2(next_to_2(largest_one(state(all))))))))
+what rivers traverses the state which borders the most states
+s13532(s13542(s23007(s15067(s16222(s18688(s24489(s15526)))))))
+
+# could not parse: Instance{inputObjects={s=[what, state, bordering, nevada, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(michigan))))
+what state borders michigan
+s13532(s15067(s18688(s16196)))
+
+# parse_time=0ms
+answer(state(next_to_2(state(all))))
+what state borders most other states
+s13532(s15067(s23532(s15526)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('new york'))))
+what state borders new york
+s13532(s15067(s18688(s14665)))
+
+# parse_time=1ms
+answer(fewest(state(all)))
+what state borders the least states
+s13532(s23556(s15526))
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, the, least, states, excluding, alaska, and, excluding, hawaii]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(largest_one(state(all)))))
+what state borders the most states
+s13532(s15067(s18688(s24489(s15526))))
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, the, state, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_1(highest(place(loc_2(countryid(usa)))))))
+what state contains the highest point in the us
+s13532(s15067(s23583(s13849(s13562(s13519(s13698))))))
+
+# could not parse: Instance{inputObjects={s=[what, state, contains, the, highest, point, of, those, the, colorado, river, traverses]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(loc_1(highest(place(all)))))
+what state has highest elevation
+s13532(s15067(s23590(s13843(s18696))))
+
+# parse_time=0ms
+answer(smallest_one(river(all)))
+what state has no rivers
+s13532(s23754(s23596))
+
+# parse_time=1ms
+answer(state(loc_1(capital(cityid(salem,_)))))
+what state has the capital salem
+s13532(s15067(s23590(s16438(s23602))))
+
+# parse_time=1ms
+answer(state(loc_1(city(cityid(flint,_)))))
+what state has the city flint
+s13532(s15067(s23590(s23611(s23612))))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, city, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, city, with, the, most, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, greatest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(highest(place(all)))))
+what state has the highest elevation
+s13532(s15067(s23590(s13849(s18696))))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, highest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(largest(capital(all)))))
+what state has the largest capital
+s13532(s15067(s23590(s13692(s17645))))
+
+# parse_time=1ms
+answer(state(loc_1(largest(city(all)))))
+what state has the largest city
+s13532(s15067(s23590(s13692(s20974))))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, urban, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, least, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(longest(river(all)))))
+what state has the longest river
+s13532(s15067(s23590(s14092(s17458))))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, lowest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(most(city(all)))
+what state has the most cities
+s13532(s23785(s14583))
+
+# parse_time=1ms
+answer(most(major(city(all))))
+what state has the most major cities
+s13532(s23785(s14514(s14583)))
+
+# parse_time=1ms
+answer(most(major(river(all))))
+what state has the most major rivers running through it
+s13532(s23785(s14514(s23806)))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, people]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(largest_one(river(all)))))
+what state has the most rivers
+s13532(s15067(s23590(s24489(s15302))))
+
+# parse_time=1ms
+answer(most(river(all)))
+what state has the most rivers running through it
+s13532(s23785(s23806))
+
+# parse_time=1ms
+answer(state(loc_1(shortest(river(all)))))
+what state has the shortest river
+s13532(s15067(s23590(s14231(s17458))))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(smallest(capital(all)))))
+what state has the smallest capital
+s13532(s15067(s23590(s16832(s17645))))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, urban, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, sparsest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(cityid(austin,_))))
+what state is austin in
+s13532(s15067(s16096(s23931)))
+
+# parse_time=2ms
+answer(state(loc_1(capital(cityid(columbus,_)))))
+what state is austin the capital of
+s13532(s15067(s16096(s23942(s23980))))
+
+# parse_time=0ms
+answer(state(loc_1(cityid(boston,_))))
+what state is boston in
+s13532(s15067(s16096(s23959)))
+
+# parse_time=1ms
+answer(state(loc_1(capital(cityid(columbus,_)))))
+what state is columbus the capital of
+s13532(s15067(s16096(s23974(s23980))))
+
+# parse_time=0ms
+answer(state(loc_1(cityid(dallas,_))))
+what state is dallas in
+s13532(s15067(s16096(s23991)))
+
+# parse_time=0ms
+answer(state(loc_1(cityid('des moines',_))))
+what state is des moines located in
+s13532(s15067(s16096(s24006)))
+
+# parse_time=0ms
+answer(state(loc_1(cityid(miami,_))))
+what state is miami in
+s13532(s15067(s16096(s24018)))
+
+# parse_time=0ms
+answer(state(loc_1(cityid(pittsburgh,_))))
+what state is pittsburgh in
+s13532(s15067(s16096(s24029)))
+
+# could not parse: Instance{inputObjects={s=[what, state, is, the, biggest]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, is, the, largest, in, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(state(loc_1(largest_one(river(all))))))
+what state is the state with the most rivers
+s13532(s15067(s22564(s15313(s24489(s15302)))))
+
+# could not parse: Instance{inputObjects={s=[what, state, that, borders, texas, has, the, highest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, that, borders, texas, is, the, largest]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, which, the, mississippi, runs, through, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(arizona))))
+what states are next to arizona
+s13532(s14541(s15515(s14517)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(texas))))
+what states are next to texas
+s13532(s14541(s15515(s13603)))
+
+# parse_time=1ms
+answer(state(next_to_2(stateid(mississippi))))
+what states are next to the mississippi
+s13532(s14541(s15521(s24142)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alaska))))
+what states border alaska
+s13532(s14541(s15569(s13766)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(arkansas))))
+what states border arkansas
+s13532(s14541(s15569(s13540)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(delaware))))
+what states border delaware
+s13532(s14541(s15569(s13957)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(florida))))
+what states border florida
+s13532(s14541(s15569(s13975)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(georgia))))
+what states border georgia
+s13532(s14541(s15569(s15033)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(hawaii))))
+what states border hawaii
+s13532(s14541(s15569(s15613)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(indiana))))
+what states border indiana
+s13532(s14541(s15569(s18395)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(kentucky))))
+what states border kentucky
+s13532(s14541(s15569(s24182)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(michigan))))
+what states border michigan
+s13532(s14541(s15569(s16196)))
+
+# parse_time=0ms
+answer(state(stateid(missouri)))
+what states border missouri
+s13532(s14541(s16459))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(montana))))
+what states border montana
+s13532(s14541(s15569(s13900)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('new hampshire'))))
+what states border new hampshire
+s13532(s14541(s15569(s14872)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('new jersey'))))
+what states border new jersey
+s13532(s14541(s15569(s18475)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(ohio))))
+what states border ohio
+s13532(s14541(s15569(s14624)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('rhode island'))))
+what states border rhode island
+s13532(s14541(s15569(s14267)))
+
+# parse_time=0ms
+answer(state(next_to_2(state(next_to_2(stateid(colorado))))))
+what states border states that border colorado
+s13532(s14541(s15569(s14541(s13741(s13548)))))
+
+# parse_time=0ms
+answer(state(next_to_2(state(next_to_2(stateid(mississippi))))))
+what states border states that border mississippi
+s13532(s14541(s15569(s14541(s13741(s13536)))))
+
+# parse_time=1ms
+answer(state(next_to_2(state(next_to_2(state(next_to_2(stateid(florida))))))))
+what states border states that border states that border florida
+s13532(s14541(s15569(s14541(s13741(s14541(s13741(s13975)))))))
+
+# parse_time=1ms
+answer(state(next_to_2(state(next_to_2(state(next_to_2(state(next_to_2(stateid(texas))))))))))
+what states border states that border states that border states that border texas
+s13532(s14541(s15569(s14541(s13741(s14541(s13741(s14541(s13741(s13603)))))))))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, states, that, border, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, states, that, the, mississippi, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, states, that, the, ohio, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, states, which, the, mississippi, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(stateid(texas)))
+what states border texas
+s13532(s14541(s16483))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, texas, and, have, a, major, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(largest_one(population_1(state(all))))))
+what states border the most populous state
+s13532(s14541(s15569(s24489(s20052(s13684)))))
+
+# parse_time=2ms
+answer(state(next_to_2(state(next_to_2(largest_one(state(all)))))))
+what states border the state that borders the most states
+s13532(s14541(s15569(s13564(s15662(s24489(s15526))))))
+
+# parse_time=2ms
+answer(state(largest_one(city(all))))
+what states border the state with the most cities
+s13532(s15702(s23636(s14583)))
+
+# parse_time=2ms
+answer(state(largest_one(major(city(all)))))
+what states border the state with the most major cities
+s13532(s15702(s23636(s14514(s14583))))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(state(largest_one(city(all))))))
+what states border the states with the most cities
+s13532(s14541(s15654(s14541(s23636(s14583)))))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(wisconsin))))
+what states border wisconsin
+s13532(s14541(s15569(s17960)))
+
+# parse_time=0ms
+answer(state(capital_2(cityid(dover,_))))
+what state 's capital is dover
+s13532(s15067(s24600(s24601)))
+
+# parse_time=0ms
+answer(state(loc_1(major(river(all)))))
+what states contain at least one major rivers
+s13532(s14541(s24608(s24609(s15302))))
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, colorado, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, delaware, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, mississippi, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, mississippi, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, missouri, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, missouri, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, ohio, river, go, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, ohio, river, run, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_2(shortest(river(all)))))
+what states does the shortest river run through
+s13532(s14541(s14261(s14231(s16047))))
+
+# parse_time=5ms
+answer(state(loc_1(capital(highest(place(all))))))
+what states have a capital that is the highest point in the state
+s13532(s14541(s15919(s15970(s24788(s24801)))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(austin,_)))))
+what states have a city named austin
+s13532(s14541(s15919(s14030(s14406))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(austin,_)))))
+what states have cities named austin
+s13532(s14541(s15913(s14250(s14406))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(dallas,_)))))
+what states have cities named dallas
+s13532(s14541(s15913(s14250(s24853))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(plano,_)))))
+what states have cities named plano
+s13532(s14541(s15913(s14250(s24863))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(portland,_)))))
+what states have cities named portland
+s13532(s14541(s15913(s14250(s24878))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(rochester,_)))))
+what states have cities named rochester
+s13532(s14541(s15913(s14250(s24893))))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid('salt lake city',_)))))
+what states have cities named salt lake city
+s13532(s14541(s15913(s14250(s24908))))
+
+# parse_time=0ms
+answer(state(next_to_2(state(all))))
+what states have no bordering state
+s13532(s14541(s24925(s13684)))
+
+# parse_time=0ms
+answer(state(loc_1(river(riverid(colorado)))))
+what states have rivers named colorado
+s13532(s14541(s15913(s13542(s24945))))
+
+# parse_time=0ms
+answer(state(loc_1(river(all))))
+what states have rivers running through them
+s13532(s14541(s15913(s24959)))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(springfield,_)))))
+what states have towns named springfield
+s13532(s14541(s15913(s24978(s15939))))
+
+# parse_time=1ms
+answer(state(capital_2(high_point_1(loc_1(higher_2(next_to_2(loc_2(stateid(colorado)))))))))
+what state 's high point is higher than that of colorado
+s13532(s15067(s24604(s18984(s16096(s25005(s13756(s13586(s13548))))))))
+
+# parse_time=2ms
+answer(intersection(city(cityid(columbus,_)),cityid(springfield,_)))
+what states in the united states have a city of springfield
+s13532(s25021(s15914(s23980),s25137))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(maine))))
+what states neighbor maine
+s13532(s14541(s25028(s17743)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(kentucky))))
+what states surround kentucky
+s13532(s14541(s25035(s24182)))
+
+# could not parse: Instance{inputObjects={s=[what, texas, city, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(largest(city(all)))
+what 's the largest city
+s13532(s25044(s20974))
+
+# could not parse: Instance{inputObjects={s=[where, are, mountains]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(loc_1(cityid(austin,_)))
+where is austin
+s25057(s16096(s19324))
+
+# parse_time=0ms
+answer(loc_1(cityid('baton rouge',_)))
+where is baton rouge
+s25057(s16096(s25062))
+
+# parse_time=0ms
+answer(loc_1(cityid(dallas,_)))
+where is dallas
+s25057(s16096(s21391))
+
+# parse_time=0ms
+answer(loc_1(cityid('fort wayne',_)))
+where is fort wayne
+s25057(s16096(s25071))
+
+# parse_time=0ms
+answer(loc_1(cityid(houston,_)))
+where is houston
+s25057(s16096(s21451))
+
+# parse_time=0ms
+answer(loc_1(cityid(indianapolis,_)))
+where is indianapolis
+s25057(s16096(s25080))
+
+# parse_time=0ms
+answer(stateid(massachusetts))
+where is massachusetts
+s25057(s13769)
+
+# parse_time=0ms
+answer(loc_1(placeid('mount whitney')))
+where is mount whitney
+s25057(s16096(s25086))
+
+# parse_time=0ms
+answer(loc_1(placeid('mount whitney')))
+where is mount whitney located
+s25057(s16096(s25092))
+
+# parse_time=0ms
+answer(loc_1(stateid('new hampshire')))
+where is new hampshire
+s25057(s16096(s14872))
+
+# parse_time=0ms
+answer(loc_1(cityid('new orleans',_)))
+where is new orleans
+s25057(s16096(s25107))
+
+# parse_time=0ms
+answer(loc_1(cityid(portland,_)))
+where is portland
+s25057(s16096(s25113))
+
+# parse_time=0ms
+answer(loc_1(cityid('san diego',_)))
+where is san diego
+s25057(s16096(s25116))
+
+# parse_time=0ms
+answer(loc_1(cityid('san jose',_)))
+where is san jose
+s25057(s16096(s25125))
+
+# parse_time=0ms
+answer(loc_1(cityid('scotts valley',_)))
+where is scotts valley
+s25057(s16096(s25134))
+
+# parse_time=0ms
+answer(loc_1(cityid(springfield,_)))
+where is springfield
+s25057(s16096(s25137))
+
+# could not parse: Instance{inputObjects={s=[where, is, the, chattahoochee, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(highest(mountain(loc_2(countryid(usa)))))
+where is the highest mountain of the united states
+s25057(s13561(s18935(s13586(s15495))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(hawaii)))))
+where is the highest point in hawaii
+s25057(s13561(s13562(s13519(s15613))))
+
+# parse_time=2ms
+answer(highest(place(loc_2(stateid(montana)))))
+where is the highest point in montana
+s25057(s13561(s13562(s13519(s13900))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(stateid(maryland)))))
+where is the lowest point in maryland
+s25057(s20645(s13562(s13519(s18429))))
+
+# parse_time=2ms
+answer(lowest(place(loc_2(countryid(usa)))))
+where is the lowest point in the us
+s25057(s20645(s13562(s13519(s13698))))
+
+# parse_time=2ms
+answer(lowest(place(stateid(iowa))))
+where is the lowest spot in iowa
+s25057(s20645(s25205(s15261)))
+
+# parse_time=2ms
+answer(largest_one(population_1(area_1(stateid('new mexico')))))
+where is the most populated area of new mexico
+s25057(s20942(s20949(s17658(s13781))))
+
+# parse_time=4ms
+answer(smallest(city(all)))
+where is the smallest city
+s25057(s22275(s20974))
+
+# parse_time=4ms
+answer(capital(loc_2(state(next_to_2(stateid(texas))))))
+which capitals are in the states that border texas
+s16102(s14260(s13656(s15446(s13741(s13603)))))
+
+# could not parse: Instance{inputObjects={s=[which, capitals, are, not, major, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, city, in, california, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, is, the, density, of, the, state, that, the, largest, river, in, the, united, states, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(loc_1(highest(exclude(cityid(boston,_),stateid(alaska)))))
+which is the highest peak not in alaska
+s16102(s25142(s13843(s25275(s21244,s13766))))
+
+# parse_time=4ms
+answer(longest(river(loc_2(countryid(usa)))))
+which is the longest river in usa
+s16102(s14086(s13696(s13519(s13587))))
+
+# could not parse: Instance{inputObjects={s=[which, is, the, lowest, point, of, the, states, that, the, mississippi, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(shortest(river(all)))
+which is the shortest river
+s16102(s14225(s17458))
+
+# parse_time=3ms
+answer(smallest(state(all)))
+which is the smallest state
+s16102(s22275(s13684))
+
+# parse_time=4ms
+answer(population_1(state(next_to_2(stateid(pennsylvania)))))
+which of the states bordering pennsylvania has the largest population
+s16102(s16236(s15446(s14542(s25353))))
+
+# parse_time=2ms
+answer(most(state(all)))
+which river goes through the most states
+s16102(s25355(s15526))
+
+# parse_time=1ms
+answer(most(state(all)))
+which river runs through most states
+s16102(s25370(s15526))
+
+# parse_time=2ms
+answer(river(traverse_2(largest_one(state(all)))))
+which river runs through the most states
+s16102(s13696(s20123(s24489(s15526))))
+
+# parse_time=1ms
+answer(most(state(all)))
+which river traverses most states
+s16102(s25400(s15526))
+
+# parse_time=1ms
+answer(river(loc_2(stateid(alaska))))
+which rivers are in alaska
+s16102(s13542(s13656(s13766)))
+
+# parse_time=1ms
+answer(river(traverse_2(stateid(texas))))
+which rivers do not run through texas
+s16102(s13542(s23142(s13603)))
+
+# parse_time=1ms
+answer(river(traverse_2(countryid(usa))))
+which rivers do not run through usa
+s16102(s13542(s23142(s13587)))
+
+# parse_time=1ms
+answer(river(traverse_2(stateid(alaska))))
+which rivers flow through alaska
+s16102(s13542(s23168(s13766)))
+
+# parse_time=1ms
+answer(river(traverse_2(state(next_to_2(stateid('new mexico'))))))
+which rivers run through states bordering new mexico
+s16102(s13542(s15420(s14541(s14542(s13781)))))
+
+# parse_time=5ms
+answer(river(traverse_2(state(next_to_2(state(loc_1(capital(cityid(austin,_)))))))))
+which rivers run through states that border the state with the capital austin
+s16102(s13542(s15420(s14541(s13741(s13564(s15313(s16438(s19324))))))))
+
+# parse_time=1ms
+answer(river(traverse_2(traverse_2(fewest(city(all))))))
+which rivers run through states with fewest cities
+s16102(s13542(s15435(s23132(s25527(s14583)))))
+
+# parse_time=5ms
+answer(river(traverse_2(state(loc_1(largest(city(loc_2(countryid(usa)))))))))
+which rivers run through the state with the largest city in the us
+s16102(s13542(s15420(s13564(s15313(s13692(s14030(s13519(s13698))))))))
+
+# parse_time=5ms
+answer(river(traverse_2(state(loc_1(lowest(place(loc_2(countryid(usa)))))))))
+which rivers run through the state with the lowest elevation in the usa
+s16102(s13542(s15420(s13564(s15313(s17634(s18997(s13519(s14107))))))))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(kentucky))))
+which state border kentucky
+s16102(s15067(s15569(s24182)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(florida))))
+which state borders florida
+s16102(s15067(s18688(s13975)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(hawaii))))
+which state borders hawaii
+s16102(s15067(s18688(s15613)))
+
+# parse_time=1ms
+answer(most(state(all)))
+which state borders most states
+s16102(s23530(s15526))
+
+# parse_time=2ms
+answer(state(next_to_2(largest_one(state(all)))))
+which state borders the most states
+s16102(s15067(s18688(s24489(s15526))))
+
+# could not parse: Instance{inputObjects={s=[which, state, capital, has, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(most(river(all)))
+which state contains most rivers
+s16102(s25633(s15302))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, biggest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, greatest, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, greatest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_1(highest(place(all)))))
+which state has the highest elevation
+s16102(s15067(s23590(s13849(s18696))))
+
+# parse_time=3ms
+answer(state(loc_1(highest(place(all)))))
+which state has the highest peak in the country
+s16102(s15067(s23590(s13849(s25673))))
+
+# parse_time=2ms
+answer(state(loc_1(highest(place(all)))))
+which state has the highest point
+s16102(s15067(s23590(s13849(s15315))))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_1(largest(city(all)))))
+which state has the largest city
+s16102(s15067(s23590(s13692(s20974))))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, largest, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, least, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(longest(river(all)))))
+which state has the longest river
+s16102(s15067(s23590(s14092(s17458))))
+
+# parse_time=1ms
+answer(state(loc_1(lowest(place(all)))))
+which state has the lowest elevation
+s16102(s15067(s23590(s17634(s18696))))
+
+# parse_time=2ms
+answer(state(loc_1(lowest(place(next_to_2(stateid(idaho)))))))
+which state has the lowest point that borders idaho
+s16102(s15067(s23590(s17634(s13562(s15662(s15337))))))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, lowest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(most(major(city(all))))
+which state has the most major cities
+s16102(s23785(s14514(s14583)))
+
+# parse_time=1ms
+answer(state(loc_1(largest_one(major(river(all))))))
+which state has the most major rivers
+s16102(s15067(s23590(s24489(s14514(s15302)))))
+
+# parse_time=2ms
+answer(most(major(river(all))))
+which state has the most major rivers running through it
+s16102(s23785(s14514(s23806)))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, people]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(largest_one(river(all)))))
+which state has the most rivers
+s16102(s15067(s23590(s24489(s15302))))
+
+# parse_time=2ms
+answer(most(river(all)))
+which state has the most rivers running through it
+s16102(s23785(s23806))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, red, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_1(smallest(city(next_to_2(stateid(texas)))))))
+which state has the smallest area that borders texas
+s16102(s15067(s23590(s16832(s25216(s15662(s13603))))))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, smallest, average, urban, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, sparsest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(cityid(kalamazoo,_))))
+which state is kalamazoo in
+s16102(s15067(s16096(s25877)))
+
+# parse_time=1ms
+answer(state(loc_1(placeid('mount mckinley'))))
+which state is mount mckinley in
+s16102(s15067(s16096(s25896)))
+
+# parse_time=3ms
+answer(state(city(cityid(denver,_))))
+which state is the city denver located in
+s16102(s15067(s13817(s25906)))
+
+# parse_time=3ms
+answer(state(largest(city(loc_2(stateid(montana))))))
+which state is the largest city in montana in
+s16102(s15067(s14029(s14030(s13519(s25936)))))
+
+# could not parse: Instance{inputObjects={s=[which, state, is, the, smallest]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alabama))))
+which states adjoin alabama
+s16102(s14541(s25950(s13939)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alabama))))
+which states border alabama
+s16102(s14541(s15569(s13939)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alaska))))
+which states border alaska
+s16102(s14541(s15569(s13766)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(arizona))))
+which states border arizona
+s16102(s14541(s15569(s14517)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(colorado))))
+which states border colorado
+s16102(s14541(s15569(s13548)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(hawaii))))
+which states border hawaii
+s16102(s14541(s15569(s15613)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(illinois))))
+which states border illinois
+s16102(s14541(s15569(s18267)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(iowa))))
+which states border iowa
+s16102(s14541(s15569(s15256)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(kentucky))))
+which states border kentucky
+s16102(s14541(s15569(s24182)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(michigan))))
+which states border michigan
+s16102(s14541(s15569(s16196)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('new york'))))
+which states border new york
+s16102(s14541(s15569(s14665)))
+
+# parse_time=0ms
+answer(state(next_to_2(state(all))))
+which states border no other states
+s16102(s14541(s25998(s15526)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('south dakota'))))
+which states border south dakota
+s16102(s14541(s15569(s14962)))
+
+# parse_time=2ms
+answer(state(next_to_2(state(traverse_1(riverid(mississippi))))))
+which states border states through which the mississippi traverses
+s16102(s14541(s15569(s14541(s16500(s26027)))))
+
+# parse_time=0ms
+answer(state(stateid(texas)))
+which states border texas
+s16102(s14541(s16483))
+
+# parse_time=2ms
+answer(state(next_to_2(longest(river(loc_2(countryid(usa)))))))
+which states border the longest river in the usa
+s16102(s14541(s15569(s14092(s13696(s13519(s14107))))))
+
+# could not parse: Instance{inputObjects={s=[which, states, border, the, missouri, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, border, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, 's, capital, city, is, the, largest]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(traverse_1(riverid(colorado))))
+which states do colorado river flow through
+s16102(s14541(s26075(s15793)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(texas))))
+which states does not border texas
+s16102(s14541(s26086(s13603)))
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, chattahoochee, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, colorado, river, run, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_2(longest(river(all)))))
+which states does the longest river cross
+s16102(s14541(s14261(s14092(s26126))))
+
+# parse_time=1ms
+answer(state(loc_2(longest(river(all)))))
+which states does the longest river run through
+s16102(s14541(s14261(s14092(s16047))))
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, mississippi, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, mississippi, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, missouri, river, pass, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, missouri, river, run, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(major(city(cityid(austin,_))))))
+which states have a major city named austin
+s16102(s14541(s15919(s14514(s14030(s14406)))))
+
+# parse_time=0ms
+answer(state(loc_1(river(all))))
+which states have a river
+s16102(s14541(s15913(s18015)))
+
+# parse_time=0ms
+answer(state(loc_1(city(cityid(austin,_)))))
+which states have cities named austin
+s16102(s14541(s15913(s14250(s14406))))
+
+# parse_time=3ms
+answer(state(loc_1(place(higher_2(highest(place(loc_2(stateid(colorado)))))))))
+which states have points higher than the highest point in colorado
+s16102(s14541(s15913(s13838(s25005(s13849(s13562(s13519(s13548))))))))
+
+# parse_time=3ms
+answer(state(loc_1(place(higher_2(highest(place(loc_2(stateid(texas)))))))))
+which states have points that are higher than the highest point in texas
+s16102(s14541(s15913(s13838(s26287(s13849(s13562(s13519(s13603))))))))
+
+# parse_time=3ms
+answer(state(traverse_1(largest(river(loc_2(countryid(usa)))))))
+which states lie on the largest river in the united states
+s16102(s14541(s26317(s13692(s13696(s13519(s15495))))))
+
+# could not parse: Instance{inputObjects={s=[which, us, city, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
