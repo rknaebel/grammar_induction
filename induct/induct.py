@@ -3,86 +3,233 @@
 """
 Induct grammar from sentence alignments between tokenized strings and tokenized trees
 """
+import traceback
 
 import re
 
-# class for a rule object with a label, string, and tree representation
-class Rule(object):
-    count = 0
-    def __init__(self):
-        self.label = None
-        self.s = None
-        self.t = None
-        self.i = Rule.count
-        Rule.count += 1
+from Rule import Rule
+from IntervalTree import IntervalTree
+from IntervalTree import Interval
 
-    def createLabel(self, start, argnum):
-        self.label = start + " -> s" + str(self.i) + ("({})".format(",".join(["X"]*argnum)) if argnum > 0 else "")
+DELETES = 0
+INVALIDS = 0
+EXCEPTIONS = 0
 
-    def createMeaning(self, name, argnum):
-        if argnum > 0:
-            self.t = name.replace("+"," ").replace("0","\"0\"") + "({})".format(",".join("?"+str(i+1) for i in range(argnum)))
+LabelDict = dict()
+
+def shiftReduceParse(linearTree):
+    """ 
+    parse listed tree items from right to left (shift reduce)
+    returns a tree or None, if some nodes are not aligned
+    """
+    treeBuffer = []
+    for node in reversed(linearTree):
+        #print "buffer:", treeBuffer
+        t = IntervalTree()
+        t.name = node[0]
+        # Add child nodes to the current node 
+        # by popping them from the buffer
+        if node[1] == 0:
+            pass
         else:
-            self.t = name.replace("+"," ").replace("0","\"0\"")
+            for _ in range(node[1]):
+                n = treeBuffer.pop()
+                t.childNodes.append(n)
+        
+        # unaligned words 
+        if node[2] == (0,):
+            return None
+            
+            if t.childNodes:
+                minInterval = min(child.interval.start for child in t.childNodes)
+                maxInterval = max(child.interval.end   for child in t.childNodes)
+                t.interval = Interval(minInterval,maxInterval)
+            else:
+                # what happens with leaf nodes that have no aligned semantic?
+                t.interval = Interval()
+        else:
+            minInterval, maxInterval = min(node[2])-1, max(node[2])
+            
+            for child in t.childNodes:
+                childInterval = child.interval
+                minInterval, maxInterval = min(minInterval,childInterval.start), max(maxInterval,childInterval.end)
+            
+            t.interval = Interval(minInterval, maxInterval)
+            t.alignment = node[2]
+            
+        treeBuffer.append(t)
+    return treeBuffer[0]
+
+def extractMeanings(f):
+    alignment = re.findall(r"([^ ]+)\s*\(\{((\s*\d\s*)*)\}\)", f.replace("({ })","({ 0 })"))
+    funqls = []
+    for a in alignment[1:]:
+        funql = [a[0], 0, []]
+        if funql[0].count('X') > 0:
+            funql[1] = funql[0].count('X')
+            funql[0] = funql[0][:funql[0].find("(")]
+        funql[2] = tuple(int(idx) for idx in a[1].split())
+        funqls.append(funql)
+    return funqls
+
+def getStringRule(interval, string):
+    s = dict(enumerate(string))
+    flatInterval = interval.flatten()
     
-    # the __hash__ and __eq__ is used to idenfity duplicate rules later
-    def __hash__(self):
-        return hash((self.s,self.t))
+    stringRule  = s[flatInterval[0]] if flatInterval[0] >= 0 else "?1"
+    varIdx      =   1                if flatInterval[0] >= 0 else   2
+    for i in flatInterval[1:]:
+        if i >= 0:
+            stringRule = "*({},{})".format(stringRule, s[i])
+        else:
+            stringRule = "*({},?{})".format(stringRule, varIdx)
+            varIdx += 1
+    return stringRule.replace("\'s",'\"\'s\"').replace("50","\"50\"")
+
+def getMeaningRule(name, argnum):
+    if argnum > 0:
+        return name.replace("+"," ").replace("0","\"0\"") + "({})".format(",".join("?"+str(i+1) for i in range(argnum)))
+    else:
+        return name.replace("+"," ").replace("0","\"0\"")
+
+def mergeTreeNodes(n1, n2):
+    treeNode = IntervalTree()
+
+def splitTree1(node):
+    interval = node.interval
+    for child in node.childNodes:
+        interval = interval.without(child.interval)
+    return interval
+
+def splitTree2(cNode, pNode):
+    pass
+
+def induceRule1(tree, s):
+    """
+    Rule Generation
+    """
+    global INVALIDS, DELETES
     
-    def __str__(self):
-        return "{}\n[s] {}\n[t] {}\n".format(self.label, self.s, self.t)
+    rules = set()
+    treeBuffer = [(tree,'S!')]
+    while treeBuffer:
+        try:
+            r = Rule()
+            node, label = treeBuffer.pop()
+            arguments = [LabelDict[child.name] for child in node.childNodes]
 
-    def __repr__(self):
-        return "({}-[s]:{}-[t]:{})".format(self.label, self.s, self.t)
+            for idx,child in enumerate(node.childNodes):
+                treeBuffer.append((child,arguments[idx]))
+            #
+            # create rule label
+            #
+            r.label = getLabel(label, r.i, arguments)
+            #
+            # create string representation
+            #
+            interval = splitTree1(node)
+            r.s = getStringRule(interval, s)
+            #
+            # create meaning representation
+            #
+            r.t = getMeaningRule(node.name,len(node.childNodes))
+            
+            if len(node.childNodes) != interval.flatten().count(-1):
+                #print "Invalid number of arguments"
+                INVALIDS += 1
+                continue
+            if r.s in ("?1", "*(?1,?2)"):
+                #print "deleting homomorphism..."
+                print r
+                raw_input()
+                DELETES += 1
+                continue
+            
+            rules.add(r)
+
+        except Exception as e:
+            print traceback.format_exc()
+            raw_input()
+            pass
+
+    return rules
+
+def getLabel(start, idx, args):
+    return (start + " -> s" + str(idx) +
+            ("({})".format(",".join(args)) if args else ""))
+
+def induceRule2(tree, s):
+    """
+    Rule Generation
+    """
+    global INVALIDS, DELETES, EXCEPTIONS
     
-    def __eq__(self, other):
-        return self.s == other.s and self.t == other.t
+    rules = set()
+    treeBuffer = [(tree,tree.interval,'S!')]
 
+    try:
+        while treeBuffer:
+            r = Rule()
+            node, nodeInterval, label = treeBuffer.pop()
+            #arguments = ['X'] * len(node.childNodes)
+            arguments = [LabelDict[child.name] for child in node.childNodes]
 
-class IntervalTree:
-    def __init__(self):
-        self.name = ""
-        self.interval = (0,0)
-        self.childNodes = []
-        self.alignment = []
+            if len(node.alignment) == 1:
+                alignedWord = node.alignment[0]
+                tmpInterval = Interval(nodeInterval.first(), alignedWord)
+            else:
+                minWord, maxWord = min(node.alignment), max(node.alignment)
+                tmpInterval = Interval(minWord-1, maxWord)
+            
+            childsInterval = nodeInterval.without(tmpInterval)
+            interval = tmpInterval
+            
+            if node.childNodes:
+                splitIdx = node.childNodes[0].interval.last()
+                tmpInterval = Interval(childsInterval.first(),splitIdx+1)
+                
+                treeBuffer.append((node.childNodes[0],tmpInterval,arguments[0]))
+                for idx,child in enumerate(node.childNodes[1:]):
+                    oldSplit = splitIdx
+                    splitIdx = child.interval.last()
+                    tmpInterval = Interval(oldSplit+1,splitIdx+1)
+                    treeBuffer.append((child,tmpInterval,arguments[idx+1]))
+            
+            for _ in range(len(node.childNodes)): interval.addPlaceholder()
+            
+            #
+            # create rule label
+            #
+            r.label = getLabel(label, r.i, arguments)
+            #
+            # create string representation
+            #
+            r.s = getStringRule(interval, s)
+            #
+            # create meaning representation
+            #
+            r.t = getMeaningRule(node.name,len(node.childNodes))
+            
+            if len(node.childNodes) != interval.flatten().count(-1):
+                #print "Invalid number of arguments"
+                INVALIDS += 1
+                continue
+            if r.s in ("?1", "*(?1,?2)"):
+                #print "deleting homomorphism..."
+                DELETES += 1
+                continue
+            
+            rules.add(r)
 
-    def sortChildNodes(self):
-        self.childNodes.sort(key=lambda t: t.interval[0])
-
-    def induceIrtgRules(self, sentence):
+    except Exception as e:
+        #print traceback.format_exc()[:30], "..."
+        #raw_input()
+        EXCEPTIONS += 1
         pass
 
-    def setAlignment(self,xs):
-        xs = sorted(xs)
-        self.alignment = xs
-        minInterval = xs[ 0]-1
-        maxInterval = xs[-1]
-        # TODO:
-        # Im using max(..., 0) to have at least index 0
-        # this is used for unaligned words so far, but will be changed
-        # later to have intervalls within surrounding semantic representations
-        if self.childNodes:
-            minChilds = min(self.childNodes, key=lambda t: t.interval[0]).interval[0]
-            maxChilds = max(self.childNodes, key=lambda t: t.interval[1]).interval[1]
-            self.interval = (max(min(minInterval, minChilds), 0), max(maxInterval, maxChilds))
-        else:
-            self.interval = (max(0, minInterval), maxInterval)
-        
+    return rules
 
-    def __str__(self):
-        interval = "[{},{}]".format(self.interval[0],self.interval[1])
-        if self.childNodes:
-            return "{}{}({})".format(self.name,interval, ",".join(str(t) for t in self.childNodes))
-        else:
-            return "{}{}".format(self.name,interval)
-
-    __repr__ = __str__
-
-
-def main():
-    # read alignments and save to string and funql lists
-    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
-    
+def separateInput(raw_alignments):
     string = []
     funql = []
     
@@ -94,104 +241,54 @@ def main():
             funql.append(raw_alignments[i])
         else:
             pass
+    
+    return string, funql
 
+def extendLabels(funqls):
+    global LabelDict
+    for (name,args,_) in funqls:
+        if name not in LabelDict: # int(args) > 0 and 
+            LabelDict[name] = name.capitalize()[:3]
+
+def ruleInduction(raw_alignments, induceMethod=induceRule1):
+    string, funql = separateInput(raw_alignments)
+    
     ruleSet = set()
-
+    
     for (s,f) in zip(string,funql):
-        s = dict(enumerate(s))
-        #print ">", s
-        #print ">", f
-        alignment = re.findall(r"([^ ]+)\s*\(\{((\s*\d\s*)*)\}\)", f.replace("({ })","({ 0 })"))
-        funqls = []
-        for a in alignment[1:]:
-            funql = [a[0], 0, []]
-            if funql[0].count('X') > 0:
-                funql[1] = funql[0].count('X')
-                funql[0] = funql[0][:funql[0].find("(")]
-            funql[2] = tuple(int(idx) for idx in a[1].split())
-            funqls.append(funql)
+        funqls  = extractMeanings(f)
+        extendLabels(funqls)
+        tree    = shiftReduceParse(funqls)
+        if not tree: continue
+        rules   = induceMethod(tree, s)
+        ruleSet = ruleSet | rules
 
-        # parse listed tree items from right to left (shift reduce)
-        treeBuffer = []
-        for node in reversed(funqls):
-            t = IntervalTree()
-            t.name = node[0]
-            if node[1] == 0:
-                pass
-            else:
-                for _ in range(node[1]):
-                    n = treeBuffer.pop()
-                    t.childNodes.append(n)
-                t.sortChildNodes()
-            t.setAlignment(node[2])
-            treeBuffer.append(t)
-        tree = treeBuffer[0]
-        try:
-            #
-            # Rule generation
-            #
-            rules = set()
-            treeBuffer = [tree]
-            while treeBuffer:
-                r = Rule()
-                node = treeBuffer.pop()
-                treeBuffer.extend(node.childNodes)
-                #
-                # create rule label
-                #
-                if node.name == "answer":
-                    r.createLabel("S!", len(node.childNodes))
-                else:
-                    r.createLabel("X", len(node.childNodes))
-                #
-                # create string representation
-                #
-                interval = range(*node.interval)
-                for child in node.childNodes:
-                    #print node
-                    #print interval
-                    #print node.childNodes
-                    start, end = child.interval
-                    startPos, endPos = interval.index(start), interval.index(end-1)
-                    interval = interval[:startPos] + [-1] + interval[endPos+1:]
-                stringRule  = s[interval[0]] if interval[0] >= 0 else "?1" 
-                varIdx      =   1  if s[0] >= 0 else   2 
-                for i in interval[1:]:
-                    if i >= 0:
-                        stringRule = "*({},{})".format(stringRule, s[i])
-                    else:
-                        stringRule = "*({},?{})".format(stringRule, varIdx)
-                        varIdx += 1
-                #print " ".join(s[i] for i in interval if i >= 0)
-                r.s = stringRule.replace("\'s",'\"\'s\"').replace("50","\"50\"")
-                #r.s = re.sub(r"([0|50])",r'"\1"',r.s)
-                #
-                # create meaning representation
-                #
-                r.createMeaning(node.name,len(node.childNodes))
-                
-                rules.add(r)
-            
-            ruleSet = ruleSet | rules
-        
-        except Exception:
-            pass
-    
-    #for rule in ruleSet:
-    #    print rule, "\n"
-    print len(ruleSet), "rules extracted"
-    
+    return ruleSet
 
-
-    # append header
+def storeRules(filename, ruleSet):
     header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
-    
     # write grammar to file
-    #grammar_irtg = open("../data/grammar.irtg", "w")
-    #grammar_irtg.write(header)
-    #for r in ruleSet:
-    #    grammar_irtg.write(str(r)+"\n")
-    #grammar_irtg.close()
+    grammar_irtg = open(filename, "w")
+    grammar_irtg.write(header)
+    for r in ruleSet:
+        grammar_irtg.write(str(r)+"\n")
+    grammar_irtg.close()
 
+def main():
+    # read alignments and save to string and funql lists
+    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
+    
+    ruleSet1 = ruleInduction(raw_alignments, induceRule1)
+    #storeRules("../data/grammar1.irtg", ruleSet1)
+    
+    #ruleSet2 = ruleInduction(raw_alignments, induceRule2)
+    #storeRules("../data/grammar2.irtg", ruleSet2)
+
+    #storeRules("../data/grammar3.irtg", ruleSet1 | ruleSet2)
+    
+    print "number of exceptions:", EXCEPTIONS
+    print "number of invalids:", INVALIDS
+    print "number of deletions:", DELETES
+    
 if __name__ == "__main__":
     main()

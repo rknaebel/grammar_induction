@@ -16,9 +16,6 @@ class Rule(object):
         self.i = Rule.count
         Rule.count += 1
     
-    def createLabel(self, start, argnum):
-        self.label = start + " -> s" + str(self.i) + ("({})".format(",".join(["X"]*argnum)) if argnum > 0 else "")
-    
     # the __hash__ and __eq__ is used to idenfity duplicate rules later
     def __hash__(self):
         return hash((self.s,self.t))
