@@ -65,6 +65,15 @@ object RunAll extends App {
     irtg.bulkParse(testCorpus, cw, null)
 
     output.close
+    
+//    val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
+//    println(parsedCorpus)
+//    for (ins <- parsedCorpus) {
+//        println(ins)
+//        val tMap = ins.getInputObjects() 
+//        val tree : Tree = tMap.get("t")
+//        println(tree.toLispString)
+//    }
 }
 
 //RunAll.main(args)

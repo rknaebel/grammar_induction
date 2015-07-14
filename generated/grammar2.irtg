@@ -1,0 +1,6010 @@
+/*
+Induced grammar from aligned sentences
+s = tokenized string from geoquery corpus
+t = tree elements from geoquery function query language (variable-free)
+*/
+
+interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
+
+
+Pla -> s13867
+[s] *(mount,mckinley)
+[t] placeid('mount mckinley')
+
+Sta -> s22866
+[s] *(*(flows,through),texas)
+[t] stateid('texas')
+
+Cit -> s21280
+[s] *(of,atlanta)
+[t] cityid('atlanta',_)
+
+Riv -> s16047
+[s] *(*(river,run),through)
+[t] river(all)
+
+S! -> s13517(Cit)
+[s] *(give,?1)
+[t] answer(?1)
+
+Cit -> s25045
+[s] *(*(*("'s",the),largest),city)
+[t] city(all)
+
+Sta -> s13723
+[s] *(*(*(of,rivers),in),california)
+[t] stateid('california')
+
+Nex -> s15521(Maj)
+[s] *(*(are,next),?1)
+[t] next_to_2(?1)
+
+Cit -> s21328
+[s] *(*(*(*(is,the),population),of),austin)
+[t] cityid('austin','tx')
+
+Riv -> s14047
+[s] *(rio,grande)
+[t] riverid('rio grande')
+
+Riv -> s24423
+[s] *(the,ohio)
+[t] riverid('ohio')
+
+Den -> s25652(Sta)
+[s] *(*(greatest,density),?1)
+[t] density_1(?1)
+
+Sta -> s20824
+[s] *(*(*(*(*(is,the),lowest),point),in),wisconsin)
+[t] stateid('wisconsin')
+
+Exc -> s15714(Sta,Loc)
+[s] *(*(*(do,not),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s14262
+[s] *(*(rhode,island),have)
+[t] stateid('rhode island')
+
+Sta -> s15251
+[s] *(in,colorado)
+[t] stateid('colorado')
+
+Sta -> s24122
+[s] *(*(*(are,next),to),texas)
+[t] stateid('texas')
+
+Sta -> s21070
+[s] *(for,kentucky)
+[t] stateid('kentucky')
+
+Sta -> s13677
+[s] *(*(*(*(me,the),lakes),in),california)
+[t] stateid('california')
+
+Cou -> s14107
+[s] *(the,usa)
+[t] countryid('usa')
+
+Pop -> s21974(Lar)
+[s] *(*(*(*(*(*(*(*(population,of),the),state),with),the),highest),population),?1)
+[t] population_1(?1)
+
+Nex -> s15662(Sta)
+[s] *(*(that,borders),?1)
+[t] next_to_2(?1)
+
+Tra -> s15435(Sta)
+[s] *(run,?1)
+[t] traverse_2(?1)
+
+Tra -> s15420(Sta)
+[s] *(*(run,through),?1)
+[t] traverse_2(?1)
+
+Len -> s20069(Riv)
+[s] *(*(*(length,of),the),?1)
+[t] len(?1)
+
+Sta -> s17719
+[s] *(*(*(*(is,the),area),of),idaho)
+[t] stateid('idaho')
+
+Lar -> s24045(Pop)
+[s] *(*(*(*(state,is),the),largest),?1)
+[t] largest_one(?1)
+
+Sta -> s16196
+[s] michigan
+[t] stateid('michigan')
+
+Riv -> s14492
+[s] *(*(colorado,rivers),are)
+[t] riverid('colorado')
+
+Sta -> s18429
+[s] maryland
+[t] stateid('maryland')
+
+Sta -> s17960
+[s] wisconsin
+[t] stateid('wisconsin')
+
+Sta -> s13778
+[s] massachusetts
+[t] stateid('massachusetts')
+
+Tra -> s20033(Riv)
+[s] *(*(traversed,by),?1)
+[t] traverse_1(?1)
+
+Sta -> s16638
+[s] *(*(*(*(the,major),cities),in),california)
+[t] stateid('california')
+
+Nex -> s15515(Maj)
+[s] *(*(*(are,next),to),?1)
+[t] next_to_2(?1)
+
+Mos -> s20172(Riv)
+[s] *(*(*(*(*(*(*(*(*(*(*(is,the),length),of),the),river),that),runs),through),the),most),?1)
+[t] most(?1)
+
+Loc -> s15231(Sta)
+[s] *(*(*(are,found),in),?1)
+[t] loc_2(?1)
+
+Cou -> s14248(Maj)
+[s] *(many,?1)
+[t] count(?1)
+
+Sta -> s19786
+[s] *(*(*(*(*(is,the),largest),city),in),wisconsin)
+[t] stateid('wisconsin')
+
+Pla -> s25092
+[s] *(*(mount,whitney),located)
+[t] placeid('mount whitney')
+
+Cit -> s21616
+[s] *(*(*(*(is,the),population),of),portland)
+[t] cityid('portland','me')
+
+Pop -> s14943(Cit)
+[s] *(*(*(*(many,people),live),in),?1)
+[t] population_1(?1)
+
+S! -> s17459(Sta)
+[s] *(*(*(*(*(*(what,are),the),states),through),which),?1)
+[t] answer(?1)
+
+Cit -> s19332
+[s] *(des,moines)
+[t] cityid('des moines',_)
+
+Mos -> s24575(Sta)
+[s] *(*(*(*(*(the,states),with),the),most),?1)
+[t] most(?1)
+
+Cit -> s13830
+[s] *(of,new)
+[t] cityid('new york',_)
+
+Riv -> s20476
+[s] *(river,that)
+[t] river(all)
+
+Mos -> s24058(Sta)
+[s] *(*(*(*(*(*(is,the),state),with),the),most),?1)
+[t] most(?1)
+
+Sta -> s15613
+[s] hawaii
+[t] stateid('hawaii')
+
+Sta -> s23345
+[s] *(through,louisiana)
+[t] stateid('louisiana')
+
+S! -> s13532(Hig)
+[s] *(what,?1)
+[t] answer(?1)
+
+Cit -> s14692
+[s] *(in,austin)
+[t] cityid('austin',_)
+
+S! -> s16102(Sta)
+[s] *(which,?1)
+[t] answer(?1)
+
+Sta -> s22298
+[s] *(*(*(*(*(is,the),smallest),city),in),arkansas)
+[t] stateid('arkansas')
+
+Cit -> s21391
+[s] dallas
+[t] cityid('dallas',_)
+
+Riv -> s14134
+[s] mississippi
+[t] riverid('mississippi')
+
+Sta -> s23165
+[s] though
+[t] stateid('colorado')
+
+Sta -> s16663
+[s] kansas
+[t] stateid('kansas')
+
+Mos -> s20232(Riv)
+[s] *(*(*(*(*(*(the,river),that),traverses),the),most),?1)
+[t] most(?1)
+
+Sta -> s17905
+[s] *(*(*(*(*(is,the),area),of),the),state)
+[t] state(all)
+
+S! -> s16138(Sta)
+[s] *(*(list,the),?1)
+[t] answer(?1)
+
+Tra -> s20123(Sta)
+[s] *(*(runs,through),?1)
+[t] traverse_2(?1)
+
+Nex -> s15654(Riv)
+[s] *(*(border,the),?1)
+[t] next_to_2(?1)
+
+Tra -> s24444(Riv)
+[s] *(*(*(the,ohio),runs),?1)
+[t] traverse_1(?1)
+
+Lar -> s23523(Pop)
+[s] *(*(*(*(state,bordering),nevada),has),?1)
+[t] largest_one(?1)
+
+Cou -> s15122
+[s] *(*(*(*(live,in),the),united),states)
+[t] countryid('usa')
+
+Sta -> s18433
+[s] *(*(*(*(is,the),capital),of),maryland)
+[t] stateid('maryland')
+
+Cit -> s21667
+[s] *(*(*(*(is,the),population),of),seattle)
+[t] cityid('seattle',_)
+
+Lar -> s24084(Pop)
+[s] *(*(*(*(*(state,that),borders),texas),has),?1)
+[t] largest_one(?1)
+
+Cit -> s14508
+[s] *(*(does,montgomery),have)
+[t] cityid('montgomery',_)
+
+Pop -> s15199(Sta)
+[s] *(*(*(many,residents),live),?1)
+[t] population_1(?1)
+
+Cou -> s25288
+[s] *(*(*(*(*(is,the),longest),river),in),usa)
+[t] countryid('usa')
+
+Hig -> s25010(Hig)
+[s] *("'s",?1)
+[t] high_point_2(?1)
+
+Sma -> s15072(Sta)
+[s] *(*(*(*(live,in),the),smallest),?1)
+[t] smallest(?1)
+
+Cit -> s14502
+[s] *(*(inhabitants,does),montgomery)
+[t] cityid('montgomery',_)
+
+Cit -> s22008
+[s] tucson
+[t] cityid('tucson',_)
+
+Maj -> s24609(Riv)
+[s] *(*(*(*(at,least),one),major),?1)
+[t] major(?1)
+
+Tra -> s24416(Riv)
+[s] *(*(*(*(that,the),mississippi),runs),?1)
+[t] traverse_1(?1)
+
+Sta -> s15097
+[s] *(*(*(live,in),the),state)
+[t] state(all)
+
+Sta -> s17247(Tra)
+[s] *(*(*(*(*(*(are,the),populations),of),the),states),?1)
+[t] state(?1)
+
+Cou -> s25435
+[s] *(*(*(*(do,not),run),through),usa)
+[t] countryid('usa')
+
+Sta -> s17692
+[s] *(*(*(*(is,the),area),of),california)
+[t] stateid('california')
+
+Lar -> s22252(Sta)
+[s] *(*(*(*(*(*(is,the),size),of),the),largest),?1)
+[t] largest(?1)
+
+Sta -> s16748
+[s] oklahoma
+[t] stateid('oklahoma')
+
+Cit -> s14797
+[s] *(in,kalamazoo)
+[t] cityid('kalamazoo',_)
+
+Loc -> s23590(Hig)
+[s] *(has,?1)
+[t] loc_1(?1)
+
+Lar -> s23636(Pop)
+[s] *(*(*(with,the),most),?1)
+[t] largest_one(?1)
+
+Sta -> s21427
+[s] *(*(*(*(is,the),population),of),hawaii)
+[t] stateid('hawaii')
+
+Maj -> s17235(Cit)
+[s] *(*(*(of,the),major),?1)
+[t] major(?1)
+
+Mos -> s23564(Sta)
+[s] *(*(*(*(state,borders),the),most),?1)
+[t] most(?1)
+
+Cit -> s14746
+[s] *(*(*(people,live),in),chicago)
+[t] cityid('chicago',_)
+
+Cit -> s21646
+[s] of
+[t] cityid('sacramento',_)
+
+Sta -> s14643(Sta)
+[s] *(*(*(*(*(*(many,people),are),in),the),state),?1)
+[t] state(?1)
+
+Cap -> s18577(Loc)
+[s] *(*(*(capital,of),the),?1)
+[t] capital(?1)
+
+Lar -> s20942(Den)
+[s] *(*(*(is,the),most),?1)
+[t] largest_one(?1)
+
+Sma -> s18807(Pop)
+[s] *(*(*(*(*(*(is,the),city),with),the),smallest),?1)
+[t] smallest_one(?1)
+
+Loc -> s19204(Sta)
+[s] *(*(*(in,nevada),in),?1)
+[t] loc_2(?1)
+
+Sta -> s14665
+[s] *(new,york)
+[t] stateid('new york')
+
+Cit -> s21397
+[s] *(*(*(*(is,the),population),of),denver)
+[t] cityid('denver',_)
+
+Sta -> s22564(Loc)
+[s] *(*(*(is,the),state),?1)
+[t] state(?1)
+
+Sta -> s13757
+[s] *(border,utah)
+[t] stateid('utah')
+
+Sta -> s16753
+[s] *(*(*(*(the,major),cities),in),oklahoma)
+[t] stateid('oklahoma')
+
+Cit -> s24888
+[s] named
+[t] cityid('portland',_)
+
+Maj -> s17229(Cit)
+[s] *(*(*(*(*(*(are,the),populations),of),the),major),?1)
+[t] major(?1)
+
+S! -> s16131(Cou)
+[s] *(*(*(iowa,borders),how),?1)
+[t] answer(?1)
+
+Riv -> s13542(Loc)
+[s] *(rivers,?1)
+[t] river(?1)
+
+Cit -> s21415
+[s] *(*(of,erie),pennsylvania)
+[t] cityid('erie','pa')
+
+Sta -> s18850
+[s] *(*(*(*(is,the),density),of),texas)
+[t] stateid('texas')
+
+Are -> s15464(Cou)
+[s] *(*(*(many,square),kilometers),?1)
+[t] area_1(?1)
+
+Cit -> s21724
+[s] *(*(*(of,springfield),south),dakota)
+[t] cityid('springfield','sd')
+
+Len -> s20060(Riv)
+[s] *(*(length,of),?1)
+[t] len(?1)
+
+Pop -> s14467(Sta)
+[s] *(*(*(*(many,citizens),live),in),?1)
+[t] population_1(?1)
+
+Lon -> s20079(Riv)
+[s] *(*(*(*(*(*(is,the),length),of),the),longest),?1)
+[t] longest(?1)
+
+Lar -> s14415(Cit)
+[s] *(*(*(*(citizens,does),the),biggest),?1)
+[t] largest(?1)
+
+Tra -> s13712(Cou)
+[s] *(*(that,passes),?1)
+[t] traverse_2(?1)
+
+Cit -> s23955
+[s] boston
+[t] cityid('boston',_)
+
+Sta -> s17746
+[s] *(*(*(the,area),of),maine)
+[t] stateid('maine')
+
+Cit -> s23959
+[s] *(boston,in)
+[t] cityid('boston',_)
+
+Lar -> s18010(Cit)
+[s] *(*(biggest,american),?1)
+[t] largest(?1)
+
+Cit -> s16019
+[s] *(*(or,towns),named)
+[t] cityid('springfield',_)
+
+Exc -> s20491(Riv,Tra)
+[s] *(*(*(*(*(river,that),does),not),?1),?2)
+[t] exclude(?1,?2)
+
+Pla -> s18997(Loc)
+[s] *(elevation,?1)
+[t] place(?1)
+
+Mos -> s25633(Sta)
+[s] *(*(*(state,contains),most),?1)
+[t] most(?1)
+
+Mos -> s25400(Riv)
+[s] *(*(*(river,traverses),most),?1)
+[t] most(?1)
+
+Pop -> s21423(Cit)
+[s] *(*(*(population,of),erie),?1)
+[t] population_1(?1)
+
+Tra -> s24958(Riv)
+[s] *(*(*(*(have,rivers),running),through),?1)
+[t] traverse_1(?1)
+
+Cit -> s25071
+[s] *(fort,wayne)
+[t] cityid('fort wayne',_)
+
+Hig -> s13561(Pla)
+[s] *(*(*(is,the),highest),?1)
+[t] highest(?1)
+
+Tra -> s23152(Sta)
+[s] *(flow,?1)
+[t] traverse_2(?1)
+
+Cit -> s24878
+[s] *(named,portland)
+[t] cityid('portland',_)
+
+Sta -> s18356
+[s] *(*(*(*(is,the),capital),of),colorado)
+[t] stateid('colorado')
+
+Sta -> s14962
+[s] *(south,dakota)
+[t] stateid('south dakota')
+
+Sma -> s15066(Sta)
+[s] *(*(*(in,the),smallest),?1)
+[t] smallest(?1)
+
+Riv -> s13696(Tra)
+[s] *(river,?1)
+[t] river(?1)
+
+Riv -> s15886(Riv)
+[s] *(*(*(the,missouri),river),?1)
+[t] river(?1)
+
+Sta -> s23485
+[s] *(*(*(run,through),west),virginia)
+[t] stateid('west virginia')
+
+Cou -> s19424
+[s] *(*(*(*(*(*(is,the),highest),point),in),the),us)
+[t] countryid('usa')
+
+Sta -> s15271
+[s] *(in,missouri)
+[t] stateid('missouri')
+
+S! -> s13556(Riv)
+[s] *(*(name,all),?1)
+[t] answer(?1)
+
+Cou -> s17978
+[s] *(by,state)
+[t] countryid('usa')
+
+Cit -> s21307
+[s] *(*(*(*(is,the),population),of),austin)
+[t] cityid('austin',_)
+
+Cit -> s25901
+[s] *(denver,located)
+[t] cityid('denver',_)
+
+Sta -> s15379
+[s] *(alaska,have)
+[t] stateid('alaska')
+
+Ele -> s18882(Pla)
+[s] *(*(*(is,the),elevation),?1)
+[t] elevation_1(?1)
+
+Cou -> s20303
+[s] *(*(*(*(*(is,the),longest),river),in),america)
+[t] countryid('usa')
+
+Sta -> s20323
+[s] *(*(*(*(*(is,the),longest),river),in),florida)
+[t] stateid('florida')
+
+Sta -> s21595
+[s] *(of,oregon)
+[t] stateid('oregon')
+
+Cit -> s24029
+[s] *(pittsburgh,in)
+[t] cityid('pittsburgh',_)
+
+Pla -> s21050
+[s] *(*(*(*(*(*(*(name,of),the),state),with),the),lowest),point)
+[t] place(all)
+
+Ele -> s18921(Pla)
+[s] *(*(*(*(is,the),height),of),?1)
+[t] elevation_1(?1)
+
+Mos -> s15291(Sta)
+[s] *(*(*(*(*(*(the,state),that),has),the),most),?1)
+[t] most(?1)
+
+Riv -> s15877
+[s] *(mississippi,run)
+[t] riverid('mississippi')
+
+Pop -> s22647(Sta)
+[s] *(*(lowest,population),?1)
+[t] population_1(?1)
+
+Loc -> s16839(Sma)
+[s] *(*(*(*(*(in,the),smallest),state),in),?1)
+[t] loc_2(?1)
+
+Sta -> s17056
+[s] *(for,michigan)
+[t] stateid('michigan')
+
+Siz -> s14040(Lar)
+[s] *(*(*(large,is),the),?1)
+[t] size(?1)
+
+Riv -> s15817
+[s] *(*(*(colorado,river),run),through)
+[t] riverid('colorado')
+
+Exc -> s26090(Sta,Nex)
+[s] *(*(*(*(states,does),not),?1),?2)
+[t] exclude(?1,?2)
+
+Cit -> s14462
+[s] *(citizens,in)
+[t] cityid('boulder',_)
+
+Sta -> s14628
+[s] nevada
+[t] stateid('nevada')
+
+Cit -> s21640
+[s] *(*(*(*(is,the),population),of),sacramento)
+[t] cityid('sacramento',_)
+
+Sta -> s17791
+[s] *(*(*(the,area),of),ohio)
+[t] stateid('ohio')
+
+Sta -> s18272
+[s] *(*(*(*(*(is,the),biggest),river),in),illinois)
+[t] stateid('illinois')
+
+Hig -> s13837(Pla)
+[s] *(*(*(are,the),highest),?1)
+[t] highest(?1)
+
+Mos -> s22968(Sta)
+[s] *(*(*(*(*(*(through,the),state),with),the),most),?1)
+[t] most(?1)
+
+Pla -> s13864
+[s] *(*(is,guadalupe),peak)
+[t] placeid('guadalupe peak')
+
+Cap -> s19553
+[s] *(*(the,largest),capital)
+[t] capital(all)
+
+Loc -> s14261(Sta)
+[s] *(does,?1)
+[t] loc_2(?1)
+
+Cit -> s16013
+[s] *(*(*(or,towns),named),springfield)
+[t] cityid('springfield',_)
+
+Sta -> s19064
+[s] *(*(*(*(the,highest),mountain),in),alaska)
+[t] stateid('alaska')
+
+Sta -> s16051
+[s] *(*(does,texas),have)
+[t] stateid('texas')
+
+Sta -> s22225
+[s] *(*(*(*(is,the),size),of),texas)
+[t] stateid('texas')
+
+Cou -> s18291
+[s] *(continental,us)
+[t] countryid('usa')
+
+Riv -> s17112(Riv)
+[s] *(*(*(*(which,the),mississippi),river),?1)
+[t] river(?1)
+
+Sta -> s23109
+[s] *(in,utah)
+[t] stateid('utah')
+
+S! -> s16134(Sta)
+[s] *(list,?1)
+[t] answer(?1)
+
+Cit -> s15152
+[s] *(*(in,washington),dc)
+[t] cityid('washington','dc')
+
+Lar -> s17587(Pop)
+[s] *(*(*(has,the),most),?1)
+[t] largest_one(?1)
+
+Loc -> s13586(Cou)
+[s] *(of,?1)
+[t] loc_2(?1)
+
+Exc -> s23594(Sta,Loc)
+[s] *(*(*(*(state,has),no),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s15623(Loc)
+[s] *(*(*(on,the),state),?1)
+[t] state(?1)
+
+Loc -> s16096(Pla)
+[s] *(is,?1)
+[t] loc_1(?1)
+
+Sta -> s21628
+[s] *(*(of,rhode),island)
+[t] stateid('rhode island')
+
+Cit -> s21424
+[s] *(*(*(*(*(is,the),population),of),erie),pennsylvania)
+[t] cityid('erie','pa')
+
+Sta -> s19872
+[s] *(*(*(*(the,largest),state),bordering),texas)
+[t] stateid('texas')
+
+Lar -> s17480(Pop)
+[s] *(*(*(has,the),largest),?1)
+[t] largest_one(?1)
+
+Sta -> s20688
+[s] *(*(*(*(*(is,the),lowest),point),in),louisiana)
+[t] stateid('louisiana')
+
+Cou -> s22189
+[s] *(*(*(*(*(the,shortest),river),in),the),usa)
+[t] countryid('usa')
+
+Mos -> s23785(Sta)
+[s] *(*(*(*(state,has),the),most),?1)
+[t] most(?1)
+
+Cap -> s14260(Loc)
+[s] *(capitals,?1)
+[t] capital(?1)
+
+Cit -> s14406
+[s] *(named,austin)
+[t] cityid('austin',_)
+
+Pop -> s14507(Cit)
+[s] *(*(many,inhabitants),?1)
+[t] population_1(?1)
+
+Ele -> s16065(Pla)
+[s] *(tall,?1)
+[t] elevation_1(?1)
+
+Sma -> s23861(Are)
+[s] *(*(*(has,the),smallest),?1)
+[t] smallest_one(?1)
+
+Hig -> s13849(Pla)
+[s] *(*(the,highest),?1)
+[t] highest(?1)
+
+Cit -> s14416
+[s] *(*(*(*(*(*(*(does,the),biggest),city),have),in),the),usa)
+[t] city(all)
+
+Tra -> s16506(Riv)
+[s] *(*(through,which),?1)
+[t] traverse_1(?1)
+
+Tra -> s22925(Sta)
+[s] *(runs,?1)
+[t] traverse_2(?1)
+
+Riv -> s15793
+[s] *(*(*(colorado,river),flow),through)
+[t] riverid('colorado')
+
+Sta -> s24106
+[s] *(to,arizona)
+[t] stateid('arizona')
+
+Cou -> s17497
+[s] *(*(*(*(*(is,the),largest),in),the),us)
+[t] countryid('usa')
+
+Cit -> s24863
+[s] *(named,plano)
+[t] cityid('plano',_)
+
+Lar -> s15007(Cit)
+[s] *(*(*(in,the),biggest),?1)
+[t] largest(?1)
+
+Sta -> s21430
+[s] *(of,hawaii)
+[t] stateid('hawaii')
+
+Sta -> s18139
+[s] *(*(*(*(the,biggest),city),in),nebraska)
+[t] stateid('nebraska')
+
+Cit -> s15939
+[s] *(named,springfield)
+[t] cityid('springfield',_)
+
+Are -> s15476(Cou)
+[s] *(*(*(*(many,square),kilometers),in),?1)
+[t] area_1(?1)
+
+Sta -> s20313
+[s] *(*(*(*(*(is,the),longest),river),in),california)
+[t] stateid('california')
+
+Cit -> s14587
+[s] *(*(cities,are),there)
+[t] city(all)
+
+Cit -> s24593
+[s] *(is,dover)
+[t] cityid('dover',_)
+
+Sta -> s14884
+[s] *(in,new)
+[t] stateid('new hampshire')
+
+Sta -> s20708
+[s] *(*(*(*(*(is,the),lowest),point),in),mississippi)
+[t] stateid('mississippi')
+
+Sta -> s22029
+[s] *(*(*(*(is,the),population),of),washington)
+[t] stateid('washington')
+
+Riv -> s24974
+[s] *(*(*(*(have,rivers),running),through),them)
+[t] river(all)
+
+Pop -> s20949(Cap)
+[s] *(populated,?1)
+[t] population_1(?1)
+
+Cit -> s15155
+[s] *(*(lived,in),austin)
+[t] cityid('austin',_)
+
+Mos -> s23530(Sta)
+[s] *(*(*(state,borders),most),?1)
+[t] most(?1)
+
+Nex -> s20604(Mos)
+[s] *(*(*(*(*(that,border),the),state),that),?1)
+[t] next_to_2(?1)
+
+Lar -> s19965(Pop)
+[s] *(*(*(with,the),highest),?1)
+[t] largest_one(?1)
+
+Sta -> s19165
+[s] *(*(*(*(*(is,the),highest),point),in),iowa)
+[t] stateid('iowa')
+
+Sma -> s22441(Are)
+[s] *(*(smallest,state),?1)
+[t] smallest_one(?1)
+
+Hig -> s15979(Hig)
+[s] *(*(*(higher,point),than),?1)
+[t] higher_2(?1)
+
+Sta -> s17963
+[s] *(*(area,of),wisconsin)
+[t] stateid('wisconsin')
+
+Cit -> s25110
+[s] new
+[t] cityid('new orleans',_)
+
+Riv -> s14156(Riv)
+[s] *(*(*(the,mississippi),river),?1)
+[t] river(?1)
+
+Len -> s14055(Riv)
+[s] *(*(*(long,is),rio),?1)
+[t] len(?1)
+
+Cit -> s23948
+[s] of
+[t] cityid('austin',_)
+
+Sta -> s17672
+[s] *(*(*(*(*(*(is,the),area),of),all),the),states)
+[t] state(all)
+
+Few -> s25527(Sta)
+[s] *(*(*(states,with),fewest),?1)
+[t] fewest(?1)
+
+Cou -> s16108
+[s] *(usa,exist)
+[t] countryid('usa')
+
+Cit -> s25125
+[s] *(san,jose)
+[t] cityid('san jose',_)
+
+Nex -> s24231(Sta)
+[s] *(*(*(border,states),that),?1)
+[t] next_to_2(?1)
+
+Cap -> s15970(Cit)
+[s] *(capital,?1)
+[t] capital(?1)
+
+Sta -> s16322
+[s] *(texas,run)
+[t] stateid('texas')
+
+Pop -> s14414(Lar)
+[s] *(many,?1)
+[t] population_1(?1)
+
+Pop -> s15193(Sta)
+[s] *(*(*(*(many,people),stay),in),?1)
+[t] population_1(?1)
+
+Loc -> s17510(Sta)
+[s] *(*(*(are,located),in),?1)
+[t] loc_2(?1)
+
+Lar -> s21979(Den)
+[s] *(*(*(*(with,the),highest),population),?1)
+[t] largest_one(?1)
+
+Sum -> s18845(Pop)
+[s] *(*(*(*(combined,population),of),all),?1)
+[t] sum(?1)
+
+Sta -> s19733
+[s] *(border,california)
+[t] stateid('california')
+
+Sma -> s23907(Pop)
+[s] *(*(*(*(has,the),smallest),urban),?1)
+[t] smallest_one(?1)
+
+Sma -> s17859(Sta)
+[s] *(*(*(*(*(*(is,the),area),of),the),smallest),?1)
+[t] smallest(?1)
+
+Sta -> s17052
+[s] *(*(*(*(*(of,the),major),cities),in),illinois)
+[t] stateid('illinois')
+
+Riv -> s17340(Loc)
+[s] *(*(*(are,the),rivers),?1)
+[t] river(?1)
+
+Tra -> s20549(Sta)
+[s] *(*(that,flows),?1)
+[t] traverse_2(?1)
+
+Sta -> s16623
+[s] *(*(*(*(the,major),cities),in),alaska)
+[t] stateid('alaska')
+
+Hig -> s26297(Pla)
+[s] *(*(*(*(*(*(that,are),higher),than),the),highest),?1)
+[t] highest(?1)
+
+Sta -> s25843
+[s] *(*(*(*(*(state,has),the),smallest),average),urban)
+[t] state(all)
+
+Sta -> s16426
+[s] *(*(which,border),texas)
+[t] stateid('texas')
+
+Sma -> s20051(Pop)
+[s] *(*(*(is,the),least),?1)
+[t] smallest_one(?1)
+
+Sta -> s15607
+[s] new
+[t] stateid('new mexico')
+
+Pla -> s15962(Hig)
+[s] *(*(*(a,higher),point),?1)
+[t] place(?1)
+
+S! -> s16263(Sta)
+[s] *(sacramento,?1)
+[t] answer(?1)
+
+Sta -> s15256
+[s] iowa
+[t] stateid('iowa')
+
+Mos -> s22872(Riv)
+[s] *(*(*(*(*(river,flows),through),the),most),?1)
+[t] most(?1)
+
+Sta -> s21535
+[s] *(of,montana)
+[t] stateid('montana')
+
+Sta -> s13585(Loc)
+[s] *(*(*(*(me,all),the),states),?1)
+[t] state(?1)
+
+Cit -> s21442
+[s] *(*(*(*(is,the),population),of),houston)
+[t] cityid('houston',_)
+
+Exc -> s23136(Riv,Tra)
+[s] *(*(*(*(rivers,do),not),?1),?2)
+[t] exclude(?1,?2)
+
+Riv -> s15887
+[s] *(*(*(missouri,river),run),through)
+[t] riverid('missouri')
+
+Loc -> s22894(Cou)
+[s] *(*(one,in),?1)
+[t] loc_2(?1)
+
+Cit -> s21286
+[s] atlanta
+[t] cityid('atlanta',_)
+
+Sta -> s19114
+[s] *(*(*(*(*(is,the),highest),point),in),colorado)
+[t] stateid('colorado')
+
+Sta -> s21529
+[s] minnesota
+[t] stateid('minnesota')
+
+Sta -> s15107
+[s] *(*(*(*(*(many,people),live),in),the),state)
+[t] state(all)
+
+Sta -> s21136
+[s] *(*(*(*(is,the),population),density),of)
+[t] stateid('texas')
+
+Sta -> s22890
+[s] *(*(*(*(flows,through),the),most),states)
+[t] state(all)
+
+Sta -> s15176
+[s] *(*(*(people,reside),in),utah)
+[t] stateid('utah')
+
+Nex -> s13756(Sta)
+[s] *(that,?1)
+[t] next_to_2(?1)
+
+Cou -> s14358
+[s] *(*(there,in),usa)
+[t] countryid('usa')
+
+Pop -> s19881(Cap)
+[s] *(*(in,population),?1)
+[t] population_1(?1)
+
+Sta -> s18982
+[s] *(*(*(*(*(is,the),high),point),of),wyoming)
+[t] stateid('wyoming')
+
+Riv -> s17458
+[s] river
+[t] river(all)
+
+Exc -> s24929(Sta,Nex)
+[s] *(*(*(*(states,have),no),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s16459
+[s] *(border,missouri)
+[t] stateid('missouri')
+
+Mou -> s22832(Loc)
+[s] *(*(mountains,are),?1)
+[t] mountain(?1)
+
+Int -> s24467(Sta,Loc)
+[s] *(*(*(*(*(states,border),texas),and),?1),?2)
+[t] intersection(?1,?2)
+
+Sta -> s19592
+[s] *(*(*(*(a,state),that),borders),texas)
+[t] stateid('texas')
+
+Sta -> s17933
+[s] *(*(of,the),states)
+[t] state(all)
+
+Cou -> s22169
+[s] *(*(*(*(*(the,shortest),river),in),the),us)
+[t] countryid('usa')
+
+Cit -> s21610
+[s] *(*(of,portland),maine)
+[t] cityid('portland','me')
+
+Cit -> s25024
+[s] *(of,springfield)
+[t] cityid('springfield',_)
+
+Sta -> s22129
+[s] *(*(*(*(*(is,the),shortest),river),in),texas)
+[t] stateid('texas')
+
+Riv -> s15223
+[s] *(*(are,called),colorado)
+[t] riverid('colorado')
+
+Cit -> s21355
+[s] *(of,boulder)
+[t] cityid('boulder',_)
+
+Sta -> s14277
+[s] *(island,have)
+[t] stateid('rhode island')
+
+Lon -> s25269(Riv)
+[s] *(*(*(that,the),largest),?1)
+[t] longest(?1)
+
+Pop -> s17474(Sta)
+[s] *(*(*(*(*(*(*(*(can,you),tell),me),about),the),population),of),?1)
+[t] population_1(?1)
+
+Cit -> s24605
+[s] *(*(capital,is),dover)
+[t] cityid('dover',_)
+
+Sta -> s18410
+[s] *(*(*(*(is,the),capital),of),iowa)
+[t] stateid('iowa')
+
+Siz -> s13765(Sta)
+[s] *(*(big,is),?1)
+[t] size(?1)
+
+Sta -> s16304
+[s] *(*(*(*(*(*(tell,me),what),cities),are),in),texas)
+[t] stateid('texas')
+
+Sta -> s13766
+[s] alaska
+[t] stateid('alaska')
+
+Sta -> s13564(Sta)
+[s] *(*(the,state),?1)
+[t] state(?1)
+
+Sta -> s24138
+[s] *(*(next,to),texas)
+[t] stateid('texas')
+
+Ele -> s16089(Hig)
+[s] *(*(*(tall,is),the),?1)
+[t] elevation_1(?1)
+
+Cit -> s23931
+[s] *(austin,in)
+[t] cityid('austin',_)
+
+Cit -> s16001
+[s] named
+[t] cityid('austin',_)
+
+Den -> s21108(Sta)
+[s] *(*(*(*(is,the),population),density),?1)
+[t] density_1(?1)
+
+Tra -> s16332(Lon)
+[s] *(*(*(*(*(*(*(*(*(*(through,which),states),does),the),longest),river),in),texas),run),?1)
+[t] traverse_1(?1)
+
+Loc -> s18333(Lar)
+[s] *(*(*(*(*(of,the),largest),state),in),?1)
+[t] loc_2(?1)
+
+Den -> s15091(Sta)
+[s] *(*(population,density),?1)
+[t] density_1(?1)
+
+Cap -> s16428(Cit)
+[s] *(*(*(is,the),capital),?1)
+[t] capital(?1)
+
+Sta -> s17511
+[s] *(*(located,in),pennsylvania)
+[t] stateid('pennsylvania')
+
+Lar -> s14041(Cit)
+[s] *(largest,?1)
+[t] largest(?1)
+
+S! -> s16609(Maj)
+[s] *(*(*(what,are),the),?1)
+[t] answer(?1)
+
+Riv -> s20291(Tra)
+[s] *(*(*(*(is,the),longest),river),?1)
+[t] river(?1)
+
+Mos -> s21947(Sta)
+[s] *(*(*(*(*(*(*(of,the),state),that),borders),the),most),?1)
+[t] most(?1)
+
+Sta -> s13793
+[s] *(north,dakota)
+[t] stateid('north dakota')
+
+Sma -> s17584(Pop)
+[s] *(*(*(*(city,has),the),least),?1)
+[t] smallest_one(?1)
+
+Sta -> s17650(Nex)
+[s] *(*(*(*(is,the),adjacent),state),?1)
+[t] state(?1)
+
+Cit -> s14788
+[s] *(*(live,in),houston)
+[t] cityid('houston',_)
+
+Few -> s23556(Sta)
+[s] *(*(*(*(state,borders),the),least),?1)
+[t] fewest(?1)
+
+S! -> s16316(Sta)
+[s] *(*(through,which),?1)
+[t] answer(?1)
+
+Cou -> s15465
+[s] *(*(in,the),us)
+[t] countryid('usa')
+
+Sta -> s22283
+[s] *(*(*(*(the,smallest),city),in),alaska)
+[t] stateid('alaska')
+
+Cit -> s14499
+[s] *(*(*(inhabitants,does),montgomery),have)
+[t] cityid('montgomery',_)
+
+Riv -> s14059
+[s] *(*(is,rio),grande)
+[t] riverid('rio grande')
+
+Riv -> s18029
+[s] *(*(*(*(a,state),with),a),river)
+[t] river(all)
+
+Mos -> s19361(Sta)
+[s] *(*(*(*(*(the,state),with),the),most),?1)
+[t] most(?1)
+
+Riv -> s23800
+[s] *(*(*(*(*(*(*(has,the),most),major),rivers),running),through),it)
+[t] river(all)
+
+Cou -> s22691
+[s] *(*(*(*(*(is,the),tallest),mountain),in),america)
+[t] countryid('usa')
+
+Loc -> s16104(Hig)
+[s] *(does,?1)
+[t] loc_1(?1)
+
+Den -> s17986(Sta)
+[s] *(*(*(average,population),per),?1)
+[t] density_1(?1)
+
+Sta -> s18471
+[s] *(*(*(*(*(is,the),capital),of),new),hampshire)
+[t] stateid('new hampshire')
+
+Cit -> s14959
+[s] *(*(in,san),francisco)
+[t] cityid('san francisco',_)
+
+Cou -> s18222
+[s] *(*(*(*(*(*(is,the),biggest),city),in),the),usa)
+[t] countryid('usa')
+
+Cou -> s18301
+[s] continental
+[t] countryid('usa')
+
+Cit -> s21658
+[s] *(*(*(*(is,the),population),of),san)
+[t] cityid('san antonio',_)
+
+Sta -> s15390
+[s] *(colorado,have)
+[t] stateid('colorado')
+
+Sta -> s16436
+[s] *(*(*(*(*(is,the),capital),city),in),texas)
+[t] stateid('texas')
+
+Sta -> s22104
+[s] *(*(*(*(*(is,the),shortest),river),in),iowa)
+[t] stateid('iowa')
+
+Sta -> s22816
+[s] *(through,illinois)
+[t] stateid('illinois')
+
+Sta -> s21262
+[s] *(*(*(*(is,the),population),of),arizona)
+[t] stateid('arizona')
+
+Are -> s17846(Lar)
+[s] *(*(*(area,of),the),?1)
+[t] area_1(?1)
+
+Pla -> s25089
+[s] mount
+[t] placeid('mount whitney')
+
+Sta -> s13975
+[s] florida
+[t] stateid('florida')
+
+Riv -> s15807
+[s] *(*(colorado,river),flow)
+[t] riverid('colorado')
+
+Sta -> s19284
+[s] *(*(*(*(*(is,the),highest),point),in),texas)
+[t] stateid('texas')
+
+Riv -> s15839
+[s] *(*(*(mississippi,river),run),through)
+[t] riverid('mississippi')
+
+Sta -> s15526
+[s] states
+[t] state(all)
+
+Sta -> s15058
+[s] *(of,texas)
+[t] stateid('texas')
+
+Riv -> s22058(Tra)
+[s] *(*(*(is,the),river),?1)
+[t] river(?1)
+
+Cou -> s13622
+[s] *(*(*(*(me,the),cities),in),usa)
+[t] countryid('usa')
+
+Sta -> s18749
+[s] inhabitants
+[t] state(all)
+
+Ele -> s18879(Pla)
+[s] *(*(elevation,of),?1)
+[t] elevation_1(?1)
+
+Sta -> s26004
+[s] *(*(no,other),states)
+[t] state(all)
+
+Cou -> s13630
+[s] *(*(*(the,cities),in),usa)
+[t] countryid('usa')
+
+Riv -> s18015
+[s] *(a,river)
+[t] river(all)
+
+Sta -> s22249
+[s] *(*(*(*(of,the),capital),of),texas)
+[t] stateid('texas')
+
+Den -> s21211(Sma)
+[s] *(*(*(*(*(*(*(*(*(population,density),of),the),state),with),the),smallest),population),?1)
+[t] density_1(?1)
+
+Cou -> s13708
+[s] *(*(*(*(*(*(*(*(me,the),longest),river),that),passes),through),the),us)
+[t] countryid('usa')
+
+Mos -> s23000(Riv)
+[s] *(*(*(*(river,traverses),the),most),?1)
+[t] most(?1)
+
+Nex -> s13535(Sta)
+[s] *(surrounding,?1)
+[t] next_to_2(?1)
+
+Sma -> s25849(Den)
+[s] *(*(*(*(*(has,the),smallest),average),urban),?1)
+[t] smallest_one(?1)
+
+Nex -> s25998(Sta)
+[s] *(*(*(border,no),other),?1)
+[t] next_to_2(?1)
+
+Sta -> s17704
+[s] *(*(*(*(is,the),area),of),florida)
+[t] stateid('florida')
+
+Mos -> s22932(Riv)
+[s] *(*(*(*(*(river,runs),through),the),most),?1)
+[t] most(?1)
+
+Siz -> s14013(Sta)
+[s] *(*(large,is),?1)
+[t] size(?1)
+
+Cou -> s14302
+[s] *(united,states)
+[t] countryid('usa')
+
+Den -> s18858(Sta)
+[s] *(*(*(*(is,the),density),of),?1)
+[t] density_1(?1)
+
+Riv -> s16344
+[s] *(mississippi,flow)
+[t] riverid('mississippi')
+
+Pla -> s25683
+[s] peak
+[t] place(all)
+
+Sta -> s17662
+[s] *(of,alaska)
+[t] stateid('alaska')
+
+Sta -> s15134
+[s] *(*(live,in),washington)
+[t] stateid('washington')
+
+Sta -> s21532
+[s] *(*(*(*(is,the),population),of),montana)
+[t] stateid('montana')
+
+Sta -> s17752
+[s] *(*(*(maryland,in),square),kilometers)
+[t] stateid('maryland')
+
+Cou -> s16988
+[s] *(*(*(*(*(the,major),cities),of),the),us)
+[t] countryid('usa')
+
+Sta -> s19200
+[s] *(*(nevada,in),meters)
+[t] stateid('nevada')
+
+Sta -> s21514
+[s] *(*(*(is,the),population),of)
+[t] stateid('maryland')
+
+Lar -> s15090(Den)
+[s] *(*(*(with,the),largest),?1)
+[t] largest_one(?1)
+
+Cou -> s14346
+[s] us
+[t] countryid('usa')
+
+Sma -> s22275(Cit)
+[s] *(*(*(is,the),smallest),?1)
+[t] smallest(?1)
+
+Cap -> s16407(Cit)
+[s] *(*(*(are,the),capital),?1)
+[t] capital(?1)
+
+Tra -> s23798(Maj)
+[s] *(*(*(*(major,rivers),running),through),?1)
+[t] traverse_1(?1)
+
+Den -> s18876(Sta)
+[s] *(*(*(density,of),the),?1)
+[t] density_1(?1)
+
+Cit -> s24006
+[s] *(*(*(des,moines),located),in)
+[t] cityid('des moines',_)
+
+Cou -> s18005
+[s] *(*(*(*(*(*(*(*(the,average),population),per),square),km),in),the),us)
+[t] countryid('usa')
+
+Sta -> s14869
+[s] *(*(*(*(many,people),live),in),montana)
+[t] stateid('montana')
+
+Sta -> s17409(Nex)
+[s] *(*(*(*(*(*(*(are,the),states),that),border),the),state),?1)
+[t] state(?1)
+
+Lon -> s18264(Riv)
+[s] *(*(*(is,the),biggest),?1)
+[t] longest(?1)
+
+Pla -> s18696
+[s] elevation
+[t] place(all)
+
+Sta -> s25415
+[s] *(*(*(*(do,not),run),through),texas)
+[t] stateid('texas')
+
+Cit -> s21406
+[s] denver
+[t] cityid('denver',_)
+
+Sho -> s14231(Riv)
+[s] *(*(the,shortest),?1)
+[t] shortest(?1)
+
+S! -> s23505(Riv)
+[s] *(*(*(*(*(*(what,rivers),traverses),the),state),which),?1)
+[t] answer(?1)
+
+Sta -> s17380
+[s] of
+[t] stateid('texas')
+
+Pop -> s17085(Maj)
+[s] *(*(populations,of),?1)
+[t] population_1(?1)
+
+Sta -> s14601
+[s] oregon
+[t] stateid('oregon')
+
+Sta -> s16877
+[s] *(virginia,runs)
+[t] stateid('virginia')
+
+Sta -> s22385
+[s] *(*(*(*(the,smallest),city),in),washington)
+[t] stateid('washington')
+
+Sma -> s23898(Pop)
+[s] *(*(*(*(state,has),the),smallest),?1)
+[t] smallest_one(?1)
+
+Lar -> s17597(Pop)
+[s] *(*(*(*(city,has),the),most),?1)
+[t] largest_one(?1)
+
+Are -> s22725(Cou)
+[s] *(*(*(*(is,the),total),area),?1)
+[t] area_1(?1)
+
+Sta -> s21106
+[s] *(*(*(*(is,the),population),density),of)
+[t] stateid('maine')
+
+Cit -> s14938
+[s] *(*(*(people,live),in),riverside)
+[t] cityid('riverside',_)
+
+Maj -> s16884(Riv)
+[s] *(*(*(which,the),major),?1)
+[t] major(?1)
+
+Sta -> s17478
+[s] *(*(*(*(can,you),tell),me),about)
+[t] stateid('missouri')
+
+Hig -> s18907(Pla)
+[s] *(*(*(of,the),highest),?1)
+[t] highest(?1)
+
+Sta -> s14624
+[s] ohio
+[t] stateid('ohio')
+
+Lar -> s17486(Pop)
+[s] *(*(capital,has),?1)
+[t] largest_one(?1)
+
+Pop -> s14638(Sta)
+[s] *(*(*(*(many,people),are),in),?1)
+[t] population_1(?1)
+
+Mos -> s22491(Sta)
+[s] *(*(*(*(*(state,that),borders),the),most),?1)
+[t] most(?1)
+
+Lar -> s16571(Cit)
+[s] *(*(*(are,the),largest),?1)
+[t] largest(?1)
+
+Riv -> s24738
+[s] *(*(*(ohio,river),go),through)
+[t] riverid('ohio')
+
+Sta -> s20634(Nex)
+[s] *(*(*(*(*(that,runs),through),a),state),?1)
+[t] state(?1)
+
+Sta -> s19624
+[s] *(*(*(*(*(is,the),largest),city),in),california)
+[t] stateid('california')
+
+Riv -> s24720
+[s] *(*(missouri,run),through)
+[t] riverid('missouri')
+
+Sta -> s24063(Mos)
+[s] *(*(*(*(state,is),the),state),?1)
+[t] state(?1)
+
+Sta -> s15281
+[s] new
+[t] stateid('new york')
+
+Sta -> s19074
+[s] *(*(*(*(*(is,the),highest),mountain),in),texas)
+[t] stateid('texas')
+
+Sta -> s21502
+[s] *(*(*(*(is,the),population),of),maryland)
+[t] stateid('maryland')
+
+Lar -> s17489(Cap)
+[s] *(*(*(*(capital,is),the),largest),?1)
+[t] largest(?1)
+
+Cit -> s14830
+[s] *(*(*(*(people,live),in),minneapolis),minnesota)
+[t] cityid('minneapolis','mn')
+
+Tra -> s23007(Sta)
+[s] *(*(traverses,the),?1)
+[t] traverse_2(?1)
+
+Cou -> s18207
+[s] *(*(*(*(*(the,biggest),city),in),the),us)
+[t] countryid('usa')
+
+Loc -> s14301(Cou)
+[s] *(*(*(are,there),in),?1)
+[t] loc_2(?1)
+
+Loc -> s22405(Sma)
+[s] *(*(*(*(*(of,the),smallest),state),in),?1)
+[t] loc_2(?1)
+
+Sta -> s18479
+[s] new
+[t] stateid('new jersey')
+
+Riv -> s16348
+[s] *(*(*(*(*(through,which),states),does),the),mississippi)
+[t] riverid('mississippi')
+
+Hig -> s18984(Sta)
+[s] *(*(high,point),?1)
+[t] high_point_1(?1)
+
+Hig -> s18993(Sta)
+[s] *(*(point,of),?1)
+[t] high_point_1(?1)
+
+Cit -> s21712
+[s] *(springfield,missouri)
+[t] cityid('springfield','mo')
+
+Cou -> s15562
+[s] *(*(there,in),united)
+[t] countryid('usa')
+
+Mos -> s15674(Sta)
+[s] *(*(the,most),?1)
+[t] most(?1)
+
+S! -> s14024(Siz)
+[s] *(*(*(how,large),is),?1)
+[t] answer(?1)
+
+Int -> s15598(Nex,Nex)
+[s] *(*(*(*(border,colorado),and),?1),?2)
+[t] intersection(?1,?2)
+
+Sta -> s15067(Nex)
+[s] *(state,?1)
+[t] state(?1)
+
+Sta -> s25259(Tra)
+[s] *(*(*(*(*(*(is,the),density),of),the),state),?1)
+[t] state(?1)
+
+Sta -> s21047(Loc)
+[s] *(*(*(*(*(*(is,the),name),of),the),state),?1)
+[t] state(?1)
+
+Lar -> s23655(Den)
+[s] *(*(*(has,the),greatest),?1)
+[t] largest_one(?1)
+
+Loc -> s25276(Sta)
+[s] *(*(not,in),?1)
+[t] loc_2(?1)
+
+Sma -> s22447(Are)
+[s] *(*(*(is,the),smallest),?1)
+[t] smallest_one(?1)
+
+Sta -> s19134(Loc)
+[s] *(*(each,state),?1)
+[t] state(?1)
+
+Cit -> s14591
+[s] *(cities,are)
+[t] city(all)
+
+Sta -> s16913
+[s] vermont
+[t] stateid('vermont')
+
+Sta -> s16211
+[s] *(*(*(*(the,major),rivers),in),florida)
+[t] stateid('florida')
+
+Sta -> s24182
+[s] kentucky
+[t] stateid('kentucky')
+
+Cit -> s24858
+[s] named
+[t] cityid('dallas',_)
+
+Sta -> s20487
+[s] *(*(*(*(*(that,does),not),run),through),texas)
+[t] stateid('texas')
+
+Cou -> s17008
+[s] states
+[t] countryid('usa')
+
+Sta -> s18089
+[s] *(*(*(*(the,biggest),city),in),georgia)
+[t] stateid('georgia')
+
+Sta -> s16201
+[s] *(*(*(*(the,major),lakes),in),michigan)
+[t] stateid('michigan')
+
+Riv -> s14488
+[s] *(are,there)
+[t] riverid('colorado')
+
+Are -> s17700(Sta)
+[s] *(*(the,area),?1)
+[t] area_1(?1)
+
+Cit -> s21451
+[s] houston
+[t] cityid('houston',_)
+
+Sta -> s18444
+[s] *(*(*(*(is,the),capital),of),massachusetts)
+[t] stateid('massachusetts')
+
+Sta -> s21179
+[s] *(*(*(of,the),smallest),state)
+[t] state(all)
+
+Sta -> s15261
+[s] *(in,iowa)
+[t] stateid('iowa')
+
+Tra -> s20234(Sta)
+[s] *(*(that,traverses),?1)
+[t] traverse_2(?1)
+
+Sta -> s20363
+[s] *(*(*(*(*(is,the),longest),river),in),texas)
+[t] stateid('texas')
+
+Sum -> s17670(Are)
+[s] *(*(*(*(all,the),states),combined),?1)
+[t] sum(?1)
+
+Maj -> s16382(Riv)
+[s] *(*(are,major),?1)
+[t] major(?1)
+
+Lak -> s16559(Loc)
+[s] *(*(*(are,the),lakes),?1)
+[t] lake(?1)
+
+Sta -> s14767
+[s] *(in,hawaii)
+[t] stateid('hawaii')
+
+Loc -> s18359(Sta)
+[s] *(*(*(*(is,the),capital),of),?1)
+[t] loc_2(?1)
+
+Sta -> s14896
+[s] *(in,new)
+[t] stateid('new mexico')
+
+Sta -> s17071
+[s] *(*(*(*(is,the),population),of),mississippi)
+[t] stateid('mississippi')
+
+Cou -> s16151
+[s] *(*(*(*(all,the),lakes),of),us)
+[t] countryid('usa')
+
+Sta -> s19818(Tra)
+[s] *(*(*(*(*(*(is,the),largest),of),the),states),?1)
+[t] state(?1)
+
+Sta -> s21967
+[s] *(*(*(*(*(is,the),population),of),the),state)
+[t] state(all)
+
+Cit -> s23991
+[s] *(dallas,in)
+[t] cityid('dallas',_)
+
+Loc -> s25142(Riv)
+[s] *(*(is,the),?1)
+[t] loc_1(?1)
+
+Sta -> s19124
+[s] *(*(*(*(the,highest),point),in),delaware)
+[t] stateid('delaware')
+
+Nex -> s16411(Sta)
+[s] *(*(which,border),?1)
+[t] next_to_2(?1)
+
+Lar -> s23735(Pop)
+[s] *(*(*(*(state,has),the),largest),?1)
+[t] largest_one(?1)
+
+Sta -> s14863
+[s] *(*(live,in),montana)
+[t] stateid('montana')
+
+Cou -> s20465
+[s] *(*(*(*(*(*(is,the),longest),river),in),the),us)
+[t] countryid('usa')
+
+Cou -> s18242
+[s] *(*(*(*(the,biggest),city),in),usa)
+[t] countryid('usa')
+
+Cou -> s18321
+[s] *(*(*(*(*(*(is,the),biggest),state),in),the),usa)
+[t] countryid('usa')
+
+Sma -> s22395(Cit)
+[s] *(*(*(*(*(*(*(is,the),smallest),city),of),the),smallest),?1)
+[t] smallest(?1)
+
+Riv -> s16501
+[s] *(*(*(which,the),mississippi),runs)
+[t] riverid('mississippi')
+
+Sta -> s13840
+[s] *(*(all,the),states)
+[t] state(all)
+
+Tra -> s24729(Riv)
+[s] *(*(*(*(does,the),missouri),run),?1)
+[t] traverse_1(?1)
+
+Sta -> s24142
+[s] *(*(to,the),mississippi)
+[t] stateid('mississippi')
+
+Riv -> s26101
+[s] *(*(*(chattahoochee,river),run),through)
+[t] riverid('chattahoochee')
+
+Sta -> s18631
+[s] *(*(*(*(*(*(is,the),capital),of),the),state),texas)
+[t] stateid('texas')
+
+Pop -> s14673(Sta)
+[s] *(*(*(*(many,people),are),there),?1)
+[t] population_1(?1)
+
+Loc -> s16154(Cou)
+[s] *(*(*(the,lakes),of),?1)
+[t] loc_2(?1)
+
+Sta -> s24995
+[s] *(*(*(*(*(is,higher),than),that),of),colorado)
+[t] stateid('colorado')
+
+Cou -> s16908
+[s] *(*(*(*(*(the,major),cities),in),the),usa)
+[t] countryid('usa')
+
+Cou -> s13713
+[s] *(*(through,the),us)
+[t] countryid('usa')
+
+Pop -> s17082(Sta)
+[s] *(*(*(*(is,the),population),of),?1)
+[t] population_1(?1)
+
+Cou -> s19104
+[s] *(*(*(*(*(is,the),highest),mountain),in),us)
+[t] countryid('usa')
+
+Riv -> s14167(Riv)
+[s] *(*(mississippi,river),?1)
+[t] river(?1)
+
+Loc -> s13519(Sta)
+[s] *(in,?1)
+[t] loc_2(?1)
+
+Tra -> s15866(Riv)
+[s] *(*(*(*(does,the),mississippi),run),?1)
+[t] traverse_1(?1)
+
+Are -> s18830(Sta)
+[s] *(*(*(*(*(is,the),combined),area),of),?1)
+[t] area_1(?1)
+
+Mos -> s20142(Riv)
+[s] *(*(*(*(*(*(*(*(*(*(*(is,the),length),of),the),river),that),flows),through),the),most),?1)
+[t] most(?1)
+
+Sta -> s16135
+[s] *(the,states)
+[t] state(all)
+
+Cou -> s13626
+[s] *(in,usa)
+[t] countryid('usa')
+
+Sta -> s16810
+[s] *(*(*(*(the,major),cities),in),texas)
+[t] stateid('texas')
+
+Tra -> s20028(Riv)
+[s] *(traversed,?1)
+[t] traverse_1(?1)
+
+Lar -> s23621(Pop)
+[s] *(*(*(*(*(*(has,the),city),with),the),largest),?1)
+[t] largest_one(?1)
+
+Cap -> s15031(Loc)
+[s] *(*(*(in,the),capital),?1)
+[t] capital(?1)
+
+Cap -> s16438(Cit)
+[s] *(*(the,capital),?1)
+[t] capital(?1)
+
+S! -> s16373(Riv)
+[s] *(*(what,are),?1)
+[t] answer(?1)
+
+Cou -> s15495
+[s] *(*(the,united),states)
+[t] countryid('usa')
+
+Are -> s22713(Cou)
+[s] *(*(*(total,area),of),?1)
+[t] area_1(?1)
+
+Cit -> s16126
+[s] rochester
+[t] cityid('rochester',_)
+
+Sta -> s15033
+[s] georgia
+[t] stateid('georgia')
+
+Riv -> s24945
+[s] *(named,colorado)
+[t] riverid('colorado')
+
+Sta -> s13661
+[s] *(*(*(*(*(*(me,the),cities),which),are),in),texas)
+[t] stateid('texas')
+
+Cou -> s22365
+[s] *(*(*(*(*(*(is,the),smallest),city),in),the),usa)
+[t] countryid('usa')
+
+Lon -> s14086(Riv)
+[s] *(*(*(is,the),longest),?1)
+[t] longest(?1)
+
+Are -> s18818(Sta)
+[s] *(*(*(*(is,the),combined),area),?1)
+[t] area_1(?1)
+
+Ele -> s13836(Hig)
+[s] *(high,?1)
+[t] elevation_1(?1)
+
+Sta -> s18874
+[s] *(*(*(*(*(is,the),density),of),the),new)
+[t] stateid('new york')
+
+Int -> s14402(Cit,Loc)
+[s] *(*(*(are,there),?1),?2)
+[t] intersection(?1,?2)
+
+Len -> s22783(Riv)
+[s] *(*(*(length,is),the),?1)
+[t] len(?1)
+
+Riv -> s24757
+[s] *(*(*(ohio,river),run),through)
+[t] riverid('ohio')
+
+Cit -> s14250(Loc)
+[s] *(cities,?1)
+[t] city(?1)
+
+Sta -> s22195
+[s] *(*(*(*(is,the),size),of),california)
+[t] stateid('california')
+
+Sta -> s22014
+[s] *(*(*(*(is,the),population),of),utah)
+[t] stateid('utah')
+
+S! -> s16298(Lar)
+[s] *(*(*(state,the),state),?1)
+[t] answer(?1)
+
+Tra -> s20168(Sta)
+[s] *(*(flows,through),?1)
+[t] traverse_2(?1)
+
+Lar -> s25044(Cit)
+[s] *(*(*("'s",the),largest),?1)
+[t] largest(?1)
+
+Sta -> s23546
+[s] *(*(most,other),states)
+[t] state(all)
+
+Sta -> s14968
+[s] *(*(in,south),dakota)
+[t] stateid('south dakota')
+
+Cit -> s14932
+[s] *(*(live,in),riverside)
+[t] cityid('riverside',_)
+
+Cit -> s22002
+[s] *(of,tucson)
+[t] cityid('tucson',_)
+
+Cou -> s14312
+[s] *(*(*(there,in),the),united)
+[t] countryid('usa')
+
+Lar -> s26340(Den)
+[s] *(*(*(us,city),has),?1)
+[t] largest_one(?1)
+
+Loc -> s13656(Sta)
+[s] *(*(are,in),?1)
+[t] loc_2(?1)
+
+Sta -> s14543
+[s] nebraska
+[t] stateid('nebraska')
+
+Sta -> s21217
+[s] *(*(*(*(*(is,the),population),density),of),wyoming)
+[t] stateid('wyoming')
+
+Cap -> s17622(Loc)
+[s] *(*(is,capital),?1)
+[t] capital(?1)
+
+Tra -> s20043(Riv)
+[s] *(*(*(traversed,by),the),?1)
+[t] traverse_1(?1)
+
+Lon -> s22902(Riv)
+[s] *(*(longest,one),?1)
+[t] longest(?1)
+
+Sta -> s21159
+[s] *(*(*(of,the),largest),state)
+[t] state(all)
+
+Sta -> s13746
+[s] *(*(*(*(*(me,the),states),that),border),utah)
+[t] stateid('utah')
+
+Sta -> s17776
+[s] *(*(of,new),mexico)
+[t] stateid('new mexico')
+
+Cou -> s19289
+[s] *(the,country)
+[t] countryid('usa')
+
+Sta -> s17216
+[s] *(*(*(*(of,states),which),border),texas)
+[t] stateid('texas')
+
+Maj -> s21897(Cit)
+[s] *(*(*(*(*(*(is,the),population),of),the),major),?1)
+[t] major(?1)
+
+Sta -> s22119
+[s] *(*(*(*(the,shortest),river),in),nebraska)
+[t] stateid('nebraska')
+
+Sta -> s14728
+[s] *(*(live,in),california)
+[t] stateid('california')
+
+Sma -> s23771(Den)
+[s] *(*(*(has,the),lowest),?1)
+[t] smallest_one(?1)
+
+Lon -> s14092(Riv)
+[s] *(*(the,longest),?1)
+[t] longest(?1)
+
+Sta -> s23153
+[s] *(though,colorado)
+[t] stateid('colorado')
+
+Loc -> s15919(Cit)
+[s] *(*(have,a),?1)
+[t] loc_1(?1)
+
+Len -> s14046(Riv)
+[s] *(long,?1)
+[t] len(?1)
+
+Nex -> s25035(Sta)
+[s] *(surround,?1)
+[t] next_to_2(?1)
+
+Cit -> s21999
+[s] *(*(*(*(is,the),population),of),tucson)
+[t] cityid('tucson',_)
+
+Sta -> s18129
+[s] *(*(*(*(*(is,the),biggest),city),in),nebraska)
+[t] stateid('nebraska')
+
+Lar -> s23732(Den)
+[s] *(*(*(*(has,the),largest),population),?1)
+[t] largest_one(?1)
+
+Maj -> s15510(Riv)
+[s] *(*(*(*(are,next),to),major),?1)
+[t] major(?1)
+
+Sta -> s23533
+[s] *(other,states)
+[t] state(all)
+
+Riv -> s14480(Riv)
+[s] *(*(colorado,rivers),?1)
+[t] river(?1)
+
+Exc -> s16221(Sta,Nex)
+[s] *(*(*(*(have,no),surrounding),?1),?2)
+[t] exclude(?1,?2)
+
+Den -> s17989(Sta)
+[s] *(*(*(*(*(average,population),per),square),km),?1)
+[t] density_1(?1)
+
+Sta -> s18781
+[s] *(*(*(*(is,the),capital),of),washington)
+[t] stateid('washington')
+
+Sta -> s23349
+[s] *(*(run,through),louisiana)
+[t] stateid('louisiana')
+
+Sta -> s21517
+[s] *(*(*(*(is,the),population),of),minnesota)
+[t] stateid('minnesota')
+
+Tra -> s16318(Lon)
+[s] *(*(*(*(through,which),states),does),?1)
+[t] traverse_1(?1)
+
+Nex -> s15569(Sta)
+[s] *(border,?1)
+[t] next_to_2(?1)
+
+Mos -> s20196(Riv)
+[s] *(*(*(*(*(*(*(*(of,the),river),that),runs),through),the),most),?1)
+[t] most(?1)
+
+Cit -> s15140
+[s] *(washington,dc)
+[t] cityid('washington','dc')
+
+Nex -> s24243(Sta)
+[s] *(*(*(*(border,states),that),border),?1)
+[t] next_to_2(?1)
+
+Sta -> s21229
+[s] *(*(*(*(is,the),population),density),of)
+[t] stateid('wyoming')
+
+Nex -> s25028(Sta)
+[s] *(neighbor,?1)
+[t] next_to_2(?1)
+
+Sta -> s15125
+[s] *(in,washington)
+[t] stateid('washington')
+
+Maj -> s16600(Cit)
+[s] *(*(*(are,the),major),?1)
+[t] major(?1)
+
+S! -> s16301(Cit)
+[s] *(*(*(tell,me),what),?1)
+[t] answer(?1)
+
+Exc -> s25275(Mou,Loc)
+[s] *(*(*(peak,not),?1),?2)
+[t] exclude(?1,?2)
+
+Pop -> s18838(Sta)
+[s] *(*(*(*(is,the),combined),population),?1)
+[t] population_1(?1)
+
+Pop -> s17422(Sta)
+[s] *(*(greatest,population),?1)
+[t] population_1(?1)
+
+Sta -> s24114
+[s] *(*(next,to),arizona)
+[t] stateid('arizona')
+
+Cit -> s21343
+[s] *(*(of,boston),massachusetts)
+[t] cityid('boston','ma')
+
+Cit -> s20974
+[s] city
+[t] city(all)
+
+Sta -> s19852
+[s] *(*(*(*(the,largest),state),bordering),arkansas)
+[t] stateid('arkansas')
+
+Pop -> s25642(Sta)
+[s] *(*(biggest,population),?1)
+[t] population_1(?1)
+
+Sta -> s23329
+[s] *(*(run,through),colorado)
+[t] stateid('colorado')
+
+Cap -> s16172(Loc)
+[s] *(*("50",capitals),?1)
+[t] capital(?1)
+
+Loc -> s15715(Riv)
+[s] *(*(*(do,not),have),?1)
+[t] loc_1(?1)
+
+Sta -> s20698
+[s] *(*(*(*(*(is,the),lowest),point),in),massachusetts)
+[t] stateid('massachusetts')
+
+Sta -> s15038
+[s] *(of,georgia)
+[t] stateid('georgia')
+
+Tra -> s13702(Cou)
+[s] *(*(passes,through),?1)
+[t] traverse_2(?1)
+
+Sta -> s17743
+[s] maine
+[t] stateid('maine')
+
+Cou -> s19304
+[s] *(*(*(*(*(the,highest),point),in),the),country)
+[t] countryid('usa')
+
+Loc -> s15250(Sta)
+[s] *(are,?1)
+[t] loc_2(?1)
+
+Sta -> s25332
+[s] *(*(the,smallest),state)
+[t] state(all)
+
+Sta -> s18564
+[s] *(*(*(*(is,the),capital),of),texas)
+[t] stateid('texas')
+
+Cit -> s21841(Loc)
+[s] *(*(*(*(*(*(*(is,the),population),of),the),largest),city),?1)
+[t] city(?1)
+
+Ele -> s13857(Pla)
+[s] *(*(high,is),?1)
+[t] elevation_1(?1)
+
+Sta -> s18399
+[s] *(*(*(*(is,the),capital),of),indiana)
+[t] stateid('indiana')
+
+Sta -> s20521
+[s] *(borders,indiana)
+[t] stateid('indiana')
+
+Cit -> s25216(Loc)
+[s] *(area,?1)
+[t] city(?1)
+
+Exc -> s20473(Riv,Tra)
+[s] *(*(*(does,not),?1),?2)
+[t] exclude(?1,?2)
+
+Pop -> s17097(Maj)
+[s] *(*(*(populations,of),all),?1)
+[t] population_1(?1)
+
+Nex -> s24925(Sta)
+[s] *(*(*(have,no),bordering),?1)
+[t] next_to_2(?1)
+
+Sma -> s25630(Pop)
+[s] *(*(*(state,capital),has),?1)
+[t] smallest_one(?1)
+
+Sta -> s22419
+[s] *(*(*(*(the,smallest),state),bordering),ohio)
+[t] stateid('ohio')
+
+Sta -> s18773
+[s] *(*(*(the,capital),of),vermont)
+[t] stateid('vermont')
+
+Riv -> s15858
+[s] *(*(mississippi,run),through)
+[t] riverid('mississippi')
+
+Sma -> s25621(Pop)
+[s] *(*(*(*(*(state,capital),has),the),smallest),?1)
+[t] smallest_one(?1)
+
+Cit -> s21244
+[s] in
+[t] cityid('boston',_)
+
+Cit -> s23612
+[s] flint
+[t] cityid('flint',_)
+
+Riv -> s19806
+[s] *(*(*(rio,grande),runs),through)
+[t] riverid('rio grande')
+
+Int -> s16040(Sta,Tra)
+[s] *(*(*(*(*(*(*(*(*(*(states,in),the),us),does),the),shortest),river),run),?1),?2)
+[t] intersection(?1,?2)
+
+Riv -> s22741
+[s] *(rivers,in)
+[t] river(all)
+
+Sta -> s20175
+[s] *(*(number,of),states)
+[t] state(all)
+
+Sta -> s17981
+[s] *(*(*(*(per,square),km),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+Lar -> s24051(Pop)
+[s] *(*(largest,in),?1)
+[t] largest_one(?1)
+
+Cou -> s13591
+[s] *(*(*(*(all,the),states),of),usa)
+[t] countryid('usa')
+
+Sta -> s19524
+[s] *(*(state,with),the)
+[t] state(all)
+
+Sta -> s18769
+[s] *(*(*(*(is,the),capital),of),vermont)
+[t] stateid('vermont')
+
+Mou -> s22828(Loc)
+[s] *(mountains,?1)
+[t] mountain(?1)
+
+Tra -> s25499(Sta)
+[s] *(*(*(*(run,through),states),that),?1)
+[t] traverse_2(?1)
+
+Lon -> s26325(Riv)
+[s] *(on,?1)
+[t] longest(?1)
+
+Cou -> s16251(Sta)
+[s] *(of,?1)
+[t] count(?1)
+
+Lar -> s18285(Sta)
+[s] *(*(the,biggest),?1)
+[t] largest(?1)
+
+Ele -> s13842(Hig)
+[s] *(*(*(high,are),the),?1)
+[t] elevation_1(?1)
+
+Sta -> s13669
+[s] california
+[t] stateid('california')
+
+Maj -> s17035(Cit)
+[s] *(*(*(*(*(*(are,the),names),of),the),major),?1)
+[t] major(?1)
+
+Sta -> s17737
+[s] *(of,maine)
+[t] stateid('maine')
+
+Sta -> s14607
+[s] *(*(there,in),oregon)
+[t] stateid('oregon')
+
+Cap -> s16443(Loc)
+[s] *(*(*(are,the),capitals),?1)
+[t] capital(?1)
+
+Sta -> s18455
+[s] *(*(*(*(is,the),capital),of),michigan)
+[t] stateid('michigan')
+
+Cit -> s23305
+[s] austin
+[t] cityid('austin','tx')
+
+Pop -> s21777(Cap)
+[s] *(*(*(*(*(population,of),the),capital),of),?1)
+[t] population_1(?1)
+
+Pla -> s13562(Loc)
+[s] *(point,?1)
+[t] place(?1)
+
+Pop -> s23682(Sta)
+[s] *(*(highest,population),?1)
+[t] population_1(?1)
+
+Sta -> s13548
+[s] colorado
+[t] stateid('colorado')
+
+Sta -> s15532
+[s] *(states,are)
+[t] state(all)
+
+Hig -> s25000(Sta)
+[s] *(*(*(*(*(*(*(high,point),is),higher),than),that),of),?1)
+[t] high_point_1(?1)
+
+Sta -> s21100
+[s] *(*(*(*(*(is,the),population),density),of),maine)
+[t] stateid('maine')
+
+Sta -> s21457
+[s] *(*(*(*(is,the),population),of),idaho)
+[t] stateid('idaho')
+
+Lar -> s23252(Sta)
+[s] *(*(*(through,the),largest),?1)
+[t] largest(?1)
+
+Cit -> s25062
+[s] *(baton,rouge)
+[t] cityid('baton rouge',_)
+
+Cit -> s16439(Loc)
+[s] *(*(*(*(is,the),capital),city),?1)
+[t] city(?1)
+
+Sta -> s13781
+[s] *(new,mexico)
+[t] stateid('new mexico')
+
+Sta -> s26021
+[s] south
+[t] stateid('south dakota')
+
+Den -> s21090(Sta)
+[s] *(*(*(*(population,density),in),the),?1)
+[t] density_1(?1)
+
+Cap -> s23974(Cit)
+[s] *(*(*(columbus,the),capital),?1)
+[t] capital(?1)
+
+Sta -> s18099
+[s] *(*(*(*(*(is,the),biggest),city),in),kansas)
+[t] stateid('kansas')
+
+Cou -> s22164
+[s] *(*(*(*(*(*(is,the),shortest),river),in),the),us)
+[t] countryid('usa')
+
+Sta -> s14770
+[s] *(*(live,in),hawaii)
+[t] stateid('hawaii')
+
+Sta -> s15266
+[s] missouri
+[t] stateid('missouri')
+
+Sta -> s22434
+[s] *(*(*(*(the,smallest),state),bordering),wyoming)
+[t] stateid('wyoming')
+
+Cit -> s16485(Loc)
+[s] *(*(*(are,the),cities),?1)
+[t] city(?1)
+
+Are -> s22722(Cou)
+[s] *(*(*(*(*(is,the),total),area),of),?1)
+[t] area_1(?1)
+
+Ele -> s18924(Pla)
+[s] *(*(*(is,the),height),?1)
+[t] elevation_1(?1)
+
+Cit -> s21337
+[s] *(boston,massachusetts)
+[t] cityid('boston','ma')
+
+Sma -> s17575(Pop)
+[s] *(*(*(has,the),least),?1)
+[t] smallest_one(?1)
+
+Nex -> s15509(Maj)
+[s] *(*(next,to),?1)
+[t] next_to_2(?1)
+
+Tra -> s22063(Sta)
+[s] *(*(that,cross),?1)
+[t] traverse_2(?1)
+
+Riv -> s14131
+[s] *(the,mississippi)
+[t] riverid('mississippi')
+
+Sta -> s22998
+[s] runs
+[t] stateid('virginia')
+
+Sma -> s17578(Pop)
+[s] *(*(city,has),?1)
+[t] smallest_one(?1)
+
+Sma -> s23910(Den)
+[s] *(*(*(has,the),sparsest),?1)
+[t] smallest_one(?1)
+
+Tra -> s23132(Sta)
+[s] *(through,?1)
+[t] traverse_2(?1)
+
+Mos -> s15660(Sta)
+[s] *(*(*(*(*(*(the,state),that),borders),the),most),?1)
+[t] most(?1)
+
+Riv -> s16352
+[s] *(*(*(*(*(*(through,which),states),does),the),mississippi),run)
+[t] riverid('mississippi')
+
+S! -> s16260(Pop)
+[s] *(population,?1)
+[t] answer(?1)
+
+Cit -> s14716
+[s] *(in,austin)
+[t] cityid('austin','tx')
+
+Nex -> s13741(Sta)
+[s] *(*(that,border),?1)
+[t] next_to_2(?1)
+
+Lar -> s17406(Pop)
+[s] *(*(*(with,the),greatest),?1)
+[t] largest_one(?1)
+
+Exc -> s26002(Sta,Nex)
+[s] *(*(*(no,other),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s14815
+[s] *(*(live,in),kansas)
+[t] stateid('kansas')
+
+Are -> s17661(Sta)
+[s] *(*(*(is,the),area),?1)
+[t] area_1(?1)
+
+Exc -> s15726(Sta,Loc)
+[s] *(*(*(states,do),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s16948
+[s] *(*(*(*(the,major),cities),of),texas)
+[t] stateid('texas')
+
+Sta -> s23760
+[s] *(*(*(state,has),the),least)
+[t] state(all)
+
+Hig -> s15964(Pla)
+[s] *(*(*(than,the),highest),?1)
+[t] highest(?1)
+
+Sta -> s13524
+[s] virginia
+[t] stateid('virginia')
+
+S! -> s13560(Hig)
+[s] *(*(*(*(*(could,you),tell),me),what),?1)
+[t] answer(?1)
+
+Sta -> s16723
+[s] *(north,carolina)
+[t] stateid('north carolina')
+
+Hig -> s24788(Pla)
+[s] *(*(*(*(that,is),the),highest),?1)
+[t] highest(?1)
+
+Pop -> s16050(Sta)
+[s] *(*(much,population),?1)
+[t] population_1(?1)
+
+Sta -> s13690
+[s] *(*(*(me,the),largest),state)
+[t] state(all)
+
+Hig -> s20932(Pla)
+[s] *(*(*(is,the),maximum),?1)
+[t] highest(?1)
+
+Riv -> s17427
+[s] *(*(that,the),potomac)
+[t] riverid('potomac')
+
+Sta -> s19791
+[s] *(*(*(*(the,largest),city),in),wisconsin)
+[t] stateid('wisconsin')
+
+Loc -> s17506(Cou)
+[s] *(*(*(*(is,the),largest),in),?1)
+[t] loc_2(?1)
+
+Sta -> s16368
+[s] *(*(*(*(all,the),rivers),in),texas)
+[t] stateid('texas')
+
+S! -> s13874(Ele)
+[s] *(*(*(how,high),is),?1)
+[t] answer(?1)
+
+Riv -> s24737(Riv)
+[s] *(*(*(the,ohio),river),?1)
+[t] river(?1)
+
+Lar -> s21840(Cit)
+[s] *(*(*(*(*(*(*(*(largest,city),in),the),state),with),the),largest),?1)
+[t] largest(?1)
+
+Lar -> s13683(Sta)
+[s] *(*(*(me,the),largest),?1)
+[t] largest(?1)
+
+Riv -> s16507
+[s] *(mississippi,runs)
+[t] riverid('mississippi')
+
+Sum -> s18813(Are)
+[s] *(*(*(*(*(combined,area),of),all),"50"),?1)
+[t] sum(?1)
+
+Hig -> s18981(Sta)
+[s] *(*(*(high,point),of),?1)
+[t] high_point_1(?1)
+
+Pop -> s17070(Sta)
+[s] *(*(population,of),?1)
+[t] population_1(?1)
+
+Loc -> s24608(Maj)
+[s] *(contain,?1)
+[t] loc_1(?1)
+
+Sta -> s19663
+[s] *(*(*(*(the,largest),city),in),missouri)
+[t] stateid('missouri')
+
+Sta -> s21751
+[s] *(*(*(*(is,the),population),of),texas)
+[t] stateid('texas')
+
+Cit -> s21334
+[s] *(*(*(*(*(is,the),population),of),austin),texas)
+[t] cityid('austin','tx')
+
+Cit -> s18032(Loc)
+[s] *(*(american,city),?1)
+[t] city(?1)
+
+Cit -> s18549
+[s] *(named,durham)
+[t] cityid('durham',_)
+
+Riv -> s26033
+[s] *(mississippi,traverses)
+[t] riverid('mississippi')
+
+Lak -> s16141(Loc)
+[s] *(*(*(all,the),lakes),?1)
+[t] lake(?1)
+
+Riv -> s20850(Riv)
+[s] *(*(*(*(which,the),colorado),river),?1)
+[t] river(?1)
+
+Sta -> s15200
+[s] *(*(*(residents,live),in),texas)
+[t] stateid('texas')
+
+Lar -> s17600(Den)
+[s] *(*(*(has,the),highest),?1)
+[t] largest_one(?1)
+
+Int -> s15398(Riv,Lon)
+[s] *(*(*(*(*(rivers,in),texas),are),?1),?2)
+[t] intersection(?1,?2)
+
+Cit -> s23943
+[s] *(*(*(austin,the),capital),of)
+[t] cityid('austin',_)
+
+Sta -> s14647
+[s] *(*(there,in),iowa)
+[t] stateid('iowa')
+
+Den -> s18849(Sta)
+[s] *(*(density,of),?1)
+[t] density_1(?1)
+
+Cit -> s21679
+[s] *(*(of,seattle),washington)
+[t] cityid('seattle','wa')
+
+Sta -> s14872
+[s] *(new,hampshire)
+[t] stateid('new hampshire')
+
+S! -> s25946(Sma)
+[s] *(*(*(which,state),is),?1)
+[t] answer(?1)
+
+Lak -> s16194(Loc)
+[s] *(lakes,?1)
+[t] lake(?1)
+
+Sta -> s17824
+[s] *(*(*(*(is,the),area),of),texas)
+[t] stateid('texas')
+
+Hig -> s16532(Pla)
+[s] *(*(*(*(highest,points),of),all),?1)
+[t] highest(?1)
+
+Cap -> s23942(Cit)
+[s] *(*(*(austin,the),capital),?1)
+[t] capital(?1)
+
+Riv -> s15792(Riv)
+[s] *(*(*(the,colorado),river),?1)
+[t] river(?1)
+
+Cit -> s21607
+[s] *(portland,maine)
+[t] cityid('portland','me')
+
+Sta -> s16653
+[s] *(*(*(*(the,major),cities),in),delaware)
+[t] stateid('delaware')
+
+Cit -> s21421
+[s] *(*(*(*(is,the),population),of),erie)
+[t] cityid('erie','pa')
+
+Sta -> s19175
+[s] *(*(*(*(*(is,the),highest),point),in),kansas)
+[t] stateid('kansas')
+
+Cou -> s14385
+[s] *(usa,have)
+[t] countryid('usa')
+
+Sta -> s13790
+[s] *(*(is,new),mexico)
+[t] stateid('new mexico')
+
+Sta -> s24110
+[s] *(*(*(are,next),to),arizona)
+[t] stateid('arizona')
+
+Pop -> s17073(Sta)
+[s] *(*(*(is,the),population),?1)
+[t] population_1(?1)
+
+S! -> s16369(Riv)
+[s] *(*(*(what,are),all),?1)
+[t] answer(?1)
+
+Riv -> s15400
+[s] *(*(than,the),red)
+[t] riverid('red')
+
+Cou -> s19429
+[s] *(*(*(*(*(the,highest),point),in),the),us)
+[t] countryid('usa')
+
+Cit -> s14285(Loc)
+[s] *(*(cities,are),?1)
+[t] city(?1)
+
+Lar -> s17839(Sta)
+[s] *(*(*(*(*(*(is,the),area),of),the),largest),?1)
+[t] largest(?1)
+
+Cou -> s14307
+[s] *(*(*(*(there,in),the),united),states)
+[t] countryid('usa')
+
+Cap -> s24787(Hig)
+[s] *(*(a,capital),?1)
+[t] capital(?1)
+
+Sta -> s19195
+[s] *(*(*(*(*(is,the),highest),point),in),montana)
+[t] stateid('montana')
+
+Sta -> s19034
+[s] *(*(*(*(*(is,the),highest),elevation),in),texas)
+[t] stateid('texas')
+
+Ele -> s18885(Pla)
+[s] *(*(*(*(is,the),elevation),of),?1)
+[t] elevation_1(?1)
+
+Sta -> s17836
+[s] *(*(*(the,area),of),texas)
+[t] stateid('texas')
+
+Cou -> s21067(Sta)
+[s] *(*(*(is,the),number),?1)
+[t] count(?1)
+
+Cou -> s13698
+[s] *(the,us)
+[t] countryid('usa')
+
+Sta -> s20353
+[s] *(*(*(*(*(is,the),longest),river),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+Riv -> s24406
+[s] *(*(mississippi,runs),through)
+[t] riverid('mississippi')
+
+Sta -> s14878
+[s] *(*(*(live,in),new),hampshire)
+[t] stateid('new hampshire')
+
+Sta -> s23289
+[s] *(*(run,through),arizona)
+[t] stateid('arizona')
+
+Cap -> s24600(Cit)
+[s] *(*(*("'s",capital),is),?1)
+[t] capital_2(?1)
+
+Len -> s14049(Riv)
+[s] *(*(long,is),?1)
+[t] len(?1)
+
+Lar -> s24489(Pop)
+[s] *(*(the,most),?1)
+[t] largest_one(?1)
+
+Sta -> s20514
+[s] *(*(*(*(a,state),that),borders),indiana)
+[t] stateid('indiana')
+
+Riv -> s13721(Loc)
+[s] *(*(of,rivers),?1)
+[t] river(?1)
+
+Cit -> s14935
+[s] *(in,riverside)
+[t] cityid('riverside',_)
+
+Lar -> s23659(Den)
+[s] *(*(state,has),?1)
+[t] largest_one(?1)
+
+Sta -> s14914
+[s] *(in,new)
+[t] stateid('new york')
+
+S! -> s16273(Maj)
+[s] *(show,?1)
+[t] answer(?1)
+
+Pla -> s16533(Loc)
+[s] *(*(*(*(are,the),highest),points),?1)
+[t] place(?1)
+
+Cap -> s15041(Loc)
+[s] *(*(*(*(live,in),the),capital),?1)
+[t] capital(?1)
+
+Loc -> s14617(Sta)
+[s] *(*(are,there),?1)
+[t] loc_2(?1)
+
+Den -> s18852(Sta)
+[s] *(*(*(is,the),density),?1)
+[t] density_1(?1)
+
+Pop -> s23642(Cit)
+[s] *(*(most,population),?1)
+[t] population_1(?1)
+
+Lon -> s19822(Riv)
+[s] *(*(*(is,the),largest),?1)
+[t] longest(?1)
+
+Sta -> s18871
+[s] *(*(*(of,the),new),york)
+[t] stateid('new york')
+
+Cit -> s24908
+[s] *(*(*(named,salt),lake),city)
+[t] cityid('salt lake city',_)
+
+Lar -> s18747(Pop)
+[s] *(*(state,with),?1)
+[t] largest_one(?1)
+
+Sta -> s25936
+[s] *(montana,in)
+[t] stateid('montana')
+
+Sta -> s23369
+[s] *(*(run,through),maine)
+[t] stateid('maine')
+
+Cou -> s17033
+[s] *(*(*(*(*(the,major),rivers),in),the),us)
+[t] countryid('usa')
+
+Cit -> s25877
+[s] *(kalamazoo,in)
+[t] cityid('kalamazoo',_)
+
+Len -> s14067(Riv)
+[s] *(*(*(long,is),the),?1)
+[t] len(?1)
+
+Pop -> s21303(Cit)
+[s] *(*(the,population),?1)
+[t] population_1(?1)
+
+Hig -> s15963(Hig)
+[s] *(*(*(*(a,higher),point),than),?1)
+[t] higher_2(?1)
+
+Lar -> s18031(Cit)
+[s] *(*(*(is,the),biggest),?1)
+[t] largest(?1)
+
+Sta -> s20629
+[s] *(*(*(*(a,state),that),borders),tennessee)
+[t] stateid('tennessee')
+
+Pop -> s22754(Sta)
+[s] *(population,?1)
+[t] population_1(?1)
+
+Sta -> s19599
+[s] *(borders,texas)
+[t] stateid('texas')
+
+Cit -> s18542
+[s] *(*(*(*(that,have),cities),named),durham)
+[t] cityid('durham',_)
+
+Sta -> s21124
+[s] *(*(*(*(*(is,the),population),density),of),south)
+[t] stateid('south dakota')
+
+Lar -> s17843(Sta)
+[s] *(*(*(of,the),largest),?1)
+[t] largest(?1)
+
+Cit -> s17797
+[s] *(*(*(*(is,the),area),of),seattle)
+[t] cityid('seattle',_)
+
+Cit -> s24873
+[s] named
+[t] cityid('plano',_)
+
+Den -> s17067(Sta)
+[s] *(*(*(*(population,densities),of),each),?1)
+[t] density_1(?1)
+
+Sta -> s21703
+[s] *(*(*(*(is,the),population),of),south)
+[t] stateid('south dakota')
+
+Pop -> s17591(Cit)
+[s] *(*(most,people),?1)
+[t] population_1(?1)
+
+Pla -> s25896
+[s] *(*(mount,mckinley),in)
+[t] placeid('mount mckinley')
+
+Sta -> s21175
+[s] *(*(*(*(*(*(*(is,the),population),density),of),the),smallest),state)
+[t] state(all)
+
+Sta -> s17054(Nex)
+[s] *(*(*(*(are,the),neighboring),states),?1)
+[t] state(?1)
+
+Sta -> s17394
+[s] *(*(are,the),states)
+[t] state(all)
+
+S! -> s16265(Sta)
+[s] *(*(*(*(*(san,antonio),is),in),what),?1)
+[t] answer(?1)
+
+Riv -> s13538(Loc)
+[s] *(*(the,rivers),?1)
+[t] river(?1)
+
+Sta -> s19245
+[s] *(*(*(*(the,highest),point),in),ohio)
+[t] stateid('ohio')
+
+Lar -> s21142(Sta)
+[s] *(*(*(*(*(*(*(is,the),population),density),of),the),largest),?1)
+[t] largest(?1)
+
+Cit -> s21745
+[s] *(*(*(*(is,the),population),of),tempe)
+[t] cityid('tempe','az')
+
+Sta -> s20713
+[s] *(*(nebraska,in),meters)
+[t] stateid('nebraska')
+
+Lar -> s17504(Cap)
+[s] *(*(*(largest,in),the),?1)
+[t] largest(?1)
+
+Cou -> s17003
+[s] united
+[t] countryid('usa')
+
+Sta -> s21553
+[s] *(*(*(*(is,the),population),of),new)
+[t] stateid('new mexico')
+
+Lar -> s17572(Pop)
+[s] *(*(*(*(city,has),the),largest),?1)
+[t] largest_one(?1)
+
+Sta -> s20423
+[s] *(border,nebraska)
+[t] stateid('nebraska')
+
+Mos -> s20154(Riv)
+[s] *(*(*(*(*(*(*(*(of,the),river),that),flows),through),the),most),?1)
+[t] most(?1)
+
+Tra -> s26303(Lon)
+[s] *(lie,?1)
+[t] traverse_1(?1)
+
+Sta -> s19474
+[s] *(*(*(*(*(is,the),highest),point),in),wyoming)
+[t] stateid('wyoming')
+
+Sta -> s20009(Loc)
+[s] *(*(*(borders,the),state),?1)
+[t] state(?1)
+
+Den -> s17058(Sta)
+[s] *(*(*(*(*(population,densities),of),each),us),?1)
+[t] density_1(?1)
+
+Den -> s21228(Sta)
+[s] *(*(*(*(population,density),of),wyoming),?1)
+[t] density_1(?1)
+
+Riv -> s13546(Loc)
+[s] *(*(*(all,the),rivers),?1)
+[t] river(?1)
+
+Sta -> s15756
+[s] *(missouri,border)
+[t] stateid('missouri')
+
+Lar -> s13692(Sta)
+[s] *(*(the,largest),?1)
+[t] largest(?1)
+
+Cit -> s14450
+[s] *(*(citizens,in),boulder)
+[t] cityid('boulder',_)
+
+Lon -> s20085(Riv)
+[s] *(*(*(of,the),longest),?1)
+[t] longest(?1)
+
+Hig -> s18934(Mou)
+[s] *(*(*(*(*(*(is,the),height),of),the),highest),?1)
+[t] highest(?1)
+
+Lak -> s16295(Loc)
+[s] *(*(*(*(*(*(all,the),major),lakes),in),the),?1)
+[t] lake(?1)
+
+Sta -> s14618
+[s] *(in,oregon)
+[t] stateid('oregon')
+
+Loc -> s16181(Cou)
+[s] *(*(capitals,in),?1)
+[t] loc_2(?1)
+
+Sta -> s18831
+[s] *(*(all,"50"),states)
+[t] state(all)
+
+Sta -> s18304(Loc)
+[s] *(*(*(*(is,the),biggest),state),?1)
+[t] state(?1)
+
+Sta -> s20622
+[s] *(borders,tennessee)
+[t] stateid('tennessee')
+
+S! -> s16255(Cou)
+[s] *(*(number,of),?1)
+[t] answer(?1)
+
+Sta -> s16861
+[s] of
+[t] stateid('california')
+
+Sta -> s17388
+[s] *(*(*(the,rivers),of),montana)
+[t] stateid('montana')
+
+Len -> s20177(Mos)
+[s] *(*(*(*(*(*(*(*(*(*(*(length,of),the),river),that),runs),through),the),most),number),of),?1)
+[t] len(?1)
+
+Sta -> s24130
+[s] *(to,texas)
+[t] stateid('texas')
+
+Nex -> s24355(Sta)
+[s] *(*(*(*(*(*(*(border,states),that),border),states),that),border),?1)
+[t] next_to_2(?1)
+
+Cit -> s15167
+[s] lived
+[t] cityid('austin',_)
+
+Riv -> s14128
+[s] *(*(is,the),mississippi)
+[t] riverid('mississippi')
+
+Sta -> s15631
+[s] tennessee
+[t] stateid('tennessee')
+
+Sta -> s18064
+[s] *(*(*(*(*(is,the),biggest),city),in),arizona)
+[t] stateid('arizona')
+
+Riv -> s15294
+[s] *(*(*(*(that,has),the),most),rivers)
+[t] river(all)
+
+Cit -> s15626
+[s] *(*(*(*(*(*(on,the),state),whose),capital),is),boston)
+[t] cityid('boston',_)
+
+Tra -> s23193(Sta)
+[s] *(*(*(*(flow,through),states),that),?1)
+[t] traverse_2(?1)
+
+Sta -> s17815
+[s] *(*(of,south),carolina)
+[t] stateid('south carolina')
+
+Tra -> s22528(Riv)
+[s] *(*(*(*(*(that,the),mississippi),river),runs),?1)
+[t] traverse_1(?1)
+
+Sta -> s23415(Loc)
+[s] *(*(*(through,the),state),?1)
+[t] state(?1)
+
+Sta -> s13738
+[s] *(in,california)
+[t] stateid('california')
+
+Are -> s17760(Sta)
+[s] *(*(*(*(*(*(area,of),maryland),in),square),kilometers),?1)
+[t] area_1(?1)
+
+Sta -> s20475
+[s] *(*(*(*(does,not),run),through),texas)
+[t] stateid('texas')
+
+S! -> s16073(Ele)
+[s] *(*(*(how,tall),is),?1)
+[t] answer(?1)
+
+Len -> s22729(Riv)
+[s] *(*(*(*(*(*(*(length,of),all),rivers),in),the),usa),?1)
+[t] len(?1)
+
+Lar -> s26330(Den)
+[s] *(*(*(*(*(us,city),has),the),highest),?1)
+[t] largest_one(?1)
+
+Cou -> s22900
+[s] *(*(*(*(one,in),the),united),states)
+[t] countryid('usa')
+
+Riv -> s23840
+[s] *(*(*(*(*(*(has,the),most),rivers),running),through),it)
+[t] river(all)
+
+Sta -> s19464
+[s] *(*(*(*(*(is,the),highest),point),in),virginia)
+[t] stateid('virginia')
+
+Sta -> s15131
+[s] *(*(*(people,live),in),washington)
+[t] stateid('washington')
+
+Sma -> s17863(Sta)
+[s] *(*(*(of,the),smallest),?1)
+[t] smallest(?1)
+
+Sta -> s21247
+[s] *(*(*(*(is,the),population),of),alaska)
+[t] stateid('alaska')
+
+Sta -> s17879(Loc)
+[s] *(*(*(*(*(*(is,the),area),of),the),state),?1)
+[t] state(?1)
+
+Den -> s23660(Sta)
+[s] *(*(*(greatest,population),density),?1)
+[t] density_1(?1)
+
+Sta -> s17782
+[s] *(of,ohio)
+[t] stateid('ohio')
+
+Cit -> s14030(Loc)
+[s] *(city,?1)
+[t] city(?1)
+
+Cou -> s18227
+[s] *(*(*(*(*(the,biggest),city),in),the),usa)
+[t] countryid('usa')
+
+Cit -> s15915
+[s] *(called,rochester)
+[t] cityid('rochester',_)
+
+Riv -> s23596
+[s] *(no,rivers)
+[t] river(all)
+
+Cit -> s14432
+[s] *(*(*(*(does,the),biggest),city),have)
+[t] city(all)
+
+Pop -> s16236(Cit)
+[s] *(of,?1)
+[t] population_1(?1)
+
+Sta -> s21888
+[s] *(*(*(*(*(*(of,the),largest),state),that),borders),texas)
+[t] stateid('texas')
+
+Pla -> s25086
+[s] *(mount,whitney)
+[t] placeid('mount whitney')
+
+Riv -> s16340
+[s] *(*(*(*(*(*(through,which),states),does),the),mississippi),flow)
+[t] riverid('mississippi')
+
+Loc -> s22904(Cou)
+[s] *(*(*(*(*(is,the),longest),one),in),?1)
+[t] loc_2(?1)
+
+Sta -> s15191
+[s] *(*(*(people,stay),in),utah)
+[t] stateid('utah')
+
+Sta -> s17779
+[s] *(*(*(*(is,the),area),of),ohio)
+[t] stateid('ohio')
+
+Sma -> s22643(Pop)
+[s] *(*(*(with,the),lowest),?1)
+[t] smallest_one(?1)
+
+Sta -> s18467
+[s] new
+[t] stateid('new hampshire')
+
+Loc -> s16281(Cou)
+[s] *(*(lakes,in),?1)
+[t] loc_2(?1)
+
+Pla -> s13838(Loc)
+[s] *(points,?1)
+[t] place(?1)
+
+Cit -> s25116
+[s] *(san,diego)
+[t] cityid('san diego',_)
+
+Sta -> s25463
+[s] *(through,alaska)
+[t] stateid('alaska')
+
+Sta -> s22380
+[s] *(*(*(*(*(is,the),smallest),city),in),washington)
+[t] stateid('washington')
+
+Ele -> s13890(Hig)
+[s] *(*(*(high,is),the),?1)
+[t] elevation_1(?1)
+
+Siz -> s13824(Cit)
+[s] *(*(*(*(*(big,is),the),city),of),?1)
+[t] size(?1)
+
+Cou -> s17996
+[s] *(*(*(*(*(*(*(*(*(is,the),average),population),per),square),km),in),the),us)
+[t] countryid('usa')
+
+Sta -> s23235(Nex)
+[s] *(*(*(*(*(states,that),border),the),state),?1)
+[t] state(?1)
+
+Sta -> s22207
+[s] *(*(*(*(is,the),size),of),florida)
+[t] stateid('florida')
+
+Sta -> s17954
+[s] *(of,wisconsin)
+[t] stateid('wisconsin')
+
+Tra -> s22997(Sta)
+[s] *(*(through,virginia),?1)
+[t] traverse_2(?1)
+
+Sta -> s15446(Nex)
+[s] *(*(the,states),?1)
+[t] state(?1)
+
+Riv -> s24445
+[s] *(*(ohio,runs),through)
+[t] riverid('ohio')
+
+Sta -> s19639
+[s] *(*(*(*(*(is,the),largest),city),in),michigan)
+[t] stateid('michigan')
+
+Pla -> s22567
+[s] *(*(*(*(that,contains),the),highest),point)
+[t] place(all)
+
+Cit -> s14752
+[s] *(in,detroit)
+[t] cityid('detroit',_)
+
+Sta -> s23285
+[s] *(through,arizona)
+[t] stateid('arizona')
+
+Riv -> s26126
+[s] *(river,cross)
+[t] river(all)
+
+Cit -> s21235
+[s] *(*(*(*(is,the),population),in),boston)
+[t] cityid('boston',_)
+
+Mos -> s20238(Riv)
+[s] *(*(*(*(*(*(*(*(*(*(is,the),length),of),the),river),that),traverses),the),most),?1)
+[t] most(?1)
+
+Nex -> s15574(Sta)
+[s] *(*(*(*(*(border,at),least),one),other),?1)
+[t] next_to_2(?1)
+
+Cou -> s15552
+[s] *(*(*(there,in),united),states)
+[t] countryid('usa')
+
+Are -> s15467(Cou)
+[s] *(*(square,kilometers),?1)
+[t] area_1(?1)
+
+Len -> s22780(Riv)
+[s] *(*(length,is),?1)
+[t] len(?1)
+
+Siz -> s14007(Sta)
+[s] *(large,?1)
+[t] size(?1)
+
+Mou -> s18935(Loc)
+[s] *(mountain,?1)
+[t] mountain(?1)
+
+Siz -> s22194(Sta)
+[s] *(*(size,of),?1)
+[t] size(?1)
+
+Maj -> s24469(Riv)
+[s] *(*(a,major),?1)
+[t] major(?1)
+
+Riv -> s22730
+[s] *(*(*(*(*(*(is,the),total),length),of),all),rivers)
+[t] river(all)
+
+Sta -> s19837
+[s] *(*(the,largest),state)
+[t] state(all)
+
+Are -> s17730(Sta)
+[s] *(*(*(area,of),idaho),?1)
+[t] area_1(?1)
+
+Pla -> s18892
+[s] *(*(of,death),valley)
+[t] placeid('death valley')
+
+Lak -> s16285(Loc)
+[s] *(*(*(*(all,the),major),lakes),?1)
+[t] lake(?1)
+
+Ele -> s13848(Hig)
+[s] *(*(high,are),?1)
+[t] elevation_1(?1)
+
+Lon -> s14098(Riv)
+[s] *(longest,?1)
+[t] longest(?1)
+
+Lar -> s17644(Cap)
+[s] *(*(is,largest),?1)
+[t] largest(?1)
+
+Sta -> s22821
+[s] *(*(run,through),illinois)
+[t] stateid('illinois')
+
+Sta -> s13649
+[s] *(*(*(which,are),in),texas)
+[t] stateid('texas')
+
+Cit -> s21352
+[s] *(*(*(*(is,the),population),of),boulder)
+[t] cityid('boulder',_)
+
+Sta -> s18835
+[s] *(*(*(*(*(*(*(is,the),combined),population),of),all),"50"),states)
+[t] state(all)
+
+Pop -> s21234(Cit)
+[s] *(*(population,in),?1)
+[t] population_1(?1)
+
+Sta -> s21505
+[s] *(of,maryland)
+[t] stateid('maryland')
+
+Sta -> s17652
+[s] *(*(*(adjacent,state),of),california)
+[t] stateid('california')
+
+Sta -> s17885(Loc)
+[s] *(*(*(of,the),state),?1)
+[t] state(?1)
+
+Sta -> s19935
+[s] *(*(that,borders),california)
+[t] stateid('california')
+
+Nex -> s17651(Sta)
+[s] *(of,?1)
+[t] next_to_2(?1)
+
+Cit -> s21232
+[s] *(in,boston)
+[t] cityid('boston',_)
+
+Nex -> s15599(Sta)
+[s] *(*(and,border),?1)
+[t] next_to_2(?1)
+
+Cit -> s21400
+[s] *(of,denver)
+[t] cityid('denver',_)
+
+Cit -> s14686
+[s] *(*(people,in),boulder)
+[t] cityid('boulder',_)
+
+Sta -> s18267
+[s] illinois
+[t] stateid('illinois')
+
+Riv -> s17119
+[s] *(*(mississippi,river),runs)
+[t] riverid('mississippi')
+
+Cou -> s13595
+[s] *(*(*(*(*(me,all),the),states),of),usa)
+[t] countryid('usa')
+
+Sta -> s17761
+[s] *(*(*(of,maryland),in),square)
+[t] stateid('maryland')
+
+Sta -> s17259(Tra)
+[s] *(*(*(of,the),states),?1)
+[t] state(?1)
+
+Nex -> s18686(Sta)
+[s] *(*(*(*(*(that,borders),the),state),that),?1)
+[t] next_to_2(?1)
+
+Sta -> s23469
+[s] *(west,virginia)
+[t] stateid('west virginia')
+
+Sta -> s13760
+[s] *(is,alaska)
+[t] stateid('alaska')
+
+Sta -> s14821
+[s] *(*(*(*(many,people),live),in),kansas)
+[t] stateid('kansas')
+
+Sta -> s14375
+[s] *(texas,have)
+[t] stateid('texas')
+
+Cou -> s22345
+[s] *(*(*(*(*(*(is,the),smallest),city),in),the),us)
+[t] countryid('usa')
+
+Pop -> s14464(Sta)
+[s] *(*(*(many,citizens),live),?1)
+[t] population_1(?1)
+
+Tra -> s20144(Sta)
+[s] *(*(*(that,flows),through),?1)
+[t] traverse_2(?1)
+
+Tra -> s23256(Lar)
+[s] *(*(*(flow,through),the),?1)
+[t] traverse_2(?1)
+
+Cit -> s24978(Cit)
+[s] *(towns,?1)
+[t] city(?1)
+
+Cap -> s22237(Loc)
+[s] *(*(*(*(*(*(is,the),size),of),the),capital),?1)
+[t] capital(?1)
+
+Loc -> s13680(Sta)
+[s] *(*(*(the,lakes),in),?1)
+[t] loc_2(?1)
+
+Cit -> s14761
+[s] *(*(*(people,live),in),detroit)
+[t] cityid('detroit',_)
+
+Lon -> s22892(Riv)
+[s] *(*(*(*(river,is),the),longest),?1)
+[t] longest(?1)
+
+Sta -> s18988
+[s] *(of,wyoming)
+[t] stateid('wyoming')
+
+Sta -> s15170
+[s] *(*(reside,in),utah)
+[t] stateid('utah')
+
+Sta -> s18507
+[s] north
+[t] stateid('north dakota')
+
+Riv -> s23134
+[s] *(*(*(rivers,do),not),run)
+[t] river(all)
+
+Sta -> s17770
+[s] *(*(*(*(is,the),area),of),new)
+[t] stateid('new mexico')
+
+Sta -> s19185
+[s] *(*(*(*(*(is,the),highest),point),in),maine)
+[t] stateid('maine')
+
+Sta -> s15426
+[s] *(*(run,through),texas)
+[t] stateid('texas')
+
+Cou -> s19299
+[s] *(*(*(*(*(*(is,the),highest),point),in),the),country)
+[t] countryid('usa')
+
+Cit -> s25056
+[s] "'s"
+[t] city(all)
+
+Tra -> s23839(Riv)
+[s] *(*(*(rivers,running),through),?1)
+[t] traverse_1(?1)
+
+Cou -> s17966
+[s] *(*(us,by),state)
+[t] countryid('usa')
+
+Sta -> s24118
+[s] to
+[t] stateid('arizona')
+
+Cit -> s14947
+[s] *(san,francisco)
+[t] cityid('san francisco',_)
+
+Sta -> s16768
+[s] rhode
+[t] stateid('rhode island')
+
+Sta -> s22072
+[s] *(cross,over)
+[t] stateid('ohio')
+
+Cit -> s24033
+[s] pittsburgh
+[t] cityid('pittsburgh',_)
+
+Cou -> s13720(Riv)
+[s] *(*(*(me,the),number),?1)
+[t] count(?1)
+
+Sta -> s21068(Nex)
+[s] *(*(*(of,neighboring),states),?1)
+[t] state(?1)
+
+Mos -> s20148(Riv)
+[s] *(*(*(*(*(*(*(the,river),that),flows),through),the),most),?1)
+[t] most(?1)
+
+Siz -> s22191(Sta)
+[s] *(*(*(is,the),size),?1)
+[t] size(?1)
+
+S! -> s25315(Sho)
+[s] *(*(*(which,is),the),?1)
+[t] answer(?1)
+
+Sta -> s13552
+[s] *(*(*(*(all,the),rivers),in),colorado)
+[t] stateid('colorado')
+
+Sma -> s16832(Sta)
+[s] *(*(the,smallest),?1)
+[t] smallest(?1)
+
+Tra -> s20498(Sta)
+[s] *(*(*(*(does,not),run),through),?1)
+[t] traverse_2(?1)
+
+Sma -> s21920(Pop)
+[s] *(*(*(*(*(*(is,the),population),of),the),smallest),?1)
+[t] smallest(?1)
+
+Sta -> s18815
+[s] *(*(*(*(*(*(*(is,the),combined),area),of),all),"50"),states)
+[t] state(all)
+
+Lar -> s15019(Cit)
+[s] *(*(*(*(live,in),the),biggest),?1)
+[t] largest(?1)
+
+S! -> s13654(Cit)
+[s] *(*(*(*(*(give,me),the),cities),which),?1)
+[t] answer(?1)
+
+Riv -> s14481
+[s] *(*(*(colorado,rivers),are),there)
+[t] riverid('colorado')
+
+Cou -> s17972
+[s] *(us,by)
+[t] countryid('usa')
+
+Pla -> s25673
+[s] *(*(*(peak,in),the),country)
+[t] place(all)
+
+S! -> s16235(Pop)
+[s] *(number,?1)
+[t] answer(?1)
+
+Cit -> s23975
+[s] *(*(*(columbus,the),capital),of)
+[t] cityid('columbus',_)
+
+Sta -> s16405
+[s] *(*(*(*(the,biggest),rivers),in),texas)
+[t] stateid('texas')
+
+Cit -> s25107
+[s] *(new,orleans)
+[t] cityid('new orleans',_)
+
+Sta -> s22032
+[s] *(of,washington)
+[t] stateid('washington')
+
+Ele -> s16068(Pla)
+[s] *(*(tall,is),?1)
+[t] elevation_1(?1)
+
+Pla -> s19144(Ele)
+[s] *(*(*(whose,lowest),point),?1)
+[t] place(?1)
+
+Cou -> s15538
+[s] *(*(*(there,in),the),usa)
+[t] countryid('usa')
+
+Riv -> s22520
+[s] *(*(*(mississippi,river),runs),through)
+[t] riverid('mississippi')
+
+Cit -> s15957
+[s] named
+[t] cityid('springfield',_)
+
+Pop -> s17091(Maj)
+[s] *(*(*(are,the),populations),?1)
+[t] population_1(?1)
+
+Pop -> s21513(Sta)
+[s] *(*(*(population,of),maryland),?1)
+[t] population_1(?1)
+
+Cit -> s24917
+[s] *(*(named,salt),lake)
+[t] cityid('salt lake city',_)
+
+Pop -> s17531(Cit)
+[s] *(number,?1)
+[t] population_1(?1)
+
+Nex -> s23014(Sta)
+[s] *(*(which,borders),?1)
+[t] next_to_2(?1)
+
+Den -> s17968(Cou)
+[s] *(*(average,population),?1)
+[t] density_1(?1)
+
+Sta -> s18164
+[s] *(*(*(*(*(is,the),biggest),city),in),texas)
+[t] stateid('texas')
+
+Sta -> s19975(Nex)
+[s] *(*(*(*(*(state,that),borders),the),state),?1)
+[t] state(?1)
+
+Sta -> s18368
+[s] *(*(*(*(is,the),capital),of),georgia)
+[t] stateid('georgia')
+
+Cap -> s21772(Loc)
+[s] *(*(*(of,the),capital),?1)
+[t] capital(?1)
+
+Sta -> s13540
+[s] arkansas
+[t] stateid('arkansas')
+
+Mos -> s20244(Riv)
+[s] *(*(*(*(*(*(*(of,the),river),that),traverses),the),most),?1)
+[t] most(?1)
+
+S! -> s16109(Sta)
+[s] *(*(in,which),?1)
+[t] answer(?1)
+
+Siz -> s13759(Sta)
+[s] *(big,?1)
+[t] size(?1)
+
+Loc -> s15624(Cap)
+[s] *(*(*(whose,capital),is),?1)
+[t] loc_1(?1)
+
+Sta -> s19129
+[s] *(*(*(*(*(is,the),highest),point),in),delaware)
+[t] stateid('delaware')
+
+Lar -> s23626(Pop)
+[s] *(*(*(the,city),with),?1)
+[t] largest_one(?1)
+
+Cit -> s19324
+[s] austin
+[t] cityid('austin',_)
+
+Cit -> s14737
+[s] *(in,chicago)
+[t] cityid('chicago',_)
+
+Pop -> s14642(Sta)
+[s] *(*(*(*(*(*(people,are),in),the),state),of),?1)
+[t] population_1(?1)
+
+Sta -> s13520
+[s] *(*(*(*(me,the),cities),in),virginia)
+[t] stateid('virginia')
+
+Exc -> s16226(Sta,Nex)
+[s] *(*(*(have,no),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s17749
+[s] *(*(*(*(of,maryland),in),square),kilometers)
+[t] stateid('maryland')
+
+Sma -> s17903(Den)
+[s] *(*(*(with,the),smallest),?1)
+[t] smallest_one(?1)
+
+Tra -> s15791(Riv)
+[s] *(does,?1)
+[t] traverse_1(?1)
+
+Riv -> s14153
+[s] *(*(*(mississippi,river),in),miles)
+[t] riverid('mississippi')
+
+Sta -> s17122(Tra)
+[s] *(*(of,states),?1)
+[t] state(?1)
+
+Cit -> s25074
+[s] fort
+[t] cityid('fort wayne',_)
+
+Sta -> s15232
+[s] *(*(found,in),colorado)
+[t] stateid('colorado')
+
+Cit -> s17882
+[s] albany
+[t] cityid('albany',_)
+
+Sta -> s18475
+[s] *(new,jersey)
+[t] stateid('new jersey')
+
+Sta -> s14908
+[s] *(*(*(live,in),new),york)
+[t] stateid('new york')
+
+Sta -> s17074
+[s] *(of,mississippi)
+[t] stateid('mississippi')
+
+Cou -> s15471
+[s] *(*(*(kilometers,in),the),us)
+[t] countryid('usa')
+
+Sta -> s17951
+[s] *(*(*(*(is,the),area),of),wisconsin)
+[t] stateid('wisconsin')
+
+Are -> s15470(Cou)
+[s] *(*(many,square),?1)
+[t] area_1(?1)
+
+Sta -> s17910
+[s] *(*(of,the),state)
+[t] state(all)
+
+Sta -> s21367
+[s] *(*(*(*(is,the),population),of),california)
+[t] stateid('california')
+
+Sta -> s25353
+[s] *(*(*(*(pennsylvania,has),the),largest),population)
+[t] stateid('pennsylvania')
+
+Cou -> s19544
+[s] *(*(*(*(*(the,highest),point),of),the),usa)
+[t] countryid('usa')
+
+Hig -> s25005(Hig)
+[s] *(*(higher,than),?1)
+[t] higher_2(?1)
+
+Sta -> s13536
+[s] mississippi
+[t] stateid('mississippi')
+
+Cou -> s19449
+[s] *(*(*(*(*(the,highest),point),in),the),usa)
+[t] countryid('usa')
+
+Sta -> s13939
+[s] alabama
+[t] stateid('alabama')
+
+Cou -> s19539
+[s] *(*(*(*(*(*(is,the),highest),point),of),the),usa)
+[t] countryid('usa')
+
+Tra -> s16500(Riv)
+[s] *(through,?1)
+[t] traverse_1(?1)
+
+Maj -> s16193(Lak)
+[s] *(*(the,major),?1)
+[t] major(?1)
+
+Maj -> s14249(Cit)
+[s] *(big,?1)
+[t] major(?1)
+
+Pop -> s16242(Cit)
+[s] *(*(of,people),?1)
+[t] population_1(?1)
+
+Sta -> s20653
+[s] *(*(*(*(*(is,the),lowest),elevation),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+Sta -> s15783
+[s] *(tennessee,border)
+[t] stateid('tennessee')
+
+Sta -> s18345
+[s] *(*(*(*(is,the),capital),of),california)
+[t] stateid('california')
+
+Cou -> s22370
+[s] *(*(*(*(*(the,smallest),city),in),the),usa)
+[t] countryid('usa')
+
+Nex -> s14542(Sta)
+[s] *(bordering,?1)
+[t] next_to_2(?1)
+
+Sta -> s20124
+[s] *(*(*(that,runs),through),texas)
+[t] stateid('texas')
+
+Mos -> s25355(Riv)
+[s] *(*(*(*(*(river,goes),through),the),most),?1)
+[t] most(?1)
+
+Sta -> s18499
+[s] *(*(*(*(*(is,the),capital),of),new),york)
+[t] stateid('new york')
+
+Cit -> s21295
+[s] *(atlanta,ga)
+[t] cityid('atlanta','ga')
+
+Cit -> s14827
+[s] *(*(in,minneapolis),minnesota)
+[t] cityid('minneapolis','mn')
+
+Lon -> s16319(Riv)
+[s] *(*(*(does,the),longest),?1)
+[t] longest(?1)
+
+Sta -> s20877
+[s] *(*(*(*(*(is,the),lowest),point),of),colorado)
+[t] stateid('colorado')
+
+Cit -> s14698
+[s] *(*(live,in),austin)
+[t] cityid('austin',_)
+
+Sta -> s23181
+[s] *(through,missouri)
+[t] stateid('missouri')
+
+Lon -> s13695(Riv)
+[s] *(*(*(me,the),longest),?1)
+[t] longest(?1)
+
+Cap -> s17645
+[s] capital
+[t] capital(all)
+
+Sta -> s23477
+[s] west
+[t] stateid('west virginia')
+
+Sta -> s15702(Nex)
+[s] *(*(*(*(states,border),the),state),?1)
+[t] state(?1)
+
+Sta -> s18252
+[s] *(*(*(*(*(is,the),biggest),city),in),wyoming)
+[t] stateid('wyoming')
+
+Are -> s22716(Cou)
+[s] *(*(total,area),?1)
+[t] area_1(?1)
+
+Sta -> s21265
+[s] *(of,arizona)
+[t] stateid('arizona')
+
+Nex -> s16222(Sta)
+[s] *(which,?1)
+[t] next_to_2(?1)
+
+Cit -> s25906
+[s] *(*(denver,located),in)
+[t] cityid('denver',_)
+
+Sta -> s14650
+[s] *(*(*(are,there),in),iowa)
+[t] stateid('iowa')
+
+Ele -> s18918(Pla)
+[s] *(*(height,of),?1)
+[t] elevation_1(?1)
+
+Are -> s17658(Sta)
+[s] *(*(area,of),?1)
+[t] area_1(?1)
+
+Cou -> s25202
+[s] *(*(*(*(*(*(is,the),lowest),point),in),the),us)
+[t] countryid('usa')
+
+Loc -> s15913(Cit)
+[s] *(have,?1)
+[t] loc_1(?1)
+
+Hig -> s24993(Hig)
+[s] *(*(*(higher,than),that),?1)
+[t] higher_2(?1)
+
+Sta -> s21115
+[s] *(*(of,south),dakota)
+[t] stateid('south dakota')
+
+Sta -> s22846
+[s] *(through,kansas)
+[t] stateid('kansas')
+
+Pop -> s21208(Sta)
+[s] *(*(*(*(*(*(*(of,the),state),with),the),smallest),population),?1)
+[t] population_1(?1)
+
+Riv -> s15215
+[s] *(called,colorado)
+[t] riverid('colorado')
+
+Loc -> s22565(Hig)
+[s] *(*(that,contains),?1)
+[t] loc_1(?1)
+
+Cou -> s19910
+[s] *(*(*(*(*(is,the),largest),state),in),usa)
+[t] countryid('usa')
+
+Sta -> s14734
+[s] *(*(*(*(many,people),live),in),california)
+[t] stateid('california')
+
+Sta -> s17809
+[s] *(south,carolina)
+[t] stateid('south carolina')
+
+Cit -> s14583
+[s] cities
+[t] city(all)
+
+Lak -> s16280(Loc)
+[s] *(*(*(*(*(me,all),the),major),lakes),?1)
+[t] lake(?1)
+
+Cit -> s25137
+[s] springfield
+[t] cityid('springfield',_)
+
+Sta -> s13684
+[s] state
+[t] state(all)
+
+Sta -> s14267
+[s] *(rhode,island)
+[t] stateid('rhode island')
+
+Sta -> s18388
+[s] *(*(*(*(is,the),capital),of),illinois)
+[t] stateid('illinois')
+
+Sta -> s13769
+[s] *(is,massachusetts)
+[t] stateid('massachusetts')
+
+Len -> s20057(Riv)
+[s] *(*(*(*(is,the),length),of),?1)
+[t] len(?1)
+
+Riv -> s15406
+[s] than
+[t] riverid('red')
+
+Sta -> s13993
+[s] louisiana
+[t] stateid('louisiana')
+
+Cit -> s23611(Cit)
+[s] *(*(the,city),?1)
+[t] city(?1)
+
+Pop -> s15208(Sta)
+[s] *(*(*(*(many,residents),live),in),?1)
+[t] population_1(?1)
+
+Sta -> s20748
+[s] *(*(*(*(*(is,the),lowest),point),in),texas)
+[t] stateid('texas')
+
+Cit -> s21736
+[s] *(tempe,arizona)
+[t] cityid('tempe','az')
+
+Sta -> s13614
+[s] *(in,texas)
+[t] stateid('texas')
+
+Sta -> s21571
+[s] *(*(*(*(is,the),population),of),new)
+[t] stateid('new york')
+
+Sta -> s15747
+[s] *(iowa,border)
+[t] stateid('iowa')
+
+Cit -> s21382
+[s] *(*(*(*(is,the),population),of),dallas)
+[t] cityid('dallas',_)
+
+Exc -> s25997(Sta,Nex)
+[s] *(*(*(*(states,border),no),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s21631
+[s] *(*(*(*(is,the),population),of),rhode)
+[t] stateid('rhode island')
+
+Cit -> s25134
+[s] *(scotts,valley)
+[t] cityid('scotts valley',_)
+
+Den -> s21084(Sta)
+[s] *(*(*(population,density),in),?1)
+[t] density_1(?1)
+
+Sta -> s15529
+[s] *(*(states,are),there)
+[t] state(all)
+
+Int -> s14396(Cit,Loc)
+[s] *(*(*(*(*(*(cities,named),austin),are),there),?1),?2)
+[t] intersection(?1,?2)
+
+Sta -> s24150
+[s] *(*(*(*(are,next),to),the),mississippi)
+[t] stateid('mississippi')
+
+Sta -> s17921
+[s] *(*(*(*(*(is,the),area),of),the),states)
+[t] state(all)
+
+Hig -> s26269(Hig)
+[s] *(higher,?1)
+[t] higher_2(?1)
+
+Sta -> s18262
+[s] *(*(*(*(the,biggest),city),in),wyoming)
+[t] stateid('wyoming')
+
+Sta -> s18511
+[s] *(*(*(*(*(is,the),capital),of),north),dakota)
+[t] stateid('north dakota')
+
+Sta -> s13597(Loc)
+[s] *(*(*(all,the),states),?1)
+[t] state(?1)
+
+Cit -> s14839
+[s] *(*(*(live,in),minneapolis),minnesota)
+[t] cityid('minneapolis','mn')
+
+Pop -> s14426(Lar)
+[s] *(*(*(*(*(*(*(*(many,citizens),does),the),biggest),city),have),in),?1)
+[t] population_1(?1)
+
+Riv -> s24950
+[s] named
+[t] riverid('colorado')
+
+Sta -> s17355
+[s] *(of,indiana)
+[t] stateid('indiana')
+
+Riv -> s26076(Riv)
+[s] *(*(colorado,river),?1)
+[t] river(?1)
+
+Cit -> s21292
+[s] *(*(of,atlanta),ga)
+[t] cityid('atlanta','ga')
+
+Sta -> s13957
+[s] delaware
+[t] stateid('delaware')
+
+Loc -> s23620(Lar)
+[s] *(*(*(*(has,the),city),with),?1)
+[t] loc_1(?1)
+
+Sta -> s15004
+[s] *(*(*(*(many,people),live),in),texas)
+[t] stateid('texas')
+
+Sta -> s14671
+[s] *(*(there,in),new)
+[t] stateid('new york')
+
+Riv -> s24648(Riv)
+[s] *(*(*(the,delaware),river),?1)
+[t] river(?1)
+
+Sta -> s22922
+[s] *(*(runs,through),illinois)
+[t] stateid('illinois')
+
+Cap -> s16176(Loc)
+[s] *(*(*(the,"50"),capitals),?1)
+[t] capital(?1)
+
+Riv -> s17113
+[s] *(*(*(*(which,the),mississippi),river),runs)
+[t] riverid('mississippi')
+
+Tra -> s20272(Sta)
+[s] *(*(flowing,through),?1)
+[t] traverse_2(?1)
+
+Loc -> s24474(Maj)
+[s] *(*(*(and,have),a),?1)
+[t] loc_1(?1)
+
+Cou -> s19094
+[s] *(*(*(*(*(the,highest),mountain),in),the),us)
+[t] countryid('usa')
+
+Cit -> s18011(Loc)
+[s] *(*(*(*(*(is,the),biggest),american),city),?1)
+[t] city(?1)
+
+Sum -> s22736(Len)
+[s] *(*(*(is,the),total),?1)
+[t] sum(?1)
+
+Cit -> s21739
+[s] *(*(of,tempe),arizona)
+[t] cityid('tempe','az')
+
+Cit -> s24903
+[s] named
+[t] cityid('rochester',_)
+
+Lar -> s17524(Pop)
+[s] *(*(*(*(*(*(cities,in),texas),have),the),highest),?1)
+[t] largest_one(?1)
+
+Cit -> s24893
+[s] *(named,rochester)
+[t] cityid('rochester',_)
+
+Cit -> s24601
+[s] dover
+[t] cityid('dover',_)
+
+Cit -> s14743
+[s] *(*(live,in),chicago)
+[t] cityid('chicago',_)
+
+Cit -> s21310
+[s] *(of,austin)
+[t] cityid('austin',_)
+
+Cit -> s15914(Cit)
+[s] *(*(a,city),?1)
+[t] city(?1)
+
+Sta -> s17528
+[s] *(*(*(*(*(*(texas,have),the),highest),number),of),citizens)
+[t] stateid('texas')
+
+Low -> s20645(Pla)
+[s] *(*(*(is,the),lowest),?1)
+[t] lowest(?1)
+
+Sta -> s14929
+[s] *(in,rhode)
+[t] stateid('rhode island')
+
+Sta -> s22114
+[s] *(*(*(*(*(is,the),shortest),river),in),nebraska)
+[t] stateid('nebraska')
+
+Sta -> s17731
+[s] *(*(*(is,the),area),of)
+[t] stateid('idaho')
+
+Sta -> s16678
+[s] *(*(*(*(the,major),cities),in),missouri)
+[t] stateid('missouri')
+
+Sta -> s18079
+[s] *(*(*(*(*(is,the),biggest),city),in),georgia)
+[t] stateid('georgia')
+
+Tra -> s26075(Riv)
+[s] *(do,?1)
+[t] traverse_1(?1)
+
+Loc -> s24468(Maj)
+[s] *(*(and,have),?1)
+[t] loc_1(?1)
+
+Tra -> s19814(Riv)
+[s] *(*(*(*(*(that,the),rio),grande),runs),?1)
+[t] traverse_1(?1)
+
+Cou -> s22720
+[s] *(*(of,the),usa)
+[t] countryid('usa')
+
+Sta -> s14631(Sta)
+[s] *(*(*(*(are,in),the),state),?1)
+[t] state(?1)
+
+Sta -> s22850
+[s] *(*(flows,through),kansas)
+[t] stateid('kansas')
+
+Cit -> s13822
+[s] *(new,york)
+[t] cityid('new york',_)
+
+Sta -> s13565
+[s] *(*(*(*(*(*(*(*(*(*(*(*(*(could,you),tell),me),what),is),the),highest),point),in),the),state),of),oregon)
+[t] stateid('oregon')
+
+Tra -> s22059(Sta)
+[s] *(that,?1)
+[t] traverse_2(?1)
+
+Sta -> s17676
+[s] *(*(*(of,all),the),states)
+[t] state(all)
+
+Riv -> s26027
+[s] *(*(*(which,the),mississippi),traverses)
+[t] riverid('mississippi')
+
+Den -> s17965(Cou)
+[s] *(*(*(average,population),of),?1)
+[t] density_1(?1)
+
+Sho -> s14225(Riv)
+[s] *(*(*(is,the),shortest),?1)
+[t] shortest(?1)
+
+Loc -> s20717(Sta)
+[s] *(*(*(in,nebraska),in),?1)
+[t] loc_2(?1)
+
+Lar -> s15326(Pop)
+[s] *(*(*(the,state),with),?1)
+[t] largest_one(?1)
+
+Sta -> s15069
+[s] wyoming
+[t] stateid('wyoming')
+
+Pop -> s21747(Cit)
+[s] *(*(*(population,of),tempe),?1)
+[t] population_1(?1)
+
+Lar -> s23647(Pop)
+[s] *(*(*(*(*(*(has,the),city),with),the),most),?1)
+[t] largest_one(?1)
+
+Tra -> s13697(Cou)
+[s] *(*(*(that,passes),through),?1)
+[t] traverse_2(?1)
+
+Sta -> s24580(Nex)
+[s] *(*(*(*(states,border),the),states),?1)
+[t] state(?1)
+
+Sta -> s23209(Nex)
+[s] *(*(through,states),?1)
+[t] state(?1)
+
+Sta -> s23365
+[s] *(through,maine)
+[t] stateid('maine')
+
+Pop -> s17525(Cit)
+[s] *(*(number,of),?1)
+[t] population_1(?1)
+
+Sta -> s19925
+[s] *(borders,california)
+[t] stateid('california')
+
+Sta -> s14252
+[s] pennsylvania
+[t] stateid('pennsylvania')
+
+Pop -> s15178(Sta)
+[s] *(*(*(*(many,people),reside),in),?1)
+[t] population_1(?1)
+
+Sta -> s22950
+[s] *(*(*(*(runs,through),the),most),states)
+[t] state(all)
+
+Sta -> s22064
+[s] *(over,ohio)
+[t] stateid('ohio')
+
+Loc -> s23583(Hig)
+[s] *(contains,?1)
+[t] loc_1(?1)
+
+Sta -> s15351
+[s] *(*(there,in),texas)
+[t] stateid('texas')
+
+Cit -> s21346
+[s] *(*(*(*(is,the),population),of),boston)
+[t] cityid('boston','ma')
+
+Cit -> s16130
+[s] *(*(*(*(in,which),state),is),rochester)
+[t] cityid('rochester',_)
+
+Sma -> s22444(Are)
+[s] *(*(*(smallest,state),by),?1)
+[t] smallest_one(?1)
+
+Tra -> s17426(Riv)
+[s] *(*(runs,through),?1)
+[t] traverse_1(?1)
+
+Hig -> s13533(Sta)
+[s] *(*(*(high,points),of),?1)
+[t] high_point_1(?1)
+
+Mos -> s21937(Sta)
+[s] *(*(*(*(*(*(*(*(*(*(is,the),population),of),the),state),that),borders),the),most),?1)
+[t] most(?1)
+
+Sta -> s21568
+[s] *(*(of,new),york)
+[t] stateid('new york')
+
+Sta -> s20333
+[s] *(*(*(*(*(is,the),longest),river),in),mississippi)
+[t] stateid('mississippi')
+
+Tra -> s23011(Mos)
+[s] *(traverses,?1)
+[t] traverse_2(?1)
+
+Lon -> s15399(Riv)
+[s] *(*(are,longer),?1)
+[t] longer(?1)
+
+Sta -> s22994
+[s] *(through,virginia)
+[t] stateid('virginia')
+
+Sho -> s14237(Riv)
+[s] *(shortest,?1)
+[t] shortest(?1)
+
+Tra -> s20857(Riv)
+[s] *(*(*(*(*(*(through,which),the),colorado),river),runs),?1)
+[t] traverse_1(?1)
+
+Sta -> s20678
+[s] *(*(*(*(*(is,the),lowest),point),in),california)
+[t] stateid('california')
+
+Sta -> s13900
+[s] montana
+[t] stateid('montana')
+
+Pop -> s17103(Maj)
+[s] *(*(*(*(populations,of),all),the),?1)
+[t] population_1(?1)
+
+Cou -> s18008
+[s] *(*(*(*(*(is,the),average),population),per),square)
+[t] countryid('usa')
+
+Sta -> s15460(Nex)
+[s] *(*(*(through,the),states),?1)
+[t] state(?1)
+
+Riv -> s14152(Riv)
+[s] *(*(*(*(is,the),mississippi),river),?1)
+[t] river(?1)
+
+Sta -> s14995
+[s] *(*(live,in),texas)
+[t] stateid('texas')
+
+Exc -> s15720(Sta,Loc)
+[s] *(*(*(*(states,do),not),?1),?2)
+[t] exclude(?1,?2)
+
+Sta -> s17244
+[s] *(*(*(*(*(of,the),major),cities),of),texas)
+[t] stateid('texas')
+
+Cit -> s14459
+[s] *(in,boulder)
+[t] cityid('boulder',_)
+
+Sta -> s16054
+[s] *(does,texas)
+[t] stateid('texas')
+
+Tra -> s22845(Sta)
+[s] *(flows,?1)
+[t] traverse_2(?1)
+
+Cit -> s21385
+[s] *(of,dallas)
+[t] cityid('dallas',_)
+
+Maj -> s17092(Cit)
+[s] *(*(*(*(of,all),the),major),?1)
+[t] major(?1)
+
+Len -> s14121(Lon)
+[s] *(*(*(*(*(*(*(long,is),the),longest),river),in),the),?1)
+[t] len(?1)
+
+Lar -> s25041(Pop)
+[s] *(*(*(texas,city),has),?1)
+[t] largest_one(?1)
+
+Riv -> s23149
+[s] *(*(*(*(rivers,do),not),run),through)
+[t] river(all)
+
+Cit -> s21721
+[s] *(*(springfield,south),dakota)
+[t] cityid('springfield','sd')
+
+Cit -> s24853
+[s] *(named,dallas)
+[t] cityid('dallas',_)
+
+Sta -> s17350
+[s] *(in,alaska)
+[t] stateid('alaska')
+
+Sta -> s20550
+[s] *(through,colorado)
+[t] stateid('colorado')
+
+Cap -> s17500(Loc)
+[s] *(*(capital,is),?1)
+[t] capital(?1)
+
+Int -> s25021(Sta,Loc)
+[s] *(*(*(*(*(*(*(states,in),the),united),states),have),?1),?2)
+[t] intersection(?1,?2)
+
+Sum -> s17680(Are)
+[s] *(*(*(*(*(is,the),area),of),all),?1)
+[t] sum(?1)
+
+Tra -> s23160(Sta)
+[s] *(*(flow,though),?1)
+[t] traverse_2(?1)
+
+Sta -> s21487
+[s] *(*(*(*(is,the),population),of),maine)
+[t] stateid('maine')
+
+Cou -> s15116
+[s] *(*(in,the),united)
+[t] countryid('usa')
+
+Sta -> s22769
+[s] *(*(*(*(*(of,the),states),that),border),texas)
+[t] stateid('texas')
+
+Nex -> s16227(Sta)
+[s] *(*(*(*(which,have),no),surrounding),?1)
+[t] next_to_2(?1)
+
+Sta -> s13603
+[s] texas
+[t] stateid('texas')
+
+Sta -> s24146
+[s] *(*(*(next,to),the),mississippi)
+[t] stateid('mississippi')
+
+Lar -> s17618(Den)
+[s] *(*(*(*(*(*(city,in),the),united),states),has),?1)
+[t] largest_one(?1)
+
+Sta -> s19614
+[s] *(*(*(*(*(is,the),largest),city),in),alabama)
+[t] stateid('alabama')
+
+Lar -> s18303(Sta)
+[s] *(*(*(*(biggest,state),in),continental),?1)
+[t] largest(?1)
+
+Sta -> s22060
+[s] *(*(cross,over),ohio)
+[t] stateid('ohio')
+
+Sum -> s18825(Are)
+[s] *(*(*(*(combined,area),of),all),?1)
+[t] sum(?1)
+
+Riv -> s15302
+[s] rivers
+[t] river(all)
+
+Sta -> s13742
+[s] utah
+[t] stateid('utah')
+
+Cit -> s15933
+[s] called
+[t] cityid('rochester',_)
+
+Sta -> s24248(Nex)
+[s] *(*(*(states,border),states),?1)
+[t] state(?1)
+
+Riv -> s26100(Riv)
+[s] *(*(*(the,chattahoochee),river),?1)
+[t] river(?1)
+
+Sta -> s14857
+[s] *(in,montana)
+[t] stateid('montana')
+
+Cit -> s13518(Loc)
+[s] *(*(*(me,the),cities),?1)
+[t] city(?1)
+
+Cit -> s21082
+[s] *(*(*(*(*(in,the),state),with),capital),austin)
+[t] cityid('austin',_)
+
+Cit -> s21748
+[s] *(*(*(*(*(is,the),population),of),tempe),arizona)
+[t] cityid('tempe','az')
+
+S! -> s21051(Sta)
+[s] *(*(*(*(what,is),the),name),?1)
+[t] answer(?1)
+
+Nex -> s15681(Mos)
+[s] *(*(*(*(border,the),state),that),?1)
+[t] next_to_2(?1)
+
+Riv -> s17445
+[s] *(river,runs)
+[t] river(all)
+
+Loc -> s15313(Hig)
+[s] *(with,?1)
+[t] loc_1(?1)
+
+Sma -> s23754(Den)
+[s] *(*(state,has),?1)
+[t] smallest_one(?1)
+
+Sta -> s15185
+[s] *(*(stay,in),utah)
+[t] stateid('utah')
+
+Len -> s20063(Riv)
+[s] *(*(*(is,the),length),?1)
+[t] len(?1)
+
+Cit -> s22050
+[s] *(*(of,washington),dc)
+[t] cityid('washington','dc')
+
+Loc -> s13648(Sta)
+[s] *(*(*(which,are),in),?1)
+[t] loc_2(?1)
+
+Cit -> s18184(Loc)
+[s] *(*(*(city,in),the),?1)
+[t] city(?1)
+
+Sta -> s19668
+[s] *(*(*(*(*(is,the),largest),city),in),missouri)
+[t] stateid('missouri')
+
+Sum -> s22743(Len)
+[s] *(*(*(*(*(*(total,length),of),all),rivers),in),?1)
+[t] sum(?1)
+
+Pop -> s14626(Sta)
+[s] *(*(*(*(*(*(*(many,people),are),in),the),state),of),?1)
+[t] population_1(?1)
+
+Lon -> s16392(Riv)
+[s] *(*(*(are,the),biggest),?1)
+[t] longest(?1)
+
+Mos -> s24064(Sta)
+[s] *(*(*(with,the),most),?1)
+[t] most(?1)
+
+Lak -> s17006(Loc)
+[s] *(*(*(lakes,in),united),?1)
+[t] lake(?1)
+
+Cit -> s23980
+[s] of
+[t] cityid('columbus',_)
+
+Sta -> s13784
+[s] *(is,new)
+[t] stateid('new mexico')
+
+Sta -> s17059
+[s] *(*(*(*(*(*(*(are,the),population),densities),of),each),us),state)
+[t] state(all)
+
+Cit -> s14809
+[s] *(*(live,in),kalamazoo)
+[t] cityid('kalamazoo',_)
+
+Pla -> s13855
+[s] *(guadalupe,peak)
+[t] placeid('guadalupe peak')
+
+Sta -> s20526(Nex)
+[s] *(*(*(*(*(that,flows),through),a),state),?1)
+[t] state(?1)
+
+Hig -> s13843(Pla)
+[s] *(highest,?1)
+[t] highest(?1)
+
+Pop -> s21854(Lar)
+[s] *(*(*(population,of),the),?1)
+[t] population_1(?1)
+
+Sta -> s18719
+[s] *(the,state)
+[t] state(all)
+
+Sta -> s13775
+[s] is
+[t] stateid('massachusetts')
+
+Sta -> s21379
+[s] *(*(*(the,population),of),california)
+[t] stateid('california')
+
+Pop -> s15163(Cit)
+[s] *(*(*(many,people),lived),?1)
+[t] population_1(?1)
+
+Riv -> s26326(Loc)
+[s] *(*(*(the,largest),river),?1)
+[t] river(?1)
+
+Lar -> s17557(Pop)
+[s] *(*(*(have,the),highest),?1)
+[t] largest_one(?1)
+
+Nex -> s18688(Sta)
+[s] *(borders,?1)
+[t] next_to_2(?1)
+
+Cou -> s20470
+[s] *(*(*(*(*(the,longest),river),in),the),us)
+[t] countryid('usa')
+
+Cit -> s21649
+[s] *(san,antonio)
+[t] cityid('san antonio',_)
+
+Pop -> s14718(Cit)
+[s] *(*(people,live),?1)
+[t] population_1(?1)
+
+Sta -> s21130
+[s] *(*(*(*(*(is,the),population),density),of),texas)
+[t] stateid('texas')
+
+Sta -> s16223
+[s] *(*(*(have,no),surrounding),states)
+[t] state(all)
+
+Sta -> s14632
+[s] *(of,nevada)
+[t] stateid('nevada')
+
+Tra -> s19805(Riv)
+[s] *(that,?1)
+[t] traverse_1(?1)
+
+Riv -> s26190
+[s] *(*(*(missouri,river),pass),through)
+[t] riverid('missouri')
+
+Sma -> s18186(Sta)
+[s] *(smallest,?1)
+[t] smallest(?1)
+
+Sta -> s13534(Nex)
+[s] *(*(*(*(*(*(are,the),high),points),of),states),?1)
+[t] state(?1)
+
+Cou -> s14341
+[s] *(*(there,in),us)
+[t] countryid('usa')
+
+Sta -> s18531
+[s] *(*(*(*(is,the),capital),of),pennsylvania)
+[t] stateid('pennsylvania')
+
+Riv -> s20837
+[s] *(*(*(colorado,river),runs),through)
+[t] riverid('colorado')
+
+Riv -> s15219
+[s] *(are,called)
+[t] riverid('colorado')
+
+Sta -> s15412
+[s] washington
+[t] stateid('washington')
+
+Sta -> s17707
+[s] *(of,florida)
+[t] stateid('florida')
+
+Cit -> s21412
+[s] *(erie,pennsylvania)
+[t] cityid('erie','pa')
+
+Cit -> s24014
+[s] miami
+[t] cityid('miami',_)
+
+S! -> s13758(Siz)
+[s] *(how,?1)
+[t] answer(?1)
+
+Sta -> s16849
+[s] *(of,california)
+[t] stateid('california')
+
+Sma -> s21162(Sta)
+[s] *(*(*(*(*(*(*(is,the),population),density),of),the),smallest),?1)
+[t] smallest(?1)
+
+Sta -> s15436
+[s] *(through,texas)
+[t] stateid('texas')
+
+Sta -> s17466
+[s] *(*(*(*(*(*(*(*(can,you),tell),me),about),the),population),of),missouri)
+[t] stateid('missouri')
+
+Pop -> s14652(Sta)
+[s] *(*(*(*(*(many,people),are),there),in),?1)
+[t] population_1(?1)
+
+Cap -> s21766(Loc)
+[s] *(*(*(*(*(*(is,the),population),of),the),capital),?1)
+[t] capital(?1)
+
+Cit -> s14977
+[s] *(*(in,spokane),washington)
+[t] cityid('spokane','wa')
+
+Sta -> s18154
+[s] *(*(*(*(*(is,the),biggest),city),in),oregon)
+[t] stateid('oregon')
+
+Cit -> s17794
+[s] *(of,seattle)
+[t] cityid('seattle',_)
+
+Sta -> s14444
+[s] citizens
+[t] stateid('alabama')
+
+Lar -> s18795(Pop)
+[s] *(*(*(*(*(*(is,the),city),in),texas),with),?1)
+[t] largest_one(?1)
+
+Sta -> s22017
+[s] *(of,utah)
+[t] stateid('utah')
+
+Riv -> s24429
+[s] *(*(that,the),ohio)
+[t] riverid('ohio')
+
+Pop -> s21213(Sta)
+[s] *(*(*(*(*(is,the),population),density),of),?1)
+[t] population_1(?1)
+
+Sta -> s15092
+[s] *(*(in,the),state)
+[t] state(all)
+
+Cit -> s25128
+[s] san
+[t] cityid('san jose',_)
+
+Len -> s20066(Riv)
+[s] *(*(*(*(*(is,the),length),of),the),?1)
+[t] len(?1)
+
+Cit -> s19340
+[s] des
+[t] cityid('des moines',_)
+
+Sta -> s19755
+[s] *(*(*(*(*(is,the),largest),city),in),texas)
+[t] stateid('texas')
+
+Are -> s21191(Sta)
+[s] *(*(*(*(*(*(*(of,the),state),with),the),smallest),area),?1)
+[t] area_1(?1)
+
+Maj -> s20917(Cit)
+[s] *(*(*(is,the),major),?1)
+[t] major(?1)
+
+Riv -> s14056
+[s] grande
+[t] riverid('rio grande')
+
+Lon -> s17452(Riv)
+[s] *(*(*(which,the),longest),?1)
+[t] longest(?1)
+
+Sta -> s17018
+[s] *(*(*(*(the,major),rivers),in),ohio)
+[t] stateid('ohio')
+
+S! -> s25057(Loc)
+[s] *(where,?1)
+[t] answer(?1)
+
+Pop -> s18748(Sta)
+[s] *(*(*(*(*(the,state),with),the),most),?1)
+[t] population_1(?1)
+
+Sta -> s23577(Nex)
+[s] *(*(*(*(state,borders),the),state),?1)
+[t] state(?1)
+
+Sma -> s15084(Sta)
+[s] *(*(*(*(*(*(many,people),live),in),the),smallest),?1)
+[t] smallest(?1)
+
+Sta -> s15337
+[s] idaho
+[t] stateid('idaho')
+
+Cit -> s21301
+[s] *(of,atlanta)
+[t] cityid('atlanta','ga')
+
+Lak -> s13667(Loc)
+[s] *(*(*(me,the),lakes),?1)
+[t] lake(?1)
+
+Tra -> s23168(Sta)
+[s] *(*(flow,through),?1)
+[t] traverse_2(?1)
+
+Sta -> s18535
+[s] *(*(*(the,capital),of),pennsylvania)
+[t] stateid('pennsylvania')
+
+Cit -> s25113
+[s] portland
+[t] cityid('portland',_)
+
+Tra -> s26317(Lon)
+[s] *(*(lie,on),?1)
+[t] traverse_1(?1)
+
+Loc -> s18540(Cit)
+[s] *(*(that,have),?1)
+[t] loc_1(?1)
+
+Siz -> s22215(Sta)
+[s] *(*(*(*(is,the),size),of),?1)
+[t] size(?1)
+
+Sta -> s21155
+[s] *(*(*(*(*(*(*(is,the),population),density),of),the),largest),state)
+[t] state(all)
+
+Tra -> s24450(Riv)
+[s] *(which,?1)
+[t] traverse_1(?1)
+
+Cit -> s14707
+[s] *(austin,texas)
+[t] cityid('austin','tx')
+
+Sta -> s23128
+[s] *(*(*(*(do,not),run),through),tennessee)
+[t] stateid('tennessee')
+
+S! -> s13812(Siz)
+[s] *(*(*(how,big),is),?1)
+[t] answer(?1)
+
+Int -> s14409(Cit,Loc)
+[s] *(*(*(*(*(cities,named),austin),are),?1),?2)
+[t] intersection(?1,?2)
+
+Sta -> s14845
+[s] *(*(live,in),mississippi)
+[t] stateid('mississippi')
+
+Tra -> s14623(Sta)
+[s] *(cross,?1)
+[t] traverse_2(?1)
+
+Sta -> s22621
+[s] *(*(is,the),state)
+[t] state(all)
+
+Hig -> s18895(Pla)
+[s] *(*(*(*(*(*(is,the),elevation),of),the),highest),?1)
+[t] highest(?1)
+
+Sta -> s18523
+[s] *(*(*(the,capital),of),ohio)
+[t] stateid('ohio')
+
+Hig -> s26287(Hig)
+[s] *(*(*(*(that,are),higher),than),?1)
+[t] higher_2(?1)
+
+Lon -> s20290(Riv)
+[s] *(*(*(longest,river),flowing),?1)
+[t] longest(?1)
+
+Cit -> s26338
+[s] *(us,city)
+[t] city(all)
+
+Cit -> s13818
+[s] *(*(of,new),york)
+[t] cityid('new york',_)
+
+Hig -> s22683(Mou)
+[s] *(*(*(is,the),tallest),?1)
+[t] highest(?1)
+
+Nex -> s26086(Sta)
+[s] *(*(*(does,not),border),?1)
+[t] next_to_2(?1)
+
+Cou -> s18202
+[s] *(*(*(*(*(*(is,the),biggest),city),in),the),us)
+[t] countryid('usa')
+
+Lar -> s17560(Pop)
+[s] *(*(the,highest),?1)
+[t] largest_one(?1)
+
+Lar -> s17566(Pop)
+[s] *(*(city,has),?1)
+[t] largest_one(?1)
+
+Cit -> s25119
+[s] san
+[t] cityid('san diego',_)
+
+Pla -> s15315
+[s] point
+[t] place(all)
+
+Sta -> s19459
+[s] *(*(*(*(the,highest),point),in),virginia)
+[t] stateid('virginia')
+
+Cit -> s21637
+[s] *(of,sacramento)
+[t] cityid('sacramento',_)
+
+Sta -> s20834(Tra)
+[s] *(*(all,states),?1)
+[t] state(?1)
+
+Sta -> s23389
+[s] *(*(*(run,through),new),york)
+[t] stateid('new york')
+
+Sta -> s16608
+[s] *(*(*(*(the,major),cities),in),alabama)
+[t] stateid('alabama')
+
+Den -> s20943(Sta)
+[s] *(dense,?1)
+[t] density_1(?1)
+
+Pop -> s17471(Sta)
+[s] *(*(*(*(*(*(*(can,you),tell),me),about),the),population),?1)
+[t] population_1(?1)
+
+Cou -> s19444
+[s] *(*(*(*(*(*(is,the),highest),point),in),the),usa)
+[t] countryid('usa')
+
+Sta -> s21475
+[s] *(of,illinois)
+[t] stateid('illinois')
+
+Tra -> s25357(Sta)
+[s] *(*(goes,through),?1)
+[t] traverse_2(?1)
+
+Sum -> s18833(Pop)
+[s] *(*(*(*(*(combined,population),of),all),"50"),?1)
+[t] sum(?1)
+
+Sta -> s13740(Nex)
+[s] *(*(*(me,the),states),?1)
+[t] state(?1)
+
+Sta -> s19155
+[s] *(*(*(*(*(is,the),highest),point),in),florida)
+[t] stateid('florida')
+
+Sta -> s21192
+[s] *(*(*(*(*(*(is,the),population),density),of),the),state)
+[t] state(all)
+
+Sta -> s14435
+[s] *(*(citizens,in),alabama)
+[t] stateid('alabama')
+
+Sma -> s19381(Pop)
+[s] *(*(*(the,state),with),?1)
+[t] smallest_one(?1)
+
+Sta -> s17659
+[s] *(*(*(*(is,the),area),of),alaska)
+[t] stateid('alaska')
+
+Len -> s22777(Riv)
+[s] *(length,?1)
+[t] len(?1)
+
+Sta -> s13805
+[s] *(is,texas)
+[t] stateid('texas')
+
+Sta -> s18013(Loc)
+[s] *(*(a,state),?1)
+[t] state(?1)
+
+Sum -> s22728(Len)
+[s] *(*(*(*(total,length),of),all),?1)
+[t] sum(?1)
+
+Nex -> s15673(Mos)
+[s] *(*(*(*(*(border,the),state),that),borders),?1)
+[t] next_to_2(?1)
+
+Sta -> s22986
+[s] *(*(runs,through),virginia)
+[t] stateid('virginia')
+
+Cit -> s18555(Cit)
+[s] *(*(*(that,have),cities),?1)
+[t] city(?1)
+
+Nex -> s15741(Sta)
+[s] *(does,?1)
+[t] next_to_1(?1)
+
+Sta -> s18414
+[s] *(*(*(the,capital),of),iowa)
+[t] stateid('iowa')
+
+Sta -> s20545
+[s] *(*(*(that,flows),through),colorado)
+[t] stateid('colorado')
+
+Sta -> s17987
+[s] *(*(*(square,km),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+Den -> s18007(Cou)
+[s] *(*(*(*(*(*(*(*(average,population),per),square),km),in),the),us),?1)
+[t] density_1(?1)
+
+Loc -> s25744(Nex)
+[s] *(that,?1)
+[t] loc_2(?1)
+
+Sta -> s18380
+[s] *(*(*(*(is,the),capital),of),hawaii)
+[t] stateid('hawaii')
+
+Sta -> s16918
+[s] *(*(*(*(the,major),cities),in),vermont)
+[t] stateid('vermont')
+
+Sta -> s21472
+[s] *(*(*(*(is,the),population),of),illinois)
+[t] stateid('illinois')
+
+Sta -> s15590
+[s] *(*(*(*(at,least),one),other),state)
+[t] state(all)
+
+Tra -> s24962(Riv)
+[s] *(have,?1)
+[t] traverse_1(?1)
+
+Pop -> s16062(Sta)
+[s] *(*(*(much,population),does),?1)
+[t] population_1(?1)
+
+Cit -> s14683
+[s] boulder
+[t] cityid('boulder',_)
+
+Sta -> s15575
+[s] *(*(*(least,one),other),state)
+[t] state(all)
+
+Sta -> s13796
+[s] *(is,north)
+[t] stateid('north dakota')
+
+Maj -> s16279(Lak)
+[s] *(*(*(*(me,all),the),major),?1)
+[t] major(?1)
+
+Sta -> s13607
+[s] *(*(*(*(me,the),cities),in),texas)
+[t] stateid('texas')
+
+Sta -> s20283
+[s] *(*(*(flowing,through),new),york)
+[t] stateid('new york')
+
+Cap -> s24592(Cit)
+[s] *(*("'s",capital),?1)
+[t] capital_2(?1)
+
+Cou -> s19089
+[s] *(*(*(*(*(*(is,the),highest),mountain),in),the),us)
+[t] countryid('usa')
+
+Sta -> s14465
+[s] *(*(*(citizens,live),in),california)
+[t] stateid('california')
+
+Cou -> s22350
+[s] *(*(*(*(*(the,smallest),city),in),the),us)
+[t] countryid('usa')
+
+S! -> s25312(Sho)
+[s] *(*(which,is),?1)
+[t] answer(?1)
+
+Pop -> s20052(Sta)
+[s] *(populous,?1)
+[t] population_1(?1)
+
+Len -> s14242(Sho)
+[s] *(*(*(*(*(*(*(long,is),the),shortest),river),in),the),?1)
+[t] len(?1)
+
+Riv -> s20867
+[s] *(*(colorado,river),runs)
+[t] riverid('colorado')
+
+Tra -> s20480(Sta)
+[s] *(*(*(*(*(that,does),not),run),through),?1)
+[t] traverse_2(?1)
+
+Sta -> s14842
+[s] *(in,mississippi)
+[t] stateid('mississippi')
+
+Exc -> s24937(Sta,Nex)
+[s] *(*(*(states,have),?1),?2)
+[t] exclude(?1,?2)
+
+Cit -> s25080
+[s] indianapolis
+[t] cityid('indianapolis',_)
+
+Riv -> s24649
+[s] *(*(*(delaware,river),run),through)
+[t] riverid('delaware')
+
+Sta -> s25212
+[s] *(*(*(*(*(is,the),lowest),spot),in),iowa)
+[t] stateid('iowa')
+
+Sta -> s18487
+[s] *(*(*(*(*(is,the),capital),of),new),jersey)
+[t] stateid('new jersey')
+
+S! -> s16098(Sta)
+[s] *(*(in,what),?1)
+[t] answer(?1)
+
+Nex -> s25950(Sta)
+[s] *(adjoin,?1)
+[t] next_to_2(?1)
+
+Tra -> s23142(Sta)
+[s] *(*(*(*(do,not),run),through),?1)
+[t] traverse_2(?1)
+
+Cit -> s23998
+[s] *(*(des,moines),located)
+[t] cityid('des moines',_)
+
+Low -> s17634(Pla)
+[s] *(*(the,lowest),?1)
+[t] lowest(?1)
+
+Lon -> s26318(Riv)
+[s] *(*(the,largest),?1)
+[t] longest(?1)
+
+Sta -> s20925
+[s] *(*(*(*(*(is,the),major),cities),in),montana)
+[t] stateid('montana')
+
+Sta -> s21912
+[s] *(*(*(*(*(of,the),major),cities),in),wisconsin)
+[t] stateid('wisconsin')
+
+Sta -> s16483
+[s] *(border,texas)
+[t] stateid('texas')
+
+Sta -> s22308
+[s] *(*(*(*(the,smallest),city),in),arkansas)
+[t] stateid('arkansas')
+
+Cit -> s13817(Cit)
+[s] *(*(*(is,the),city),?1)
+[t] city(?1)
+
+Lar -> s25638(Pop)
+[s] *(*(*(has,the),biggest),?1)
+[t] largest_one(?1)
+
+Maj -> s14514(Cit)
+[s] *(major,?1)
+[t] major(?1)
+
+S! -> s18284(Lar)
+[s] *(*(what,is),?1)
+[t] answer(?1)
+
+S! -> s13596(Sta)
+[s] *(*(give,me),?1)
+[t] answer(?1)
+
+Riv -> s24959
+[s] *(*(*(rivers,running),through),them)
+[t] river(all)
+
+Sta -> s14776
+[s] *(*(*(*(many,people),live),in),hawaii)
+[t] stateid('hawaii')
+
+Cou -> s20915
+[s] *(*(*(*(*(the,lowest),point),of),the),us)
+[t] countryid('usa')
+
+Cou -> s20910
+[s] *(*(*(*(*(*(is,the),lowest),point),of),the),us)
+[t] countryid('usa')
+
+Sta -> s13733
+[s] *(*(*(*(*(*(me,the),number),of),rivers),in),california)
+[t] stateid('california')
+
+Sta -> s21520
+[s] *(of,minnesota)
+[t] stateid('minnesota')
+
+Lar -> s19817(Sta)
+[s] *(*(largest,of),?1)
+[t] largest(?1)
+
+Sma -> s22646(Pop)
+[s] *(*(*(*(is,the),state),with),?1)
+[t] smallest_one(?1)
+
+Sta -> s14662
+[s] *(*(*(there,in),new),york)
+[t] stateid('new york')
+
+Sta -> s21592
+[s] *(*(*(*(is,the),population),of),oregon)
+[t] stateid('oregon')
+
+S! -> s22557(Sma)
+[s] *(*(*(*(*(*(*(what,is),the),smallest),state),through),which),?1)
+[t] answer(?1)
+
+Are -> s17667(Sta)
+[s] *(*(*(*(is,the),area),of),?1)
+[t] area_1(?1)
+
+Mos -> s15682(Sta)
+[s] *(*(*(borders,the),most),?1)
+[t] most(?1)
+
+Riv -> s16362(Loc)
+[s] *(*(*(*(are,all),the),rivers),?1)
+[t] river(?1)
+
+Sta -> s21073(Loc)
+[s] *(*(*(*(*(*(*(is,the),population),density),in),the),state),?1)
+[t] state(?1)
+
+Lak -> s16153(Loc)
+[s] *(all,?1)
+[t] lake(?1)
+
+Sta -> s17722
+[s] *(of,idaho)
+[t] stateid('idaho')
+
+Den -> s23922(Sta)
+[s] *(*(*(sparsest,population),density),?1)
+[t] density_1(?1)
+
+Cit -> s25881
+[s] kalamazoo
+[t] cityid('kalamazoo',_)
+
+Pla -> s24789
+[s] *(*(*(*(*(*(*(that,is),the),highest),point),in),the),state)
+[t] place(all)
+
+Sta -> s14541(Nex)
+[s] *(states,?1)
+[t] state(?1)
+
+S! -> s13537(Riv)
+[s] *(name,?1)
+[t] answer(?1)
+
+Nex -> s20594(Mos)
+[s] *(*(*(*(*(*(that,border),the),state),that),borders),?1)
+[t] next_to_2(?1)
+
+Lar -> s23696(Den)
+[s] *(*(*(*(has,the),highest),population),?1)
+[t] largest_one(?1)
+
+Lar -> s22610(Are)
+[s] *(*(*(*(is,the),state),with),?1)
+[t] largest_one(?1)
+
+Cit -> s23602
+[s] salem
+[t] cityid('salem',_)
+
+Loc -> s19135(Pla)
+[s] *(*(*(*(whose,lowest),point),is),?1)
+[t] loc_1(?1)
+
+Cit -> s21688
+[s] *(of,seattle)
+[t] cityid('seattle','wa')
+
+Lak -> s13679(Loc)
+[s] *(me,?1)
+[t] lake(?1)
+
+Sta -> s23756
+[s] *(the,least)
+[t] state(all)
+
+Cit -> s14758
+[s] *(*(live,in),detroit)
+[t] cityid('detroit',_)
+
+Cou -> s18237
+[s] *(*(*(*(*(is,the),biggest),city),in),usa)
+[t] countryid('usa')
+
+Tra -> s20099(Sta)
+[s] *(*(*(that,runs),through),?1)
+[t] traverse_2(?1)
+
+Hig -> s24992(Hig)
+[s] *(*(*("'s",high),point),?1)
+[t] high_point_2(?1)
+
+Cit -> s25065
+[s] baton
+[t] cityid('baton rouge',_)
+
+S! -> s22079(Sho)
+[s] *(*(*(what,is),the),?1)
+[t] answer(?1)
+
+Pop -> s14437(Sta)
+[s] *(*(*(many,citizens),in),?1)
+[t] population_1(?1)
+
+Sta -> s13799
+[s] *(*(is,north),dakota)
+[t] stateid('north dakota')
+
+Maj -> s17086(Cit)
+[s] *(*(*(*(*(*(*(are,the),populations),of),all),the),major),?1)
+[t] major(?1)
+
+Riv -> s24610
+[s] *(*(*(least,one),major),rivers)
+[t] river(all)
+
+Lar -> s18723(Den)
+[s] *(*(*(*(with,the),largest),population),?1)
+[t] largest_one(?1)
+
+Pop -> s14691(Cit)
+[s] *(*(*(many,people),live),?1)
+[t] population_1(?1)
+
+S! -> s23028(Riv)
+[s] *(*(*(*(*(*(what,river),traverses),the),state),which),?1)
+[t] answer(?1)
+
+Cou -> s13587
+[s] usa
+[t] countryid('usa')
+
+Pla -> s25205(Loc)
+[s] *(spot,?1)
+[t] place(?1)
+
+Cou -> s20814
+[s] *(*(*(*(*(is,the),lowest),point),in),usa)
+[t] countryid('usa')
+
+Sta -> s18519
+[s] *(*(*(*(is,the),capital),of),ohio)
+[t] stateid('ohio')
+
+Sta -> s14812
+[s] *(in,kansas)
+[t] stateid('kansas')
+
+Sta -> s17404(Nex)
+[s] *(*(*(are,the),states),?1)
+[t] state(?1)
+
+Lar -> s16592(Cit)
+[s] *(*(*(*(*(*(*(*(*(*(*(are,the),largest),cities),in),the),states),that),border),the),largest),?1)
+[t] largest(?1)
+
+Lar -> s14029(Cit)
+[s] *(*(*(is,the),largest),?1)
+[t] largest(?1)
+
+Loc -> s16173(Cou)
+[s] *(*(*(*(the,"50"),capitals),in),?1)
+[t] loc_2(?1)
+
+Tra -> s23432(Sta)
+[s] *(*(*(*(*(run,through),the),states),that),?1)
+[t] traverse_2(?1)
+
+Den -> s22614(Sta)
+[s] *(*(*(*(*(*(*(is,the),state),with),the),largest),density),?1)
+[t] density_1(?1)
+
+Cou -> s22714
+[s] *(*(*(*(*(*(is,the),total),area),of),the),usa)
+[t] countryid('usa')
+
+Sta -> s18757
+[s] *(*(*(*(is,the),capital),of),utah)
+[t] stateid('utah')
+
+Pop -> s14630(Sta)
+[s] *(*(many,people),?1)
+[t] population_1(?1)
+
+Cou -> s15468
+[s] *(*(*(*(*(many,square),kilometers),in),the),us)
+[t] countryid('usa')
+
+Sta -> s18114
+[s] *(*(*(*(*(is,the),biggest),city),in),louisiana)
+[t] stateid('louisiana')
+
+Cou -> s14322
+[s] *(*(*(there,in),the),us)
+[t] countryid('usa')
+
+Cap -> s24604(Cit)
+[s] *("'s",?1)
+[t] capital_2(?1)
+
+Sta -> s18819
+[s] *(*(*(of,all),"50"),states)
+[t] state(all)
+
+Mos -> s23543(Sta)
+[s] *(*(most,other),?1)
+[t] most(?1)
+
+Sta -> s17734
+[s] *(*(*(*(is,the),area),of),maine)
+[t] stateid('maine')
+
+Riv -> s14053
+[s] *(is,rio)
+[t] riverid('rio grande')
+
+Cit -> s17803
+[s] of
+[t] cityid('seattle',_)
+
+Riv -> s24749
+[s] *(*(ohio,river),go)
+[t] riverid('ohio')
+
+Lon -> s26304(Riv)
+[s] *(*(*(on,the),largest),?1)
+[t] longest(?1)
+
+Maj -> s15522(Riv)
+[s] *(*(to,major),?1)
+[t] major(?1)
+
+Sta -> s16743
+[s] *(*(*(*(the,major),cities),in),ohio)
+[t] stateid('ohio')
+
+Tra -> s22974(Mos)
+[s] *(*(*(runs,through),the),?1)
+[t] traverse_2(?1)
+
+Cou -> s14317
+[s] *(the,united)
+[t] countryid('usa')
+
+Lar -> s19646(Pop)
+[s] *(*(*(is,the),largest),?1)
+[t] largest_one(?1)
+
+Cou -> s13703
+[s] *(*(*(*(that,passes),through),the),us)
+[t] countryid('usa')
+
+Cou -> s16186
+[s] *(*(*(*("50",capitals),in),the),usa)
+[t] countryid('usa')
+
+Cit -> s24018
+[s] *(miami,in)
+[t] cityid('miami',_)
+
+Nex -> s23532(Sta)
+[s] *(*(*(borders,most),other),?1)
+[t] next_to_2(?1)
+
+Cou -> s22184
+[s] *(*(*(*(*(*(is,the),shortest),river),in),the),usa)
+[t] countryid('usa')
+
+Den -> s17064(Sta)
+[s] *(*(*(*(*(*(*(are,the),population),densities),of),each),us),?1)
+[t] density_1(?1)
+
+Loc -> s16865(Sta)
+[s] *(*(*(*(in,the),state),of),?1)
+[t] loc_2(?1)
+
+Lar -> s23744(Pop)
+[s] *(*(*(*(has,the),largest),urban),?1)
+[t] largest_one(?1)
+
+Cit -> s21655
+[s] *(*(of,san),antonio)
+[t] cityid('san antonio',_)
+
+Sta -> s23177
+[s] *(*(flow,through),missouri)
+[t] stateid('missouri')
+
+Lar -> s21826(Cit)
+[s] *(*(*(*(*(*(is,the),population),of),the),largest),?1)
+[t] largest(?1)
+
+Sta -> s22094
+[s] *(*(*(*(the,shortest),river),in),alaska)
+[t] stateid('alaska')
+
+Sta -> s16933
+[s] *(*(*(*(the,major),cities),in),wyoming)
+[t] stateid('wyoming')
+
+Den -> s25842(Sta)
+[s] *(*(*(average,urban),population),?1)
+[t] density_1(?1)
+
+S! -> s13541(Riv)
+[s] *(*(name,the),?1)
+[t] answer(?1)
+
+Sta -> s16491
+[s] *(*(*(the,cities),in),california)
+[t] stateid('california')
+
+Sma -> s18804(Pop)
+[s] *(*(*(*(is,the),city),with),?1)
+[t] smallest_one(?1)
+
+Den -> s21099(Sta)
+[s] *(*(*(population,density),of),?1)
+[t] density_1(?1)
+
+Sta -> s17365
+[s] of
+[t] stateid('indiana')
+
+Sta -> s18422
+[s] *(*(*(*(is,the),capital),of),maine)
+[t] stateid('maine')
+
+Sta -> s17110(Tra)
+[s] *(*(*(*(*(are,the),populations),of),states),?1)
+[t] state(?1)
+
+Sta -> s14517
+[s] arizona
+[t] stateid('arizona')
+
+Cit -> s14782
+[s] *(in,houston)
+[t] cityid('houston',_)
+
+Mos -> s25370(Riv)
+[s] *(*(*(*(river,runs),through),most),?1)
+[t] most(?1)
+
+Sta -> s18761
+[s] *(*(*(the,capital),of),utah)
+[t] stateid('utah')
+
+Lar -> s25055(Cit)
+[s] *(*(largest,city),?1)
+[t] largest(?1)
+
+Tra -> s15851(Riv)
+[s] *(*(*(*(*(does,the),mississippi),river),run),?1)
+[t] traverse_1(?1)
+
+Sta -> s18395
+[s] indiana
+[t] stateid('indiana')
+
+Sta -> s19240
+[s] *(*(*(*(*(is,the),highest),point),in),ohio)
+[t] stateid('ohio')
+
+Pla -> s24801
+[s] *(*(*(point,in),the),state)
+[t] place(all)
+
+Sta -> s23049
+[s] *(in,nevada)
+[t] stateid('nevada')
+
+Are -> s25827(Sta)
+[s] *(*(*(*(*(state,has),the),smallest),area),?1)
+[t] area_1(?1)
+
+Sta -> s15332
+[s] *(*(there,in),idaho)
+[t] stateid('idaho')
+
+Sta -> s20663
+[s] *(*(*(*(*(is,the),lowest),point),in),arkansas)
+[t] stateid('arkansas')
+
+Pop -> s14682(Cit)
+[s] *(*(*(many,people),in),?1)
+[t] population_1(?1)
+
+Pla -> s18880
+[s] *(death,valley)
+[t] placeid('death valley')
+
+Mos -> s22975(Sta)
+[s] *(*(*(*(state,with),the),most),?1)
+[t] most(?1)
+
+Sta -> s17038
+[s] *(*(*(*(*(*(names,of),the),major),cities),in),illinois)
+[t] stateid('illinois')
+
+Riv -> s23806
+[s] *(*(*(rivers,running),through),it)
+[t] river(all)
+
+Cou -> s22463
+[s] *(*(*(*(*(*(is,the),smallest),state),in),the),usa)
+[t] countryid('usa')
+
+Cit -> s21277
+[s] *(*(*(*(is,the),population),of),atlanta)
+[t] cityid('atlanta',_)
+
+Cap -> s16180(Loc)
+[s] *(*(the,"50"),?1)
+[t] capital(?1)
+
+Mos -> s20184(Riv)
+[s] *(*(*(*(*(*(*(the,river),that),runs),through),the),most),?1)
+[t] most(?1)
+
+Mos -> s23012(Sta)
+[s] *(*(*(*(*(*(the,state),which),borders),the),most),?1)
+[t] most(?1)
+
+Cit -> s21709
+[s] *(*(of,springfield),missouri)
+[t] cityid('springfield','mo')
+
+Cou -> s13882
+[s] america
+[t] countryid('usa')
+
+Cit -> s21682
+[s] *(seattle,washington)
+[t] cityid('seattle','wa')
+
+Cit -> s21445
+[s] *(of,houston)
+[t] cityid('houston',_)
+
+Cit -> s14980
+[s] *(spokane,washington)
+[t] cityid('spokane','wa')
+
+Ele -> s19137
+[s] *(*(*(*(*(*(*(each,state),whose),lowest),point),is),sea),level)
+[t] elevation_2("0")
+
