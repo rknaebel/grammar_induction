@@ -4,6 +4,7 @@
 Induct grammar from sentence alignments between tokenized strings and tokenized trees
 """
 import traceback
+import sys
 
 import re
 
@@ -104,7 +105,7 @@ def splitTree1(node):
 def splitTree2(cNode, pNode):
     pass
 
-def induceRule1(tree, s):
+def induceRule1(tree, s, split=False):
     """
     Rule Generation
     """
@@ -117,8 +118,7 @@ def induceRule1(tree, s):
             r = Rule()
             node, label = treeBuffer.pop()
             
-            arguments = [LabelDict[child.name] for child in node.childNodes]
-            arguments = ['X'] * len(node.childNodes)
+            arguments = ['X'] * len(node.childNodes) if not split else [LabelDict[child.name] for child in node.childNodes]
             
             for idx,child in enumerate(node.childNodes):
                 treeBuffer.append((child,arguments[idx]))
@@ -160,7 +160,7 @@ def getLabel(start, idx, args):
     return (start + " -> s" + str(idx) +
             ("({})".format(",".join(args)) if args else ""))
 
-def induceRule2(tree, s):
+def induceRule2(tree, s, split=False):
     """
     Rule Generation
     """
@@ -173,9 +173,7 @@ def induceRule2(tree, s):
         while treeBuffer:
             r = Rule()
             node, nodeInterval, label = treeBuffer.pop()
-            arguments = ['X'] * len(node.childNodes)
-            #arguments = [LabelDict[child.name] for child in node.childNodes]
-
+            arguments = ['X'] * len(node.childNodes) if not split else [LabelDict[child.name] for child in node.childNodes]
             if len(node.alignment) == 1:
                 alignedWord = node.alignment[0]
                 tmpInterval = Interval(nodeInterval.first(), alignedWord)
@@ -252,7 +250,7 @@ def extendLabels(funqls):
         if name not in LabelDict: # int(args) > 0 and 
             LabelDict[name] = name.capitalize()[:3]
 
-def ruleInduction(raw_alignments, induceMethod=induceRule1):
+def ruleInduction(raw_alignments, induceMethod=induceRule1, split=False):
     string, funql = separateInput(raw_alignments)
     
     ruleSet = set()
@@ -262,7 +260,7 @@ def ruleInduction(raw_alignments, induceMethod=induceRule1):
         extendLabels(funqls)
         tree    = shiftReduceParse(funqls)
         if not tree: continue
-        rules   = induceMethod(tree, s)
+        rules   = induceMethod(tree, s, split)
         ruleSet = ruleSet | rules
 
     return ruleSet
@@ -276,21 +274,56 @@ def storeRules(filename, ruleSet):
         grammar_irtg.write(str(r)+"\n")
     grammar_irtg.close()
 
-def main():
-    # read alignments and save to string and funql lists
-    raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
-    
-    ruleSet1 = ruleInduction(raw_alignments, induceRule1)
-    storeRules("../data/grammar1.irtg", ruleSet1)
-    
-    ruleSet2 = ruleInduction(raw_alignments, induceRule2)
-    storeRules("../data/grammar2.irtg", ruleSet2)
+def printRules(ruleSet):
+    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
+    print header
+    for r in ruleSet:
+        print r
 
-    storeRules("../data/grammar3.irtg", ruleSet1 | ruleSet2)
+def main():
+    if len(sys.argv) < 3:
+        raise Exception("Unexpected number of arguments")
+
+    alignmentFile = ""
+    ruleSplit = ""
+    nonterminalSplit = ""
+    splitSize = 0
+
+    alignmentFile    = sys.argv[1]
+    ruleSplit        = sys.argv[2] if sys.argv[2] in ("left", "right", "both") else "both"
+    nonterminalSplit = sys.argv[3] if sys.argv[3] in ("nosplit", "semsplit") else "nosplit"
+
+    ruleSet = set()
     
-    print "number of exceptions:", EXCEPTIONS
-    print "number of invalids:", INVALIDS
-    print "number of deletions:", DELETES
+    # read alignments and save to string and funql lists
+    raw_alignments = open(alignmentFile, "r").read().split("\n")
+    split = (nonterminalSplit == "semsplit")
+    if ruleSplit in ("left",  "both"):
+        ruleSet = ruleSet | ruleInduction(raw_alignments, induceRule1, split)
+    if ruleSplit in ("right", "both"):
+        ruleSet = ruleSet | ruleInduction(raw_alignments, induceRule2, split)
+
+    printRules(ruleSet)
+    
+    sys.stderr.write("number of exceptions:" + str(EXCEPTIONS) + "\n")
+    sys.stderr.write("number of invalids:" + str(INVALIDS) + "\n")
+    sys.stderr.write("number of deletions:" + str(DELETES) + "\n")
+
+#def main():
+    ## read alignments and save to string and funql lists
+    #raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
+    
+    #ruleSet1 = ruleInduction(raw_alignments, induceRule1)
+    #storeRules("../data/grammar1.irtg", ruleSet1)
+    
+    #ruleSet2 = ruleInduction(raw_alignments, induceRule2)
+    #storeRules("../data/grammar2.irtg", ruleSet2)
+
+    #storeRules("../data/grammar3.irtg", ruleSet1 | ruleSet2)
+    
+    #print "number of exceptions:", EXCEPTIONS
+    #print "number of invalids:", INVALIDS
+    #print "number of deletions:", DELETES
     
 if __name__ == "__main__":
     main()
