@@ -1,12 +1,12 @@
 # IRTG annotated corpus file, v1.0
 # 
 # Parsed from null
-# at Sat Jul 11 18:02:53 CEST 2015
+# at Tue Jul 14 15:40:59 CEST 2015
 # 
 # interpretation t: class de.up.ling.irtg.algebra.TreeAlgebra
 # interpretation s: class de.up.ling.irtg.algebra.StringAlgebra
 
-# parse_time=5ms
+# parse_time=4ms
 answer(city(loc_2(stateid(virginia))))
 give me the cities in virginia
 s4(s5(s6(s7)))
@@ -16,12 +16,12 @@ answer(high_point_1(state(next_to_2(stateid(mississippi)))))
 what are the high points of states surrounding mississippi
 s16(s17(s18(s19(s20))))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(river(loc_2(stateid(arkansas))))
 name the rivers in arkansas
 s21(s22(s6(s24)))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(river(loc_2(stateid(colorado))))
 name all the rivers in colorado
 s29(s22(s6(s32)))
@@ -46,7 +46,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(city(loc_2(stateid(texas))))
 give me the cities in texas
 s4(s5(s6(s88)))
@@ -61,7 +61,7 @@ answer(city(loc_2(stateid(virginia))))
 give me the cities in virginia
 s4(s5(s6(s7)))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(city(loc_2(stateid(texas))))
 give me the cities which are in texas
 s4(s138(s6(s88)))
@@ -71,7 +71,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(state(all))
 give me the largest state
 s73(s6597)
@@ -221,22 +221,22 @@ answer(len(river(riverid(mississippi))))
 how long is the mississippi river
 s560(s561(s550(s624)))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(len(riverid(mississippi)))
 how long is the mississippi river in miles
 s560(s561(s653))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(len(river(riverid(missouri))))
 how long is the missouri river
 s560(s561(s550(s673)))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(len(river(riverid('north platte'))))
 how long is the north platte river
 s560(s561(s550(s689)))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(len(river(riverid(ohio))))
 how long is the ohio river
 s560(s561(s550(s709)))
@@ -326,7 +326,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=0ms
 answer(count(river(all)))
 how many colorado rivers are there
 s2091(s1018(s1841))
@@ -361,7 +361,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=0ms
 answer(count(major(city(all))))
 how many major cities are there
 s2091(s767(s1046(s1115)))
@@ -376,12 +376,12 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(population_1(state(stateid(nevada))))
 how many people are in the state of nevada
 s1174(s1175(s1168(s1169)))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(population_1(stateid(iowa)))
 how many people are there in iowa
 s1174(s1188(s1180))
@@ -426,7 +426,7 @@ answer(population_1(stateid(hawaii)))
 how many people live in hawaii
 s1174(s1718(s1312))
 
-# parse_time=0ms
+# parse_time=1ms
 answer(population_1(cityid(houston,_)))
 how many people live in houston
 s1174(s1251(s1318))
@@ -451,7 +451,7 @@ answer(population_1(stateid(mississippi)))
 how many people live in mississippi
 s1174(s1718(s1378))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(population_1(stateid(montana)))
 how many people live in montana
 s1174(s1718(s1399))
@@ -466,7 +466,7 @@ _null_
 _null_
 _null_
 
-# parse_time=0ms
+# parse_time=1ms
 answer(population_1(cityid('new york',_)))
 how many people live in new york
 s1174(s1251(s310))
@@ -531,12 +531,12 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=0ms
 answer(population_1(stateid(washington)))
 how many people live in washington
 s1174(s1718(s1671))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(population_1(cityid(washington,dc)))
 how many people live in washington dc
 s1174(s1251(s1677))
@@ -746,7 +746,7 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(population_1(state(all)))
 how many states border the state with the largest population
 s1174(s2279(s328))
@@ -836,7 +836,7 @@ _null_
 _null_
 _null_
 
-# parse_time=0ms
+# parse_time=1ms
 answer(population_1(stateid(texas)))
 how much population does texas have
 s2676(s2677(s2669))
@@ -1321,7 +1321,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=2ms
 answer(stateid(missouri))
 what can you tell me about the population of missouri
 s2712(s4130)
@@ -1416,27 +1416,27 @@ answer(area_1(stateid(florida)))
 what is the area of florida
 s4362(s4363(s463))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(area_1(stateid(idaho)))
 what is the area of idaho
 s4362(s4363(s1881))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(area_1(stateid(maine)))
 what is the area of maine
 s4362(s4363(s4432))
 
-# parse_time=2ms
+# parse_time=3ms
 answer(area_1(stateid(maryland)))
 what is the area of maryland in square kilometers
 s4362(s4363(s4450))
 
-# parse_time=1ms
+# parse_time=3ms
 answer(area_1(stateid('new mexico')))
 what is the area of new mexico
 s4362(s4363(s269))
 
-# parse_time=1ms
+# parse_time=3ms
 answer(area_1(stateid(ohio)))
 what is the area of ohio
 s4362(s4363(s1157))
@@ -1451,7 +1451,7 @@ answer(area_1(stateid('south carolina')))
 what is the area of south carolina
 s4362(s4363(s4507))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(area_1(stateid(texas)))
 what is the area of texas
 s4362(s4363(s88))
@@ -1486,7 +1486,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=2ms
 answer(area_1(stateid(wisconsin)))
 what is the area of wisconsin
 s4362(s4363(s4656))
@@ -1516,7 +1516,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(arizona))
 what is the biggest city in arizona
 s2712(s4769)
@@ -1641,7 +1641,7 @@ answer(capital(loc_2(stateid(maine))))
 what is the capital of maine
 s3061(s1568(s5133(s5134)))
 
-# parse_time=3ms
+# parse_time=2ms
 answer(capital(loc_2(stateid(maine))))
 what is the capital of maryland
 s3061(s1568(s5145(s5134)))
@@ -1651,7 +1651,7 @@ answer(stateid(massachusetts))
 what is the capital of massachusetts
 s2712(s5154)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(michigan))
 what is the capital of michigan
 s2712(s5166)
@@ -1666,17 +1666,17 @@ answer(stateid('new jersey'))
 what is the capital of new jersey
 s2712(s5198)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(capital(cityid('new york',_)))
 what is the capital of new york
 s3071(s3072(s306))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid('north dakota'))
 what is the capital of north dakota
 s2712(s5222)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(ohio))
 what is the capital of ohio
 s2712(s5230)
@@ -1691,12 +1691,12 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(capital(loc_2(stateid(maine))))
 what is the capital of texas
 s3061(s1568(s5278(s5134)))
 
-# parse_time=3ms
+# parse_time=2ms
 answer(capital(loc_2(state(stateid(alabama)))))
 what is the capital of the alabama state
 s3061(s1568(s2577(s1543(s427))))
@@ -1721,12 +1721,12 @@ answer(capital(loc_2(state(stateid(texas)))))
 what is the capital of the state texas
 s3061(s1568(s2577(s1168(s88))))
 
-# parse_time=7ms
+# parse_time=6ms
 answer(capital(loc_2(state(next_to_2(state(all))))))
 what is the capital of the state that borders the most states
 s3061(s1568(s2577(s2240(s2241(s171)))))
 
-# parse_time=8ms
+# parse_time=6ms
 answer(capital(loc_2(state(loc_2(next_to_2(stateid(texas)))))))
 what is the capital of the state that borders the state that borders texas
 s3061(s1568(s2577(s6790(s12847(s5400(s88))))))
@@ -1766,7 +1766,7 @@ answer(stateid(utah))
 what is the capital of utah
 s2712(s5481)
 
-# parse_time=1ms
+# parse_time=2ms
 answer(stateid(vermont))
 what is the capital of vermont
 s2712(s5493)
@@ -1831,7 +1831,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=2ms
 answer(high_point_1(stateid(wyoming)))
 what is the high point of wyoming
 s5734(s5735(s1606))
@@ -1861,7 +1861,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(texas))
 what is the highest mountain in texas
 s2712(s5816)
@@ -1911,7 +1911,7 @@ answer(stateid(maine))
 what is the highest point in maine
 s2712(s5927)
 
-# parse_time=1ms
+# parse_time=2ms
 answer(stateid(montana))
 what is the highest point in montana
 s2712(s5937)
@@ -1926,7 +1926,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=2ms
 answer(stateid(ohio))
 what is the highest point in ohio
 s2712(s5982)
@@ -2001,7 +2001,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=2ms
 answer(stateid(virginia))
 what is the highest point in virginia
 s2712(s6209)
@@ -2041,17 +2041,17 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(stateid(alabama))
 what is the largest city in alabama
 s2712(s6363)
 
-# parse_time=5ms
+# parse_time=3ms
 answer(stateid(california))
 what is the largest city in california
 s2712(s6373)
 
-# parse_time=3ms
+# parse_time=2ms
 answer(stateid(michigan))
 what is the largest city in michigan
 s2712(s6388)
@@ -2061,7 +2061,7 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=1ms
 answer(stateid(missouri))
 what is the largest city in missouri
 s2712(s6426)
@@ -2081,7 +2081,7 @@ _null_
 _null_
 _null_
 
-# parse_time=4ms
+# parse_time=2ms
 answer(stateid(texas))
 what is the largest city in texas
 s2712(s6513)
@@ -2091,7 +2091,7 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=1ms
 answer(stateid(wisconsin))
 what is the largest city in wisconsin
 s2712(s6544)
@@ -2231,17 +2231,17 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(stateid(california))
 what is the longest river in california
 s2712(s7101)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(florida))
 what is the longest river in florida
 s2712(s7111)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(mississippi))
 what is the longest river in mississippi
 s2712(s7121)
@@ -2251,12 +2251,12 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(stateid(pennsylvania))
 what is the longest river in pennsylvania
 s2712(s7141)
 
-# parse_time=3ms
+# parse_time=2ms
 answer(stateid(texas))
 what is the longest river in texas
 s2712(s7151)
@@ -2326,7 +2326,7 @@ answer(stateid(pennsylvania))
 what is the lowest elevation in pennsylvania
 s2712(s7443)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(arkansas))
 what is the lowest point in arkansas
 s2712(s7453)
@@ -2336,17 +2336,17 @@ answer(stateid(california))
 what is the lowest point in california
 s2712(s7468)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(louisiana))
 what is the lowest point in louisiana
 s2712(s7478)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(massachusetts))
 what is the lowest point in massachusetts
 s2712(s7488)
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(mississippi))
 what is the lowest point in mississippi
 s2712(s7498)
@@ -2386,7 +2386,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(wisconsin))
 what is the lowest point in wisconsin
 s2712(s7614)
@@ -2501,7 +2501,7 @@ answer(density_1(state(all)))
 what is the population density of the largest state
 s7903(s5594(s7955))
 
-# parse_time=3ms
+# parse_time=4ms
 answer(density_1(state(all)))
 what is the population density of the smallest state
 s7903(s5594(s7975))
@@ -2516,7 +2516,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(density_1(stateid(wyoming)))
 what is the population density of wyoming
 s7903(s5591(s1606))
@@ -2566,7 +2566,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=3ms
 answer(density_1(stateid(california)))
 what is the population of california
 s7903(s5603(s156))
@@ -2586,7 +2586,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=2ms
 answer(density_1(stateid(hawaii)))
 what is the population of hawaii
 s7903(s5603(s1300))
@@ -2606,7 +2606,7 @@ answer(density_1(stateid(illinois)))
 what is the population of illinois
 s7903(s5603(s4972))
 
-# parse_time=1ms
+# parse_time=2ms
 answer(density_1(stateid(maine)))
 what is the population of maine
 s7903(s5603(s4432))
@@ -2641,7 +2641,7 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=2ms
 answer(density_1(stateid(oregon)))
 what is the population of oregon
 s7903(s5603(s1133))
@@ -2651,7 +2651,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(density_1(stateid('rhode island')))
 what is the population of rhode island
 s7903(s5603(s787))
@@ -2721,7 +2721,7 @@ _null_
 _null_
 _null_
 
-# parse_time=4ms
+# parse_time=3ms
 answer(density_1(state(all)))
 what is the population of the largest state
 s7903(s5603(s6597))
@@ -2736,7 +2736,7 @@ _null_
 _null_
 _null_
 
-# parse_time=4ms
+# parse_time=2ms
 answer(density_1(state(all)))
 what is the population of the smallest state
 s7903(s5603(s12414))
@@ -2761,12 +2761,12 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(density_1(stateid(utah)))
 what is the population of utah
 s7903(s5603(s229))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(density_1(stateid(washington)))
 what is the population of washington
 s7903(s5603(s1662))
@@ -2791,7 +2791,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=3ms
 answer(stateid(iowa))
 what is the shortest river in iowa
 s2712(s8921)
@@ -2821,7 +2821,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(size(stateid(california)))
 what is the size of california
 s9031(s9032(s156))
@@ -2831,7 +2831,7 @@ answer(size(stateid(florida)))
 what is the size of florida
 s9031(s9032(s463))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(size(stateid(texas)))
 what is the size of texas
 s9031(s9032(s88))
@@ -2851,7 +2851,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(stateid(arkansas))
 what is the smallest city in arkansas
 s2712(s9115)
@@ -2876,7 +2876,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=3ms
 answer(stateid(washington))
 what is the smallest city in washington
 s2712(s9197)
@@ -2996,7 +2996,7 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(len(riverid(mississippi)))
 what length is the mississippi
 s9630(s561(s624))
@@ -3406,17 +3406,17 @@ answer(state(loc_1(capital(cityid(austin,_)))))
 what state is austin the capital of
 s2712(s10854(s10874(s10860(s1225))))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(state(loc_1(cityid(boston,_))))
 what state is boston in
 s2712(s10854(s10855(s8036)))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(state(loc_1(capital(cityid(columbus,_)))))
 what state is columbus the capital of
 s2712(s10854(s10874(s10860(s10897))))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(state(loc_1(cityid(dallas,_))))
 what state is dallas in
 s2712(s10854(s10855(s8183)))
@@ -3426,7 +3426,7 @@ answer(state(loc_1(cityid('des moines',_))))
 what state is des moines located in
 s2712(s10854(s10855(s10928)))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(state(loc_1(cityid(miami,_))))
 what state is miami in
 s2712(s10854(s10855(s10944)))
@@ -3441,7 +3441,7 @@ answer(largest(stateid(massachusetts)))
 what state is the biggest
 s10637(s10973(s263))
 
-# parse_time=2ms
+# parse_time=3ms
 answer(largest_one(population_1(cityid(pittsburgh,_))))
 what state is the largest in population
 s10637(s6407(s6396(s10968)))
@@ -3581,12 +3581,12 @@ _null_
 _null_
 _null_
 
-# parse_time=4ms
+# parse_time=2ms
 answer(state(next_to_2(state(traverse_1(riverid(mississippi))))))
 what states border states that the mississippi runs through
 s2712(s18(s236(s4100(s4085(s624)))))
 
-# parse_time=4ms
+# parse_time=2ms
 answer(state(next_to_2(state(traverse_1(riverid(ohio))))))
 what states border states that the ohio runs through
 s2712(s18(s236(s4100(s4085(s709)))))
@@ -3596,7 +3596,7 @@ _null_
 _null_
 _null_
 
-# parse_time=1ms
+# parse_time=0ms
 answer(state(next_to_2(stateid(texas))))
 what states border texas
 s2712(s18(s236(s88)))
@@ -3616,7 +3616,7 @@ _null_
 _null_
 _null_
 
-# parse_time=6ms
+# parse_time=2ms
 answer(state(loc_2(next_to_2(state(all)))))
 what states border the state that borders the most states
 s2712(s11530(s12847(s2257(s328))))
@@ -3626,7 +3626,7 @@ _null_
 _null_
 _null_
 
-# parse_time=3ms
+# parse_time=1ms
 answer(state(loc_1(major(city(all)))))
 what states border the state with the most major cities
 s2712(s11530(s7188(s1046(s1115))))
@@ -3646,7 +3646,7 @@ answer(state(next_to_2(stateid(wisconsin))))
 what states border wisconsin
 s2712(s18(s236(s4656)))
 
-# parse_time=1ms
+# parse_time=0ms
 answer(state(capital_2(cityid(dover,_))))
 what state 's capital is dover
 s2712(s11590(s11591(s11588)))
@@ -3886,12 +3886,12 @@ _null_
 _null_
 _null_
 
-# parse_time=2ms
+# parse_time=1ms
 answer(highest(place(loc_2(stateid(hawaii)))))
 where is the highest point in hawaii
 s12210(s325(s368(s6(s1300))))
 
-# parse_time=2ms
+# parse_time=1ms
 answer(highest(place(loc_2(stateid(montana)))))
 where is the highest point in montana
 s12210(s325(s368(s6(s388))))

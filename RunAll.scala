@@ -15,7 +15,7 @@ import java.io._
 import java.util.Date
 import scala.collection.JavaConverters._
 
-import scala.language.implicitConversions;
+//import scala.language.implicitConversions;
 
 import ScalaShell._
 
@@ -66,14 +66,18 @@ object RunAll extends App {
 
     output.close
     
-//    val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
-//    println(parsedCorpus)
-//    for (ins <- parsedCorpus) {
-//        println(ins)
-//        val tMap = ins.getInputObjects() 
-//        val tree : Tree = tMap.get("t")
-//        println(tree.toLispString)
-//    }
+    val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
+    println(parsedCorpus)
+    parsedCorpus.asInstanceOf[Interable].foreach {
+        instance => println(instance)
+    }
+
+    //for (ins : Instance <- parsedCorpus) {
+    //    println(ins)
+    //    val tMap = ins.getInputObjects()
+        //val tree : Tree = tMap.get("t").asInstanceOf[Tree]
+        //println(tree.toLispString)
+    //}
 }
 
 //RunAll.main(args)
