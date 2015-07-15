@@ -1,0 +1,7370 @@
+/*
+Induced grammar from aligned sentences
+s = tokenized string from geoquery corpus
+t = tree elements from geoquery function query language (variable-free)
+*/
+
+interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+interpretation t: de.up.ling.irtg.algebra.TreeAlgebra 
+
+
+feature f0: de.up.ling.irtg.maxent.RuleNameFeature('s3692')
+feature f1: de.up.ling.irtg.maxent.RuleNameFeature('s355')
+feature f2: de.up.ling.irtg.maxent.RuleNameFeature('s9712')
+feature f3: de.up.ling.irtg.maxent.RuleNameFeature('s8081')
+feature f4: de.up.ling.irtg.maxent.RuleNameFeature('s2663')
+feature f5: de.up.ling.irtg.maxent.RuleNameFeature('s0')
+feature f6: de.up.ling.irtg.maxent.RuleNameFeature('s12108')
+feature f7: de.up.ling.irtg.maxent.RuleNameFeature('s210')
+feature f8: de.up.ling.irtg.maxent.RuleNameFeature('s1127')
+feature f9: de.up.ling.irtg.maxent.RuleNameFeature('s535')
+feature f10: de.up.ling.irtg.maxent.RuleNameFeature('s6569')
+feature f11: de.up.ling.irtg.maxent.RuleNameFeature('s13355')
+feature f12: de.up.ling.irtg.maxent.RuleNameFeature('s12747')
+feature f13: de.up.ling.irtg.maxent.RuleNameFeature('s2375')
+feature f14: de.up.ling.irtg.maxent.RuleNameFeature('s7614')
+feature f15: de.up.ling.irtg.maxent.RuleNameFeature('s782')
+feature f16: de.up.ling.irtg.maxent.RuleNameFeature('s99')
+feature f17: de.up.ling.irtg.maxent.RuleNameFeature('s1757')
+feature f18: de.up.ling.irtg.maxent.RuleNameFeature('s10974')
+feature f19: de.up.ling.irtg.maxent.RuleNameFeature('s7866')
+feature f20: de.up.ling.irtg.maxent.RuleNameFeature('s164')
+feature f21: de.up.ling.irtg.maxent.RuleNameFeature('s5384')
+feature f22: de.up.ling.irtg.maxent.RuleNameFeature('s1996')
+feature f23: de.up.ling.irtg.maxent.RuleNameFeature('s1976')
+feature f24: de.up.ling.irtg.maxent.RuleNameFeature('s5642')
+feature f25: de.up.ling.irtg.maxent.RuleNameFeature('s4141')
+feature f26: de.up.ling.irtg.maxent.RuleNameFeature('s188')
+feature f27: de.up.ling.irtg.maxent.RuleNameFeature('s1848')
+feature f28: de.up.ling.irtg.maxent.RuleNameFeature('s2817')
+feature f29: de.up.ling.irtg.maxent.RuleNameFeature('s1024')
+feature f30: de.up.ling.irtg.maxent.RuleNameFeature('s10581')
+feature f31: de.up.ling.irtg.maxent.RuleNameFeature('s5138')
+feature f32: de.up.ling.irtg.maxent.RuleNameFeature('s1839')
+feature f33: de.up.ling.irtg.maxent.RuleNameFeature('s257')
+feature f34: de.up.ling.irtg.maxent.RuleNameFeature('s7498')
+feature f35: de.up.ling.irtg.maxent.RuleNameFeature('s4670')
+feature f36: de.up.ling.irtg.maxent.RuleNameFeature('s3276')
+feature f37: de.up.ling.irtg.maxent.RuleNameFeature('s705')
+feature f38: de.up.ling.irtg.maxent.RuleNameFeature('s6962')
+feature f39: de.up.ling.irtg.maxent.RuleNameFeature('s10871')
+feature f40: de.up.ling.irtg.maxent.RuleNameFeature('s8225')
+feature f41: de.up.ling.irtg.maxent.RuleNameFeature('s767')
+feature f42: de.up.ling.irtg.maxent.RuleNameFeature('s6544')
+feature f43: de.up.ling.irtg.maxent.RuleNameFeature('s673')
+feature f44: de.up.ling.irtg.maxent.RuleNameFeature('s12156')
+feature f45: de.up.ling.irtg.maxent.RuleNameFeature('s1949')
+feature f46: de.up.ling.irtg.maxent.RuleNameFeature('s251')
+feature f47: de.up.ling.irtg.maxent.RuleNameFeature('s1932')
+feature f48: de.up.ling.irtg.maxent.RuleNameFeature('s12025')
+feature f49: de.up.ling.irtg.maxent.RuleNameFeature('s318')
+feature f50: de.up.ling.irtg.maxent.RuleNameFeature('s7264')
+feature f51: de.up.ling.irtg.maxent.RuleNameFeature('s1188')
+feature f52: de.up.ling.irtg.maxent.RuleNameFeature('s1300')
+feature f53: de.up.ling.irtg.maxent.RuleNameFeature('s10214')
+feature f54: de.up.ling.irtg.maxent.RuleNameFeature('s463')
+feature f55: de.up.ling.irtg.maxent.RuleNameFeature('s13168')
+feature f56: de.up.ling.irtg.maxent.RuleNameFeature('s1228')
+feature f57: de.up.ling.irtg.maxent.RuleNameFeature('s2720')
+feature f58: de.up.ling.irtg.maxent.RuleNameFeature('s9115')
+feature f59: de.up.ling.irtg.maxent.RuleNameFeature('s1543')
+feature f60: de.up.ling.irtg.maxent.RuleNameFeature('s8183')
+feature f61: de.up.ling.irtg.maxent.RuleNameFeature('s624')
+feature f62: de.up.ling.irtg.maxent.RuleNameFeature('s10014')
+feature f63: de.up.ling.irtg.maxent.RuleNameFeature('s13509')
+feature f64: de.up.ling.irtg.maxent.RuleNameFeature('s3676')
+feature f65: de.up.ling.irtg.maxent.RuleNameFeature('s1345')
+feature f66: de.up.ling.irtg.maxent.RuleNameFeature('s2754')
+feature f67: de.up.ling.irtg.maxent.RuleNameFeature('s6906')
+feature f68: de.up.ling.irtg.maxent.RuleNameFeature('s2206')
+feature f69: de.up.ling.irtg.maxent.RuleNameFeature('s1659')
+feature f70: de.up.ling.irtg.maxent.RuleNameFeature('s5142')
+feature f71: de.up.ling.irtg.maxent.RuleNameFeature('s1040')
+feature f72: de.up.ling.irtg.maxent.RuleNameFeature('s12186')
+feature f73: de.up.ling.irtg.maxent.RuleNameFeature('s12369')
+feature f74: de.up.ling.irtg.maxent.RuleNameFeature('s12048')
+feature f75: de.up.ling.irtg.maxent.RuleNameFeature('s1034')
+feature f76: de.up.ling.irtg.maxent.RuleNameFeature('s8816')
+feature f77: de.up.ling.irtg.maxent.RuleNameFeature('s3051')
+feature f78: de.up.ling.irtg.maxent.RuleNameFeature('s8671')
+feature f79: de.up.ling.irtg.maxent.RuleNameFeature('s2425')
+feature f80: de.up.ling.irtg.maxent.RuleNameFeature('s1330')
+feature f81: de.up.ling.irtg.maxent.RuleNameFeature('s10467')
+feature f82: de.up.ling.irtg.maxent.RuleNameFeature('s3227')
+feature f83: de.up.ling.irtg.maxent.RuleNameFeature('s1279')
+feature f84: de.up.ling.irtg.maxent.RuleNameFeature('s3235')
+feature f85: de.up.ling.irtg.maxent.RuleNameFeature('s5109')
+feature f86: de.up.ling.irtg.maxent.RuleNameFeature('s7749')
+feature f87: de.up.ling.irtg.maxent.RuleNameFeature('s3610')
+feature f88: de.up.ling.irtg.maxent.RuleNameFeature('s5956')
+feature f89: de.up.ling.irtg.maxent.RuleNameFeature('s2888')
+feature f90: de.up.ling.irtg.maxent.RuleNameFeature('s7064')
+feature f91: de.up.ling.irtg.maxent.RuleNameFeature('s1198')
+feature f92: de.up.ling.irtg.maxent.RuleNameFeature('s4063')
+feature f93: de.up.ling.irtg.maxent.RuleNameFeature('s2530')
+feature f94: de.up.ling.irtg.maxent.RuleNameFeature('s245')
+feature f95: de.up.ling.irtg.maxent.RuleNameFeature('s8138')
+feature f96: de.up.ling.irtg.maxent.RuleNameFeature('s11940')
+feature f97: de.up.ling.irtg.maxent.RuleNameFeature('s22')
+feature f98: de.up.ling.irtg.maxent.RuleNameFeature('s8216')
+feature f99: de.up.ling.irtg.maxent.RuleNameFeature('s11010')
+feature f100: de.up.ling.irtg.maxent.RuleNameFeature('s10020')
+feature f101: de.up.ling.irtg.maxent.RuleNameFeature('s8530')
+feature f102: de.up.ling.irtg.maxent.RuleNameFeature('s5134')
+feature f103: de.up.ling.irtg.maxent.RuleNameFeature('s1001')
+feature f104: de.up.ling.irtg.maxent.RuleNameFeature('s6272')
+feature f105: de.up.ling.irtg.maxent.RuleNameFeature('s12424')
+feature f106: de.up.ling.irtg.maxent.RuleNameFeature('s8036')
+feature f107: de.up.ling.irtg.maxent.RuleNameFeature('s5556')
+feature f108: de.up.ling.irtg.maxent.RuleNameFeature('s4444')
+feature f109: de.up.ling.irtg.maxent.RuleNameFeature('s10884')
+feature f110: de.up.ling.irtg.maxent.RuleNameFeature('s4715')
+feature f111: de.up.ling.irtg.maxent.RuleNameFeature('s2630')
+feature f112: de.up.ling.irtg.maxent.RuleNameFeature('s1539')
+feature f113: de.up.ling.irtg.maxent.RuleNameFeature('s5739')
+feature f114: de.up.ling.irtg.maxent.RuleNameFeature('s8224')
+feature f115: de.up.ling.irtg.maxent.RuleNameFeature('s689')
+feature f116: de.up.ling.irtg.maxent.RuleNameFeature('s12135')
+feature f117: de.up.ling.irtg.maxent.RuleNameFeature('s5748')
+feature f118: de.up.ling.irtg.maxent.RuleNameFeature('s10001')
+feature f119: de.up.ling.irtg.maxent.RuleNameFeature('s4552')
+feature f120: de.up.ling.irtg.maxent.RuleNameFeature('s5062')
+feature f121: de.up.ling.irtg.maxent.RuleNameFeature('s1495')
+feature f122: de.up.ling.irtg.maxent.RuleNameFeature('s13231')
+feature f123: de.up.ling.irtg.maxent.RuleNameFeature('s5602')
+feature f124: de.up.ling.irtg.maxent.RuleNameFeature('s309')
+feature f125: de.up.ling.irtg.maxent.RuleNameFeature('s3026')
+feature f126: de.up.ling.irtg.maxent.RuleNameFeature('s6169')
+feature f127: de.up.ling.irtg.maxent.RuleNameFeature('s11603')
+feature f128: de.up.ling.irtg.maxent.RuleNameFeature('s5600')
+feature f129: de.up.ling.irtg.maxent.RuleNameFeature('s4683')
+feature f130: de.up.ling.irtg.maxent.RuleNameFeature('s776')
+feature f131: de.up.ling.irtg.maxent.RuleNameFeature('s325')
+feature f132: de.up.ling.irtg.maxent.RuleNameFeature('s13017')
+feature f133: de.up.ling.irtg.maxent.RuleNameFeature('s1926')
+feature f134: de.up.ling.irtg.maxent.RuleNameFeature('s12026')
+feature f135: de.up.ling.irtg.maxent.RuleNameFeature('s7091')
+feature f136: de.up.ling.irtg.maxent.RuleNameFeature('s7111')
+feature f137: de.up.ling.irtg.maxent.RuleNameFeature('s10905')
+feature f138: de.up.ling.irtg.maxent.RuleNameFeature('s8401')
+feature f139: de.up.ling.irtg.maxent.RuleNameFeature('s12699')
+feature f140: de.up.ling.irtg.maxent.RuleNameFeature('s10960')
+feature f141: de.up.ling.irtg.maxent.RuleNameFeature('s2896')
+feature f142: de.up.ling.irtg.maxent.RuleNameFeature('s5663')
+feature f143: de.up.ling.irtg.maxent.RuleNameFeature('s2465')
+feature f144: de.up.ling.irtg.maxent.RuleNameFeature('s2899')
+feature f145: de.up.ling.irtg.maxent.RuleNameFeature('s3700')
+feature f146: de.up.ling.irtg.maxent.RuleNameFeature('s516')
+feature f147: de.up.ling.irtg.maxent.RuleNameFeature('s2407')
+feature f148: de.up.ling.irtg.maxent.RuleNameFeature('s8391')
+feature f149: de.up.ling.irtg.maxent.RuleNameFeature('s9508')
+feature f150: de.up.ling.irtg.maxent.RuleNameFeature('s12789')
+feature f151: de.up.ling.irtg.maxent.RuleNameFeature('s993')
+feature f152: de.up.ling.irtg.maxent.RuleNameFeature('s1161')
+feature f153: de.up.ling.irtg.maxent.RuleNameFeature('s2892')
+feature f154: de.up.ling.irtg.maxent.RuleNameFeature('s4489')
+feature f155: de.up.ling.irtg.maxent.RuleNameFeature('s2365')
+feature f156: de.up.ling.irtg.maxent.RuleNameFeature('s9086')
+feature f157: de.up.ling.irtg.maxent.RuleNameFeature('s5576')
+feature f158: de.up.ling.irtg.maxent.RuleNameFeature('s8134')
+feature f159: de.up.ling.irtg.maxent.RuleNameFeature('s1749')
+feature f160: de.up.ling.irtg.maxent.RuleNameFeature('s3182')
+feature f161: de.up.ling.irtg.maxent.RuleNameFeature('s352')
+feature f162: de.up.ling.irtg.maxent.RuleNameFeature('s550')
+feature f163: de.up.ling.irtg.maxent.RuleNameFeature('s1465')
+feature f164: de.up.ling.irtg.maxent.RuleNameFeature('s2158')
+feature f165: de.up.ling.irtg.maxent.RuleNameFeature('s2948')
+feature f166: de.up.ling.irtg.maxent.RuleNameFeature('s2722')
+feature f167: de.up.ling.irtg.maxent.RuleNameFeature('s5145')
+feature f168: de.up.ling.irtg.maxent.RuleNameFeature('s781')
+feature f169: de.up.ling.irtg.maxent.RuleNameFeature('s2036')
+feature f170: de.up.ling.irtg.maxent.RuleNameFeature('s5806')
+feature f171: de.up.ling.irtg.maxent.RuleNameFeature('s13199')
+feature f172: de.up.ling.irtg.maxent.RuleNameFeature('s6405')
+feature f173: de.up.ling.irtg.maxent.RuleNameFeature('s5186')
+feature f174: de.up.ling.irtg.maxent.RuleNameFeature('s5390')
+feature f175: de.up.ling.irtg.maxent.RuleNameFeature('s5485')
+feature f176: de.up.ling.irtg.maxent.RuleNameFeature('s13012')
+feature f177: de.up.ling.irtg.maxent.RuleNameFeature('s4996')
+feature f178: de.up.ling.irtg.maxent.RuleNameFeature('s2756')
+feature f179: de.up.ling.irtg.maxent.RuleNameFeature('s1689')
+feature f180: de.up.ling.irtg.maxent.RuleNameFeature('s9407')
+feature f181: de.up.ling.irtg.maxent.RuleNameFeature('s2241')
+feature f182: de.up.ling.irtg.maxent.RuleNameFeature('s2714')
+feature f183: de.up.ling.irtg.maxent.RuleNameFeature('s8434')
+feature f184: de.up.ling.irtg.maxent.RuleNameFeature('s240')
+feature f185: de.up.ling.irtg.maxent.RuleNameFeature('s4052')
+feature f186: de.up.ling.irtg.maxent.RuleNameFeature('s10638')
+feature f187: de.up.ling.irtg.maxent.RuleNameFeature('s7478')
+feature f188: de.up.ling.irtg.maxent.RuleNameFeature('s9006')
+feature f189: de.up.ling.irtg.maxent.RuleNameFeature('s780')
+feature f190: de.up.ling.irtg.maxent.RuleNameFeature('s929')
+feature f191: de.up.ling.irtg.maxent.RuleNameFeature('s11650')
+feature f192: de.up.ling.irtg.maxent.RuleNameFeature('s1039')
+feature f193: de.up.ling.irtg.maxent.RuleNameFeature('s2257')
+feature f194: de.up.ling.irtg.maxent.RuleNameFeature('s8551')
+feature f195: de.up.ling.irtg.maxent.RuleNameFeature('s10822')
+feature f196: de.up.ling.irtg.maxent.RuleNameFeature('s12091')
+feature f197: de.up.ling.irtg.maxent.RuleNameFeature('s1417')
+feature f198: de.up.ling.irtg.maxent.RuleNameFeature('s947')
+feature f199: de.up.ling.irtg.maxent.RuleNameFeature('s2279')
+feature f200: de.up.ling.irtg.maxent.RuleNameFeature('s9775')
+feature f201: de.up.ling.irtg.maxent.RuleNameFeature('s2377')
+feature f202: de.up.ling.irtg.maxent.RuleNameFeature('s8096')
+feature f203: de.up.ling.irtg.maxent.RuleNameFeature('s4164')
+feature f204: de.up.ling.irtg.maxent.RuleNameFeature('s7022')
+feature f205: de.up.ling.irtg.maxent.RuleNameFeature('s11915')
+feature f206: de.up.ling.irtg.maxent.RuleNameFeature('s4090')
+feature f207: de.up.ling.irtg.maxent.RuleNameFeature('s2654')
+feature f208: de.up.ling.irtg.maxent.RuleNameFeature('s10169')
+feature f209: de.up.ling.irtg.maxent.RuleNameFeature('s1019')
+feature f210: de.up.ling.irtg.maxent.RuleNameFeature('s4844')
+feature f211: de.up.ling.irtg.maxent.RuleNameFeature('s2550')
+feature f212: de.up.ling.irtg.maxent.RuleNameFeature('s7101')
+feature f213: de.up.ling.irtg.maxent.RuleNameFeature('s1119')
+feature f214: de.up.ling.irtg.maxent.RuleNameFeature('s4005')
+feature f215: de.up.ling.irtg.maxent.RuleNameFeature('s1549')
+feature f216: de.up.ling.irtg.maxent.RuleNameFeature('s11066')
+feature f217: de.up.ling.irtg.maxent.RuleNameFeature('s13286')
+feature f218: de.up.ling.irtg.maxent.RuleNameFeature('s12206')
+feature f219: de.up.ling.irtg.maxent.RuleNameFeature('s4100')
+feature f220: de.up.ling.irtg.maxent.RuleNameFeature('s12030')
+feature f221: de.up.ling.irtg.maxent.RuleNameFeature('s7744')
+feature f222: de.up.ling.irtg.maxent.RuleNameFeature('s1692')
+feature f223: de.up.ling.irtg.maxent.RuleNameFeature('s9492')
+feature f224: de.up.ling.irtg.maxent.RuleNameFeature('s11815')
+feature f225: de.up.ling.irtg.maxent.RuleNameFeature('s12490')
+feature f226: de.up.ling.irtg.maxent.RuleNameFeature('s5907')
+feature f227: de.up.ling.irtg.maxent.RuleNameFeature('s3147')
+feature f228: de.up.ling.irtg.maxent.RuleNameFeature('s9258')
+feature f229: de.up.ling.irtg.maxent.RuleNameFeature('s11608')
+feature f230: de.up.ling.irtg.maxent.RuleNameFeature('s6831')
+feature f231: de.up.ling.irtg.maxent.RuleNameFeature('s2001')
+feature f232: de.up.ling.irtg.maxent.RuleNameFeature('s12174')
+feature f233: de.up.ling.irtg.maxent.RuleNameFeature('s1951')
+feature f234: de.up.ling.irtg.maxent.RuleNameFeature('s543')
+feature f235: de.up.ling.irtg.maxent.RuleNameFeature('s13362')
+feature f236: de.up.ling.irtg.maxent.RuleNameFeature('s10799')
+feature f237: de.up.ling.irtg.maxent.RuleNameFeature('s12119')
+feature f238: de.up.ling.irtg.maxent.RuleNameFeature('s3532')
+feature f239: de.up.ling.irtg.maxent.RuleNameFeature('s8422')
+feature f240: de.up.ling.irtg.maxent.RuleNameFeature('s2726')
+feature f241: de.up.ling.irtg.maxent.RuleNameFeature('s7737')
+feature f242: de.up.ling.irtg.maxent.RuleNameFeature('s12189')
+feature f243: de.up.ling.irtg.maxent.RuleNameFeature('s6230')
+feature f244: de.up.ling.irtg.maxent.RuleNameFeature('s1568')
+feature f245: de.up.ling.irtg.maxent.RuleNameFeature('s2956')
+feature f246: de.up.ling.irtg.maxent.RuleNameFeature('s1159')
+feature f247: de.up.ling.irtg.maxent.RuleNameFeature('s12695')
+feature f248: de.up.ling.irtg.maxent.RuleNameFeature('s6491')
+feature f249: de.up.ling.irtg.maxent.RuleNameFeature('s2561')
+feature f250: de.up.ling.irtg.maxent.RuleNameFeature('s3696')
+feature f251: de.up.ling.irtg.maxent.RuleNameFeature('s7347')
+feature f252: de.up.ling.irtg.maxent.RuleNameFeature('s3261')
+feature f253: de.up.ling.irtg.maxent.RuleNameFeature('s12956')
+feature f254: de.up.ling.irtg.maxent.RuleNameFeature('s3060')
+feature f255: de.up.ling.irtg.maxent.RuleNameFeature('s272')
+feature f256: de.up.ling.irtg.maxent.RuleNameFeature('s2884')
+feature f257: de.up.ling.irtg.maxent.RuleNameFeature('s2966')
+feature f258: de.up.ling.irtg.maxent.RuleNameFeature('s561')
+feature f259: de.up.ling.irtg.maxent.RuleNameFeature('s1183')
+feature f260: de.up.ling.irtg.maxent.RuleNameFeature('s8339')
+feature f261: de.up.ling.irtg.maxent.RuleNameFeature('s1249')
+feature f262: de.up.ling.irtg.maxent.RuleNameFeature('s3661')
+feature f263: de.up.ling.irtg.maxent.RuleNameFeature('s2492')
+feature f264: de.up.ling.irtg.maxent.RuleNameFeature('s12104')
+feature f265: de.up.ling.irtg.maxent.RuleNameFeature('s2891')
+feature f266: de.up.ling.irtg.maxent.RuleNameFeature('s8078')
+feature f267: de.up.ling.irtg.maxent.RuleNameFeature('s5856')
+feature f268: de.up.ling.irtg.maxent.RuleNameFeature('s3023')
+feature f269: de.up.ling.irtg.maxent.RuleNameFeature('s925')
+feature f270: de.up.ling.irtg.maxent.RuleNameFeature('s71')
+feature f271: de.up.ling.irtg.maxent.RuleNameFeature('s9736')
+feature f272: de.up.ling.irtg.maxent.RuleNameFeature('s1713')
+feature f273: de.up.ling.irtg.maxent.RuleNameFeature('s244')
+feature f274: de.up.ling.irtg.maxent.RuleNameFeature('s882')
+feature f275: de.up.ling.irtg.maxent.RuleNameFeature('s10654')
+feature f276: de.up.ling.irtg.maxent.RuleNameFeature('s3093')
+feature f277: de.up.ling.irtg.maxent.RuleNameFeature('s4668')
+feature f278: de.up.ling.irtg.maxent.RuleNameFeature('s777')
+feature f279: de.up.ling.irtg.maxent.RuleNameFeature('s12207')
+feature f280: de.up.ling.irtg.maxent.RuleNameFeature('s6341')
+feature f281: de.up.ling.irtg.maxent.RuleNameFeature('s4633')
+feature f282: de.up.ling.irtg.maxent.RuleNameFeature('s8986')
+feature f283: de.up.ling.irtg.maxent.RuleNameFeature('s2313')
+feature f284: de.up.ling.irtg.maxent.RuleNameFeature('s12080')
+feature f285: de.up.ling.irtg.maxent.RuleNameFeature('s8946')
+feature f286: de.up.ling.irtg.maxent.RuleNameFeature('s1765')
+feature f287: de.up.ling.irtg.maxent.RuleNameFeature('s8159')
+feature f288: de.up.ling.irtg.maxent.RuleNameFeature('s797')
+feature f289: de.up.ling.irtg.maxent.RuleNameFeature('s5118')
+feature f290: de.up.ling.irtg.maxent.RuleNameFeature('s247')
+feature f291: de.up.ling.irtg.maxent.RuleNameFeature('s4700')
+feature f292: de.up.ling.irtg.maxent.RuleNameFeature('s248')
+feature f293: de.up.ling.irtg.maxent.RuleNameFeature('s11109')
+feature f294: de.up.ling.irtg.maxent.RuleNameFeature('s2695')
+feature f295: de.up.ling.irtg.maxent.RuleNameFeature('s2137')
+feature f296: de.up.ling.irtg.maxent.RuleNameFeature('s2612')
+feature f297: de.up.ling.irtg.maxent.RuleNameFeature('s9504')
+feature f298: de.up.ling.irtg.maxent.RuleNameFeature('s13044')
+feature f299: de.up.ling.irtg.maxent.RuleNameFeature('s1564')
+feature f300: de.up.ling.irtg.maxent.RuleNameFeature('s7874')
+feature f301: de.up.ling.irtg.maxent.RuleNameFeature('s9832')
+feature f302: de.up.ling.irtg.maxent.RuleNameFeature('s10770')
+feature f303: de.up.ling.irtg.maxent.RuleNameFeature('s4178')
+feature f304: de.up.ling.irtg.maxent.RuleNameFeature('s2937')
+feature f305: de.up.ling.irtg.maxent.RuleNameFeature('s16')
+feature f306: de.up.ling.irtg.maxent.RuleNameFeature('s1447')
+feature f307: de.up.ling.irtg.maxent.RuleNameFeature('s4580')
+feature f308: de.up.ling.irtg.maxent.RuleNameFeature('s8012')
+feature f309: de.up.ling.irtg.maxent.RuleNameFeature('s281')
+feature f310: de.up.ling.irtg.maxent.RuleNameFeature('s5452')
+feature f311: de.up.ling.irtg.maxent.RuleNameFeature('s1972')
+feature f312: de.up.ling.irtg.maxent.RuleNameFeature('s5540')
+feature f313: de.up.ling.irtg.maxent.RuleNameFeature('s11810')
+feature f314: de.up.ling.irtg.maxent.RuleNameFeature('s1321')
+feature f315: de.up.ling.irtg.maxent.RuleNameFeature('s9262')
+feature f316: de.up.ling.irtg.maxent.RuleNameFeature('s2890')
+feature f317: de.up.ling.irtg.maxent.RuleNameFeature('s2387')
+feature f318: de.up.ling.irtg.maxent.RuleNameFeature('s3045')
+feature f319: de.up.ling.irtg.maxent.RuleNameFeature('s9100')
+feature f320: de.up.ling.irtg.maxent.RuleNameFeature('s4097')
+feature f321: de.up.ling.irtg.maxent.RuleNameFeature('s1031')
+feature f322: de.up.ling.irtg.maxent.RuleNameFeature('s4734')
+feature f323: de.up.ling.irtg.maxent.RuleNameFeature('s10702')
+feature f324: de.up.ling.irtg.maxent.RuleNameFeature('s4150')
+feature f325: de.up.ling.irtg.maxent.RuleNameFeature('s1840')
+feature f326: de.up.ling.irtg.maxent.RuleNameFeature('s4098')
+feature f327: de.up.ling.irtg.maxent.RuleNameFeature('s4691')
+feature f328: de.up.ling.irtg.maxent.RuleNameFeature('s5182')
+feature f329: de.up.ling.irtg.maxent.RuleNameFeature('s1492')
+feature f330: de.up.ling.irtg.maxent.RuleNameFeature('s4927')
+feature f331: de.up.ling.irtg.maxent.RuleNameFeature('s5006')
+feature f332: de.up.ling.irtg.maxent.RuleNameFeature('s1941')
+feature f333: de.up.ling.irtg.maxent.RuleNameFeature('s3070')
+feature f334: de.up.ling.irtg.maxent.RuleNameFeature('s8921')
+feature f335: de.up.ling.irtg.maxent.RuleNameFeature('s9672')
+feature f336: de.up.ling.irtg.maxent.RuleNameFeature('s4536')
+feature f337: de.up.ling.irtg.maxent.RuleNameFeature('s12153')
+feature f338: de.up.ling.irtg.maxent.RuleNameFeature('s7720')
+feature f339: de.up.ling.irtg.maxent.RuleNameFeature('s2676')
+feature f340: de.up.ling.irtg.maxent.RuleNameFeature('s2712')
+feature f341: de.up.ling.irtg.maxent.RuleNameFeature('s10854')
+feature f342: de.up.ling.irtg.maxent.RuleNameFeature('s2371')
+feature f343: de.up.ling.irtg.maxent.RuleNameFeature('s1378')
+feature f344: de.up.ling.irtg.maxent.RuleNameFeature('s1857')
+feature f345: de.up.ling.irtg.maxent.RuleNameFeature('s6026')
+feature f346: de.up.ling.irtg.maxent.RuleNameFeature('s4429')
+feature f347: de.up.ling.irtg.maxent.RuleNameFeature('s2866')
+feature f348: de.up.ling.irtg.maxent.RuleNameFeature('s12902')
+feature f349: de.up.ling.irtg.maxent.RuleNameFeature('s4026')
+feature f350: de.up.ling.irtg.maxent.RuleNameFeature('s2510')
+feature f351: de.up.ling.irtg.maxent.RuleNameFeature('s4458')
+feature f352: de.up.ling.irtg.maxent.RuleNameFeature('s8730')
+feature f353: de.up.ling.irtg.maxent.RuleNameFeature('s8777')
+feature f354: de.up.ling.irtg.maxent.RuleNameFeature('s2868')
+feature f355: de.up.ling.irtg.maxent.RuleNameFeature('s5621')
+feature f356: de.up.ling.irtg.maxent.RuleNameFeature('s116')
+feature f357: de.up.ling.irtg.maxent.RuleNameFeature('s4727')
+feature f358: de.up.ling.irtg.maxent.RuleNameFeature('s9066')
+feature f359: de.up.ling.irtg.maxent.RuleNameFeature('s4682')
+feature f360: de.up.ling.irtg.maxent.RuleNameFeature('s195')
+feature f361: de.up.ling.irtg.maxent.RuleNameFeature('s19')
+feature f362: de.up.ling.irtg.maxent.RuleNameFeature('s4149')
+feature f363: de.up.ling.irtg.maxent.RuleNameFeature('s13119')
+feature f364: de.up.ling.irtg.maxent.RuleNameFeature('s2857')
+feature f365: de.up.ling.irtg.maxent.RuleNameFeature('s495')
+feature f366: de.up.ling.irtg.maxent.RuleNameFeature('s822')
+feature f367: de.up.ling.irtg.maxent.RuleNameFeature('s2900')
+feature f368: de.up.ling.irtg.maxent.RuleNameFeature('s11920')
+feature f369: de.up.ling.irtg.maxent.RuleNameFeature('s2978')
+feature f370: de.up.ling.irtg.maxent.RuleNameFeature('s5471')
+feature f371: de.up.ling.irtg.maxent.RuleNameFeature('s2052')
+feature f372: de.up.ling.irtg.maxent.RuleNameFeature('s2389')
+feature f373: de.up.ling.irtg.maxent.RuleNameFeature('s6832')
+feature f374: de.up.ling.irtg.maxent.RuleNameFeature('s11101')
+feature f375: de.up.ling.irtg.maxent.RuleNameFeature('s1671')
+feature f376: de.up.ling.irtg.maxent.RuleNameFeature('s4450')
+feature f377: de.up.ling.irtg.maxent.RuleNameFeature('s2401')
+feature f378: de.up.ling.irtg.maxent.RuleNameFeature('s3631')
+feature f379: de.up.ling.irtg.maxent.RuleNameFeature('s6692')
+feature f380: de.up.ling.irtg.maxent.RuleNameFeature('s1760')
+feature f381: de.up.ling.irtg.maxent.RuleNameFeature('s185')
+feature f382: de.up.ling.irtg.maxent.RuleNameFeature('s9102')
+feature f383: de.up.ling.irtg.maxent.RuleNameFeature('s5606')
+feature f384: de.up.ling.irtg.maxent.RuleNameFeature('s1620')
+feature f385: de.up.ling.irtg.maxent.RuleNameFeature('s4710')
+feature f386: de.up.ling.irtg.maxent.RuleNameFeature('s4979')
+feature f387: de.up.ling.irtg.maxent.RuleNameFeature('s5416')
+feature f388: de.up.ling.irtg.maxent.RuleNameFeature('s8198')
+feature f389: de.up.ling.irtg.maxent.RuleNameFeature('s4036')
+feature f390: de.up.ling.irtg.maxent.RuleNameFeature('s3753')
+feature f391: de.up.ling.irtg.maxent.RuleNameFeature('s12077')
+feature f392: de.up.ling.irtg.maxent.RuleNameFeature('s1133')
+feature f393: de.up.ling.irtg.maxent.RuleNameFeature('s498')
+feature f394: de.up.ling.irtg.maxent.RuleNameFeature('s9202')
+feature f395: de.up.ling.irtg.maxent.RuleNameFeature('s10814')
+feature f396: de.up.ling.irtg.maxent.RuleNameFeature('s4348')
+feature f397: de.up.ling.irtg.maxent.RuleNameFeature('s1471')
+feature f398: de.up.ling.irtg.maxent.RuleNameFeature('s4142')
+feature f399: de.up.ling.irtg.maxent.RuleNameFeature('s10651')
+feature f400: de.up.ling.irtg.maxent.RuleNameFeature('s6733')
+feature f401: de.up.ling.irtg.maxent.RuleNameFeature('s9259')
+feature f402: de.up.ling.irtg.maxent.RuleNameFeature('s1157')
+feature f403: de.up.ling.irtg.maxent.RuleNameFeature('s12774')
+feature f404: de.up.ling.irtg.maxent.RuleNameFeature('s3039')
+feature f405: de.up.ling.irtg.maxent.RuleNameFeature('s11770')
+feature f406: de.up.ling.irtg.maxent.RuleNameFeature('s6373')
+feature f407: de.up.ling.irtg.maxent.RuleNameFeature('s11748')
+feature f408: de.up.ling.irtg.maxent.RuleNameFeature('s11003')
+feature f409: de.up.ling.irtg.maxent.RuleNameFeature('s1225')
+feature f410: de.up.ling.irtg.maxent.RuleNameFeature('s5816')
+feature f411: de.up.ling.irtg.maxent.RuleNameFeature('s13482')
+feature f412: de.up.ling.irtg.maxent.RuleNameFeature('s10433')
+feature f413: de.up.ling.irtg.maxent.RuleNameFeature('s1363')
+feature f414: de.up.ling.irtg.maxent.RuleNameFeature('s7188')
+feature f415: de.up.ling.irtg.maxent.RuleNameFeature('s2233')
+feature f416: de.up.ling.irtg.maxent.RuleNameFeature('s9857')
+feature f417: de.up.ling.irtg.maxent.RuleNameFeature('s1288')
+feature f418: de.up.ling.irtg.maxent.RuleNameFeature('s12109')
+feature f419: de.up.ling.irtg.maxent.RuleNameFeature('s5190')
+feature f420: de.up.ling.irtg.maxent.RuleNameFeature('s2982')
+feature f421: de.up.ling.irtg.maxent.RuleNameFeature('s4279')
+feature f422: de.up.ling.irtg.maxent.RuleNameFeature('s5729')
+feature f423: de.up.ling.irtg.maxent.RuleNameFeature('s8147')
+feature f424: de.up.ling.irtg.maxent.RuleNameFeature('s11559')
+feature f425: de.up.ling.irtg.maxent.RuleNameFeature('s5735')
+feature f426: de.up.ling.irtg.maxent.RuleNameFeature('s8013')
+feature f427: de.up.ling.irtg.maxent.RuleNameFeature('s2732')
+feature f428: de.up.ling.irtg.maxent.RuleNameFeature('s8518')
+feature f429: de.up.ling.irtg.maxent.RuleNameFeature('s10860')
+feature f430: de.up.ling.irtg.maxent.RuleNameFeature('s1168')
+feature f431: de.up.ling.irtg.maxent.RuleNameFeature('s709')
+feature f432: de.up.ling.irtg.maxent.RuleNameFeature('s9725')
+feature f433: de.up.ling.irtg.maxent.RuleNameFeature('s1906')
+feature f434: de.up.ling.irtg.maxent.RuleNameFeature('s1123')
+feature f435: de.up.ling.irtg.maxent.RuleNameFeature('s3556')
+feature f436: de.up.ling.irtg.maxent.RuleNameFeature('s2832')
+feature f437: de.up.ling.irtg.maxent.RuleNameFeature('s11153')
+feature f438: de.up.ling.irtg.maxent.RuleNameFeature('s11910')
+feature f439: de.up.ling.irtg.maxent.RuleNameFeature('s7538')
+feature f440: de.up.ling.irtg.maxent.RuleNameFeature('s2053')
+feature f441: de.up.ling.irtg.maxent.RuleNameFeature('s4794')
+feature f442: de.up.ling.irtg.maxent.RuleNameFeature('s2822')
+feature f443: de.up.ling.irtg.maxent.RuleNameFeature('s4398')
+feature f444: de.up.ling.irtg.maxent.RuleNameFeature('s13502')
+feature f445: de.up.ling.irtg.maxent.RuleNameFeature('s7937')
+feature f446: de.up.ling.irtg.maxent.RuleNameFeature('s5154')
+feature f447: de.up.ling.irtg.maxent.RuleNameFeature('s7975')
+feature f448: de.up.ling.irtg.maxent.RuleNameFeature('s2508')
+feature f449: de.up.ling.irtg.maxent.RuleNameFeature('s9359')
+feature f450: de.up.ling.irtg.maxent.RuleNameFeature('s8276')
+feature f451: de.up.ling.irtg.maxent.RuleNameFeature('s12713')
+feature f452: de.up.ling.irtg.maxent.RuleNameFeature('s2486')
+feature f453: de.up.ling.irtg.maxent.RuleNameFeature('s7151')
+feature f454: de.up.ling.irtg.maxent.RuleNameFeature('s5536')
+feature f455: de.up.ling.irtg.maxent.RuleNameFeature('s3200')
+feature f456: de.up.ling.irtg.maxent.RuleNameFeature('s8378')
+feature f457: de.up.ling.irtg.maxent.RuleNameFeature('s6402')
+feature f458: de.up.ling.irtg.maxent.RuleNameFeature('s4093')
+feature f459: de.up.ling.irtg.maxent.RuleNameFeature('s2771')
+feature f460: de.up.ling.irtg.maxent.RuleNameFeature('s10756')
+feature f461: de.up.ling.irtg.maxent.RuleNameFeature('s2537')
+feature f462: de.up.ling.irtg.maxent.RuleNameFeature('s2886')
+feature f463: de.up.ling.irtg.maxent.RuleNameFeature('s12144')
+feature f464: de.up.ling.irtg.maxent.RuleNameFeature('s5866')
+feature f465: de.up.ling.irtg.maxent.RuleNameFeature('s1985')
+feature f466: de.up.ling.irtg.maxent.RuleNameFeature('s4704')
+feature f467: de.up.ling.irtg.maxent.RuleNameFeature('s10630')
+feature f468: de.up.ling.irtg.maxent.RuleNameFeature('s1399')
+feature f469: de.up.ling.irtg.maxent.RuleNameFeature('s8030')
+feature f470: de.up.ling.irtg.maxent.RuleNameFeature('s7292')
+feature f471: de.up.ling.irtg.maxent.RuleNameFeature('s4717')
+feature f472: de.up.ling.irtg.maxent.RuleNameFeature('s7253')
+feature f473: de.up.ling.irtg.maxent.RuleNameFeature('s4947')
+feature f474: de.up.ling.irtg.maxent.RuleNameFeature('s5026')
+feature f475: de.up.ling.irtg.maxent.RuleNameFeature('s3135')
+feature f476: de.up.ling.irtg.maxent.RuleNameFeature('s3175')
+feature f477: de.up.ling.irtg.maxent.RuleNameFeature('s11113')
+feature f478: de.up.ling.irtg.maxent.RuleNameFeature('s4094')
+feature f479: de.up.ling.irtg.maxent.RuleNameFeature('s5349')
+feature f480: de.up.ling.irtg.maxent.RuleNameFeature('s1224')
+feature f481: de.up.ling.irtg.maxent.RuleNameFeature('s3381')
+feature f482: de.up.ling.irtg.maxent.RuleNameFeature('s10874')
+feature f483: de.up.ling.irtg.maxent.RuleNameFeature('s3723')
+feature f484: de.up.ling.irtg.maxent.RuleNameFeature('s5846')
+feature f485: de.up.ling.irtg.maxent.RuleNameFeature('s3690')
+feature f486: de.up.ling.irtg.maxent.RuleNameFeature('s6')
+feature f487: de.up.ling.irtg.maxent.RuleNameFeature('s4295')
+feature f488: de.up.ling.irtg.maxent.RuleNameFeature('s4859')
+feature f489: de.up.ling.irtg.maxent.RuleNameFeature('s851')
+feature f490: de.up.ling.irtg.maxent.RuleNameFeature('s2757')
+feature f491: de.up.ling.irtg.maxent.RuleNameFeature('s3449')
+feature f492: de.up.ling.irtg.maxent.RuleNameFeature('s9053')
+feature f493: de.up.ling.irtg.maxent.RuleNameFeature('s11085')
+feature f494: de.up.ling.irtg.maxent.RuleNameFeature('s12272')
+feature f495: de.up.ling.irtg.maxent.RuleNameFeature('s3072')
+feature f496: de.up.ling.irtg.maxent.RuleNameFeature('s3616')
+feature f497: de.up.ling.irtg.maxent.RuleNameFeature('s6074')
+feature f498: de.up.ling.irtg.maxent.RuleNameFeature('s2538')
+feature f499: de.up.ling.irtg.maxent.RuleNameFeature('s8144')
+feature f500: de.up.ling.irtg.maxent.RuleNameFeature('s12000')
+feature f501: de.up.ling.irtg.maxent.RuleNameFeature('s148')
+feature f502: de.up.ling.irtg.maxent.RuleNameFeature('s9182')
+feature f503: de.up.ling.irtg.maxent.RuleNameFeature('s7052')
+feature f504: de.up.ling.irtg.maxent.RuleNameFeature('s7732')
+feature f505: de.up.ling.irtg.maxent.RuleNameFeature('s6641')
+feature f506: de.up.ling.irtg.maxent.RuleNameFeature('s13058')
+feature f507: de.up.ling.irtg.maxent.RuleNameFeature('s351')
+feature f508: de.up.ling.irtg.maxent.RuleNameFeature('s12126')
+feature f509: de.up.ling.irtg.maxent.RuleNameFeature('s4351')
+feature f510: de.up.ling.irtg.maxent.RuleNameFeature('s9622')
+feature f511: de.up.ling.irtg.maxent.RuleNameFeature('s11795')
+feature f512: de.up.ling.irtg.maxent.RuleNameFeature('s5')
+feature f513: de.up.ling.irtg.maxent.RuleNameFeature('s9762')
+feature f514: de.up.ling.irtg.maxent.RuleNameFeature('s9466')
+feature f515: de.up.ling.irtg.maxent.RuleNameFeature('s7332')
+feature f516: de.up.ling.irtg.maxent.RuleNameFeature('s220')
+feature f517: de.up.ling.irtg.maxent.RuleNameFeature('s6105')
+feature f518: de.up.ling.irtg.maxent.RuleNameFeature('s9535')
+feature f519: de.up.ling.irtg.maxent.RuleNameFeature('s12116')
+feature f520: de.up.ling.irtg.maxent.RuleNameFeature('s3481')
+feature f521: de.up.ling.irtg.maxent.RuleNameFeature('s1501')
+feature f522: de.up.ling.irtg.maxent.RuleNameFeature('s5885')
+feature f523: de.up.ling.irtg.maxent.RuleNameFeature('s7402')
+feature f524: de.up.ling.irtg.maxent.RuleNameFeature('s8819')
+feature f525: de.up.ling.irtg.maxent.RuleNameFeature('s832')
+feature f526: de.up.ling.irtg.maxent.RuleNameFeature('s1789')
+feature f527: de.up.ling.irtg.maxent.RuleNameFeature('s1075')
+feature f528: de.up.ling.irtg.maxent.RuleNameFeature('s29')
+feature f529: de.up.ling.irtg.maxent.RuleNameFeature('s12955')
+feature f530: de.up.ling.irtg.maxent.RuleNameFeature('s8314')
+feature f531: de.up.ling.irtg.maxent.RuleNameFeature('s6827')
+feature f532: de.up.ling.irtg.maxent.RuleNameFeature('s4322')
+feature f533: de.up.ling.irtg.maxent.RuleNameFeature('s6805')
+feature f534: de.up.ling.irtg.maxent.RuleNameFeature('s11590')
+feature f535: de.up.ling.irtg.maxent.RuleNameFeature('s2856')
+feature f536: de.up.ling.irtg.maxent.RuleNameFeature('s7955')
+feature f537: de.up.ling.irtg.maxent.RuleNameFeature('s233')
+feature f538: de.up.ling.irtg.maxent.RuleNameFeature('s6396')
+feature f539: de.up.ling.irtg.maxent.RuleNameFeature('s4474')
+feature f540: de.up.ling.irtg.maxent.RuleNameFeature('s6036')
+feature f541: de.up.ling.irtg.maxent.RuleNameFeature('s8234')
+feature f542: de.up.ling.irtg.maxent.RuleNameFeature('s327')
+feature f543: de.up.ling.irtg.maxent.RuleNameFeature('s96')
+feature f544: de.up.ling.irtg.maxent.RuleNameFeature('s348')
+feature f545: de.up.ling.irtg.maxent.RuleNameFeature('s8936')
+feature f546: de.up.ling.irtg.maxent.RuleNameFeature('s1261')
+feature f547: de.up.ling.irtg.maxent.RuleNameFeature('s7633')
+feature f548: de.up.ling.irtg.maxent.RuleNameFeature('s10002')
+feature f549: de.up.ling.irtg.maxent.RuleNameFeature('s7727')
+feature f550: de.up.ling.irtg.maxent.RuleNameFeature('s2524')
+feature f551: de.up.ling.irtg.maxent.RuleNameFeature('s12094')
+feature f552: de.up.ling.irtg.maxent.RuleNameFeature('s4834')
+feature f553: de.up.ling.irtg.maxent.RuleNameFeature('s6956')
+feature f554: de.up.ling.irtg.maxent.RuleNameFeature('s2577')
+feature f555: de.up.ling.irtg.maxent.RuleNameFeature('s7016')
+feature f556: de.up.ling.irtg.maxent.RuleNameFeature('s6825')
+feature f557: de.up.ling.irtg.maxent.RuleNameFeature('s9480')
+feature f558: de.up.ling.irtg.maxent.RuleNameFeature('s7979')
+feature f559: de.up.ling.irtg.maxent.RuleNameFeature('s13134')
+feature f560: de.up.ling.irtg.maxent.RuleNameFeature('s10977')
+feature f561: de.up.ling.irtg.maxent.RuleNameFeature('s5505')
+feature f562: de.up.ling.irtg.maxent.RuleNameFeature('s10210')
+feature f563: de.up.ling.irtg.maxent.RuleNameFeature('s10477')
+feature f564: de.up.ling.irtg.maxent.RuleNameFeature('s12617')
+feature f565: de.up.ling.irtg.maxent.RuleNameFeature('s236')
+feature f566: de.up.ling.irtg.maxent.RuleNameFeature('s2574')
+feature f567: de.up.ling.irtg.maxent.RuleNameFeature('s9739')
+feature f568: de.up.ling.irtg.maxent.RuleNameFeature('s1718')
+feature f569: de.up.ling.irtg.maxent.RuleNameFeature('s1677')
+feature f570: de.up.ling.irtg.maxent.RuleNameFeature('s8452')
+feature f571: de.up.ling.irtg.maxent.RuleNameFeature('s12086')
+feature f572: de.up.ling.irtg.maxent.RuleNameFeature('s1665')
+feature f573: de.up.ling.irtg.maxent.RuleNameFeature('s5278')
+feature f574: de.up.ling.irtg.maxent.RuleNameFeature('s3551')
+feature f575: de.up.ling.irtg.maxent.RuleNameFeature('s7141')
+feature f576: de.up.ling.irtg.maxent.RuleNameFeature('s1728')
+feature f577: de.up.ling.irtg.maxent.RuleNameFeature('s1570')
+feature f578: de.up.ling.irtg.maxent.RuleNameFeature('s4248')
+feature f579: de.up.ling.irtg.maxent.RuleNameFeature('s6612')
+feature f580: de.up.ling.irtg.maxent.RuleNameFeature('s10190')
+feature f581: de.up.ling.irtg.maxent.RuleNameFeature('s10787')
+feature f582: de.up.ling.irtg.maxent.RuleNameFeature('s2793')
+feature f583: de.up.ling.irtg.maxent.RuleNameFeature('s7488')
+feature f584: de.up.ling.irtg.maxent.RuleNameFeature('s5675')
+feature f585: de.up.ling.irtg.maxent.RuleNameFeature('s10995')
+feature f586: de.up.ling.irtg.maxent.RuleNameFeature('s4967')
+feature f587: de.up.ling.irtg.maxent.RuleNameFeature('s12414')
+feature f588: de.up.ling.irtg.maxent.RuleNameFeature('s5275')
+feature f589: de.up.ling.irtg.maxent.RuleNameFeature('s342')
+feature f590: de.up.ling.irtg.maxent.RuleNameFeature('s5106')
+feature f591: de.up.ling.irtg.maxent.RuleNameFeature('s7309')
+feature f592: de.up.ling.irtg.maxent.RuleNameFeature('s12283')
+feature f593: de.up.ling.irtg.maxent.RuleNameFeature('s5945')
+feature f594: de.up.ling.irtg.maxent.RuleNameFeature('s2915')
+feature f595: de.up.ling.irtg.maxent.RuleNameFeature('s12999')
+feature f596: de.up.ling.irtg.maxent.RuleNameFeature('s5497')
+feature f597: de.up.ling.irtg.maxent.RuleNameFeature('s8390')
+feature f598: de.up.ling.irtg.maxent.RuleNameFeature('s2674')
+feature f599: de.up.ling.irtg.maxent.RuleNameFeature('s2460')
+feature f600: de.up.ling.irtg.maxent.RuleNameFeature('s8045')
+feature f601: de.up.ling.irtg.maxent.RuleNameFeature('s1020')
+feature f602: de.up.ling.irtg.maxent.RuleNameFeature('s10489')
+feature f603: de.up.ling.irtg.maxent.RuleNameFeature('s567')
+feature f604: de.up.ling.irtg.maxent.RuleNameFeature('s6564')
+feature f605: de.up.ling.irtg.maxent.RuleNameFeature('s9586')
+feature f606: de.up.ling.irtg.maxent.RuleNameFeature('s7352')
+feature f607: de.up.ling.irtg.maxent.RuleNameFeature('s76')
+feature f608: de.up.ling.irtg.maxent.RuleNameFeature('s5435')
+feature f609: de.up.ling.irtg.maxent.RuleNameFeature('s9260')
+feature f610: de.up.ling.irtg.maxent.RuleNameFeature('s5493')
+feature f611: de.up.ling.irtg.maxent.RuleNameFeature('s4706')
+feature f612: de.up.ling.irtg.maxent.RuleNameFeature('s1863')
+feature f613: de.up.ling.irtg.maxent.RuleNameFeature('s5146')
+feature f614: de.up.ling.irtg.maxent.RuleNameFeature('s2872')
+feature f615: de.up.ling.irtg.maxent.RuleNameFeature('s4656')
+feature f616: de.up.ling.irtg.maxent.RuleNameFeature('s5097')
+feature f617: de.up.ling.irtg.maxent.RuleNameFeature('s9236')
+feature f618: de.up.ling.irtg.maxent.RuleNameFeature('s2087')
+feature f619: de.up.ling.irtg.maxent.RuleNameFeature('s156')
+feature f620: de.up.ling.irtg.maxent.RuleNameFeature('s2381')
+feature f621: de.up.ling.irtg.maxent.RuleNameFeature('s9268')
+feature f622: de.up.ling.irtg.maxent.RuleNameFeature('s13053')
+feature f623: de.up.ling.irtg.maxent.RuleNameFeature('s549')
+feature f624: de.up.ling.irtg.maxent.RuleNameFeature('s10619')
+feature f625: de.up.ling.irtg.maxent.RuleNameFeature('s1139')
+feature f626: de.up.ling.irtg.maxent.RuleNameFeature('s5166')
+feature f627: de.up.ling.irtg.maxent.RuleNameFeature('s368')
+feature f628: de.up.ling.irtg.maxent.RuleNameFeature('s2437')
+feature f629: de.up.ling.irtg.maxent.RuleNameFeature('s2090')
+feature f630: de.up.ling.irtg.maxent.RuleNameFeature('s1574')
+feature f631: de.up.ling.irtg.maxent.RuleNameFeature('s12050')
+feature f632: de.up.ling.irtg.maxent.RuleNameFeature('s10742')
+feature f633: de.up.ling.irtg.maxent.RuleNameFeature('s8213')
+feature f634: de.up.ling.irtg.maxent.RuleNameFeature('s2290')
+feature f635: de.up.ling.irtg.maxent.RuleNameFeature('s4360')
+feature f636: de.up.ling.irtg.maxent.RuleNameFeature('s269')
+feature f637: de.up.ling.irtg.maxent.RuleNameFeature('s560')
+feature f638: de.up.ling.irtg.maxent.RuleNameFeature('s7920')
+feature f639: de.up.ling.irtg.maxent.RuleNameFeature('s328')
+feature f640: de.up.ling.irtg.maxent.RuleNameFeature('s4804')
+feature f641: de.up.ling.irtg.maxent.RuleNameFeature('s8981')
+feature f642: de.up.ling.irtg.maxent.RuleNameFeature('s1312')
+feature f643: de.up.ling.irtg.maxent.RuleNameFeature('s1805')
+feature f644: de.up.ling.irtg.maxent.RuleNameFeature('s9251')
+feature f645: de.up.ling.irtg.maxent.RuleNameFeature('s3127')
+feature f646: de.up.ling.irtg.maxent.RuleNameFeature('s4363')
+feature f647: de.up.ling.irtg.maxent.RuleNameFeature('s3391')
+feature f648: de.up.ling.irtg.maxent.RuleNameFeature('s2067')
+feature f649: de.up.ling.irtg.maxent.RuleNameFeature('s1773')
+feature f650: de.up.ling.irtg.maxent.RuleNameFeature('s12185')
+feature f651: de.up.ling.irtg.maxent.RuleNameFeature('s2617')
+feature f652: de.up.ling.irtg.maxent.RuleNameFeature('s4217')
+feature f653: de.up.ling.irtg.maxent.RuleNameFeature('s9844')
+feature f654: de.up.ling.irtg.maxent.RuleNameFeature('s4677')
+feature f655: de.up.ling.irtg.maxent.RuleNameFeature('s9768')
+feature f656: de.up.ling.irtg.maxent.RuleNameFeature('s1986')
+feature f657: de.up.ling.irtg.maxent.RuleNameFeature('s10561')
+feature f658: de.up.ling.irtg.maxent.RuleNameFeature('s4713')
+feature f659: de.up.ling.irtg.maxent.RuleNameFeature('s2881')
+feature f660: de.up.ling.irtg.maxent.RuleNameFeature('s6031')
+feature f661: de.up.ling.irtg.maxent.RuleNameFeature('s228')
+feature f662: de.up.ling.irtg.maxent.RuleNameFeature('s10552')
+feature f663: de.up.ling.irtg.maxent.RuleNameFeature('s5603')
+feature f664: de.up.ling.irtg.maxent.RuleNameFeature('s184')
+feature f665: de.up.ling.irtg.maxent.RuleNameFeature('s12412')
+feature f666: de.up.ling.irtg.maxent.RuleNameFeature('s138')
+feature f667: de.up.ling.irtg.maxent.RuleNameFeature('s2863')
+feature f668: de.up.ling.irtg.maxent.RuleNameFeature('s3591')
+feature f669: de.up.ling.irtg.maxent.RuleNameFeature('s4428')
+feature f670: de.up.ling.irtg.maxent.RuleNameFeature('s3757')
+feature f671: de.up.ling.irtg.maxent.RuleNameFeature('s10660')
+feature f672: de.up.ling.irtg.maxent.RuleNameFeature('s7')
+feature f673: de.up.ling.irtg.maxent.RuleNameFeature('s4784')
+feature f674: de.up.ling.irtg.maxent.RuleNameFeature('s3361')
+feature f675: de.up.ling.irtg.maxent.RuleNameFeature('s10852')
+feature f676: de.up.ling.irtg.maxent.RuleNameFeature('s1381')
+feature f677: de.up.ling.irtg.maxent.RuleNameFeature('s2668')
+feature f678: de.up.ling.irtg.maxent.RuleNameFeature('s177')
+feature f679: de.up.ling.irtg.maxent.RuleNameFeature('s9400')
+feature f680: de.up.ling.irtg.maxent.RuleNameFeature('s10346')
+feature f681: de.up.ling.irtg.maxent.RuleNameFeature('s11773')
+feature f682: de.up.ling.irtg.maxent.RuleNameFeature('s4086')
+feature f683: de.up.ling.irtg.maxent.RuleNameFeature('s6549')
+feature f684: de.up.ling.irtg.maxent.RuleNameFeature('s5613')
+feature f685: de.up.ling.irtg.maxent.RuleNameFeature('s10589')
+feature f686: de.up.ling.irtg.maxent.RuleNameFeature('s3002')
+feature f687: de.up.ling.irtg.maxent.RuleNameFeature('s4180')
+feature f688: de.up.ling.irtg.maxent.RuleNameFeature('s3141')
+feature f689: de.up.ling.irtg.maxent.RuleNameFeature('s5723')
+feature f690: de.up.ling.irtg.maxent.RuleNameFeature('s10970')
+feature f691: de.up.ling.irtg.maxent.RuleNameFeature('s3140')
+feature f692: de.up.ling.irtg.maxent.RuleNameFeature('s3714')
+feature f693: de.up.ling.irtg.maxent.RuleNameFeature('s5260')
+feature f694: de.up.ling.irtg.maxent.RuleNameFeature('s13156')
+feature f695: de.up.ling.irtg.maxent.RuleNameFeature('s2765')
+feature f696: de.up.ling.irtg.maxent.RuleNameFeature('s12946')
+feature f697: de.up.ling.irtg.maxent.RuleNameFeature('s1737')
+feature f698: de.up.ling.irtg.maxent.RuleNameFeature('s4367')
+feature f699: de.up.ling.irtg.maxent.RuleNameFeature('s12814')
+feature f700: de.up.ling.irtg.maxent.RuleNameFeature('s10866')
+feature f701: de.up.ling.irtg.maxent.RuleNameFeature('s1180')
+feature f702: de.up.ling.irtg.maxent.RuleNameFeature('s5591')
+feature f703: de.up.ling.irtg.maxent.RuleNameFeature('s8485')
+feature f704: de.up.ling.irtg.maxent.RuleNameFeature('s1405')
+feature f705: de.up.ling.irtg.maxent.RuleNameFeature('s2072')
+feature f706: de.up.ling.irtg.maxent.RuleNameFeature('s4432')
+feature f707: de.up.ling.irtg.maxent.RuleNameFeature('s8413')
+feature f708: de.up.ling.irtg.maxent.RuleNameFeature('s3291')
+feature f709: de.up.ling.irtg.maxent.RuleNameFeature('s12847')
+feature f710: de.up.ling.irtg.maxent.RuleNameFeature('s4420')
+feature f711: de.up.ling.irtg.maxent.RuleNameFeature('s5917')
+feature f712: de.up.ling.irtg.maxent.RuleNameFeature('s912')
+feature f713: de.up.ling.irtg.maxent.RuleNameFeature('s278')
+feature f714: de.up.ling.irtg.maxent.RuleNameFeature('s8041')
+feature f715: de.up.ling.irtg.maxent.RuleNameFeature('s10920')
+feature f716: de.up.ling.irtg.maxent.RuleNameFeature('s6174')
+feature f717: de.up.ling.irtg.maxent.RuleNameFeature('s769')
+feature f718: de.up.ling.irtg.maxent.RuleNameFeature('s827')
+feature f719: de.up.ling.irtg.maxent.RuleNameFeature('s12205')
+feature f720: de.up.ling.irtg.maxent.RuleNameFeature('s5937')
+feature f721: de.up.ling.irtg.maxent.RuleNameFeature('s5776')
+feature f722: de.up.ling.irtg.maxent.RuleNameFeature('s10980')
+feature f723: de.up.ling.irtg.maxent.RuleNameFeature('s4')
+feature f724: de.up.ling.irtg.maxent.RuleNameFeature('s10869')
+feature f725: de.up.ling.irtg.maxent.RuleNameFeature('s4534')
+feature f726: de.up.ling.irtg.maxent.RuleNameFeature('s12716')
+feature f727: de.up.ling.irtg.maxent.RuleNameFeature('s7604')
+feature f728: de.up.ling.irtg.maxent.RuleNameFeature('s6298')
+feature f729: de.up.ling.irtg.maxent.RuleNameFeature('s11061')
+feature f730: de.up.ling.irtg.maxent.RuleNameFeature('s8014')
+feature f731: de.up.ling.irtg.maxent.RuleNameFeature('s1411')
+feature f732: de.up.ling.irtg.maxent.RuleNameFeature('s10150')
+feature f733: de.up.ling.irtg.maxent.RuleNameFeature('s11587')
+feature f734: de.up.ling.irtg.maxent.RuleNameFeature('s1160')
+feature f735: de.up.ling.irtg.maxent.RuleNameFeature('s534')
+feature f736: de.up.ling.irtg.maxent.RuleNameFeature('s5681')
+feature f737: de.up.ling.irtg.maxent.RuleNameFeature('s7302')
+feature f738: de.up.ling.irtg.maxent.RuleNameFeature('s9225')
+feature f739: de.up.ling.irtg.maxent.RuleNameFeature('s324')
+feature f740: de.up.ling.irtg.maxent.RuleNameFeature('s9874')
+feature f741: de.up.ling.irtg.maxent.RuleNameFeature('s2905')
+feature f742: de.up.ling.irtg.maxent.RuleNameFeature('s13055')
+feature f743: de.up.ling.irtg.maxent.RuleNameFeature('s3699')
+feature f744: de.up.ling.irtg.maxent.RuleNameFeature('s4330')
+feature f745: de.up.ling.irtg.maxent.RuleNameFeature('s13031')
+feature f746: de.up.ling.irtg.maxent.RuleNameFeature('s11960')
+feature f747: de.up.ling.irtg.maxent.RuleNameFeature('s10973')
+feature f748: de.up.ling.irtg.maxent.RuleNameFeature('s10230')
+feature f749: de.up.ling.irtg.maxent.RuleNameFeature('s10803')
+feature f750: de.up.ling.irtg.maxent.RuleNameFeature('s10897')
+feature f751: de.up.ling.irtg.maxent.RuleNameFeature('s12992')
+feature f752: de.up.ling.irtg.maxent.RuleNameFeature('s4435')
+feature f753: de.up.ling.irtg.maxent.RuleNameFeature('s12301')
+feature f754: de.up.ling.irtg.maxent.RuleNameFeature('s1285')
+feature f755: de.up.ling.irtg.maxent.RuleNameFeature('s2894')
+feature f756: de.up.ling.irtg.maxent.RuleNameFeature('s8104')
+feature f757: de.up.ling.irtg.maxent.RuleNameFeature('s2590')
+feature f758: de.up.ling.irtg.maxent.RuleNameFeature('s4755')
+feature f759: de.up.ling.irtg.maxent.RuleNameFeature('s7419')
+feature f760: de.up.ling.irtg.maxent.RuleNameFeature('s6348')
+feature f761: de.up.ling.irtg.maxent.RuleNameFeature('s12099')
+feature f762: de.up.ling.irtg.maxent.RuleNameFeature('s7950')
+feature f763: de.up.ling.irtg.maxent.RuleNameFeature('s2952')
+feature f764: de.up.ling.irtg.maxent.RuleNameFeature('s2624')
+feature f765: de.up.ling.irtg.maxent.RuleNameFeature('s11841')
+feature f766: de.up.ling.irtg.maxent.RuleNameFeature('s10456')
+feature f767: de.up.ling.irtg.maxent.RuleNameFeature('s5633')
+feature f768: de.up.ling.irtg.maxent.RuleNameFeature('s5987')
+feature f769: de.up.ling.irtg.maxent.RuleNameFeature('s10831')
+feature f770: de.up.ling.irtg.maxent.RuleNameFeature('s7503')
+feature f771: de.up.ling.irtg.maxent.RuleNameFeature('s7261')
+feature f772: de.up.ling.irtg.maxent.RuleNameFeature('s12431')
+feature f773: de.up.ling.irtg.maxent.RuleNameFeature('s13475')
+feature f774: de.up.ling.irtg.maxent.RuleNameFeature('s6219')
+feature f775: de.up.ling.irtg.maxent.RuleNameFeature('s3702')
+feature f776: de.up.ling.irtg.maxent.RuleNameFeature('s1174')
+feature f777: de.up.ling.irtg.maxent.RuleNameFeature('s5594')
+feature f778: de.up.ling.irtg.maxent.RuleNameFeature('s4145')
+feature f779: de.up.ling.irtg.maxent.RuleNameFeature('s981')
+feature f780: de.up.ling.irtg.maxent.RuleNameFeature('s405')
+feature f781: de.up.ling.irtg.maxent.RuleNameFeature('s12936')
+feature f782: de.up.ling.irtg.maxent.RuleNameFeature('s7412')
+feature f783: de.up.ling.irtg.maxent.RuleNameFeature('s13432')
+feature f784: de.up.ling.irtg.maxent.RuleNameFeature('s108')
+feature f785: de.up.ling.irtg.maxent.RuleNameFeature('s3500')
+feature f786: de.up.ling.irtg.maxent.RuleNameFeature('s11925')
+feature f787: de.up.ling.irtg.maxent.RuleNameFeature('s4044')
+feature f788: de.up.ling.irtg.maxent.RuleNameFeature('s4361')
+feature f789: de.up.ling.irtg.maxent.RuleNameFeature('s1704')
+feature f790: de.up.ling.irtg.maxent.RuleNameFeature('s32')
+feature f791: de.up.ling.irtg.maxent.RuleNameFeature('s2197')
+feature f792: de.up.ling.irtg.maxent.RuleNameFeature('s4769')
+feature f793: de.up.ling.irtg.maxent.RuleNameFeature('s1833')
+feature f794: de.up.ling.irtg.maxent.RuleNameFeature('s2192')
+feature f795: de.up.ling.irtg.maxent.RuleNameFeature('s4223')
+feature f796: de.up.ling.irtg.maxent.RuleNameFeature('s12195')
+feature f797: de.up.ling.irtg.maxent.RuleNameFeature('s1628')
+feature f798: de.up.ling.irtg.maxent.RuleNameFeature('s11988')
+feature f799: de.up.ling.irtg.maxent.RuleNameFeature('s4513')
+feature f800: de.up.ling.irtg.maxent.RuleNameFeature('s347')
+feature f801: de.up.ling.irtg.maxent.RuleNameFeature('s304')
+feature f802: de.up.ling.irtg.maxent.RuleNameFeature('s225')
+feature f803: de.up.ling.irtg.maxent.RuleNameFeature('s7211')
+feature f804: de.up.ling.irtg.maxent.RuleNameFeature('s796')
+feature f805: de.up.ling.irtg.maxent.RuleNameFeature('s9746')
+feature f806: de.up.ling.irtg.maxent.RuleNameFeature('s10747')
+feature f807: de.up.ling.irtg.maxent.RuleNameFeature('s6209')
+feature f808: de.up.ling.irtg.maxent.RuleNameFeature('s212')
+feature f809: de.up.ling.irtg.maxent.RuleNameFeature('s7970')
+feature f810: de.up.ling.irtg.maxent.RuleNameFeature('s3863')
+feature f811: de.up.ling.irtg.maxent.RuleNameFeature('s4703')
+feature f812: de.up.ling.irtg.maxent.RuleNameFeature('s11060')
+feature f813: de.up.ling.irtg.maxent.RuleNameFeature('s4483')
+feature f814: de.up.ling.irtg.maxent.RuleNameFeature('s305')
+feature f815: de.up.ling.irtg.maxent.RuleNameFeature('s10434')
+feature f816: de.up.ling.irtg.maxent.RuleNameFeature('s4932')
+feature f817: de.up.ling.irtg.maxent.RuleNameFeature('s2526')
+feature f818: de.up.ling.irtg.maxent.RuleNameFeature('s11930')
+feature f819: de.up.ling.irtg.maxent.RuleNameFeature('s10936')
+feature f820: de.up.ling.irtg.maxent.RuleNameFeature('s5627')
+feature f821: de.up.ling.irtg.maxent.RuleNameFeature('s6636')
+feature f822: de.up.ling.irtg.maxent.RuleNameFeature('s963')
+feature f823: de.up.ling.irtg.maxent.RuleNameFeature('s4686')
+feature f824: de.up.ling.irtg.maxent.RuleNameFeature('s8697')
+feature f825: de.up.ling.irtg.maxent.RuleNameFeature('s541')
+feature f826: de.up.ling.irtg.maxent.RuleNameFeature('s12150')
+feature f827: de.up.ling.irtg.maxent.RuleNameFeature('s11668')
+feature f828: de.up.ling.irtg.maxent.RuleNameFeature('s2974')
+feature f829: de.up.ling.irtg.maxent.RuleNameFeature('s12013')
+feature f830: de.up.ling.irtg.maxent.RuleNameFeature('s8446')
+feature f831: de.up.ling.irtg.maxent.RuleNameFeature('s852')
+feature f832: de.up.ling.irtg.maxent.RuleNameFeature('s1251')
+feature f833: de.up.ling.irtg.maxent.RuleNameFeature('s2240')
+feature f834: de.up.ling.irtg.maxent.RuleNameFeature('s6839')
+feature f835: de.up.ling.irtg.maxent.RuleNameFeature('s326')
+feature f836: de.up.ling.irtg.maxent.RuleNameFeature('s12359')
+feature f837: de.up.ling.irtg.maxent.RuleNameFeature('s12180')
+feature f838: de.up.ling.irtg.maxent.RuleNameFeature('s9197')
+feature f839: de.up.ling.irtg.maxent.RuleNameFeature('s366')
+feature f840: de.up.ling.irtg.maxent.RuleNameFeature('s9585')
+feature f841: de.up.ling.irtg.maxent.RuleNameFeature('s4659')
+feature f842: de.up.ling.irtg.maxent.RuleNameFeature('s9866')
+feature f843: de.up.ling.irtg.maxent.RuleNameFeature('s3878')
+feature f844: de.up.ling.irtg.maxent.RuleNameFeature('s5133')
+feature f845: de.up.ling.irtg.maxent.RuleNameFeature('s10499')
+feature f846: de.up.ling.irtg.maxent.RuleNameFeature('s11423')
+feature f847: de.up.ling.irtg.maxent.RuleNameFeature('s6388')
+feature f848: de.up.ling.irtg.maxent.RuleNameFeature('s9397')
+feature f849: de.up.ling.irtg.maxent.RuleNameFeature('s183')
+feature f850: de.up.ling.irtg.maxent.RuleNameFeature('s10637')
+feature f851: de.up.ling.irtg.maxent.RuleNameFeature('s9031')
+feature f852: de.up.ling.irtg.maxent.RuleNameFeature('s40')
+feature f853: de.up.ling.irtg.maxent.RuleNameFeature('s4229')
+feature f854: de.up.ling.irtg.maxent.RuleNameFeature('s13271')
+feature f855: de.up.ling.irtg.maxent.RuleNameFeature('s4712')
+feature f856: de.up.ling.irtg.maxent.RuleNameFeature('s1855')
+feature f857: de.up.ling.irtg.maxent.RuleNameFeature('s2113')
+feature f858: de.up.ling.irtg.maxent.RuleNameFeature('s1150')
+feature f859: de.up.ling.irtg.maxent.RuleNameFeature('s4256')
+feature f860: de.up.ling.irtg.maxent.RuleNameFeature('s3516')
+feature f861: de.up.ling.irtg.maxent.RuleNameFeature('s5677')
+feature f862: de.up.ling.irtg.maxent.RuleNameFeature('s837')
+feature f863: de.up.ling.irtg.maxent.RuleNameFeature('s6932')
+feature f864: de.up.ling.irtg.maxent.RuleNameFeature('s9011')
+feature f865: de.up.ling.irtg.maxent.RuleNameFeature('s4089')
+feature f866: de.up.ling.irtg.maxent.RuleNameFeature('s13459')
+feature f867: de.up.ling.irtg.maxent.RuleNameFeature('s39')
+feature f868: de.up.ling.irtg.maxent.RuleNameFeature('s10615')
+feature f869: de.up.ling.irtg.maxent.RuleNameFeature('s6597')
+feature f870: de.up.ling.irtg.maxent.RuleNameFeature('s2688')
+feature f871: de.up.ling.irtg.maxent.RuleNameFeature('s12039')
+feature f872: de.up.ling.irtg.maxent.RuleNameFeature('s5634')
+feature f873: de.up.ling.irtg.maxent.RuleNameFeature('s12723')
+feature f874: de.up.ling.irtg.maxent.RuleNameFeature('s2917')
+feature f875: de.up.ling.irtg.maxent.RuleNameFeature('s182')
+feature f876: de.up.ling.irtg.maxent.RuleNameFeature('s1273')
+feature f877: de.up.ling.irtg.maxent.RuleNameFeature('s1748')
+feature f878: de.up.ling.irtg.maxent.RuleNameFeature('s9035')
+feature f879: de.up.ling.irtg.maxent.RuleNameFeature('s296')
+feature f880: de.up.ling.irtg.maxent.RuleNameFeature('s12210')
+feature f881: de.up.ling.irtg.maxent.RuleNameFeature('s8035')
+feature f882: de.up.ling.irtg.maxent.RuleNameFeature('s241')
+feature f883: de.up.ling.irtg.maxent.RuleNameFeature('s8306')
+feature f884: de.up.ling.irtg.maxent.RuleNameFeature('s10341')
+feature f885: de.up.ling.irtg.maxent.RuleNameFeature('s2098')
+feature f886: de.up.ling.irtg.maxent.RuleNameFeature('s224')
+feature f887: de.up.ling.irtg.maxent.RuleNameFeature('s8033')
+feature f888: de.up.ling.irtg.maxent.RuleNameFeature('s9566')
+feature f889: de.up.ling.irtg.maxent.RuleNameFeature('s8201')
+feature f890: de.up.ling.irtg.maxent.RuleNameFeature('s1219')
+feature f891: de.up.ling.irtg.maxent.RuleNameFeature('s4972')
+feature f892: de.up.ling.irtg.maxent.RuleNameFeature('s7313')
+feature f893: de.up.ling.irtg.maxent.RuleNameFeature('s3763')
+feature f894: de.up.ling.irtg.maxent.RuleNameFeature('s80')
+feature f895: de.up.ling.irtg.maxent.RuleNameFeature('s4459')
+feature f896: de.up.ling.irtg.maxent.RuleNameFeature('s9674')
+feature f897: de.up.ling.irtg.maxent.RuleNameFeature('s1697')
+feature f898: de.up.ling.irtg.maxent.RuleNameFeature('s10330')
+feature f899: de.up.ling.irtg.maxent.RuleNameFeature('s902')
+feature f900: de.up.ling.irtg.maxent.RuleNameFeature('s9162')
+feature f901: de.up.ling.irtg.maxent.RuleNameFeature('s7299')
+feature f902: de.up.ling.irtg.maxent.RuleNameFeature('s10099')
+feature f903: de.up.ling.irtg.maxent.RuleNameFeature('s2748')
+feature f904: de.up.ling.irtg.maxent.RuleNameFeature('s9496')
+feature f905: de.up.ling.irtg.maxent.RuleNameFeature('s5265')
+feature f906: de.up.ling.irtg.maxent.RuleNameFeature('s5053')
+feature f907: de.up.ling.irtg.maxent.RuleNameFeature('s1707')
+feature f908: de.up.ling.irtg.maxent.RuleNameFeature('s284')
+feature f909: de.up.ling.irtg.maxent.RuleNameFeature('s5473')
+feature f910: de.up.ling.irtg.maxent.RuleNameFeature('s12329')
+feature f911: de.up.ling.irtg.maxent.RuleNameFeature('s10039')
+feature f912: de.up.ling.irtg.maxent.RuleNameFeature('s8880')
+feature f913: de.up.ling.irtg.maxent.RuleNameFeature('s1982')
+feature f914: de.up.ling.irtg.maxent.RuleNameFeature('s6041')
+feature f915: de.up.ling.irtg.maxent.RuleNameFeature('s2369')
+feature f916: de.up.ling.irtg.maxent.RuleNameFeature('s12114')
+feature f917: de.up.ling.irtg.maxent.RuleNameFeature('s4671')
+feature f918: de.up.ling.irtg.maxent.RuleNameFeature('s11089')
+feature f919: de.up.ling.irtg.maxent.RuleNameFeature('s12460')
+feature f920: de.up.ling.irtg.maxent.RuleNameFeature('s1480')
+feature f921: de.up.ling.irtg.maxent.RuleNameFeature('s1462')
+feature f922: de.up.ling.irtg.maxent.RuleNameFeature('s8889')
+feature f923: de.up.ling.irtg.maxent.RuleNameFeature('s12198')
+feature f924: de.up.ling.irtg.maxent.RuleNameFeature('s4495')
+feature f925: de.up.ling.irtg.maxent.RuleNameFeature('s953')
+feature f926: de.up.ling.irtg.maxent.RuleNameFeature('s6992')
+feature f927: de.up.ling.irtg.maxent.RuleNameFeature('s8189')
+feature f928: de.up.ling.irtg.maxent.RuleNameFeature('s10752')
+feature f929: de.up.ling.irtg.maxent.RuleNameFeature('s9020')
+feature f930: de.up.ling.irtg.maxent.RuleNameFeature('s12330')
+feature f931: de.up.ling.irtg.maxent.RuleNameFeature('s36')
+feature f932: de.up.ling.irtg.maxent.RuleNameFeature('s12098')
+feature f933: de.up.ling.irtg.maxent.RuleNameFeature('s5571')
+feature f934: de.up.ling.irtg.maxent.RuleNameFeature('s5198')
+feature f935: de.up.ling.irtg.maxent.RuleNameFeature('s4623')
+feature f936: de.up.ling.irtg.maxent.RuleNameFeature('s9516')
+feature f937: de.up.ling.irtg.maxent.RuleNameFeature('s5957')
+feature f938: de.up.ling.irtg.maxent.RuleNameFeature('s8571')
+feature f939: de.up.ling.irtg.maxent.RuleNameFeature('s3013')
+feature f940: de.up.ling.irtg.maxent.RuleNameFeature('s10902')
+feature f941: de.up.ling.irtg.maxent.RuleNameFeature('s5242')
+feature f942: de.up.ling.irtg.maxent.RuleNameFeature('s1780')
+feature f943: de.up.ling.irtg.maxent.RuleNameFeature('s11052')
+feature f944: de.up.ling.irtg.maxent.RuleNameFeature('s12171')
+feature f945: de.up.ling.irtg.maxent.RuleNameFeature('s8849')
+feature f946: de.up.ling.irtg.maxent.RuleNameFeature('s1849')
+feature f947: de.up.ling.irtg.maxent.RuleNameFeature('s69')
+feature f948: de.up.ling.irtg.maxent.RuleNameFeature('s2683')
+feature f949: de.up.ling.irtg.maxent.RuleNameFeature('s11790')
+feature f950: de.up.ling.irtg.maxent.RuleNameFeature('s306')
+feature f951: de.up.ling.irtg.maxent.RuleNameFeature('s9344')
+feature f952: de.up.ling.irtg.maxent.RuleNameFeature('s2568')
+feature f953: de.up.ling.irtg.maxent.RuleNameFeature('s4957')
+feature f954: de.up.ling.irtg.maxent.RuleNameFeature('s11591')
+feature f955: de.up.ling.irtg.maxent.RuleNameFeature('s6702')
+feature f956: de.up.ling.irtg.maxent.RuleNameFeature('s10956')
+feature f957: de.up.ling.irtg.maxent.RuleNameFeature('s2153')
+feature f958: de.up.ling.irtg.maxent.RuleNameFeature('s920')
+feature f959: de.up.ling.irtg.maxent.RuleNameFeature('s4685')
+feature f960: de.up.ling.irtg.maxent.RuleNameFeature('s4869')
+feature f961: de.up.ling.irtg.maxent.RuleNameFeature('s2986')
+feature f962: de.up.ling.irtg.maxent.RuleNameFeature('s2157')
+feature f963: de.up.ling.irtg.maxent.RuleNameFeature('s6790')
+feature f964: de.up.ling.irtg.maxent.RuleNameFeature('s5074')
+feature f965: de.up.ling.irtg.maxent.RuleNameFeature('s4602')
+feature f966: de.up.ling.irtg.maxent.RuleNameFeature('s7846')
+feature f967: de.up.ling.irtg.maxent.RuleNameFeature('s24')
+feature f968: de.up.ling.irtg.maxent.RuleNameFeature('s10779')
+feature f969: de.up.ling.irtg.maxent.RuleNameFeature('s10928')
+feature f970: de.up.ling.irtg.maxent.RuleNameFeature('s13449')
+feature f971: de.up.ling.irtg.maxent.RuleNameFeature('s250')
+feature f972: de.up.ling.irtg.maxent.RuleNameFeature('s5871')
+feature f973: de.up.ling.irtg.maxent.RuleNameFeature('s9983')
+feature f974: de.up.ling.irtg.maxent.RuleNameFeature('s10406')
+feature f975: de.up.ling.irtg.maxent.RuleNameFeature('s10672')
+feature f976: de.up.ling.irtg.maxent.RuleNameFeature('s13279')
+feature f977: de.up.ling.irtg.maxent.RuleNameFeature('s1270')
+feature f978: de.up.ling.irtg.maxent.RuleNameFeature('s10342')
+feature f979: de.up.ling.irtg.maxent.RuleNameFeature('s3691')
+feature f980: de.up.ling.irtg.maxent.RuleNameFeature('s4186')
+feature f981: de.up.ling.irtg.maxent.RuleNameFeature('s3708')
+feature f982: de.up.ling.irtg.maxent.RuleNameFeature('s3')
+feature f983: de.up.ling.irtg.maxent.RuleNameFeature('s6640')
+feature f984: de.up.ling.irtg.maxent.RuleNameFeature('s12465')
+feature f985: de.up.ling.irtg.maxent.RuleNameFeature('s1513')
+feature f986: de.up.ling.irtg.maxent.RuleNameFeature('s4617')
+feature f987: de.up.ling.irtg.maxent.RuleNameFeature('s653')
+feature f988: de.up.ling.irtg.maxent.RuleNameFeature('s11778')
+feature f989: de.up.ling.irtg.maxent.RuleNameFeature('s12138')
+feature f990: de.up.ling.irtg.maxent.RuleNameFeature('s820')
+feature f991: de.up.ling.irtg.maxent.RuleNameFeature('s12014')
+feature f992: de.up.ling.irtg.maxent.RuleNameFeature('s6799')
+feature f993: de.up.ling.irtg.maxent.RuleNameFeature('s2041')
+feature f994: de.up.ling.irtg.maxent.RuleNameFeature('s1441')
+feature f995: de.up.ling.irtg.maxent.RuleNameFeature('s3718')
+feature f996: de.up.ling.irtg.maxent.RuleNameFeature('s1879')
+feature f997: de.up.ling.irtg.maxent.RuleNameFeature('s2091')
+feature f998: de.up.ling.irtg.maxent.RuleNameFeature('s12784')
+feature f999: de.up.ling.irtg.maxent.RuleNameFeature('s3386')
+feature f1000: de.up.ling.irtg.maxent.RuleNameFeature('s3410')
+feature f1001: de.up.ling.irtg.maxent.RuleNameFeature('s9080')
+feature f1002: de.up.ling.irtg.maxent.RuleNameFeature('s12441')
+feature f1003: de.up.ling.irtg.maxent.RuleNameFeature('s11411')
+feature f1004: de.up.ling.irtg.maxent.RuleNameFeature('s20')
+feature f1005: de.up.ling.irtg.maxent.RuleNameFeature('s6194')
+feature f1006: de.up.ling.irtg.maxent.RuleNameFeature('s10967')
+feature f1007: de.up.ling.irtg.maxent.RuleNameFeature('s427')
+feature f1008: de.up.ling.irtg.maxent.RuleNameFeature('s6288')
+feature f1009: de.up.ling.irtg.maxent.RuleNameFeature('s12009')
+feature f1010: de.up.ling.irtg.maxent.RuleNameFeature('s3134')
+feature f1011: de.up.ling.irtg.maxent.RuleNameFeature('s1175')
+feature f1012: de.up.ling.irtg.maxent.RuleNameFeature('s768')
+feature f1013: de.up.ling.irtg.maxent.RuleNameFeature('s7443')
+feature f1014: de.up.ling.irtg.maxent.RuleNameFeature('s10887')
+feature f1015: de.up.ling.irtg.maxent.RuleNameFeature('s5050')
+feature f1016: de.up.ling.irtg.maxent.RuleNameFeature('s9187')
+feature f1017: de.up.ling.irtg.maxent.RuleNameFeature('s1074')
+feature f1018: de.up.ling.irtg.maxent.RuleNameFeature('s5210')
+feature f1019: de.up.ling.irtg.maxent.RuleNameFeature('s1540')
+feature f1020: de.up.ling.irtg.maxent.RuleNameFeature('s1360')
+feature f1021: de.up.ling.irtg.maxent.RuleNameFeature('s7669')
+feature f1022: de.up.ling.irtg.maxent.RuleNameFeature('s1234')
+feature f1023: de.up.ling.irtg.maxent.RuleNameFeature('s4719')
+feature f1024: de.up.ling.irtg.maxent.RuleNameFeature('s10034')
+feature f1025: de.up.ling.irtg.maxent.RuleNameFeature('s4146')
+feature f1026: de.up.ling.irtg.maxent.RuleNameFeature('s10338')
+feature f1027: de.up.ling.irtg.maxent.RuleNameFeature('s4085')
+feature f1028: de.up.ling.irtg.maxent.RuleNameFeature('s11530')
+feature f1029: de.up.ling.irtg.maxent.RuleNameFeature('s5636')
+feature f1030: de.up.ling.irtg.maxent.RuleNameFeature('s4912')
+feature f1031: de.up.ling.irtg.maxent.RuleNameFeature('s8069')
+feature f1032: de.up.ling.irtg.maxent.RuleNameFeature('s13022')
+feature f1033: de.up.ling.irtg.maxent.RuleNameFeature('s8416')
+feature f1034: de.up.ling.irtg.maxent.RuleNameFeature('s5660')
+feature f1035: de.up.ling.irtg.maxent.RuleNameFeature('s4354')
+feature f1036: de.up.ling.irtg.maxent.RuleNameFeature('s12269')
+feature f1037: de.up.ling.irtg.maxent.RuleNameFeature('s2291')
+feature f1038: de.up.ling.irtg.maxent.RuleNameFeature('s12963')
+feature f1039: de.up.ling.irtg.maxent.RuleNameFeature('s5509')
+feature f1040: de.up.ling.irtg.maxent.RuleNameFeature('s11851')
+feature f1041: de.up.ling.irtg.maxent.RuleNameFeature('s9008')
+feature f1042: de.up.ling.irtg.maxent.RuleNameFeature('s7911')
+feature f1043: de.up.ling.irtg.maxent.RuleNameFeature('s2949')
+feature f1044: de.up.ling.irtg.maxent.RuleNameFeature('s1753')
+feature f1045: de.up.ling.irtg.maxent.RuleNameFeature('s189')
+feature f1046: de.up.ling.irtg.maxent.RuleNameFeature('s6677')
+feature f1047: de.up.ling.irtg.maxent.RuleNameFeature('s3210')
+feature f1048: de.up.ling.irtg.maxent.RuleNameFeature('s4507')
+feature f1049: de.up.ling.irtg.maxent.RuleNameFeature('s1115')
+feature f1050: de.up.ling.irtg.maxent.RuleNameFeature('s2912')
+feature f1051: de.up.ling.irtg.maxent.RuleNameFeature('s2562')
+feature f1052: de.up.ling.irtg.maxent.RuleNameFeature('s171')
+feature f1053: de.up.ling.irtg.maxent.RuleNameFeature('s787')
+feature f1054: de.up.ling.irtg.maxent.RuleNameFeature('s5094')
+feature f1055: de.up.ling.irtg.maxent.RuleNameFeature('s260')
+feature f1056: de.up.ling.irtg.maxent.RuleNameFeature('s8029')
+feature f1057: de.up.ling.irtg.maxent.RuleNameFeature('s1959')
+feature f1058: de.up.ling.irtg.maxent.RuleNameFeature('s481')
+feature f1059: de.up.ling.irtg.maxent.RuleNameFeature('s1739')
+feature f1060: de.up.ling.irtg.maxent.RuleNameFeature('s12940')
+feature f1061: de.up.ling.irtg.maxent.RuleNameFeature('s2020')
+feature f1062: de.up.ling.irtg.maxent.RuleNameFeature('s8542')
+feature f1063: de.up.ling.irtg.maxent.RuleNameFeature('s1534')
+feature f1064: de.up.ling.irtg.maxent.RuleNameFeature('s4271')
+feature f1065: de.up.ling.irtg.maxent.RuleNameFeature('s136')
+feature f1066: de.up.ling.irtg.maxent.RuleNameFeature('s8222')
+feature f1067: de.up.ling.irtg.maxent.RuleNameFeature('s5730')
+feature f1068: de.up.ling.irtg.maxent.RuleNameFeature('s2999')
+feature f1069: de.up.ling.irtg.maxent.RuleNameFeature('s5527')
+feature f1070: de.up.ling.irtg.maxent.RuleNameFeature('s2314')
+feature f1071: de.up.ling.irtg.maxent.RuleNameFeature('s2431')
+feature f1072: de.up.ling.irtg.maxent.RuleNameFeature('s12445')
+feature f1073: de.up.ling.irtg.maxent.RuleNameFeature('s12731')
+feature f1074: de.up.ling.irtg.maxent.RuleNameFeature('s10518')
+feature f1075: de.up.ling.irtg.maxent.RuleNameFeature('s2142')
+feature f1076: de.up.ling.irtg.maxent.RuleNameFeature('s6561')
+feature f1077: de.up.ling.irtg.maxent.RuleNameFeature('s9990')
+feature f1078: de.up.ling.irtg.maxent.RuleNameFeature('s1971')
+feature f1079: de.up.ling.irtg.maxent.RuleNameFeature('s5472')
+feature f1080: de.up.ling.irtg.maxent.RuleNameFeature('s4726')
+feature f1081: de.up.ling.irtg.maxent.RuleNameFeature('s911')
+feature f1082: de.up.ling.irtg.maxent.RuleNameFeature('s6046')
+feature f1083: de.up.ling.irtg.maxent.RuleNameFeature('s10976')
+feature f1084: de.up.ling.irtg.maxent.RuleNameFeature('s5222')
+feature f1085: de.up.ling.irtg.maxent.RuleNameFeature('s1372')
+feature f1086: de.up.ling.irtg.maxent.RuleNameFeature('s4645')
+feature f1087: de.up.ling.irtg.maxent.RuleNameFeature('s9406')
+feature f1088: de.up.ling.irtg.maxent.RuleNameFeature('s4011')
+feature f1089: de.up.ling.irtg.maxent.RuleNameFeature('s6302')
+feature f1090: de.up.ling.irtg.maxent.RuleNameFeature('s8093')
+feature f1091: de.up.ling.irtg.maxent.RuleNameFeature('s445')
+feature f1092: de.up.ling.irtg.maxent.RuleNameFeature('s1204')
+feature f1093: de.up.ling.irtg.maxent.RuleNameFeature('s2529')
+feature f1094: de.up.ling.irtg.maxent.RuleNameFeature('s12735')
+feature f1095: de.up.ling.irtg.maxent.RuleNameFeature('s11')
+feature f1096: de.up.ling.irtg.maxent.RuleNameFeature('s5000')
+feature f1097: de.up.ling.irtg.maxent.RuleNameFeature('s10632')
+feature f1098: de.up.ling.irtg.maxent.RuleNameFeature('s7060')
+feature f1099: de.up.ling.irtg.maxent.RuleNameFeature('s5836')
+feature f1100: de.up.ling.irtg.maxent.RuleNameFeature('s11588')
+feature f1101: de.up.ling.irtg.maxent.RuleNameFeature('s13285')
+feature f1102: de.up.ling.irtg.maxent.RuleNameFeature('s8545')
+feature f1103: de.up.ling.irtg.maxent.RuleNameFeature('s11955')
+feature f1104: de.up.ling.irtg.maxent.RuleNameFeature('s11945')
+feature f1105: de.up.ling.irtg.maxent.RuleNameFeature('s12449')
+feature f1106: de.up.ling.irtg.maxent.RuleNameFeature('s1276')
+feature f1107: de.up.ling.irtg.maxent.RuleNameFeature('s8111')
+feature f1108: de.up.ling.irtg.maxent.RuleNameFeature('s4196')
+feature f1109: de.up.ling.irtg.maxent.RuleNameFeature('s7455')
+feature f1110: de.up.ling.irtg.maxent.RuleNameFeature('s8931')
+feature f1111: de.up.ling.irtg.maxent.RuleNameFeature('s207')
+feature f1112: de.up.ling.irtg.maxent.RuleNameFeature('s3316')
+feature f1113: de.up.ling.irtg.maxent.RuleNameFeature('s5253')
+feature f1114: de.up.ling.irtg.maxent.RuleNameFeature('s13204')
+feature f1115: de.up.ling.irtg.maxent.RuleNameFeature('s5734')
+feature f1116: de.up.ling.irtg.maxent.RuleNameFeature('s9564')
+feature f1117: de.up.ling.irtg.maxent.RuleNameFeature('s9696')
+feature f1118: de.up.ling.irtg.maxent.RuleNameFeature('s310')
+feature f1119: de.up.ling.irtg.maxent.RuleNameFeature('s50')
+feature f1120: de.up.ling.irtg.maxent.RuleNameFeature('s2995')
+feature f1121: de.up.ling.irtg.maxent.RuleNameFeature('s13150')
+feature f1122: de.up.ling.irtg.maxent.RuleNameFeature('s8900')
+feature f1123: de.up.ling.irtg.maxent.RuleNameFeature('s12420')
+feature f1124: de.up.ling.irtg.maxent.RuleNameFeature('s13209')
+feature f1125: de.up.ling.irtg.maxent.RuleNameFeature('s11977')
+feature f1126: de.up.ling.irtg.maxent.RuleNameFeature('s1606')
+feature f1127: de.up.ling.irtg.maxent.RuleNameFeature('s1950')
+feature f1128: de.up.ling.irtg.maxent.RuleNameFeature('s8553')
+feature f1129: de.up.ling.irtg.maxent.RuleNameFeature('s11578')
+feature f1130: de.up.ling.irtg.maxent.RuleNameFeature('s10540')
+feature f1131: de.up.ling.irtg.maxent.RuleNameFeature('s6801')
+feature f1132: de.up.ling.irtg.maxent.RuleNameFeature('s10234')
+feature f1133: de.up.ling.irtg.maxent.RuleNameFeature('s2309')
+feature f1134: de.up.ling.irtg.maxent.RuleNameFeature('s4343')
+feature f1135: de.up.ling.irtg.maxent.RuleNameFeature('s771')
+feature f1136: de.up.ling.irtg.maxent.RuleNameFeature('s9796')
+feature f1137: de.up.ling.irtg.maxent.RuleNameFeature('s8881')
+feature f1138: de.up.ling.irtg.maxent.RuleNameFeature('s1896')
+feature f1139: de.up.ling.irtg.maxent.RuleNameFeature('s12034')
+feature f1140: de.up.ling.irtg.maxent.RuleNameFeature('s3146')
+feature f1141: de.up.ling.irtg.maxent.RuleNameFeature('s17')
+feature f1142: de.up.ling.irtg.maxent.RuleNameFeature('s10964')
+feature f1143: de.up.ling.irtg.maxent.RuleNameFeature('s8369')
+feature f1144: de.up.ling.irtg.maxent.RuleNameFeature('s7121')
+feature f1145: de.up.ling.irtg.maxent.RuleNameFeature('s11614')
+feature f1146: de.up.ling.irtg.maxent.RuleNameFeature('s11482')
+feature f1147: de.up.ling.irtg.maxent.RuleNameFeature('s1770')
+feature f1148: de.up.ling.irtg.maxent.RuleNameFeature('s744')
+feature f1149: de.up.ling.irtg.maxent.RuleNameFeature('s6293')
+feature f1150: de.up.ling.irtg.maxent.RuleNameFeature('s7468')
+feature f1151: de.up.ling.irtg.maxent.RuleNameFeature('s388')
+feature f1152: de.up.ling.irtg.maxent.RuleNameFeature('s3729')
+feature f1153: de.up.ling.irtg.maxent.RuleNameFeature('s2718')
+feature f1154: de.up.ling.irtg.maxent.RuleNameFeature('s3894')
+feature f1155: de.up.ling.irtg.maxent.RuleNameFeature('s9630')
+feature f1156: de.up.ling.irtg.maxent.RuleNameFeature('s990')
+feature f1157: de.up.ling.irtg.maxent.RuleNameFeature('s2672')
+feature f1158: de.up.ling.irtg.maxent.RuleNameFeature('s9715')
+feature f1159: de.up.ling.irtg.maxent.RuleNameFeature('s12005')
+feature f1160: de.up.ling.irtg.maxent.RuleNameFeature('s9998')
+feature f1161: de.up.ling.irtg.maxent.RuleNameFeature('s8527')
+feature f1162: de.up.ling.irtg.maxent.RuleNameFeature('s12755')
+feature f1163: de.up.ling.irtg.maxent.RuleNameFeature('s11905')
+feature f1164: de.up.ling.irtg.maxent.RuleNameFeature('s7348')
+feature f1165: de.up.ling.irtg.maxent.RuleNameFeature('s10095')
+feature f1166: de.up.ling.irtg.maxent.RuleNameFeature('s2752')
+feature f1167: de.up.ling.irtg.maxent.RuleNameFeature('s10005')
+feature f1168: de.up.ling.irtg.maxent.RuleNameFeature('s10636')
+feature f1169: de.up.ling.irtg.maxent.RuleNameFeature('s13032')
+feature f1170: de.up.ling.irtg.maxent.RuleNameFeature('s9614')
+feature f1171: de.up.ling.irtg.maxent.RuleNameFeature('s2843')
+feature f1172: de.up.ling.irtg.maxent.RuleNameFeature('s11117')
+feature f1173: de.up.ling.irtg.maxent.RuleNameFeature('s6363')
+feature f1174: de.up.ling.irtg.maxent.RuleNameFeature('s7989')
+feature f1175: de.up.ling.irtg.maxent.RuleNameFeature('s8877')
+feature f1176: de.up.ling.irtg.maxent.RuleNameFeature('s1213')
+feature f1177: de.up.ling.irtg.maxent.RuleNameFeature('s1841')
+feature f1178: de.up.ling.irtg.maxent.RuleNameFeature('s6632')
+feature f1179: de.up.ling.irtg.maxent.RuleNameFeature('s229')
+feature f1180: de.up.ling.irtg.maxent.RuleNameFeature('s2544')
+feature f1181: de.up.ling.irtg.maxent.RuleNameFeature('s1015')
+feature f1182: de.up.ling.irtg.maxent.RuleNameFeature('s11221')
+feature f1183: de.up.ling.irtg.maxent.RuleNameFeature('s1318')
+feature f1184: de.up.ling.irtg.maxent.RuleNameFeature('s13507')
+feature f1185: de.up.ling.irtg.maxent.RuleNameFeature('s2213')
+feature f1186: de.up.ling.irtg.maxent.RuleNameFeature('s1393')
+feature f1187: de.up.ling.irtg.maxent.RuleNameFeature('s13')
+feature f1188: de.up.ling.irtg.maxent.RuleNameFeature('s7878')
+feature f1189: de.up.ling.irtg.maxent.RuleNameFeature('s4263')
+feature f1190: de.up.ling.irtg.maxent.RuleNameFeature('s975')
+feature f1191: de.up.ling.irtg.maxent.RuleNameFeature('s2043')
+feature f1192: de.up.ling.irtg.maxent.RuleNameFeature('s1212')
+feature f1193: de.up.ling.irtg.maxent.RuleNameFeature('s5246')
+feature f1194: de.up.ling.irtg.maxent.RuleNameFeature('s5547')
+feature f1195: de.up.ling.irtg.maxent.RuleNameFeature('s10955')
+feature f1196: de.up.ling.irtg.maxent.RuleNameFeature('s1722')
+feature f1197: de.up.ling.irtg.maxent.RuleNameFeature('s8867')
+feature f1198: de.up.ling.irtg.maxent.RuleNameFeature('s1294')
+feature f1199: de.up.ling.irtg.maxent.RuleNameFeature('s704')
+feature f1200: de.up.ling.irtg.maxent.RuleNameFeature('s8721')
+feature f1201: de.up.ling.irtg.maxent.RuleNameFeature('s6426')
+feature f1202: de.up.ling.irtg.maxent.RuleNameFeature('s4157')
+feature f1203: de.up.ling.irtg.maxent.RuleNameFeature('s1012')
+feature f1204: de.up.ling.irtg.maxent.RuleNameFeature('s4612')
+feature f1205: de.up.ling.irtg.maxent.RuleNameFeature('s7635')
+feature f1206: de.up.ling.irtg.maxent.RuleNameFeature('s3031')
+feature f1207: de.up.ling.irtg.maxent.RuleNameFeature('s13071')
+feature f1208: de.up.ling.irtg.maxent.RuleNameFeature('s6882')
+feature f1209: de.up.ling.irtg.maxent.RuleNameFeature('s10907')
+feature f1210: de.up.ling.irtg.maxent.RuleNameFeature('s2411')
+feature f1211: de.up.ling.irtg.maxent.RuleNameFeature('s1342')
+feature f1212: de.up.ling.irtg.maxent.RuleNameFeature('s343')
+feature f1213: de.up.ling.irtg.maxent.RuleNameFeature('s2669')
+feature f1214: de.up.ling.irtg.maxent.RuleNameFeature('s8180')
+feature f1215: de.up.ling.irtg.maxent.RuleNameFeature('s4362')
+feature f1216: de.up.ling.irtg.maxent.RuleNameFeature('s5157')
+feature f1217: de.up.ling.irtg.maxent.RuleNameFeature('s1846')
+feature f1218: de.up.ling.irtg.maxent.RuleNameFeature('s5400')
+feature f1219: de.up.ling.irtg.maxent.RuleNameFeature('s7258')
+feature f1220: de.up.ling.irtg.maxent.RuleNameFeature('s2932')
+feature f1221: de.up.ling.irtg.maxent.RuleNameFeature('s1326')
+feature f1222: de.up.ling.irtg.maxent.RuleNameFeature('s2063')
+feature f1223: de.up.ling.irtg.maxent.RuleNameFeature('s10741')
+feature f1224: de.up.ling.irtg.maxent.RuleNameFeature('s1169')
+feature f1225: de.up.ling.irtg.maxent.RuleNameFeature('s875')
+feature f1226: de.up.ling.irtg.maxent.RuleNameFeature('s2101')
+feature f1227: de.up.ling.irtg.maxent.RuleNameFeature('s13352')
+feature f1228: de.up.ling.irtg.maxent.RuleNameFeature('s6563')
+feature f1229: de.up.ling.irtg.maxent.RuleNameFeature('s2128')
+feature f1230: de.up.ling.irtg.maxent.RuleNameFeature('s8009')
+feature f1231: de.up.ling.irtg.maxent.RuleNameFeature('s1603')
+feature f1232: de.up.ling.irtg.maxent.RuleNameFeature('s862')
+feature f1233: de.up.ling.irtg.maxent.RuleNameFeature('s7627')
+feature f1234: de.up.ling.irtg.maxent.RuleNameFeature('s1662')
+feature f1235: de.up.ling.irtg.maxent.RuleNameFeature('s4408')
+feature f1236: de.up.ling.irtg.maxent.RuleNameFeature('s2162')
+feature f1237: de.up.ling.irtg.maxent.RuleNameFeature('s7273')
+feature f1238: de.up.ling.irtg.maxent.RuleNameFeature('s10944')
+feature f1239: de.up.ling.irtg.maxent.RuleNameFeature('s946')
+feature f1240: de.up.ling.irtg.maxent.RuleNameFeature('s2796')
+feature f1241: de.up.ling.irtg.maxent.RuleNameFeature('s246')
+feature f1242: de.up.ling.irtg.maxent.RuleNameFeature('s3488')
+feature f1243: de.up.ling.irtg.maxent.RuleNameFeature('s9527')
+feature f1244: de.up.ling.irtg.maxent.RuleNameFeature('s11835')
+feature f1245: de.up.ling.irtg.maxent.RuleNameFeature('s1997')
+feature f1246: de.up.ling.irtg.maxent.RuleNameFeature('s8554')
+feature f1247: de.up.ling.irtg.maxent.RuleNameFeature('s1182')
+feature f1248: de.up.ling.irtg.maxent.RuleNameFeature('s1510')
+feature f1249: de.up.ling.irtg.maxent.RuleNameFeature('s7847')
+feature f1250: de.up.ling.irtg.maxent.RuleNameFeature('s4492')
+feature f1251: de.up.ling.irtg.maxent.RuleNameFeature('s895')
+feature f1252: de.up.ling.irtg.maxent.RuleNameFeature('s11615')
+feature f1253: de.up.ling.irtg.maxent.RuleNameFeature('s8837')
+feature f1254: de.up.ling.irtg.maxent.RuleNameFeature('s10968')
+feature f1255: de.up.ling.irtg.maxent.RuleNameFeature('s8807')
+feature f1256: de.up.ling.irtg.maxent.RuleNameFeature('s1049')
+feature f1257: de.up.ling.irtg.maxent.RuleNameFeature('s12192')
+feature f1258: de.up.ling.irtg.maxent.RuleNameFeature('s6835')
+feature f1259: de.up.ling.irtg.maxent.RuleNameFeature('s6082')
+feature f1260: de.up.ling.irtg.maxent.RuleNameFeature('s8461')
+feature f1261: de.up.ling.irtg.maxent.RuleNameFeature('s10714')
+feature f1262: de.up.ling.irtg.maxent.RuleNameFeature('s4366')
+feature f1263: de.up.ling.irtg.maxent.RuleNameFeature('s11077')
+feature f1264: de.up.ling.irtg.maxent.RuleNameFeature('s10705')
+feature f1265: de.up.ling.irtg.maxent.RuleNameFeature('s10429')
+feature f1266: de.up.ling.irtg.maxent.RuleNameFeature('s10643')
+feature f1267: de.up.ling.irtg.maxent.RuleNameFeature('s544')
+feature f1268: de.up.ling.irtg.maxent.RuleNameFeature('s11744')
+feature f1269: de.up.ling.irtg.maxent.RuleNameFeature('s5572')
+feature f1270: de.up.ling.irtg.maxent.RuleNameFeature('s6581')
+feature f1271: de.up.ling.irtg.maxent.RuleNameFeature('s945')
+feature f1272: de.up.ling.irtg.maxent.RuleNameFeature('s12121')
+feature f1273: de.up.ling.irtg.maxent.RuleNameFeature('s4107')
+feature f1274: de.up.ling.irtg.maxent.RuleNameFeature('s1881')
+feature f1275: de.up.ling.irtg.maxent.RuleNameFeature('s12788')
+feature f1276: de.up.ling.irtg.maxent.RuleNameFeature('s8102')
+feature f1277: de.up.ling.irtg.maxent.RuleNameFeature('s9215')
+feature f1278: de.up.ling.irtg.maxent.RuleNameFeature('s158')
+feature f1279: de.up.ling.irtg.maxent.RuleNameFeature('s10017')
+feature f1280: de.up.ling.irtg.maxent.RuleNameFeature('s12254')
+feature f1281: de.up.ling.irtg.maxent.RuleNameFeature('s11935')
+feature f1282: de.up.ling.irtg.maxent.RuleNameFeature('s4977')
+feature f1283: de.up.ling.irtg.maxent.RuleNameFeature('s11055')
+feature f1284: de.up.ling.irtg.maxent.RuleNameFeature('s11780')
+feature f1285: de.up.ling.irtg.maxent.RuleNameFeature('s1126')
+feature f1286: de.up.ling.irtg.maxent.RuleNameFeature('s9557')
+feature f1287: de.up.ling.irtg.maxent.RuleNameFeature('s1240')
+feature f1288: de.up.ling.irtg.maxent.RuleNameFeature('s5382')
+feature f1289: de.up.ling.irtg.maxent.RuleNameFeature('s736')
+feature f1290: de.up.ling.irtg.maxent.RuleNameFeature('s2751')
+feature f1291: de.up.ling.irtg.maxent.RuleNameFeature('s12951')
+feature f1292: de.up.ling.irtg.maxent.RuleNameFeature('s1156')
+feature f1293: de.up.ling.irtg.maxent.RuleNameFeature('s6421')
+feature f1294: de.up.ling.irtg.maxent.RuleNameFeature('s5234')
+feature f1295: de.up.ling.irtg.maxent.RuleNameFeature('s9263')
+feature f1296: de.up.ling.irtg.maxent.RuleNameFeature('s6237')
+feature f1297: de.up.ling.irtg.maxent.RuleNameFeature('s4907')
+feature f1298: de.up.ling.irtg.maxent.RuleNameFeature('s5555')
+feature f1299: de.up.ling.irtg.maxent.RuleNameFeature('s88')
+feature f1300: de.up.ling.irtg.maxent.RuleNameFeature('s12183')
+feature f1301: de.up.ling.irtg.maxent.RuleNameFeature('s13214')
+feature f1302: de.up.ling.irtg.maxent.RuleNameFeature('s6204')
+feature f1303: de.up.ling.irtg.maxent.RuleNameFeature('s8443')
+feature f1304: de.up.ling.irtg.maxent.RuleNameFeature('s10250')
+feature f1305: de.up.ling.irtg.maxent.RuleNameFeature('s551')
+feature f1306: de.up.ling.irtg.maxent.RuleNameFeature('s3246')
+feature f1307: de.up.ling.irtg.maxent.RuleNameFeature('s7738')
+feature f1308: de.up.ling.irtg.maxent.RuleNameFeature('s6395')
+feature f1309: de.up.ling.irtg.maxent.RuleNameFeature('s6189')
+feature f1310: de.up.ling.irtg.maxent.RuleNameFeature('s5521')
+feature f1311: de.up.ling.irtg.maxent.RuleNameFeature('s4447')
+feature f1312: de.up.ling.irtg.maxent.RuleNameFeature('s8876')
+feature f1313: de.up.ling.irtg.maxent.RuleNameFeature('s5897')
+feature f1314: de.up.ling.irtg.maxent.RuleNameFeature('s966')
+feature f1315: de.up.ling.irtg.maxent.RuleNameFeature('s3640')
+feature f1316: de.up.ling.irtg.maxent.RuleNameFeature('s7362')
+feature f1317: de.up.ling.irtg.maxent.RuleNameFeature('s11964')
+feature f1318: de.up.ling.irtg.maxent.RuleNameFeature('s3866')
+feature f1319: de.up.ling.irtg.maxent.RuleNameFeature('s7903')
+feature f1320: de.up.ling.irtg.maxent.RuleNameFeature('s2319')
+feature f1321: de.up.ling.irtg.maxent.RuleNameFeature('s6824')
+feature f1322: de.up.ling.irtg.maxent.RuleNameFeature('s5122')
+feature f1323: de.up.ling.irtg.maxent.RuleNameFeature('s6399')
+feature f1324: de.up.ling.irtg.maxent.RuleNameFeature('s4692')
+feature f1325: de.up.ling.irtg.maxent.RuleNameFeature('s5086')
+feature f1326: de.up.ling.irtg.maxent.RuleNameFeature('s3561')
+feature f1327: de.up.ling.irtg.maxent.RuleNameFeature('s9572')
+feature f1328: de.up.ling.irtg.maxent.RuleNameFeature('s11834')
+feature f1329: de.up.ling.irtg.maxent.RuleNameFeature('s2138')
+feature f1330: de.up.ling.irtg.maxent.RuleNameFeature('s2008')
+feature f1331: de.up.ling.irtg.maxent.RuleNameFeature('s7423')
+feature f1332: de.up.ling.irtg.maxent.RuleNameFeature('s92')
+feature f1333: de.up.ling.irtg.maxent.RuleNameFeature('s7071')
+feature f1334: de.up.ling.irtg.maxent.RuleNameFeature('s9744')
+feature f1335: de.up.ling.irtg.maxent.RuleNameFeature('s9686')
+feature f1336: de.up.ling.irtg.maxent.RuleNameFeature('s9563')
+feature f1337: de.up.ling.irtg.maxent.RuleNameFeature('s8135')
+feature f1338: de.up.ling.irtg.maxent.RuleNameFeature('s5831')
+feature f1339: de.up.ling.irtg.maxent.RuleNameFeature('s996')
+feature f1340: de.up.ling.irtg.maxent.RuleNameFeature('s9167')
+feature f1341: de.up.ling.irtg.maxent.RuleNameFeature('s7868')
+feature f1342: de.up.ling.irtg.maxent.RuleNameFeature('s10855')
+feature f1343: de.up.ling.irtg.maxent.RuleNameFeature('s1018')
+feature f1344: de.up.ling.irtg.maxent.RuleNameFeature('s6828')
+feature f1345: de.up.ling.irtg.maxent.RuleNameFeature('s173')
+feature f1346: de.up.ling.irtg.maxent.RuleNameFeature('s4069')
+feature f1347: de.up.ling.irtg.maxent.RuleNameFeature('s7268')
+feature f1348: de.up.ling.irtg.maxent.RuleNameFeature('s2903')
+feature f1349: de.up.ling.irtg.maxent.RuleNameFeature('s11655')
+feature f1350: de.up.ling.irtg.maxent.RuleNameFeature('s12279')
+feature f1351: de.up.ling.irtg.maxent.RuleNameFeature('s1145')
+feature f1352: de.up.ling.irtg.maxent.RuleNameFeature('s2677')
+feature f1353: de.up.ling.irtg.maxent.RuleNameFeature('s8585')
+feature f1354: de.up.ling.irtg.maxent.RuleNameFeature('s12090')
+feature f1355: de.up.ling.irtg.maxent.RuleNameFeature('s2335')
+feature f1356: de.up.ling.irtg.maxent.RuleNameFeature('s5098')
+feature f1357: de.up.ling.irtg.maxent.RuleNameFeature('s3117')
+feature f1358: de.up.ling.irtg.maxent.RuleNameFeature('s7040')
+feature f1359: de.up.ling.irtg.maxent.RuleNameFeature('s9125')
+feature f1360: de.up.ling.irtg.maxent.RuleNameFeature('s1046')
+feature f1361: de.up.ling.irtg.maxent.RuleNameFeature('s3071')
+feature f1362: de.up.ling.irtg.maxent.RuleNameFeature('s73')
+feature f1363: de.up.ling.irtg.maxent.RuleNameFeature('s3411')
+feature f1364: de.up.ling.irtg.maxent.RuleNameFeature('s1668')
+feature f1365: de.up.ling.irtg.maxent.RuleNameFeature('s7710')
+feature f1366: de.up.ling.irtg.maxent.RuleNameFeature('s7705')
+feature f1367: de.up.ling.irtg.maxent.RuleNameFeature('s154')
+feature f1368: de.up.ling.irtg.maxent.RuleNameFeature('s8321')
+feature f1369: de.up.ling.irtg.maxent.RuleNameFeature('s1195')
+feature f1370: de.up.ling.irtg.maxent.RuleNameFeature('s4413')
+feature f1371: de.up.ling.irtg.maxent.RuleNameFeature('s4301')
+feature f1372: de.up.ling.irtg.maxent.RuleNameFeature('s9667')
+feature f1373: de.up.ling.irtg.maxent.RuleNameFeature('s1333')
+feature f1374: de.up.ling.irtg.maxent.RuleNameFeature('s18')
+feature f1375: de.up.ling.irtg.maxent.RuleNameFeature('s33')
+feature f1376: de.up.ling.irtg.maxent.RuleNameFeature('s5927')
+feature f1377: de.up.ling.irtg.maxent.RuleNameFeature('s13000')
+feature f1378: de.up.ling.irtg.maxent.RuleNameFeature('s10479')
+feature f1379: de.up.ling.irtg.maxent.RuleNameFeature('s8494')
+feature f1380: de.up.ling.irtg.maxent.RuleNameFeature('s1291')
+feature f1381: de.up.ling.irtg.maxent.RuleNameFeature('s4942')
+feature f1382: de.up.ling.irtg.maxent.RuleNameFeature('s6747')
+feature f1383: de.up.ling.irtg.maxent.RuleNameFeature('s9449')
+feature f1384: de.up.ling.irtg.maxent.RuleNameFeature('s7453')
+feature f1385: de.up.ling.irtg.maxent.RuleNameFeature('s12129')
+feature f1386: de.up.ling.irtg.maxent.RuleNameFeature('s1468')
+feature f1387: de.up.ling.irtg.maxent.RuleNameFeature('s3061')
+feature f1388: de.up.ling.irtg.maxent.RuleNameFeature('s10026')
+feature f1389: de.up.ling.irtg.maxent.RuleNameFeature('s971')
+feature f1390: de.up.ling.irtg.maxent.RuleNameFeature('s287')
+feature f1391: de.up.ling.irtg.maxent.RuleNameFeature('s11605')
+feature f1392: de.up.ling.irtg.maxent.RuleNameFeature('s10839')
+feature f1393: de.up.ling.irtg.maxent.RuleNameFeature('s1227')
+feature f1394: de.up.ling.irtg.maxent.RuleNameFeature('s235')
+feature f1395: de.up.ling.irtg.maxent.RuleNameFeature('s2073')
+feature f1396: de.up.ling.irtg.maxent.RuleNameFeature('s72')
+feature f1397: de.up.ling.irtg.maxent.RuleNameFeature('s263')
+feature f1398: de.up.ling.irtg.maxent.RuleNameFeature('s9573')
+feature f1399: de.up.ling.irtg.maxent.RuleNameFeature('s3626')
+feature f1400: de.up.ling.irtg.maxent.RuleNameFeature('s5230')
+feature f1401: de.up.ling.irtg.maxent.RuleNameFeature('s1357')
+feature f1402: de.up.ling.irtg.maxent.RuleNameFeature('s1179')
+feature f1403: de.up.ling.irtg.maxent.RuleNameFeature('s170')
+feature f1404: de.up.ling.irtg.maxent.RuleNameFeature('s2325')
+feature f1405: de.up.ling.irtg.maxent.RuleNameFeature('s4130')
+feature f1406: de.up.ling.irtg.maxent.RuleNameFeature('s5481')
+feature f1407: de.up.ling.irtg.maxent.RuleNameFeature('s13450')
+feature f1408: de.up.ling.irtg.maxent.RuleNameFeature('s1209')
+feature f1409: de.up.ling.irtg.maxent.RuleNameFeature('s10472')
+feature f1410: de.up.ling.irtg.maxent.RuleNameFeature('s13236')
+feature f1411: de.up.ling.irtg.maxent.RuleNameFeature('s10154')
+feature f1412: de.up.ling.irtg.maxent.RuleNameFeature('s4819')
+feature f1413: de.up.ling.irtg.maxent.RuleNameFeature('s842')
+feature f1414: de.up.ling.irtg.maxent.RuleNameFeature('s11120')
+feature f1415: de.up.ling.irtg.maxent.RuleNameFeature('s10827')
+feature f1416: de.up.ling.irtg.maxent.RuleNameFeature('s12356')
+feature f1417: de.up.ling.irtg.maxent.RuleNameFeature('s4501')
+feature f1418: de.up.ling.irtg.maxent.RuleNameFeature('s11765')
+feature f1419: de.up.ling.irtg.maxent.RuleNameFeature('s13476')
+feature f1420: de.up.ling.irtg.maxent.RuleNameFeature('s10820')
+feature f1421: de.up.ling.irtg.maxent.RuleNameFeature('s10680')
+feature f1422: de.up.ling.irtg.maxent.RuleNameFeature('s13061')
+feature f1423: de.up.ling.irtg.maxent.RuleNameFeature('s9799')
+feature f1424: de.up.ling.irtg.maxent.RuleNameFeature('s10655')
+feature f1425: de.up.ling.irtg.maxent.RuleNameFeature('s6407')
+feature f1426: de.up.ling.irtg.maxent.RuleNameFeature('s11670')
+feature f1427: de.up.ling.irtg.maxent.RuleNameFeature('s2807')
+feature f1428: de.up.ling.irtg.maxent.RuleNameFeature('s10948')
+feature f1429: de.up.ling.irtg.maxent.RuleNameFeature('s10401')
+feature f1430: de.up.ling.irtg.maxent.RuleNameFeature('s2023')
+feature f1431: de.up.ling.irtg.maxent.RuleNameFeature('s10')
+feature f1432: de.up.ling.irtg.maxent.RuleNameFeature('s9001')
+feature f1433: de.up.ling.irtg.maxent.RuleNameFeature('s6513')
+feature f1434: de.up.ling.irtg.maxent.RuleNameFeature('s13467')
+feature f1435: de.up.ling.irtg.maxent.RuleNameFeature('s2123')
+feature f1436: de.up.ling.irtg.maxent.RuleNameFeature('s13167')
+feature f1437: de.up.ling.irtg.maxent.RuleNameFeature('s8911')
+feature f1438: de.up.ling.irtg.maxent.RuleNameFeature('s3576')
+feature f1439: de.up.ling.irtg.maxent.RuleNameFeature('s1886')
+feature f1440: de.up.ling.irtg.maxent.RuleNameFeature('s21')
+feature f1441: de.up.ling.irtg.maxent.RuleNameFeature('s3125')
+feature f1442: de.up.ling.irtg.maxent.RuleNameFeature('s9843')
+feature f1443: de.up.ling.irtg.maxent.RuleNameFeature('s7895')
+feature f1444: de.up.ling.irtg.maxent.RuleNameFeature('s4021')
+feature f1445: de.up.ling.irtg.maxent.RuleNameFeature('s5130')
+feature f1446: de.up.ling.irtg.maxent.RuleNameFeature('s5041')
+feature f1447: de.up.ling.irtg.maxent.RuleNameFeature('s5541')
+feature f1448: de.up.ling.irtg.maxent.RuleNameFeature('s8515')
+feature f1449: de.up.ling.irtg.maxent.RuleNameFeature('s13347')
+feature f1450: de.up.ling.irtg.maxent.RuleNameFeature('s4016')
+feature f1451: de.up.ling.irtg.maxent.RuleNameFeature('s5982')
+feature f1452: de.up.ling.irtg.maxent.RuleNameFeature('s11853')
+feature f1453: de.up.ling.irtg.maxent.RuleNameFeature('s9860')
+feature f1454: de.up.ling.irtg.maxent.RuleNameFeature('s9032')
+feature f1455: de.up.ling.irtg.maxent.RuleNameFeature('s11076')
+feature f1456: de.up.ling.irtg.maxent.RuleNameFeature('s3179')
+feature f1457: de.up.ling.irtg.maxent.RuleNameFeature('s11037')
+feature f1458: de.up.ling.irtg.maxent.RuleNameFeature('s11965')
+feature f1459: de.up.ling.irtg.maxent.RuleNameFeature('s1876')
+feature f1460: de.up.ling.irtg.maxent.RuleNameFeature('s5622')
+feature f1461: de.up.ling.irtg.maxent.RuleNameFeature('s3681')
+feature f1462: de.up.ling.irtg.maxent.RuleNameFeature('s10708')
+feature f1463: de.up.ling.irtg.maxent.RuleNameFeature('s11455')
+feature f1464: de.up.ling.irtg.maxent.RuleNameFeature('s9283')
+feature f1465: de.up.ling.irtg.maxent.RuleNameFeature('s5942')
+feature f1466: de.up.ling.irtg.maxent.RuleNameFeature('s1315')
+feature f1467: de.up.ling.irtg.maxent.RuleNameFeature('s370')
+feature f1468: de.up.ling.irtg.maxent.RuleNameFeature('s8488')
+feature f1469: de.up.ling.irtg.maxent.RuleNameFeature('s8246')
+feature f1470: de.up.ling.irtg.maxent.RuleNameFeature('s5879')
+
+
+
+
+S! -> s3692(X)
+[s] *(*(*(*(what,are),the),names),?1)
+[t] answer(?1)
+
+X -> s355
+[s] *(mount,mckinley)
+[t] placeid('mount mckinley')
+
+X -> s9712
+[s] *(*(flows,through),texas)
+[t] stateid('texas')
+
+X -> s8081
+[s] *(of,atlanta)
+[t] cityid('atlanta',_)
+
+X -> s2663
+[s] *(*(river,run),through)
+[t] river(all)
+
+S! -> s0(X)
+[s] *(give,?1)
+[t] answer(?1)
+
+X -> s12108
+[s] *(*(*("'s",the),largest),city)
+[t] city(all)
+
+X -> s210
+[s] *(*(*(of,rivers),in),california)
+[t] stateid('california')
+
+X -> s1127
+[s] there
+[t] city(all)
+
+X -> s535
+[s] *(rio,grande)
+[t] riverid('rio grande')
+
+X -> s6569
+[s] *(*(rio,grande),runs)
+[t] riverid('rio grande')
+
+X -> s13355(X)
+[s] *(*(*(*(does,the),?1),pass),through)
+[t] traverse_1(?1)
+
+X -> s12747(X)
+[s] *(*(*(*(?1,has),the),greatest),density)
+[t] density_1(?1)
+
+X -> s2375(X)
+[s] *(*(does,the),?1)
+[t] traverse_1(?1)
+
+X -> s7614
+[s] *(*(*(*(*(is,the),lowest),point),in),wisconsin)
+[t] stateid('wisconsin')
+
+X -> s782
+[s] *(*(rhode,island),have)
+[t] stateid('rhode island')
+
+X -> s99(X)
+[s] *(*(*(*(me,the),cities),in),?1)
+[t] loc_2(?1)
+
+X -> s1757
+[s] called
+[t] riverid('colorado')
+
+X -> s10974
+[s] *(state,is)
+[t] state(all)
+
+X -> s7866
+[s] *(for,kentucky)
+[t] stateid('kentucky')
+
+X -> s164
+[s] *(*(*(*(me,the),lakes),in),california)
+[t] stateid('california')
+
+X -> s5384(X)
+[s] *(*(that,borders),?1)
+[t] next_to_2(?1)
+
+X -> s1996(X)
+[s] *(run,?1)
+[t] traverse_2(?1)
+
+X -> s1976(X)
+[s] *(*(run,through),?1)
+[t] traverse_2(?1)
+
+X -> s5642(X)
+[s] *(*(*(*(*(is,the),elevation),of),the),?1)
+[t] elevation_1(?1)
+
+X -> s4141(X)
+[s] *(*(*(?1,the),population),of)
+[t] population_1(?1)
+
+X -> s188(X)
+[s] *(*(river,that),?1)
+[t] river(?1)
+
+X -> s1848(X)
+[s] *(?1,has)
+[t] loc_1(?1)
+
+X -> s2817
+[s] michigan
+[t] stateid('michigan')
+
+X -> s1024
+[s] *(*(colorado,rivers),are)
+[t] riverid('colorado')
+
+X -> s10581(X)
+[s] *(*(*(*(?1,has),the),highest),population)
+[t] density_1(?1)
+
+X -> s5138
+[s] maryland
+[t] stateid('maryland')
+
+X -> s1839(X)
+[s] *(*(state,that),?1)
+[t] state(?1)
+
+X -> s257
+[s] massachusetts
+[t] stateid('massachusetts')
+
+X -> s7498
+[s] *(*(*(*(*(is,the),lowest),point),in),mississippi)
+[t] stateid('mississippi')
+
+X -> s4670(X)
+[s] *(*(*(*(average,population),of),the),?1)
+[t] density_1(?1)
+
+X -> s3276
+[s] *(*(*(*(the,major),cities),in),california)
+[t] stateid('california')
+
+X -> s705
+[s] north
+[t] riverid('north platte')
+
+X -> s6962(X)
+[s] *(*(*(*(*(*(*(that,runs),through),the),most),number),of),?1)
+[t] traverse_2(?1)
+
+X -> s10871
+[s] of
+[t] cityid('austin',_)
+
+X -> s8225
+[s] pennsylvania
+[t] cityid('erie','pa')
+
+X -> s767(X)
+[s] *(many,?1)
+[t] count(?1)
+
+X -> s6544
+[s] *(*(*(*(*(is,the),largest),city),in),wisconsin)
+[t] stateid('wisconsin')
+
+X -> s673
+[s] missouri
+[t] riverid('missouri')
+
+X -> s12156
+[s] *(*(mount,whitney),located)
+[t] placeid('mount whitney')
+
+X -> s1949(X,X)
+[s] *(*(?1,are),?2)
+[t] intersection(?1,?2)
+
+X -> s251
+[s] *(is,alaska)
+[t] stateid('alaska')
+
+S! -> s1932(X)
+[s] *(*(how,?1),have)
+[t] answer(?1)
+
+X -> s12025(X)
+[s] *(*(have,?1),through)
+[t] traverse_1(?1)
+
+X -> s318
+[s] *(of,new)
+[t] cityid('new york',_)
+
+X -> s7264
+[s] *(river,that)
+[t] river(all)
+
+X -> s1188(X)
+[s] *(*(people,are),?1)
+[t] population_1(?1)
+
+X -> s1300
+[s] hawaii
+[t] stateid('hawaii')
+
+X -> s10214
+[s] *(through,louisiana)
+[t] stateid('louisiana')
+
+X -> s463
+[s] florida
+[t] stateid('florida')
+
+X -> s13168
+[s] *(*(*(through,which),the),mississippi)
+[t] riverid('mississippi')
+
+X -> s1228
+[s] *(in,austin)
+[t] cityid('austin',_)
+
+S! -> s2720(X)
+[s] *(which,?1)
+[t] answer(?1)
+
+X -> s9115
+[s] *(*(*(*(*(is,the),smallest),city),in),arkansas)
+[t] stateid('arkansas')
+
+X -> s1543(X)
+[s] *(?1,state)
+[t] state(?1)
+
+X -> s8183
+[s] dallas
+[t] cityid('dallas',_)
+
+X -> s624
+[s] mississippi
+[t] riverid('mississippi')
+
+X -> s10014
+[s] though
+[t] stateid('colorado')
+
+S! -> s13509(X)
+[s] *(*(which,us),?1)
+[t] answer(?1)
+
+X -> s3676
+[s] *(*(*(*(*(the,major),rivers),in),the),us)
+[t] countryid('usa')
+
+X -> s1345
+[s] kansas
+[t] stateid('kansas')
+
+S! -> s2754(X)
+[s] *(*(list,the),?1)
+[t] answer(?1)
+
+X -> s6906(X)
+[s] *(*(runs,through),?1)
+[t] traverse_2(?1)
+
+X -> s2206(X)
+[s] *(*(border,the),?1)
+[t] next_to_2(?1)
+
+X -> s1659
+[s] *(*(*(*(live,in),the),united),states)
+[t] countryid('usa')
+
+X -> s5142
+[s] *(*(*(*(is,the),capital),of),maryland)
+[t] stateid('maryland')
+
+X -> s1040
+[s] *(*(does,montgomery),have)
+[t] cityid('montgomery',_)
+
+X -> s12186
+[s] diego
+[t] cityid('san diego',_)
+
+X -> s12369
+[s] *(*(*(*(*(is,the),longest),river),in),usa)
+[t] countryid('usa')
+
+X -> s12048(X)
+[s] *("'s",?1)
+[t] high_point_2(?1)
+
+X -> s1034
+[s] *(*(inhabitants,does),montgomery)
+[t] cityid('montgomery',_)
+
+X -> s8816
+[s] tucson
+[t] cityid('tucson',_)
+
+X -> s3051(X)
+[s] *(*(states,which),?1)
+[t] state(?1)
+
+X -> s8671(X)
+[s] *(*(*(*(*(is,the),population),of),the),?1)
+[t] population_1(?1)
+
+X -> s2425
+[s] run
+[t] riverid('colorado')
+
+X -> s1330
+[s] *(in,kalamazoo)
+[t] cityid('kalamazoo',_)
+
+X -> s10467(X)
+[s] *(has,?1)
+[t] loc_1(?1)
+
+X -> s3227(X)
+[s] *(*(*(*(?1,that),border),the),largest)
+[t] largest(?1)
+
+X -> s1279
+[s] *(*(*(people,live),in),chicago)
+[t] cityid('chicago',_)
+
+X -> s3235(X)
+[s] *(*(*(*(*(*(*(*(*(largest,cities),in),the),states),that),border),the),largest),?1)
+[t] largest(?1)
+
+X -> s5109(X)
+[s] *(?1,indiana)
+[t] loc_2(?1)
+
+X -> s7749(X)
+[s] *(*(*(is,the),most),?1)
+[t] largest_one(?1)
+
+X -> s3610(X)
+[s] *(*(*(of,the),united),?1)
+[t] loc_2(?1)
+
+X -> s5956(X)
+[s] *(*(*(in,nevada),in),?1)
+[t] loc_2(?1)
+
+X -> s2888
+[s] *(of,which)
+[t] cityid('sacramento',_)
+
+X -> s7064(X)
+[s] *(*(river,flowing),?1)
+[t] river(?1)
+
+X -> s1198
+[s] *(new,york)
+[t] stateid('new york')
+
+X -> s4063(X)
+[s] *(*(*(*(?1,with),the),greatest),population)
+[t] population_1(?1)
+
+X -> s2530(X)
+[s] *(a,?1)
+[t] loc_1(?1)
+
+X -> s245
+[s] *(border,utah)
+[t] stateid('utah')
+
+X -> s8138
+[s] *(boston,massachusetts)
+[t] cityid('boston','ma')
+
+X -> s11940
+[s] named
+[t] cityid('portland',_)
+
+X -> s22(X)
+[s] *(rivers,?1)
+[t] river(?1)
+
+X -> s8216
+[s] *(*(of,erie),pennsylvania)
+[t] cityid('erie','pa')
+
+X -> s11010(X)
+[s] *(*(*(*(*(*(is,the),state),with),the),most),?1)
+[t] loc_1(?1)
+
+X -> s10020(X)
+[s] *(*(rivers,flow),?1)
+[t] river(?1)
+
+X -> s8530
+[s] *(*(*(of,springfield),south),dakota)
+[t] cityid('springfield','sd')
+
+X -> s5134
+[s] of
+[t] stateid('maine')
+
+X -> s1001(X)
+[s] *(*(*(*(many,citizens),live),in),?1)
+[t] population_1(?1)
+
+X -> s6272(X)
+[s] *(*(*(?1,smallest),population),density)
+[t] density_1(?1)
+
+S! -> s12424(X)
+[s] *(*(*(which,of),the),?1)
+[t] answer(?1)
+
+X -> s8036
+[s] boston
+[t] cityid('boston',_)
+
+X -> s5556(X)
+[s] *(*(*(*(area,of),all),"50"),?1)
+[t] area_1(?1)
+
+X -> s4444
+[s] *(*(*(the,area),of),maine)
+[t] stateid('maine')
+
+X -> s10884
+[s] *(boston,in)
+[t] cityid('boston',_)
+
+X -> s4715(X)
+[s] *(*(biggest,american),?1)
+[t] largest(?1)
+
+X -> s2630
+[s] *(*(or,towns),named)
+[t] cityid('springfield',_)
+
+X -> s1539(X)
+[s] *(*(*(*(*(many,people),live),in),the),?1)
+[t] population_1(?1)
+
+X -> s5739(X)
+[s] *(elevation,?1)
+[t] place(?1)
+
+X -> s8224(X)
+[s] *(*(*(population,of),erie),?1)
+[t] population_1(?1)
+
+X -> s689
+[s] *(north,platte)
+[t] riverid('north platte')
+
+X -> s12135
+[s] *(fort,wayne)
+[t] cityid('fort wayne',_)
+
+X -> s5748(X)
+[s] *(*(*(is,the),highest),?1)
+[t] highest(?1)
+
+X -> s10001(X)
+[s] *(flow,?1)
+[t] traverse_2(?1)
+
+X -> s4552(X)
+[s] *(*(of,the),?1)
+[t] area_1(?1)
+
+X -> s5062
+[s] *(*(*(*(is,the),capital),of),colorado)
+[t] stateid('colorado')
+
+X -> s1495
+[s] *(south,dakota)
+[t] stateid('south dakota')
+
+X -> s13231
+[s] *(*(chattahoochee,river),run)
+[t] riverid('chattahoochee')
+
+S! -> s5602(X)
+[s] *(*(*(*(what,is),the),density),?1)
+[t] answer(?1)
+
+X -> s309(X)
+[s] *(*(city,of),?1)
+[t] city(?1)
+
+X -> s3026(X)
+[s] *(biggest,?1)
+[t] longest(?1)
+
+X -> s6169
+[s] *(*(*(*(*(*(is,the),highest),point),in),the),us)
+[t] countryid('usa')
+
+X -> s11603(X)
+[s] *(*(contain,at),?1)
+[t] loc_1(?1)
+
+X -> s5600(X)
+[s] *(*(*(*(is,the),density),of),?1)
+[t] density_1(?1)
+
+X -> s4683
+[s] *(by,state)
+[t] countryid('usa')
+
+X -> s776(X)
+[s] *(?1,pennsylvania)
+[t] loc_2(?1)
+
+X -> s325(X)
+[s] *(highest,?1)
+[t] highest(?1)
+
+X -> s13017
+[s] *(denver,located)
+[t] cityid('denver',_)
+
+X -> s1926
+[s] *(alaska,have)
+[t] stateid('alaska')
+
+X -> s12026
+[s] *(rivers,running)
+[t] river(all)
+
+X -> s7091
+[s] *(*(*(*(*(is,the),longest),river),in),america)
+[t] countryid('usa')
+
+X -> s7111
+[s] *(*(*(*(*(is,the),longest),river),in),florida)
+[t] stateid('florida')
+
+X -> s10905(X)
+[s] *(*(*(is,columbus),the),?1)
+[t] loc_1(?1)
+
+X -> s8401
+[s] *(of,oregon)
+[t] stateid('oregon')
+
+X -> s12699(X)
+[s] *(*(?1,most),states)
+[t] state(?1)
+
+X -> s10960
+[s] *(pittsburgh,in)
+[t] cityid('pittsburgh',_)
+
+X -> s2896
+[s] *(*(*(san,antonio),is),in)
+[t] cityid('san antonio',_)
+
+X -> s5663(X)
+[s] *(*(*(*(is,the),height),of),?1)
+[t] elevation_1(?1)
+
+X -> s2465
+[s] *(mississippi,run)
+[t] riverid('mississippi')
+
+X -> s2899(X)
+[s] *(*(?1,antonio),is)
+[t] loc_1(?1)
+
+X -> s3700
+[s] *(for,michigan)
+[t] stateid('michigan')
+
+X -> s516(X)
+[s] *(*(*(large,is),the),?1)
+[t] size(?1)
+
+X -> s2407
+[s] *(*(*(colorado,river),run),through)
+[t] riverid('colorado')
+
+X -> s8391
+[s] new
+[t] cityid('new york',_)
+
+X -> s9508(X)
+[s] *(*(*(?1,lowest),population),density)
+[t] density_1(?1)
+
+X -> s12789
+[s] country
+[t] place(all)
+
+X -> s993
+[s] *(citizens,in)
+[t] cityid('boulder',_)
+
+X -> s1161
+[s] nevada
+[t] stateid('nevada')
+
+X -> s2892
+[s] *(san,antonio)
+[t] cityid('san antonio',_)
+
+X -> s4489
+[s] *(*(*(the,area),of),ohio)
+[t] stateid('ohio')
+
+X -> s2365
+[s] *(tennessee,border)
+[t] stateid('tennessee')
+
+X -> s9086(X)
+[s] *(*(of,the),?1)
+[t] size(?1)
+
+X -> s5576(X)
+[s] *(*(*(*(population,of),all),"50"),?1)
+[t] population_1(?1)
+
+X -> s8134(X)
+[s] *(*(*(population,of),austin),?1)
+[t] population_1(?1)
+
+X -> s1749
+[s] residents
+[t] stateid('texas')
+
+X -> s3182(X)
+[s] *(*(*(are,the),highest),?1)
+[t] highest(?1)
+
+X -> s352
+[s] *(*(is,guadalupe),peak)
+[t] placeid('guadalupe peak')
+
+X -> s550(X)
+[s] *(?1,river)
+[t] river(?1)
+
+X -> s1465
+[s] *(*(live,in),riverside)
+[t] cityid('riverside',_)
+
+X -> s2158
+[s] least
+[t] state(all)
+
+X -> s2948(X)
+[s] *(*(*(*(?1,what),cities),are),in)
+[t] loc_2(?1)
+
+X -> s2722(X)
+[s] *(*(does,the),?1)
+[t] loc_1(?1)
+
+X -> s5145(X)
+[s] *(?1,maryland)
+[t] loc_2(?1)
+
+X -> s781(X)
+[s] *(does,?1)
+[t] loc_2(?1)
+
+X -> s2036(X)
+[s] *(*(states,are),?1)
+[t] state(?1)
+
+X -> s5806
+[s] *(*(*(*(the,highest),mountain),in),alaska)
+[t] stateid('alaska')
+
+X -> s13199(X)
+[s] *(*(do,?1),through)
+[t] traverse_1(?1)
+
+X -> s6405
+[s] minnesota
+[t] stateid('minnesota')
+
+X -> s5186
+[s] *(new,jersey)
+[t] stateid('new jersey')
+
+X -> s5390(X)
+[s] *(*(borders,the),?1)
+[t] next_to_2(?1)
+
+X -> s5485
+[s] *(*(*(the,capital),of),utah)
+[t] stateid('utah')
+
+X -> s13012
+[s] *(*(mount,mckinley),in)
+[t] placeid('mount mckinley')
+
+X -> s4996
+[s] *(continental,us)
+[t] countryid('usa')
+
+S! -> s2756(X)
+[s] *(list,?1)
+[t] answer(?1)
+
+X -> s1689
+[s] *(*(in,washington),dc)
+[t] cityid('washington','dc')
+
+X -> s9407
+[s] that
+[t] place(all)
+
+X -> s2241(X)
+[s] *(*(?1,that),borders)
+[t] next_to_2(?1)
+
+X -> s2714(X)
+[s] *(is,?1)
+[t] loc_1(?1)
+
+X -> s8434
+[s] *(*(of,rhode),island)
+[t] stateid('rhode island')
+
+X -> s240(X)
+[s] *(*(*(*(?1,the),states),that),border)
+[t] next_to_2(?1)
+
+X -> s4052
+[s] *(*(are,the),states)
+[t] state(all)
+
+X -> s10638(X)
+[s] *(*(*(has,the),largest),?1)
+[t] largest_one(?1)
+
+X -> s7478
+[s] *(*(*(*(*(is,the),lowest),point),in),louisiana)
+[t] stateid('louisiana')
+
+X -> s9006
+[s] *(*(*(*(*(the,shortest),river),in),the),usa)
+[t] countryid('usa')
+
+X -> s780(X)
+[s] *(capitals,?1)
+[t] capital(?1)
+
+X -> s929
+[s] *(named,austin)
+[t] cityid('austin',_)
+
+X -> s11650
+[s] *(*(delaware,river),run)
+[t] riverid('delaware')
+
+X -> s1039(X)
+[s] *(*(many,inhabitants),?1)
+[t] population_1(?1)
+
+X -> s2257(X)
+[s] *(*(*(borders,the),most),?1)
+[t] next_to_2(?1)
+
+X -> s8551
+[s] tempe
+[t] cityid('tempe','az')
+
+X -> s10822(X)
+[s] *(*(*(has,the),smallest),?1)
+[t] smallest_one(?1)
+
+X -> s12091
+[s] neighbor
+[t] stateid('maine')
+
+X -> s1417
+[s] new
+[t] stateid('new hampshire')
+
+X -> s947
+[s] *(*(*(*(*(*(*(does,the),biggest),city),have),in),the),usa)
+[t] city(all)
+
+X -> s2279(X)
+[s] *(*(*(*(*(*(*(?1,border),the),state),with),the),largest),population)
+[t] population_1(?1)
+
+X -> s9775(X)
+[s] *(runs,?1)
+[t] traverse_2(?1)
+
+X -> s2377
+[s] *(*(*(colorado,river),flow),through)
+[t] riverid('colorado')
+
+X -> s8096
+[s] *(atlanta,ga)
+[t] cityid('atlanta','ga')
+
+X -> s4164
+[s] *(*(*(*(*(is,the),largest),in),the),us)
+[t] countryid('usa')
+
+X -> s7022(X)
+[s] *(*(*(*(that,traverses),the),most),?1)
+[t] traverse_2(?1)
+
+X -> s11915
+[s] *(named,plano)
+[t] cityid('plano',_)
+
+X -> s4090
+[s] *(potomac,runs)
+[t] riverid('potomac')
+
+X -> s2654
+[s] river
+[t] river(all)
+
+X -> s10169(X)
+[s] *(*(*(run,through),austin),?1)
+[t] traverse_2(?1)
+
+X -> s1019(X)
+[s] *(*(rivers,are),?1)
+[t] river(?1)
+
+X -> s4844
+[s] *(*(*(*(the,biggest),city),in),nebraska)
+[t] stateid('nebraska')
+
+X -> s2550
+[s] *(named,springfield)
+[t] cityid('springfield',_)
+
+X -> s7101
+[s] *(*(*(*(*(is,the),longest),river),in),california)
+[t] stateid('california')
+
+X -> s1119
+[s] *(*(cities,are),there)
+[t] city(all)
+
+X -> s4005(X)
+[s] *(*(*(*(are,the),rivers),in),?1)
+[t] loc_2(?1)
+
+X -> s1549(X)
+[s] *(*(*(*(*(in,the),biggest),city),in),?1)
+[t] loc_2(?1)
+
+X -> s11066(X)
+[s] *(*(*(which,the),?1),through)
+[t] traverse_1(?1)
+
+X -> s13286
+[s] cross
+[t] river(all)
+
+S! -> s12206(X)
+[s] *(*(where,is),?1)
+[t] answer(?1)
+
+X -> s4100(X)
+[s] *(*(*(states,that),the),?1)
+[t] state(?1)
+
+X -> s12030
+[s] *(*(*(*(have,rivers),running),through),them)
+[t] river(all)
+
+X -> s7744(X)
+[s] *(populated,?1)
+[t] population_1(?1)
+
+X -> s1692
+[s] *(*(lived,in),austin)
+[t] cityid('austin',_)
+
+X -> s9492(X)
+[s] *(*(?1,lowest),population)
+[t] population_1(?1)
+
+X -> s11815
+[s] *(river,run)
+[t] river(all)
+
+X -> s12490(X)
+[s] *(*(traverses,most),?1)
+[t] traverse_2(?1)
+
+X -> s5907
+[s] *(*(*(*(*(is,the),highest),point),in),iowa)
+[t] stateid('iowa')
+
+X -> s3147
+[s] *(*(which,the),mississippi)
+[t] riverid('mississippi')
+
+X -> s9258(X)
+[s] *(*(smallest,state),?1)
+[t] smallest_one(?1)
+
+X -> s11608(X)
+[s] *(*(*(*(contain,at),least),one),?1)
+[t] loc_1(?1)
+
+X -> s6831(X)
+[s] *(?1,state)
+[t] smallest_one(?1)
+
+X -> s2001(X)
+[s] *(*(*(run,through),the),?1)
+[t] traverse_2(?1)
+
+X -> s12174
+[s] new
+[t] cityid('new orleans',_)
+
+X -> s1951
+[s] *(*(than,the),red)
+[t] riverid('red')
+
+X -> s543(X)
+[s] *(*(*(long,is),rio),?1)
+[t] len(?1)
+
+X -> s13362
+[s] pass
+[t] riverid('missouri')
+
+X -> s10799(X)
+[s] *(*(*(*(*(?1,has),the),smallest),population),density)
+[t] density_1(?1)
+
+X -> s12119(X)
+[s] *(*(*(?1,the),largest),city)
+[t] largest(?1)
+
+X -> s3532(X)
+[s] *(*(*(*(through,which),the),?1),runs)
+[t] traverse_1(?1)
+
+X -> s8422
+[s] portland
+[t] cityid('portland','me')
+
+X -> s2726
+[s] *(usa,exist)
+[t] countryid('usa')
+
+X -> s7737(X)
+[s] *(most,?1)
+[t] largest_one(?1)
+
+X -> s12189
+[s] *(san,jose)
+[t] cityid('san jose',_)
+
+X -> s6230(X)
+[s] *(*(*(*(?1,with),the),largest),area)
+[t] area_1(?1)
+
+X -> s1568(X)
+[s] *(capital,?1)
+[t] capital(?1)
+
+X -> s2956
+[s] *(texas,run)
+[t] stateid('texas')
+
+X -> s1159(X)
+[s] *(*(*(*(*(many,people),are),in),the),?1)
+[t] population_1(?1)
+
+X -> s12695(X)
+[s] *(*(borders,most),?1)
+[t] next_to_2(?1)
+
+X -> s6491
+[s] *(border,california)
+[t] stateid('california')
+
+X -> s2561(X)
+[s] *(*(city,named),?1)
+[t] city(?1)
+
+X -> s3696
+[s] *(*(*(*(*(of,the),major),cities),in),illinois)
+[t] stateid('illinois')
+
+X -> s7347(X)
+[s] *(*(that,flows),?1)
+[t] traverse_2(?1)
+
+X -> s3261
+[s] *(*(*(*(the,major),cities),in),alaska)
+[t] stateid('alaska')
+
+X -> s12956
+[s] *(*(*(*(*(state,has),the),smallest),average),urban)
+[t] state(all)
+
+X -> s3060
+[s] *(*(which,border),texas)
+[t] stateid('texas')
+
+X -> s272
+[s] new
+[t] stateid('new mexico')
+
+S! -> s2884(X)
+[s] *(sacramento,?1)
+[t] answer(?1)
+
+X -> s2966(X)
+[s] *(*(*(*(*(*(through,which),states),does),the),?1),run)
+[t] traverse_1(?1)
+
+X -> s561(X)
+[s] *(*(is,the),?1)
+[t] len(?1)
+
+X -> s1183
+[s] iowa
+[t] stateid('iowa')
+
+X -> s8339
+[s] *(of,montana)
+[t] stateid('montana')
+
+X -> s1249
+[s] austin
+[t] cityid('austin','tx')
+
+X -> s3661
+[s] *(*(*(*(the,major),rivers),in),ohio)
+[t] stateid('ohio')
+
+X -> s2492
+[s] *(*(*(missouri,river),run),through)
+[t] riverid('missouri')
+
+X -> s12104(X)
+[s] *(*(*(*(?1,city),has),the),largest)
+[t] loc_2(?1)
+
+X -> s2891(X)
+[s] *(?1,is)
+[t] loc_1(?1)
+
+X -> s8078
+[s] atlanta
+[t] cityid('atlanta',_)
+
+X -> s5856
+[s] *(*(*(*(*(is,the),highest),point),in),colorado)
+[t] stateid('colorado')
+
+X -> s3023(X)
+[s] *(*(*(*(are,major),rivers),in),?1)
+[t] loc_2(?1)
+
+X -> s925(X,X)
+[s] *(*(*(?1,are),there),?2)
+[t] intersection(?1,?2)
+
+X -> s71(X)
+[s] *(of,?1)
+[t] loc_2(?1)
+
+X -> s9736
+[s] *(*(*(*(flows,through),the),most),states)
+[t] state(all)
+
+X -> s1713
+[s] *(*(*(people,reside),in),utah)
+[t] stateid('utah')
+
+X -> s244(X)
+[s] *(that,?1)
+[t] next_to_2(?1)
+
+X -> s882
+[s] *(*(there,in),usa)
+[t] countryid('usa')
+
+X -> s10654(X)
+[s] *(*(*(state,has),the),?1)
+[t] smallest_one(?1)
+
+X -> s3093
+[s] *(border,missouri)
+[t] stateid('missouri')
+
+X -> s4668
+[s] *(*(area,of),wisconsin)
+[t] stateid('wisconsin')
+
+X -> s777
+[s] in
+[t] stateid('pennsylvania')
+
+X -> s12207(X)
+[s] *(the,?1)
+[t] loc_1(?1)
+
+X -> s6341
+[s] *(*(*(*(a,state),that),borders),texas)
+[t] stateid('texas')
+
+X -> s4633
+[s] *(*(of,the),states)
+[t] state(all)
+
+X -> s8986
+[s] *(*(*(*(*(the,shortest),river),in),the),us)
+[t] countryid('usa')
+
+X -> s2313(X)
+[s] *(*(states,does),?1)
+[t] state(?1)
+
+X -> s12080
+[s] *(of,springfield)
+[t] cityid('springfield',_)
+
+X -> s8946
+[s] *(*(*(*(*(is,the),shortest),river),in),texas)
+[t] stateid('texas')
+
+X -> s1765
+[s] *(*(are,called),colorado)
+[t] riverid('colorado')
+
+X -> s8159
+[s] *(of,boulder)
+[t] cityid('boulder',_)
+
+X -> s797
+[s] *(island,have)
+[t] stateid('rhode island')
+
+X -> s5118
+[s] *(*(*(*(is,the),capital),of),iowa)
+[t] stateid('iowa')
+
+X -> s247(X)
+[s] *(*(big,is),?1)
+[t] size(?1)
+
+X -> s4700(X)
+[s] *(*(*(*(*(*(*(average,population),per),square),km),in),the),?1)
+[t] density_1(?1)
+
+X -> s248
+[s] alaska
+[t] stateid('alaska')
+
+X -> s11109
+[s] *(*(next,to),texas)
+[t] stateid('texas')
+
+X -> s2695(X)
+[s] *(*(*(tall,is),the),?1)
+[t] elevation_1(?1)
+
+X -> s2137(X)
+[s] *(*(border,at),?1)
+[t] next_to_2(?1)
+
+X -> s2612
+[s] named
+[t] cityid('austin',_)
+
+X -> s9504(X)
+[s] *(*(*(*(?1,with),the),lowest),population)
+[t] density_1(?1)
+
+X -> s13044(X)
+[s] *(*(city,in),?1)
+[t] city(?1)
+
+X -> s1564(X)
+[s] *(*(?1,york),state)
+[t] state(?1)
+
+X -> s7874(X)
+[s] *(*(population,density),?1)
+[t] density_1(?1)
+
+X -> s9832
+[s] *(*(runs,through),virginia)
+[t] stateid('virginia')
+
+X -> s10770(X)
+[s] *(*(*(*(?1,has),the),smallest),area)
+[t] area_1(?1)
+
+X -> s4178
+[s] *(*(located,in),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s2937
+[s] *(*(*(*(*(*(tell,me),what),cities),are),in),texas)
+[t] stateid('texas')
+
+S! -> s16(X)
+[s] *(*(*(what,are),the),?1)
+[t] answer(?1)
+
+X -> s1447
+[s] new
+[t] stateid('new york')
+
+X -> s4580
+[s] albany
+[t] cityid('albany',_)
+
+X -> s8012(X)
+[s] *(*(*(population,density),?1),population)
+[t] density_1(?1)
+
+X -> s281
+[s] *(north,dakota)
+[t] stateid('north dakota')
+
+X -> s5452(X)
+[s] *(*(*(*(?1,with),the),largest),population)
+[t] density_1(?1)
+
+X -> s1972
+[s] in
+[t] stateid('washington')
+
+X -> s5540(X)
+[s] *(*(?1,smallest),population)
+[t] population_1(?1)
+
+X -> s11810
+[s] run
+[t] riverid('ohio')
+
+X -> s1321
+[s] *(*(live,in),houston)
+[t] cityid('houston',_)
+
+X -> s9262(X)
+[s] *(smallest,?1)
+[t] smallest_one(?1)
+
+X -> s2890(X)
+[s] *(*(*(?1,in),what),state)
+[t] state(?1)
+
+X -> s2387(X)
+[s] *(*(*(*(does,the),colorado),?1),through)
+[t] traverse_1(?1)
+
+X -> s3045(X)
+[s] *(*(which,border),?1)
+[t] next_to_2(?1)
+
+X -> s9100
+[s] *(*(*(*(the,smallest),city),in),alaska)
+[t] stateid('alaska')
+
+X -> s4097(X)
+[s] *(*(*(*(that,the),?1),runs),through)
+[t] traverse_1(?1)
+
+X -> s1031
+[s] *(*(*(inhabitants,does),montgomery),have)
+[t] cityid('montgomery',_)
+
+X -> s4734
+[s] *(*(*(*(a,state),with),a),river)
+[t] river(all)
+
+X -> s10702
+[s] *(*(*(*(*(*(*(has,the),most),major),rivers),running),through),it)
+[t] river(all)
+
+X -> s4150
+[s] *(*(capital,has),the)
+[t] capital(all)
+
+X -> s1840(X)
+[s] *(*(*(has,the),most),?1)
+[t] loc_1(?1)
+
+X -> s4098
+[s] potomac
+[t] riverid('potomac')
+
+X -> s4691(X)
+[s] *(*(*(average,population),per),?1)
+[t] density_1(?1)
+
+X -> s5182
+[s] *(*(*(*(*(is,the),capital),of),new),hampshire)
+[t] stateid('new hampshire')
+
+X -> s1492
+[s] *(*(in,san),francisco)
+[t] cityid('san francisco',_)
+
+X -> s4927
+[s] *(*(*(*(*(*(is,the),biggest),city),in),the),usa)
+[t] countryid('usa')
+
+X -> s5006
+[s] continental
+[t] countryid('usa')
+
+X -> s1941
+[s] *(colorado,have)
+[t] stateid('colorado')
+
+X -> s3070
+[s] *(*(*(*(*(is,the),capital),city),in),texas)
+[t] stateid('texas')
+
+X -> s8921
+[s] *(*(*(*(*(is,the),shortest),river),in),iowa)
+[t] stateid('iowa')
+
+X -> s9672
+[s] *(through,illinois)
+[t] stateid('illinois')
+
+X -> s4536(X)
+[s] *(*(*(area,of),the),?1)
+[t] area_1(?1)
+
+X -> s12153
+[s] mount
+[t] placeid('mount whitney')
+
+X -> s7720
+[s] *(*(*(*(*(is,the),major),cities),in),montana)
+[t] stateid('montana')
+
+S! -> s2676(X)
+[s] *(*(how,much),?1)
+[t] answer(?1)
+
+S! -> s2712(X)
+[s] *(what,?1)
+[t] answer(?1)
+
+X -> s10854(X)
+[s] *(*(state,is),?1)
+[t] state(?1)
+
+X -> s2371
+[s] *(*(colorado,river),flow)
+[t] riverid('colorado')
+
+X -> s1378
+[s] *(*(live,in),mississippi)
+[t] stateid('mississippi')
+
+X -> s1857
+[s] point
+[t] place(all)
+
+X -> s6026
+[s] *(*(*(*(*(is,the),highest),point),in),texas)
+[t] stateid('texas')
+
+X -> s4429
+[s] of
+[t] stateid('idaho')
+
+X -> s2866(X)
+[s] *(*(*(of,people),in),?1)
+[t] population_1(?1)
+
+X -> s12902(X)
+[s] *(*(*(*(?1,has),the),most),population)
+[t] population_1(?1)
+
+X -> s4026
+[s] *(of,texas)
+[t] stateid('texas')
+
+X -> s2510
+[s] run
+[t] riverid('missouri')
+
+X -> s4458(X)
+[s] *(*(area,?1),kilometers)
+[t] area_1(?1)
+
+X -> s8730(X)
+[s] *(*(*(*(population,of),the),smallest),?1)
+[t] population_1(?1)
+
+X -> s8777(X)
+[s] *(*(*(*(*(?1,with),the),highest),population),density)
+[t] density_1(?1)
+
+S! -> s2868(X)
+[s] *(*(number,of),?1)
+[t] answer(?1)
+
+X -> s5621(X)
+[s] *(*(elevation,of),?1)
+[t] elevation_1(?1)
+
+X -> s116
+[s] *(*(*(the,cities),in),usa)
+[t] countryid('usa')
+
+X -> s4727
+[s] *(a,river)
+[t] river(all)
+
+X -> s9066
+[s] *(*(*(*(of,the),capital),of),texas)
+[t] stateid('texas')
+
+X -> s4682(X)
+[s] *(*(*(*(*(average,population),of),the),us),?1)
+[t] density_1(?1)
+
+X -> s195
+[s] *(*(*(*(*(*(*(*(me,the),longest),river),that),passes),through),the),us)
+[t] countryid('usa')
+
+X -> s19(X)
+[s] *(surrounding,?1)
+[t] next_to_2(?1)
+
+X -> s4149(X)
+[s] *(*(?1,largest),population)
+[t] population_1(?1)
+
+X -> s13119(X)
+[s] *(*(*(border,no),other),?1)
+[t] next_to_2(?1)
+
+X -> s2857(X)
+[s] *(of,?1)
+[t] population_1(?1)
+
+X -> s495(X)
+[s] *(*(large,is),?1)
+[t] size(?1)
+
+X -> s822
+[s] *(united,states)
+[t] countryid('usa')
+
+X -> s2900
+[s] san
+[t] cityid('san antonio',_)
+
+X -> s11920
+[s] plano
+[t] cityid('plano',_)
+
+X -> s2978
+[s] *(mississippi,flow)
+[t] riverid('mississippi')
+
+X -> s5471(X)
+[s] *(*(*(state,with),the),?1)
+[t] largest_one(?1)
+
+X -> s2052(X)
+[s] *(*(*(in,the),united),?1)
+[t] loc_2(?1)
+
+X -> s2389
+[s] flow
+[t] riverid('colorado')
+
+X -> s6832(X)
+[s] *(?1,populous)
+[t] population_1(?1)
+
+X -> s11101
+[s] *(to,texas)
+[t] stateid('texas')
+
+X -> s1671
+[s] *(*(live,in),washington)
+[t] stateid('washington')
+
+X -> s4450
+[s] *(*(*(maryland,in),square),kilometers)
+[t] stateid('maryland')
+
+X -> s2401
+[s] *(*(colorado,river),run)
+[t] riverid('colorado')
+
+X -> s3631
+[s] *(*(*(*(*(the,major),cities),of),the),us)
+[t] countryid('usa')
+
+X -> s6692
+[s] *(borders,california)
+[t] stateid('california')
+
+X -> s1760(X)
+[s] *(*(*(rivers,are),called),?1)
+[t] river(?1)
+
+X -> s185
+[s] us
+[t] countryid('usa')
+
+X -> s9102(X)
+[s] *(*(*(is,the),smallest),?1)
+[t] smallest(?1)
+
+X -> s5606(X)
+[s] *(*(*(density,of),the),?1)
+[t] density_1(?1)
+
+X -> s1620(X)
+[s] *(*(*(*(people,live),in),the),?1)
+[t] population_1(?1)
+
+X -> s4710
+[s] *(*(*(*(*(*(*(*(the,average),population),per),square),km),in),the),us)
+[t] countryid('usa')
+
+X -> s4979(X)
+[s] *(*(*(is,the),biggest),?1)
+[t] longest(?1)
+
+X -> s5416
+[s] elevation
+[t] place(all)
+
+X -> s8198
+[s] denver
+[t] cityid('denver',_)
+
+X -> s4036
+[s] of
+[t] stateid('texas')
+
+X -> s3753(X)
+[s] *(*(populations,of),?1)
+[t] population_1(?1)
+
+X -> s12077(X,X)
+[s] *(*(?1,have),?2)
+[t] intersection(?1,?2)
+
+X -> s1133
+[s] oregon
+[t] stateid('oregon')
+
+X -> s498(X)
+[s] *(large,?1)
+[t] size(?1)
+
+X -> s9202
+[s] *(*(*(*(the,smallest),city),in),washington)
+[t] stateid('washington')
+
+X -> s10814(X)
+[s] *(*(*(*(state,has),the),smallest),?1)
+[t] smallest_one(?1)
+
+X -> s4348
+[s] *(*(*(adjacent,state),of),california)
+[t] stateid('california')
+
+X -> s1471
+[s] *(*(*(people,live),in),riverside)
+[t] cityid('riverside',_)
+
+X -> s4142
+[s] *(*(*(*(can,you),tell),me),about)
+[t] stateid('missouri')
+
+X -> s10651(X)
+[s] *(*(*(*(*(?1,has),the),least),population),density)
+[t] density_1(?1)
+
+X -> s6733(X)
+[s] *(*(*(*(?1,with),the),highest),population)
+[t] population_1(?1)
+
+X -> s9259(X)
+[s] *(?1,area)
+[t] area_1(?1)
+
+X -> s1157
+[s] ohio
+[t] stateid('ohio')
+
+X -> s12774
+[s] *(*(*(peak,in),the),country)
+[t] place(all)
+
+X -> s3039
+[s] *(*(*(*(the,biggest),rivers),in),texas)
+[t] stateid('texas')
+
+X -> s11770
+[s] *(*(*(ohio,river),go),through)
+[t] riverid('ohio')
+
+X -> s6373
+[s] *(*(*(*(*(is,the),largest),city),in),california)
+[t] stateid('california')
+
+X -> s11748
+[s] *(*(missouri,run),through)
+[t] riverid('missouri')
+
+X -> s11003(X)
+[s] *(*(*(*(state,is),the),state),?1)
+[t] state(?1)
+
+X -> s1225
+[s] austin
+[t] cityid('austin',_)
+
+X -> s5816
+[s] *(*(*(*(*(is,the),highest),mountain),in),texas)
+[t] stateid('texas')
+
+X -> s13482(X)
+[s] *(*(*(lie,on),the),?1)
+[t] traverse_1(?1)
+
+X -> s10433(X)
+[s] *(*(*(?1,the),least),states)
+[t] state(?1)
+
+X -> s1363
+[s] *(*(*(*(people,live),in),minneapolis),minnesota)
+[t] cityid('minneapolis','mn')
+
+X -> s7188(X)
+[s] *(*(*(with,the),most),?1)
+[t] loc_1(?1)
+
+X -> s2233(X)
+[s] *(*(*(*(that,borders),the),most),?1)
+[t] next_to_2(?1)
+
+X -> s9857(X)
+[s] *(*(traverses,the),?1)
+[t] traverse_2(?1)
+
+X -> s1288
+[s] detroit
+[t] cityid('detroit',_)
+
+S! -> s12109(X)
+[s] *(*(*(what,"'s"),the),?1)
+[t] answer(?1)
+
+X -> s5190
+[s] new
+[t] stateid('new jersey')
+
+X -> s2982
+[s] *(*(*(*(*(through,which),states),does),the),mississippi)
+[t] riverid('mississippi')
+
+X -> s4279(X)
+[s] *(*(*(*(?1,has),the),most),people)
+[t] population_1(?1)
+
+X -> s5729(X)
+[s] *(*(high,point),?1)
+[t] high_point_1(?1)
+
+X -> s8147
+[s] boston
+[t] cityid('boston','ma')
+
+X -> s11559(X)
+[s] *(*(*(*(*(*(*(?1,border),the),state),with),the),smallest),area)
+[t] area_1(?1)
+
+X -> s5735(X)
+[s] *(*(point,of),?1)
+[t] high_point_1(?1)
+
+X -> s8013(X)
+[s] *(*(*(?1,with),the),smallest)
+[t] smallest_one(?1)
+
+X -> s2732(X)
+[s] *(*(*(*(*(*(*(*(in,which),state),does),the),highest),point),in),?1)
+[t] loc_2(?1)
+
+X -> s8518
+[s] *(springfield,missouri)
+[t] cityid('springfield','mo')
+
+X -> s10860(X)
+[s] *(*(?1,the),capital)
+[t] capital(?1)
+
+X -> s1168(X)
+[s] *(state,?1)
+[t] state(?1)
+
+X -> s709
+[s] ohio
+[t] riverid('ohio')
+
+X -> s9725(X)
+[s] *(*(*(through,the),most),?1)
+[t] traverse_2(?1)
+
+X -> s1906
+[s] there
+[t] stateid('texas')
+
+X -> s1123
+[s] *(cities,are)
+[t] city(all)
+
+X -> s3556
+[s] vermont
+[t] stateid('vermont')
+
+X -> s2832
+[s] *(*(*(*(the,major),rivers),in),florida)
+[t] stateid('florida')
+
+X -> s11153
+[s] kentucky
+[t] stateid('kentucky')
+
+X -> s11910
+[s] named
+[t] cityid('dallas',_)
+
+X -> s7538
+[s] *(*(*(*(*(is,the),lowest),point),in),texas)
+[t] stateid('texas')
+
+X -> s2053
+[s] states
+[t] countryid('usa')
+
+X -> s4794
+[s] *(*(*(*(the,biggest),city),in),georgia)
+[t] stateid('georgia')
+
+X -> s2822
+[s] *(*(*(*(the,major),lakes),in),michigan)
+[t] stateid('michigan')
+
+X -> s4398(X)
+[s] *(*(the,area),?1)
+[t] area_1(?1)
+
+X -> s13502(X)
+[s] *(us,?1)
+[t] largest_one(?1)
+
+X -> s7937(X)
+[s] *(*(*(*(population,density),of),the),?1)
+[t] density_1(?1)
+
+X -> s5154
+[s] *(*(*(*(is,the),capital),of),massachusetts)
+[t] stateid('massachusetts')
+
+X -> s7975
+[s] *(*(*(of,the),smallest),state)
+[t] state(all)
+
+X -> s2508(X)
+[s] *(*(*(*(does,the),missouri),?1),through)
+[t] traverse_1(?1)
+
+X -> s9359(X)
+[s] *(*(*(state,that),the),?1)
+[t] state(?1)
+
+X -> s8276
+[s] *(of,illinois)
+[t] stateid('illinois')
+
+X -> s12713(X)
+[s] *(state,?1)
+[t] smallest_one(?1)
+
+X -> s2486
+[s] *(*(missouri,river),run)
+[t] riverid('missouri')
+
+X -> s7151
+[s] *(*(*(*(*(is,the),longest),river),in),texas)
+[t] stateid('texas')
+
+X -> s5536(X)
+[s] *(*(*(*(?1,with),the),smallest),population)
+[t] population_1(?1)
+
+X -> s3200(X)
+[s] *(*(*(are,the),lakes),?1)
+[t] lake(?1)
+
+X -> s8378(X)
+[s] *(?1,city)
+[t] city(?1)
+
+X -> s6402(X)
+[s] *(*(?1,by),population)
+[t] population_1(?1)
+
+X -> s4093(X)
+[s] *(?1,through)
+[t] traverse_1(?1)
+
+X -> s2771
+[s] *(*(*(*(all,the),lakes),of),us)
+[t] countryid('usa')
+
+X -> s10756(X)
+[s] *(*(*(has,the),most),?1)
+[t] traverse_1(?1)
+
+X -> s2537(X)
+[s] *(*(city,called),?1)
+[t] city(?1)
+
+X -> s2886(X)
+[s] *(*(is,the),?1)
+[t] loc_1(?1)
+
+X -> s12144
+[s] indianapolis
+[t] cityid('indianapolis',_)
+
+X -> s5866
+[s] *(*(*(*(the,highest),point),in),delaware)
+[t] stateid('delaware')
+
+X -> s1985(X)
+[s] *(*(rivers,run),?1)
+[t] river(?1)
+
+X -> s4704
+[s] *(*(in,the),us)
+[t] countryid('usa')
+
+X -> s10630(X)
+[s] *(*(*(*(state,has),the),largest),?1)
+[t] largest_one(?1)
+
+X -> s1399
+[s] *(*(live,in),montana)
+[t] stateid('montana')
+
+X -> s8030
+[s] of
+[t] stateid('wyoming')
+
+X -> s7292(X)
+[s] *(*(*(*(that,flows),through),a),?1)
+[t] traverse_2(?1)
+
+X -> s4717(X)
+[s] *(*(in,a),?1)
+[t] loc_2(?1)
+
+X -> s7253
+[s] *(*(*(*(*(*(is,the),longest),river),in),the),us)
+[t] countryid('usa')
+
+X -> s4947
+[s] *(*(*(*(the,biggest),city),in),usa)
+[t] countryid('usa')
+
+X -> s5026
+[s] *(*(*(*(*(*(is,the),biggest),state),in),the),usa)
+[t] countryid('usa')
+
+X -> s3135
+[s] *(*(*(which,the),mississippi),runs)
+[t] riverid('mississippi')
+
+X -> s3175
+[s] *(*(all,the),states)
+[t] state(all)
+
+X -> s11113
+[s] *(*(to,the),mississippi)
+[t] stateid('mississippi')
+
+X -> s4094
+[s] *(*(*(that,the),potomac),runs)
+[t] riverid('potomac')
+
+X -> s5349
+[s] *(*(*(*(*(*(is,the),capital),of),the),state),texas)
+[t] stateid('texas')
+
+X -> s1224(X)
+[s] *(*(*(*(many,people),live),in),?1)
+[t] population_1(?1)
+
+X -> s3381
+[s] *(*(*(*(the,major),cities),in),ohio)
+[t] stateid('ohio')
+
+X -> s10874(X)
+[s] *(?1,of)
+[t] loc_1(?1)
+
+X -> s3723(X)
+[s] *(*(*(*(is,the),population),of),?1)
+[t] population_1(?1)
+
+X -> s5846
+[s] *(*(*(*(*(is,the),highest),mountain),in),us)
+[t] countryid('usa')
+
+X -> s3690(X)
+[s] *(*(*(*(?1,the),major),cities),in)
+[t] loc_2(?1)
+
+X -> s6(X)
+[s] *(in,?1)
+[t] loc_2(?1)
+
+X -> s4295(X)
+[s] *(*(*(*(*(?1,has),the),highest),population),density)
+[t] density_1(?1)
+
+X -> s4859
+[s] *(*(*(*(*(is,the),biggest),city),in),oregon)
+[t] stateid('oregon')
+
+X -> s851(X)
+[s] *(?1,in)
+[t] loc_2(?1)
+
+X -> s2757
+[s] *(the,states)
+[t] state(all)
+
+X -> s3449
+[s] *(*(*(*(the,major),cities),in),texas)
+[t] stateid('texas')
+
+X -> s9053(X)
+[s] *(*(*(size,of),the),?1)
+[t] size(?1)
+
+X -> s11085
+[s] *(*(next,to),arizona)
+[t] stateid('arizona')
+
+X -> s12272(X)
+[s] *(spot,?1)
+[t] place(?1)
+
+X -> s3072(X)
+[s] *(*(the,capital),?1)
+[t] capital(?1)
+
+X -> s3616
+[s] *(*(the,united),states)
+[t] countryid('usa')
+
+X -> s6074
+[s] *(des,moines)
+[t] cityid('des moines',_)
+
+X -> s2538
+[s] rochester
+[t] cityid('rochester',_)
+
+X -> s8144
+[s] *(*(of,boston),massachusetts)
+[t] cityid('boston','ma')
+
+X -> s12000
+[s] *(named,colorado)
+[t] riverid('colorado')
+
+X -> s148
+[s] *(*(*(*(*(*(me,the),cities),which),are),in),texas)
+[t] stateid('texas')
+
+X -> s9182
+[s] *(*(*(*(*(*(is,the),smallest),city),in),the),usa)
+[t] countryid('usa')
+
+X -> s7052(X)
+[s] *(*(*(is,the),longest),?1)
+[t] longest(?1)
+
+X -> s7732(X)
+[s] *(*(*(is,the),maximum),?1)
+[t] highest(?1)
+
+X -> s6641(X)
+[s] *(?1,capital)
+[t] capital_1(?1)
+
+X -> s13058(X)
+[s] *(*(?1,the),smallest)
+[t] smallest(?1)
+
+X -> s351(X)
+[s] *(high,?1)
+[t] elevation_1(?1)
+
+X -> s12126
+[s] *(baton,rouge)
+[t] cityid('baton rouge',_)
+
+X -> s4351(X)
+[s] *(*(*(adjacent,state),of),?1)
+[t] next_to_2(?1)
+
+X -> s9622(X)
+[s] *(*(*(length,is),the),?1)
+[t] len(?1)
+
+X -> s11795
+[s] *(*(*(ohio,river),run),through)
+[t] riverid('ohio')
+
+X -> s5(X)
+[s] *(cities,?1)
+[t] city(?1)
+
+X -> s9762(X)
+[s] *(*(river,runs),?1)
+[t] river(?1)
+
+X -> s9466(X)
+[s] *(*(*(?1,largest),population),density)
+[t] density_1(?1)
+
+X -> s7332(X)
+[s] *(*(flows,through),?1)
+[t] traverse_2(?1)
+
+X -> s220
+[s] *(*(*(*(*(*(me,the),number),of),rivers),in),california)
+[t] stateid('california')
+
+X -> s6105(X)
+[s] *(*(*(with,the),most),?1)
+[t] traverse_1(?1)
+
+X -> s9535
+[s] *(*(*(*(*(is,the),tallest),mountain),in),america)
+[t] countryid('usa')
+
+X -> s12116(X)
+[s] *(*(*("'s",the),largest),?1)
+[t] largest(?1)
+
+X -> s3481(X)
+[s] *(*(*(*(*(*(in,the),smallest),state),in),the),?1)
+[t] loc_2(?1)
+
+X -> s1501
+[s] *(*(in,south),dakota)
+[t] stateid('south dakota')
+
+X -> s5885(X)
+[s] *(*(*(*(*(is,the),highest),point),in),?1)
+[t] loc_1(?1)
+
+X -> s7402(X)
+[s] *(*(*(*(that,runs),through),a),?1)
+[t] traverse_2(?1)
+
+X -> s8819
+[s] *(of,tucson)
+[t] cityid('tucson',_)
+
+X -> s832
+[s] *(*(*(there,in),the),united)
+[t] countryid('usa')
+
+X -> s1789(X)
+[s] *(*(are,in),?1)
+[t] loc_2(?1)
+
+X -> s1075
+[s] nebraska
+[t] stateid('nebraska')
+
+S! -> s29(X)
+[s] *(*(*(name,all),the),?1)
+[t] answer(?1)
+
+X -> s12955(X)
+[s] *(?1,population)
+[t] density_1(?1)
+
+X -> s8314(X)
+[s] *(*(population,?1),maryland)
+[t] population_1(?1)
+
+X -> s6827(X)
+[s] *(least,?1)
+[t] smallest_one(?1)
+
+X -> s4322(X)
+[s] *(*(is,capital),?1)
+[t] capital(?1)
+
+X -> s6805(X)
+[s] *(*(*(traversed,by),the),?1)
+[t] traverse_1(?1)
+
+X -> s11590(X)
+[s] *(*(state,"'s"),?1)
+[t] state(?1)
+
+S! -> s2856(X)
+[s] *(number,?1)
+[t] answer(?1)
+
+X -> s7955
+[s] *(*(*(of,the),largest),state)
+[t] state(all)
+
+X -> s233
+[s] *(*(*(*(*(me,the),states),that),border),utah)
+[t] stateid('utah')
+
+X -> s6396(X)
+[s] *(?1,population)
+[t] population_1(?1)
+
+X -> s4474
+[s] *(*(of,new),mexico)
+[t] stateid('new mexico')
+
+X -> s6036
+[s] *(the,country)
+[t] countryid('usa')
+
+X -> s8234
+[s] *(of,hawaii)
+[t] stateid('hawaii')
+
+X -> s327(X)
+[s] *(*(*(of,all),the),?1)
+[t] loc_2(?1)
+
+X -> s96
+[s] me
+[t] stateid('texas')
+
+X -> s348(X)
+[s] *(is,?1)
+[t] elevation_1(?1)
+
+X -> s8936
+[s] *(*(*(*(the,shortest),river),in),nebraska)
+[t] stateid('nebraska')
+
+X -> s1261
+[s] *(*(live,in),california)
+[t] stateid('california')
+
+X -> s7633(X)
+[s] *(*(*(*(through,which),the),?1),through)
+[t] traverse_1(?1)
+
+X -> s10002
+[s] *(though,colorado)
+[t] stateid('colorado')
+
+X -> s7727(X)
+[s] *(maximum,?1)
+[t] highest(?1)
+
+X -> s2524(X)
+[s] *(*(have,a),?1)
+[t] loc_1(?1)
+
+X -> s12094(X)
+[s] *(surround,?1)
+[t] next_to_2(?1)
+
+X -> s4834
+[s] *(*(*(*(*(is,the),biggest),city),in),nebraska)
+[t] stateid('nebraska')
+
+X -> s6956(X)
+[s] *(*(*(*(flows,through),the),most),?1)
+[t] traverse_2(?1)
+
+X -> s2577(X)
+[s] *(*(of,the),?1)
+[t] loc_2(?1)
+
+X -> s7016(X)
+[s] *(*(*(*(runs,through),the),most),?1)
+[t] traverse_2(?1)
+
+X -> s6825
+[s] by
+[t] riverid('mississippi')
+
+X -> s9480(X)
+[s] *(*(*(*(?1,with),the),lowest),population)
+[t] population_1(?1)
+
+X -> s7979(X)
+[s] *(*(*(*(?1,with),the),smallest),area)
+[t] area_1(?1)
+
+X -> s13134(X)
+[s] *(*(*(?1,border),no),other)
+[t] next_to_2(?1)
+
+X -> s10977
+[s] *(*(state,is),the)
+[t] state(all)
+
+X -> s5505
+[s] *(*(*(*(is,the),capital),of),washington)
+[t] stateid('washington')
+
+X -> s10210
+[s] *(*(run,through),louisiana)
+[t] stateid('louisiana')
+
+X -> s10477(X)
+[s] *(*(has,the),?1)
+[t] loc_1(?1)
+
+X -> s12617(X)
+[s] *(*(with,fewest),?1)
+[t] loc_1(?1)
+
+X -> s236(X)
+[s] *(border,?1)
+[t] next_to_2(?1)
+
+X -> s2574(X)
+[s] *(*(*(*(*(a,higher),point),than),the),?1)
+[t] higher_2(?1)
+
+X -> s9739(X)
+[s] *(*(*(*(*(river,is),the),longest),one),?1)
+[t] river(?1)
+
+X -> s1718(X)
+[s] *(people,?1)
+[t] population_1(?1)
+
+X -> s1677
+[s] *(washington,dc)
+[t] cityid('washington','dc')
+
+X -> s8452
+[s] of
+[t] cityid('sacramento',_)
+
+X -> s12086(X)
+[s] *(neighbor,?1)
+[t] next_to_2(?1)
+
+X -> s1665
+[s] *(in,washington)
+[t] stateid('washington')
+
+X -> s5278(X)
+[s] *(?1,texas)
+[t] loc_2(?1)
+
+X -> s3551
+[s] *(*(*(*(*(the,major),cities),in),the),usa)
+[t] countryid('usa')
+
+X -> s7141
+[s] *(*(*(*(*(is,the),longest),river),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s1728
+[s] *(*(*(people,stay),in),utah)
+[t] stateid('utah')
+
+X -> s1570
+[s] georgia
+[t] stateid('georgia')
+
+X -> s4248
+[s] city
+[t] city(all)
+
+X -> s6612
+[s] *(*(*(*(the,largest),state),bordering),arkansas)
+[t] stateid('arkansas')
+
+X -> s10190
+[s] *(*(run,through),colorado)
+[t] stateid('colorado')
+
+X -> s10787(X)
+[s] *(*(*(*(?1,has),the),smallest),population)
+[t] population_1(?1)
+
+X -> s2793(X)
+[s] *(*("50",capitals),?1)
+[t] capital(?1)
+
+X -> s7488
+[s] *(*(*(*(*(is,the),lowest),point),in),massachusetts)
+[t] stateid('massachusetts')
+
+X -> s5675(X)
+[s] *(*(*(height,of),the),?1)
+[t] elevation_1(?1)
+
+X -> s10995(X)
+[s] *(*(*(state,is),the),?1)
+[t] state(?1)
+
+X -> s4967
+[s] *(*(*(*(the,biggest),city),in),wyoming)
+[t] stateid('wyoming')
+
+X -> s12414
+[s] *(*(the,smallest),state)
+[t] state(all)
+
+X -> s5275
+[s] *(*(*(*(is,the),capital),of),texas)
+[t] stateid('texas')
+
+X -> s342(X)
+[s] *(*(high,is),?1)
+[t] elevation_1(?1)
+
+X -> s5106
+[s] *(*(*(*(is,the),capital),of),indiana)
+[t] stateid('indiana')
+
+X -> s7309
+[s] *(borders,indiana)
+[t] stateid('indiana')
+
+X -> s12283(X)
+[s] *(area,?1)
+[t] city(?1)
+
+X -> s5945(X)
+[s] *(*(point,in),?1)
+[t] place(?1)
+
+S! -> s2915(X)
+[s] *(*(show,me),?1)
+[t] answer(?1)
+
+X -> s12999(X)
+[s] *(*(is,kalamazoo),?1)
+[t] loc_1(?1)
+
+X -> s5497
+[s] *(*(*(the,capital),of),vermont)
+[t] stateid('vermont')
+
+X -> s8390(X)
+[s] *(*(?1,york),city)
+[t] city(?1)
+
+X -> s2674(X)
+[s] *(*(*(much,population),does),?1)
+[t] population_1(?1)
+
+X -> s2460
+[s] *(*(mississippi,run),through)
+[t] riverid('mississippi')
+
+X -> s8045
+[s] in
+[t] cityid('boston',_)
+
+X -> s1020
+[s] there
+[t] riverid('colorado')
+
+X -> s10489
+[s] flint
+[t] cityid('flint',_)
+
+X -> s567
+[s] delaware
+[t] riverid('delaware')
+
+X -> s6564
+[s] *(*(*(rio,grande),runs),through)
+[t] riverid('rio grande')
+
+X -> s9586
+[s] *(rivers,in)
+[t] river(all)
+
+X -> s7352(X)
+[s] *(*(*(that,passes),the),?1)
+[t] traverse_2(?1)
+
+X -> s76
+[s] *(*(*(*(all,the),states),of),usa)
+[t] countryid('usa')
+
+X -> s5435
+[s] *(*(state,with),the)
+[t] state(all)
+
+X -> s9260
+[s] by
+[t] state(all)
+
+X -> s5493
+[s] *(*(*(*(is,the),capital),of),vermont)
+[t] stateid('vermont')
+
+X -> s4706(X)
+[s] *(*(*(*(*(*(average,population),per),square),km),in),?1)
+[t] density_1(?1)
+
+X -> s1863(X)
+[s] *(*(*(*(?1,with),the),largest),population)
+[t] population_1(?1)
+
+X -> s5146
+[s] of
+[t] stateid('maryland')
+
+X -> s2872(X)
+[s] *(of,?1)
+[t] count(?1)
+
+X -> s4656
+[s] wisconsin
+[t] stateid('wisconsin')
+
+X -> s5097(X)
+[s] *(?1,illinois)
+[t] loc_2(?1)
+
+X -> s9236
+[s] *(*(*(*(the,smallest),state),bordering),ohio)
+[t] stateid('ohio')
+
+X -> s2087
+[s] *(*(states,are),there)
+[t] state(all)
+
+X -> s156
+[s] california
+[t] stateid('california')
+
+X -> s2381(X)
+[s] *(*(*(*(does,the),?1),flow),through)
+[t] traverse_1(?1)
+
+X -> s9268
+[s] *(state,by)
+[t] state(all)
+
+X -> s13053
+[s] *(montana,in)
+[t] stateid('montana')
+
+X -> s549(X)
+[s] *(*(*(long,is),the),?1)
+[t] len(?1)
+
+X -> s10619(X)
+[s] *(*(*(*(?1,has),the),largest),population)
+[t] density_1(?1)
+
+X -> s1139
+[s] *(*(there,in),oregon)
+[t] stateid('oregon')
+
+X -> s5166
+[s] *(*(*(*(is,the),capital),of),michigan)
+[t] stateid('michigan')
+
+X -> s368(X)
+[s] *(point,?1)
+[t] place(?1)
+
+X -> s2437
+[s] *(*(*(mississippi,river),run),through)
+[t] riverid('mississippi')
+
+X -> s2090
+[s] *(states,are)
+[t] state(all)
+
+X -> s1574(X)
+[s] *(*(*(*(in,the),capital),of),?1)
+[t] loc_2(?1)
+
+X -> s12050(X)
+[s] *(*(*(*(*(*(*(high,point),is),higher),than),that),of),?1)
+[t] high_point_1(?1)
+
+X -> s10742
+[s] has
+[t] river(all)
+
+X -> s8213
+[s] *(erie,pennsylvania)
+[t] cityid('erie','pa')
+
+X -> s2290(X,X)
+[s] *(*(*(?1,do),not),?2)
+[t] exclude(?1,?2)
+
+X -> s4360(X)
+[s] *(area,?1)
+[t] area_1(?1)
+
+X -> s269
+[s] *(new,mexico)
+[t] stateid('new mexico')
+
+S! -> s560(X)
+[s] *(*(how,long),?1)
+[t] answer(?1)
+
+X -> s7920
+[s] south
+[t] stateid('south dakota')
+
+X -> s328
+[s] states
+[t] state(all)
+
+X -> s4804
+[s] *(*(*(*(*(is,the),biggest),city),in),kansas)
+[t] stateid('kansas')
+
+X -> s8981
+[s] *(*(*(*(*(*(is,the),shortest),river),in),the),us)
+[t] countryid('usa')
+
+X -> s1312
+[s] *(*(live,in),hawaii)
+[t] stateid('hawaii')
+
+X -> s1805
+[s] missouri
+[t] stateid('missouri')
+
+X -> s9251
+[s] *(*(*(*(the,smallest),state),bordering),wyoming)
+[t] stateid('wyoming')
+
+X -> s3127(X)
+[s] *(*(*(are,the),cities),?1)
+[t] city(?1)
+
+X -> s4363(X)
+[s] *(of,?1)
+[t] area_1(?1)
+
+X -> s3391
+[s] *(*(*(*(the,major),cities),in),oklahoma)
+[t] stateid('oklahoma')
+
+X -> s2067(X)
+[s] *(*(next,to),?1)
+[t] next_to_2(?1)
+
+X -> s1773(X)
+[s] *(*(*(rivers,are),found),?1)
+[t] river(?1)
+
+X -> s12185(X)
+[s] *(*(is,san),?1)
+[t] loc_1(?1)
+
+X -> s2617(X)
+[s] *(*(cities,named),?1)
+[t] city(?1)
+
+X -> s4217(X)
+[s] *(*(*(*(?1,the),highest),number),of)
+[t] population_1(?1)
+
+X -> s9844
+[s] runs
+[t] stateid('virginia')
+
+X -> s4677
+[s] *(us,by)
+[t] countryid('usa')
+
+X -> s9768
+[s] *(*(runs,through),illinois)
+[t] stateid('illinois')
+
+X -> s1986(X)
+[s] *(through,?1)
+[t] traverse_2(?1)
+
+X -> s10561(X)
+[s] *(*(*(*(?1,has),the),highest),population)
+[t] population_1(?1)
+
+X -> s4713
+[s] square
+[t] countryid('usa')
+
+S! -> s2881(X)
+[s] *(population,?1)
+[t] answer(?1)
+
+X -> s6031
+[s] country
+[t] countryid('usa')
+
+X -> s228(X)
+[s] *(*(that,border),?1)
+[t] next_to_2(?1)
+
+X -> s10552(X)
+[s] *(*(*(*(?1,has),the),greatest),population)
+[t] density_1(?1)
+
+X -> s5603(X)
+[s] *(of,?1)
+[t] density_1(?1)
+
+X -> s184(X)
+[s] *(*(*(*(that,passes),through),the),?1)
+[t] traverse_2(?1)
+
+S! -> s12412(X)
+[s] *(*(which,is),?1)
+[t] answer(?1)
+
+X -> s138(X)
+[s] *(*(*(cities,which),are),?1)
+[t] city(?1)
+
+X -> s2863(X)
+[s] *(*(of,people),?1)
+[t] population_1(?1)
+
+X -> s3591
+[s] *(*(*(*(the,major),cities),of),texas)
+[t] stateid('texas')
+
+X -> s4428(X)
+[s] *(*(area,?1),idaho)
+[t] area_1(?1)
+
+X -> s3757
+[s] *(*(*(*(which,the),mississippi),river),runs)
+[t] riverid('mississippi')
+
+X -> s10660
+[s] *(*(*(state,has),the),least)
+[t] state(all)
+
+X -> s7
+[s] virginia
+[t] stateid('virginia')
+
+X -> s4784
+[s] *(*(*(*(*(is,the),biggest),city),in),georgia)
+[t] stateid('georgia')
+
+X -> s3361
+[s] *(north,carolina)
+[t] stateid('north carolina')
+
+X -> s10852
+[s] *(austin,in)
+[t] cityid('austin',_)
+
+X -> s1381
+[s] *(in,mississippi)
+[t] stateid('mississippi')
+
+X -> s2668(X)
+[s] *(*(much,population),?1)
+[t] population_1(?1)
+
+X -> s177
+[s] *(*(*(me,the),largest),state)
+[t] state(all)
+
+X -> s9400(X)
+[s] *(*(contains,the),?1)
+[t] loc_1(?1)
+
+X -> s10346
+[s] *(*(*(run,through),west),virginia)
+[t] stateid('west virginia')
+
+X -> s11773(X)
+[s] *(*(*(*(does,the),?1),go),through)
+[t] traverse_1(?1)
+
+X -> s4086
+[s] *(*(that,the),potomac)
+[t] riverid('potomac')
+
+X -> s6549
+[s] *(*(*(*(the,largest),city),in),wisconsin)
+[t] stateid('wisconsin')
+
+X -> s5613
+[s] *(*(*(of,the),new),york)
+[t] stateid('new york')
+
+X -> s10589(X)
+[s] *(*(*(*(?1,has),the),largest),area)
+[t] area_1(?1)
+
+X -> s3002
+[s] *(*(*(*(all,the),rivers),in),texas)
+[t] stateid('texas')
+
+X -> s4180(X)
+[s] *(*(*(cities,are),located),?1)
+[t] city(?1)
+
+X -> s3141
+[s] *(mississippi,runs)
+[t] riverid('mississippi')
+
+X -> s5723(X)
+[s] *(*(*(high,point),of),?1)
+[t] high_point_1(?1)
+
+X -> s10970(X)
+[s] *(*(*(?1,is),the),biggest)
+[t] largest(?1)
+
+X -> s3140(X)
+[s] *(*(*(through,which),the),?1)
+[t] traverse_1(?1)
+
+X -> s3714(X)
+[s] *(*(population,of),?1)
+[t] population_1(?1)
+
+X -> s5260
+[s] *(named,durham)
+[t] cityid('durham',_)
+
+X -> s13156
+[s] *(mississippi,traverses)
+[t] riverid('mississippi')
+
+X -> s2765(X)
+[s] *(*(*(all,the),lakes),?1)
+[t] lake(?1)
+
+X -> s12946(X)
+[s] *(*(*(*(*(*(state,has),the),smallest),area),that),?1)
+[t] state(?1)
+
+X -> s1737
+[s] *(*(*(residents,live),in),texas)
+[t] stateid('texas')
+
+X -> s4367(X)
+[s] *(*(*(*(area,of),all),the),?1)
+[t] area_1(?1)
+
+X -> s12814(X)
+[s] *(*(*(*(?1,has),the),largest),density)
+[t] density_1(?1)
+
+X -> s10866
+[s] *(*(*(austin,the),capital),of)
+[t] cityid('austin',_)
+
+X -> s1180
+[s] *(*(there,in),iowa)
+[t] stateid('iowa')
+
+X -> s5591(X)
+[s] *(*(density,of),?1)
+[t] density_1(?1)
+
+X -> s8485
+[s] *(*(of,seattle),washington)
+[t] cityid('seattle','wa')
+
+X -> s1405
+[s] *(new,hampshire)
+[t] stateid('new hampshire')
+
+X -> s2072(X)
+[s] *(*(*(states,are),next),?1)
+[t] state(?1)
+
+X -> s4432
+[s] maine
+[t] stateid('maine')
+
+X -> s8413
+[s] *(portland,maine)
+[t] cityid('portland','me')
+
+X -> s3291
+[s] *(*(*(*(the,major),cities),in),delaware)
+[t] stateid('delaware')
+
+X -> s12847(X)
+[s] *(that,?1)
+[t] loc_2(?1)
+
+X -> s4420
+[s] *(of,idaho)
+[t] stateid('idaho')
+
+X -> s5917
+[s] *(*(*(*(*(is,the),highest),point),in),kansas)
+[t] stateid('kansas')
+
+X -> s912
+[s] *(usa,have)
+[t] countryid('usa')
+
+X -> s278
+[s] *(*(is,new),mexico)
+[t] stateid('new mexico')
+
+X -> s8041(X)
+[s] *(*(*(is,the),population),?1)
+[t] population_1(?1)
+
+X -> s10920
+[s] *(dallas,in)
+[t] cityid('dallas',_)
+
+X -> s6174
+[s] *(*(*(*(*(the,highest),point),in),the),us)
+[t] countryid('usa')
+
+X -> s769(X)
+[s] *(*(cities,are),?1)
+[t] city(?1)
+
+X -> s827
+[s] *(*(*(*(there,in),the),united),states)
+[t] countryid('usa')
+
+X -> s12205
+[s] chattahoochee
+[t] riverid('chattahoochee')
+
+X -> s5937
+[s] *(*(*(*(*(is,the),highest),point),in),montana)
+[t] stateid('montana')
+
+X -> s5776
+[s] *(*(*(*(*(is,the),highest),elevation),in),texas)
+[t] stateid('texas')
+
+X -> s10980(X)
+[s] *(*(*(*(*(?1,is),the),largest),in),population)
+[t] population_1(?1)
+
+S! -> s4(X)
+[s] *(*(*(give,me),the),?1)
+[t] answer(?1)
+
+X -> s10869(X)
+[s] *(*(*(is,austin),the),?1)
+[t] loc_1(?1)
+
+X -> s4534
+[s] *(*(*(the,area),of),texas)
+[t] stateid('texas')
+
+S! -> s12716(X)
+[s] *(*(which,state),?1)
+[t] answer(?1)
+
+X -> s7604
+[s] *(*(*(*(*(is,the),lowest),point),in),usa)
+[t] countryid('usa')
+
+X -> s6298(X)
+[s] *(*(*(is,the),largest),?1)
+[t] largest(?1)
+
+X -> s11061
+[s] *(*(mississippi,runs),through)
+[t] riverid('mississippi')
+
+X -> s8014(X)
+[s] *(*(of,the),?1)
+[t] population_1(?1)
+
+X -> s1411
+[s] *(*(*(live,in),new),hampshire)
+[t] stateid('new hampshire')
+
+X -> s10150
+[s] *(*(run,through),arizona)
+[t] stateid('arizona')
+
+X -> s11587(X)
+[s] *(*(*("'s",capital),is),?1)
+[t] capital_2(?1)
+
+X -> s1160(X)
+[s] *(*(state,of),?1)
+[t] state(?1)
+
+X -> s534(X)
+[s] *(*(long,is),?1)
+[t] len(?1)
+
+X -> s5681(X)
+[s] *(*(*(*(*(is,the),height),of),the),?1)
+[t] elevation_1(?1)
+
+X -> s7302
+[s] *(*(*(*(a,state),that),borders),indiana)
+[t] stateid('indiana')
+
+X -> s9225(X)
+[s] *(*(*(*(*(*(of,the),smallest),state),in),the),?1)
+[t] loc_2(?1)
+
+X -> s324(X)
+[s] *(*(*(high,are),the),?1)
+[t] elevation_1(?1)
+
+X -> s9874(X)
+[s] *(*(?1,which),borders)
+[t] next_to_2(?1)
+
+S! -> s2905(X)
+[s] *(show,?1)
+[t] answer(?1)
+
+X -> s13055(X)
+[s] *(*(*(?1,is),the),smallest)
+[t] smallest(?1)
+
+X -> s3699(X)
+[s] *(*(neighboring,states),?1)
+[t] next_to_2(?1)
+
+X -> s4330(X)
+[s] *(lowest,?1)
+[t] lowest(?1)
+
+X -> s13031(X)
+[s] *(*(city,denver),?1)
+[t] city(?1)
+
+X -> s11960
+[s] *(*(*(named,salt),lake),city)
+[t] cityid('salt lake city',_)
+
+X -> s10973(X)
+[s] *(*(?1,the),biggest)
+[t] largest(?1)
+
+X -> s10230
+[s] *(*(run,through),maine)
+[t] stateid('maine')
+
+X -> s10803(X)
+[s] *(*(*(*(?1,has),the),smallest),population)
+[t] density_1(?1)
+
+X -> s10897
+[s] columbus
+[t] cityid('columbus',_)
+
+X -> s12992
+[s] *(kalamazoo,in)
+[t] cityid('kalamazoo',_)
+
+X -> s4435
+[s] *(of,maine)
+[t] stateid('maine')
+
+X -> s12301(X)
+[s] *(*(capitals,are),?1)
+[t] capital(?1)
+
+X -> s1285
+[s] *(in,detroit)
+[t] cityid('detroit',_)
+
+X -> s2894(X)
+[s] *(*(?1,what),state)
+[t] state(?1)
+
+X -> s8104(X)
+[s] *(*(the,population),?1)
+[t] population_1(?1)
+
+X -> s2590(X)
+[s] *(*(*(*(higher,point),than),the),?1)
+[t] higher_2(?1)
+
+X -> s4755(X)
+[s] *(*(*(is,the),biggest),?1)
+[t] largest(?1)
+
+X -> s7419
+[s] *(*(*(*(a,state),that),borders),tennessee)
+[t] stateid('tennessee')
+
+X -> s6348
+[s] *(borders,texas)
+[t] stateid('texas')
+
+X -> s12099
+[s] surround
+[t] stateid('kentucky')
+
+X -> s7950(X)
+[s] *(*(*(of,the),largest),?1)
+[t] largest(?1)
+
+X -> s2952(X)
+[s] *(*(*(*(*(through,which),states),does),the),?1)
+[t] traverse_1(?1)
+
+X -> s2624
+[s] *(*(*(or,towns),named),springfield)
+[t] cityid('springfield',_)
+
+X -> s11841
+[s] *(*(*(*(*(*(*(that,is),the),highest),point),in),the),state)
+[t] place(all)
+
+X -> s10456(X)
+[s] *(*(*(*(*(*(*(?1,borders),the),state),with),the),smallest),population)
+[t] population_1(?1)
+
+X -> s5633(X)
+[s] *(elevation,?1)
+[t] elevation_1(?1)
+
+X -> s5987
+[s] *(*(*(*(the,highest),point),in),ohio)
+[t] stateid('ohio')
+
+X -> s10831(X)
+[s] *(*(*(*(*(?1,has),the),sparsest),population),density)
+[t] density_1(?1)
+
+X -> s7503
+[s] *(*(nebraska,in),meters)
+[t] stateid('nebraska')
+
+X -> s7261(X,X)
+[s] *(*(*(?1,does),not),?2)
+[t] exclude(?1,?2)
+
+X -> s12431(X)
+[s] *(*(*(?1,has),the),largest)
+[t] largest_one(?1)
+
+X -> s13475(X)
+[s] *(lie,?1)
+[t] traverse_1(?1)
+
+X -> s6219
+[s] *(*(*(*(*(is,the),highest),point),in),wyoming)
+[t] stateid('wyoming')
+
+X -> s3702(X)
+[s] *(*(*(*(*(population,densities),of),each),us),?1)
+[t] density_1(?1)
+
+S! -> s1174(X)
+[s] *(*(how,many),?1)
+[t] answer(?1)
+
+X -> s5594(X)
+[s] *(density,?1)
+[t] density_1(?1)
+
+X -> s4145(X)
+[s] *(*(*(*(?1,has),the),largest),population)
+[t] population_1(?1)
+
+X -> s981
+[s] *(*(citizens,in),boulder)
+[t] cityid('boulder',_)
+
+X -> s405(X)
+[s] *(*(in,the),?1)
+[t] loc_2(?1)
+
+X -> s12936
+[s] red
+[t] riverid('red')
+
+X -> s7412
+[s] *(borders,tennessee)
+[t] stateid('tennessee')
+
+X -> s13432(X)
+[s] *(*(*(higher,than),the),?1)
+[t] higher_2(?1)
+
+X -> s108
+[s] *(*(*(*(me,the),cities),in),usa)
+[t] countryid('usa')
+
+X -> s3500
+[s] of
+[t] stateid('california')
+
+X -> s11925
+[s] named
+[t] cityid('plano',_)
+
+X -> s4044
+[s] *(*(*(the,rivers),of),montana)
+[t] stateid('montana')
+
+X -> s4361
+[s] *(of,alaska)
+[t] stateid('alaska')
+
+X -> s1704
+[s] lived
+[t] cityid('austin',_)
+
+X -> s32
+[s] colorado
+[t] stateid('colorado')
+
+X -> s2197
+[s] tennessee
+[t] stateid('tennessee')
+
+X -> s4769
+[s] *(*(*(*(*(is,the),biggest),city),in),arizona)
+[t] stateid('arizona')
+
+X -> s1833
+[s] *(*(*(*(that,has),the),most),rivers)
+[t] river(all)
+
+X -> s2192
+[s] *(*(*(*(*(*(on,the),state),whose),capital),is),boston)
+[t] cityid('boston',_)
+
+X -> s4223(X)
+[s] *(*(*(?1,the),highest),populations)
+[t] population_1(?1)
+
+X -> s12195
+[s] jose
+[t] cityid('san jose',_)
+
+X -> s1628(X)
+[s] *(*(*(*(*(?1,with),the),largest),population),density)
+[t] density_1(?1)
+
+X -> s11988(X)
+[s] *(*(*(?1,have),no),bordering)
+[t] next_to_2(?1)
+
+X -> s4513
+[s] *(*(of,south),carolina)
+[t] stateid('south carolina')
+
+S! -> s347(X)
+[s] *(*(how,high),?1)
+[t] answer(?1)
+
+X -> s304(X)
+[s] *(*(*(big,is),the),?1)
+[t] size(?1)
+
+X -> s225
+[s] *(in,california)
+[t] stateid('california')
+
+X -> s7211
+[s] *(border,nebraska)
+[t] stateid('nebraska')
+
+X -> s796(X)
+[s] *(*(does,rhode),?1)
+[t] loc_2(?1)
+
+X -> s9746
+[s] *(*(*(*(one,in),the),united),states)
+[t] countryid('usa')
+
+X -> s10747
+[s] *(*(*(*(*(*(has,the),most),rivers),running),through),it)
+[t] river(all)
+
+X -> s6209
+[s] *(*(*(*(*(is,the),highest),point),in),virginia)
+[t] stateid('virginia')
+
+X -> s212(X)
+[s] *(*(number,of),?1)
+[t] count(?1)
+
+X -> s7970(X)
+[s] *(*(*(of,the),smallest),?1)
+[t] smallest(?1)
+
+X -> s3863(X)
+[s] *(populations,?1)
+[t] population_1(?1)
+
+X -> s4703(X)
+[s] *(*(*(*(*(average,population),per),square),km),?1)
+[t] density_1(?1)
+
+X -> s11060(X)
+[s] *(*(which,the),?1)
+[t] traverse_1(?1)
+
+X -> s4483
+[s] *(of,ohio)
+[t] stateid('ohio')
+
+X -> s305(X)
+[s] *(city,?1)
+[t] city(?1)
+
+X -> s10434(X)
+[s] *(?1,borders)
+[t] next_to_2(?1)
+
+X -> s4932
+[s] *(*(*(*(*(the,biggest),city),in),the),usa)
+[t] countryid('usa')
+
+X -> s2526
+[s] *(called,rochester)
+[t] cityid('rochester',_)
+
+X -> s11930
+[s] *(named,portland)
+[t] cityid('portland',_)
+
+X -> s10936
+[s] *(*(*(des,moines),located),in)
+[t] cityid('des moines',_)
+
+X -> s5627(X)
+[s] *(*(*(*(is,the),elevation),of),?1)
+[t] elevation_1(?1)
+
+X -> s6636(X)
+[s] *(*(?1,capital),in)
+[t] capital_1(?1)
+
+X -> s963
+[s] *(*(*(*(does,the),biggest),city),have)
+[t] city(all)
+
+X -> s4686
+[s] *(*(*(*(per,square),km),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s8697
+[s] *(*(*(*(*(*(of,the),largest),state),that),borders),texas)
+[t] stateid('texas')
+
+X -> s541
+[s] rio
+[t] riverid('rio grande')
+
+X -> s12150
+[s] *(mount,whitney)
+[t] placeid('mount whitney')
+
+X -> s11668(X)
+[s] *(*(*(*(does,the),delaware),?1),through)
+[t] traverse_1(?1)
+
+X -> s2974
+[s] *(*(*(*(*(*(through,which),states),does),the),mississippi),flow)
+[t] riverid('mississippi')
+
+X -> s12013(X)
+[s] *(have,?1)
+[t] traverse_1(?1)
+
+X -> s8446
+[s] sacramento
+[t] cityid('sacramento',_)
+
+X -> s852
+[s] there
+[t] countryid('usa')
+
+X -> s1251(X)
+[s] *(*(*(people,live),in),?1)
+[t] population_1(?1)
+
+X -> s2240(X)
+[s] *(*(*(?1,the),most),states)
+[t] state(?1)
+
+X -> s6839(X)
+[s] *(*(*(length,of),the),?1)
+[t] len(?1)
+
+X -> s326(X)
+[s] *(points,?1)
+[t] place(?1)
+
+X -> s12359
+[s] peak
+[t] mountain(all)
+
+X -> s12180
+[s] *(san,diego)
+[t] cityid('san diego',_)
+
+X -> s9197
+[s] *(*(*(*(*(is,the),smallest),city),in),washington)
+[t] stateid('washington')
+
+X -> s366(X)
+[s] *(*(*(high,is),the),?1)
+[t] elevation_1(?1)
+
+X -> s9585(X)
+[s] *(*(*(*(*(length,of),all),?1),the),usa)
+[t] len(?1)
+
+X -> s4659
+[s] *(of,wisconsin)
+[t] stateid('wisconsin')
+
+X -> s9866(X)
+[s] *(*(state,which),?1)
+[t] state(?1)
+
+X -> s3878(X)
+[s] *(*(*(populations,of),the),?1)
+[t] population_1(?1)
+
+X -> s5133(X)
+[s] *(?1,maine)
+[t] loc_2(?1)
+
+X -> s10499(X)
+[s] *(*(has,the),?1)
+[t] largest_one(?1)
+
+X -> s11423
+[s] *(*(ohio,runs),through)
+[t] riverid('ohio')
+
+X -> s6388
+[s] *(*(*(*(*(is,the),largest),city),in),michigan)
+[t] stateid('michigan')
+
+X -> s9397
+[s] *(*(*(*(that,contains),the),highest),point)
+[t] place(all)
+
+X -> s183(X)
+[s] *(river,?1)
+[t] river(?1)
+
+S! -> s10637(X)
+[s] *(*(what,state),?1)
+[t] answer(?1)
+
+S! -> s9031(X)
+[s] *(*(*(*(what,is),the),size),?1)
+[t] answer(?1)
+
+X -> s40
+[s] all
+[t] stateid('colorado')
+
+X -> s4229(X)
+[s] *(*(*(*(?1,have),the),highest),populations)
+[t] population_1(?1)
+
+X -> s13271
+[s] *(river,cross)
+[t] river(all)
+
+X -> s4712(X)
+[s] *(*(*(*(*(*(*(average,population),per),?1),km),in),the),us)
+[t] density_1(?1)
+
+X -> s1855(X)
+[s] *(*(with,the),?1)
+[t] loc_1(?1)
+
+X -> s2113
+[s] *(*(*(there,in),united),states)
+[t] countryid('usa')
+
+X -> s1150(X)
+[s] *(*(there,in),?1)
+[t] loc_2(?1)
+
+X -> s4256
+[s] *(*(city,has),the)
+[t] city(all)
+
+X -> s3516
+[s] *(virginia,runs)
+[t] stateid('virginia')
+
+X -> s5677(X)
+[s] *(mountain,?1)
+[t] mountain(?1)
+
+X -> s837
+[s] united
+[t] countryid('usa')
+
+X -> s6932(X)
+[s] *(*(*(*(*(that,flows),through),the),most),?1)
+[t] traverse_2(?1)
+
+X -> s9011(X)
+[s] *(*(size,of),?1)
+[t] size(?1)
+
+X -> s4089(X)
+[s] *(*(*(that,the),?1),through)
+[t] traverse_1(?1)
+
+X -> s13459(X)
+[s] *(*(*(*(*(that,are),higher),than),the),?1)
+[t] higher_2(?1)
+
+X -> s39(X)
+[s] *(*(*(?1,the),rivers),in)
+[t] loc_2(?1)
+
+X -> s10615(X)
+[s] *(*(*(*(*(?1,has),the),largest),population),density)
+[t] density_1(?1)
+
+X -> s6597
+[s] *(*(the,largest),state)
+[t] state(all)
+
+S! -> s2688(X)
+[s] *(*(how,tall),?1)
+[t] answer(?1)
+
+X -> s12039(X)
+[s] *(*(towns,named),?1)
+[t] city(?1)
+
+X -> s5634
+[s] *(*(of,death),valley)
+[t] placeid('death valley')
+
+X -> s12723
+[s] *(state,capital)
+[t] capital(all)
+
+X -> s2917(X)
+[s] *(*(*(*(all,the),major),lakes),?1)
+[t] lake(?1)
+
+X -> s182(X)
+[s] *(longest,?1)
+[t] longest(?1)
+
+X -> s1273
+[s] chicago
+[t] cityid('chicago',_)
+
+X -> s1748(X)
+[s] *(*(many,?1),live)
+[t] population_1(?1)
+
+X -> s9035(X)
+[s] *(*(*(*(is,the),size),of),?1)
+[t] size(?1)
+
+X -> s296
+[s] *(is,texas)
+[t] stateid('texas')
+
+S! -> s12210(X)
+[s] *(*(*(where,is),the),?1)
+[t] answer(?1)
+
+X -> s8035(X)
+[s] *(*(population,in),?1)
+[t] population_1(?1)
+
+X -> s241
+[s] me
+[t] stateid('utah')
+
+X -> s8306
+[s] *(of,maryland)
+[t] stateid('maryland')
+
+X -> s10341(X)
+[s] *(*(*(run,through),west),?1)
+[t] traverse_2(?1)
+
+X -> s2098
+[s] *(*(*(there,in),the),usa)
+[t] countryid('usa')
+
+X -> s224(X)
+[s] *(*(of,rivers),?1)
+[t] loc_2(?1)
+
+X -> s8033
+[s] *(in,boston)
+[t] cityid('boston',_)
+
+X -> s9566(X)
+[s] *(*(*(*(*(*(is,the),total),area),of),the),?1)
+[t] area_1(?1)
+
+X -> s8201
+[s] *(of,denver)
+[t] cityid('denver',_)
+
+X -> s1219
+[s] *(*(people,in),boulder)
+[t] cityid('boulder',_)
+
+X -> s4972
+[s] illinois
+[t] stateid('illinois')
+
+X -> s7313(X)
+[s] *(*(*(flows,through),a),?1)
+[t] traverse_2(?1)
+
+X -> s3763
+[s] *(*(mississippi,river),runs)
+[t] riverid('mississippi')
+
+X -> s80
+[s] *(*(*(*(*(me,all),the),states),of),usa)
+[t] countryid('usa')
+
+X -> s4459
+[s] *(*(*(of,maryland),in),square)
+[t] stateid('maryland')
+
+X -> s9674(X)
+[s] *(*(mountains,are),?1)
+[t] mountain(?1)
+
+X -> s1697(X)
+[s] *(*(*(*(many,people),lived),in),?1)
+[t] population_1(?1)
+
+X -> s10330
+[s] *(west,virginia)
+[t] stateid('west virginia')
+
+X -> s902
+[s] *(texas,have)
+[t] stateid('texas')
+
+X -> s9162
+[s] *(*(*(*(*(*(is,the),smallest),city),in),the),us)
+[t] countryid('usa')
+
+X -> s7299(X)
+[s] *(*(*(that,flows),through),?1)
+[t] traverse_2(?1)
+
+X -> s10099(X)
+[s] *(*(*(flow,through),the),?1)
+[t] traverse_2(?1)
+
+X -> s2748
+[s] *(*(*(*(in,which),state),is),rochester)
+[t] cityid('rochester',_)
+
+X -> s9496(X)
+[s] *(*(*(*(*(?1,with),the),lowest),population),density)
+[t] density_1(?1)
+
+X -> s5265(X)
+[s] *(*(*(*(*(is,the),capital),of),states),?1)
+[t] loc_1(?1)
+
+X -> s5053(X)
+[s] *(?1,california)
+[t] loc_2(?1)
+
+X -> s1707
+[s] *(*(reside,in),utah)
+[t] stateid('utah')
+
+X -> s284
+[s] north
+[t] stateid('north dakota')
+
+X -> s5473
+[s] inhabitants
+[t] state(all)
+
+X -> s12329
+[s] *(*(california,has),the)
+[t] stateid('california')
+
+X -> s10039(X)
+[s] *(*(that,?1),borders)
+[t] next_to_1(?1)
+
+X -> s8880(X)
+[s] *(*(that,cross),?1)
+[t] traverse_2(?1)
+
+X -> s1982
+[s] *(*(run,through),texas)
+[t] stateid('texas')
+
+X -> s6041
+[s] *(*(*(*(*(*(is,the),highest),point),in),the),country)
+[t] countryid('usa')
+
+X -> s2369(X)
+[s] *(*(*(does,the),?1),through)
+[t] traverse_1(?1)
+
+X -> s12114
+[s] "'s"
+[t] city(all)
+
+X -> s4671
+[s] *(*(us,by),state)
+[t] countryid('usa')
+
+X -> s11089
+[s] to
+[t] stateid('arizona')
+
+X -> s12460(X)
+[s] *(*(*(runs,through),most),?1)
+[t] traverse_2(?1)
+
+X -> s1480
+[s] *(san,francisco)
+[t] cityid('san francisco',_)
+
+X -> s1462
+[s] rhode
+[t] stateid('rhode island')
+
+X -> s8889
+[s] *(cross,over)
+[t] stateid('ohio')
+
+X -> s12198
+[s] *(scotts,valley)
+[t] cityid('scotts valley',_)
+
+X -> s4495
+[s] seattle
+[t] cityid('seattle',_)
+
+X -> s953(X)
+[s] *(*(many,citizens),?1)
+[t] population_1(?1)
+
+X -> s6992(X)
+[s] *(*(*(*(*(that,runs),through),the),most),?1)
+[t] traverse_2(?1)
+
+X -> s8189
+[s] *(of,dallas)
+[t] cityid('dallas',_)
+
+X -> s10752
+[s] *(*(*(*(has,the),most),rivers),running)
+[t] river(all)
+
+X -> s9020(X)
+[s] *(*(*(is,the),size),?1)
+[t] size(?1)
+
+S! -> s12330(X)
+[s] *(*(*(which,is),the),?1)
+[t] answer(?1)
+
+X -> s36
+[s] *(*(*(*(all,the),rivers),in),colorado)
+[t] stateid('colorado')
+
+X -> s12098(X)
+[s] *(?1,kentucky)
+[t] next_to_2(?1)
+
+X -> s5571(X)
+[s] *(*(combined,area),?1)
+[t] sum(?1)
+
+X -> s5198
+[s] *(*(*(*(*(is,the),capital),of),new),jersey)
+[t] stateid('new jersey')
+
+X -> s4623(X)
+[s] *(*(*(*(*(is,the),area),of),the),?1)
+[t] area_1(?1)
+
+X -> s9516(X)
+[s] *(*(?1,smallest),area)
+[t] area_1(?1)
+
+X -> s5957
+[s] meters
+[t] stateid('nevada')
+
+X -> s8571(X)
+[s] *(*(*(population,of),the),?1)
+[t] population_1(?1)
+
+X -> s3013(X)
+[s] *(*(*(*(all,the),rivers),in),?1)
+[t] loc_2(?1)
+
+X -> s10902
+[s] *(*(*(columbus,the),capital),of)
+[t] cityid('columbus',_)
+
+X -> s5242
+[s] *(*(*(*(is,the),capital),of),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s1780
+[s] found
+[t] stateid('colorado')
+
+X -> s11052(X)
+[s] *(*(?1,the),largest)
+[t] largest(?1)
+
+X -> s12171
+[s] *(new,orleans)
+[t] cityid('new orleans',_)
+
+X -> s8849
+[s] *(of,washington)
+[t] stateid('washington')
+
+X -> s1849
+[s] that
+[t] river(all)
+
+S! -> s69(X)
+[s] *(*(*(*(give,me),all),the),?1)
+[t] answer(?1)
+
+X -> s2683(X)
+[s] *(*(tall,is),?1)
+[t] elevation_1(?1)
+
+X -> s11790
+[s] *(*(ohio,river),run)
+[t] riverid('ohio')
+
+X -> s306
+[s] *(*(of,new),york)
+[t] cityid('new york',_)
+
+X -> s9344
+[s] *(*(*(mississippi,river),runs),through)
+[t] riverid('mississippi')
+
+X -> s2568
+[s] named
+[t] cityid('springfield',_)
+
+X -> s4957
+[s] *(*(*(*(*(is,the),biggest),city),in),wyoming)
+[t] stateid('wyoming')
+
+X -> s11591(X)
+[s] *(*(capital,is),?1)
+[t] capital_2(?1)
+
+X -> s6702
+[s] *(*(that,borders),california)
+[t] stateid('california')
+
+X -> s10956
+[s] in
+[t] cityid('miami',_)
+
+X -> s2153
+[s] *(*(*(*(at,least),one),other),state)
+[t] state(all)
+
+X -> s920(X)
+[s] *(*(cities,?1),have)
+[t] city(?1)
+
+X -> s4685(X)
+[s] *(*(average,population),?1)
+[t] density_1(?1)
+
+X -> s4869
+[s] *(*(*(*(*(is,the),biggest),city),in),texas)
+[t] stateid('texas')
+
+X -> s2986
+[s] *(*(*(*(*(*(through,which),states),does),the),mississippi),run)
+[t] riverid('mississippi')
+
+X -> s2157(X)
+[s] *(*(*(*(border,at),?1),one),other)
+[t] next_to_2(?1)
+
+X -> s6790(X)
+[s] *(*(*(*(*(state,that),borders),the),state),?1)
+[t] state(?1)
+
+X -> s5074
+[s] *(*(*(*(is,the),capital),of),georgia)
+[t] stateid('georgia')
+
+X -> s4602(X)
+[s] *(*(*(*(*(?1,with),the),smallest),population),density)
+[t] density_1(?1)
+
+X -> s7846
+[s] *(*(*(*(*(*(*(name,of),the),state),with),the),lowest),point)
+[t] place(all)
+
+X -> s24
+[s] arkansas
+[t] stateid('arkansas')
+
+X -> s10779
+[s] *(*(state,has),the)
+[t] state(all)
+
+X -> s10928
+[s] *(*(des,moines),located)
+[t] cityid('des moines',_)
+
+X -> s13449(X)
+[s] *(*(points,higher),?1)
+[t] place(?1)
+
+X -> s250(X)
+[s] *(big,?1)
+[t] size(?1)
+
+X -> s5871
+[s] *(*(*(*(*(is,the),highest),point),in),delaware)
+[t] stateid('delaware')
+
+X -> s9983
+[s] *(*(*(rivers,do),not),run)
+[t] river(all)
+
+X -> s10406(X)
+[s] *(*(*(?1,borders),most),other)
+[t] next_to_2(?1)
+
+X -> s10672(X)
+[s] *(*(*(*(*(?1,has),the),lowest),population),density)
+[t] density_1(?1)
+
+X -> s13279(X)
+[s] *(*(*(does,the),?1),cross)
+[t] traverse_1(?1)
+
+X -> s1270
+[s] *(in,chicago)
+[t] cityid('chicago',_)
+
+X -> s10342
+[s] virginia
+[t] stateid('west virginia')
+
+X -> s3691
+[s] *(names,of)
+[t] stateid('illinois')
+
+X -> s4186
+[s] located
+[t] stateid('pennsylvania')
+
+X -> s3708(X)
+[s] *(*(*(*(*(*(*(are,the),population),densities),of),each),us),?1)
+[t] density_1(?1)
+
+X -> s3
+[s] *(*(*(*(me,the),cities),in),virginia)
+[t] stateid('virginia')
+
+X -> s6640(X)
+[s] *(*(?1,in),population)
+[t] population_1(?1)
+
+X -> s12465(X)
+[s] *(*(through,most),?1)
+[t] traverse_2(?1)
+
+X -> s1513
+[s] *(spokane,washington)
+[t] cityid('spokane','wa')
+
+X -> s4617(X)
+[s] *(*(*(*(?1,with),the),smallest),population)
+[t] density_1(?1)
+
+X -> s653
+[s] *(*(*(mississippi,river),in),miles)
+[t] riverid('mississippi')
+
+X -> s11778(X)
+[s] *(*(*(*(does,the),ohio),?1),through)
+[t] traverse_1(?1)
+
+X -> s12138
+[s] fort
+[t] cityid('fort wayne',_)
+
+X -> s820(X)
+[s] *(*(*(cities,are),there),?1)
+[t] city(?1)
+
+X -> s12014
+[s] *(*(*(rivers,running),through),them)
+[t] river(all)
+
+X -> s6799(X)
+[s] *(traversed,?1)
+[t] traverse_1(?1)
+
+X -> s2041(X)
+[s] *(?1,states)
+[t] state(?1)
+
+X -> s1441
+[s] *(*(*(live,in),new),york)
+[t] stateid('new york')
+
+X -> s3718
+[s] *(of,mississippi)
+[t] stateid('mississippi')
+
+X -> s1879(X)
+[s] *(*(*(rivers,are),there),?1)
+[t] river(?1)
+
+S! -> s2091(X)
+[s] *(*(*(how,?1),are),there)
+[t] answer(?1)
+
+X -> s12784
+[s] peak
+[t] place(all)
+
+X -> s3386
+[s] oklahoma
+[t] stateid('oklahoma')
+
+X -> s3410(X)
+[s] *(*(in,rhode),?1)
+[t] loc_2(?1)
+
+X -> s9080(X)
+[s] *(*(*(*(*(is,the),size),of),the),?1)
+[t] size(?1)
+
+X -> s12441
+[s] *(*(*(*(pennsylvania,has),the),largest),population)
+[t] stateid('pennsylvania')
+
+X -> s11411
+[s] *(ohio,runs)
+[t] riverid('ohio')
+
+X -> s20
+[s] mississippi
+[t] stateid('mississippi')
+
+X -> s6194
+[s] *(*(*(*(*(the,highest),point),in),the),usa)
+[t] countryid('usa')
+
+X -> s10967(X)
+[s] *(*(is,pittsburgh),?1)
+[t] loc_1(?1)
+
+X -> s427
+[s] alabama
+[t] stateid('alabama')
+
+X -> s6288
+[s] *(*(*(*(*(*(is,the),highest),point),of),the),usa)
+[t] countryid('usa')
+
+X -> s12009(X)
+[s] *(*(rivers,named),?1)
+[t] river(?1)
+
+X -> s3134(X)
+[s] *(through,?1)
+[t] traverse_1(?1)
+
+X -> s1175(X)
+[s] *(*(*(*(people,are),in),the),?1)
+[t] population_1(?1)
+
+X -> s768(X)
+[s] *(big,?1)
+[t] major(?1)
+
+X -> s7443
+[s] *(*(*(*(*(is,the),lowest),elevation),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s10887(X)
+[s] *(*(is,boston),?1)
+[t] loc_1(?1)
+
+X -> s5050
+[s] *(*(*(*(is,the),capital),of),california)
+[t] stateid('california')
+
+X -> s9187
+[s] *(*(*(*(*(the,smallest),city),in),the),usa)
+[t] countryid('usa')
+
+X -> s1074(X)
+[s] *(bordering,?1)
+[t] next_to_2(?1)
+
+X -> s5210
+[s] *(*(*(*(*(is,the),capital),of),new),york)
+[t] stateid('new york')
+
+X -> s1540(X)
+[s] *(biggest,?1)
+[t] largest(?1)
+
+X -> s1360
+[s] *(*(in,minneapolis),minnesota)
+[t] cityid('minneapolis','mn')
+
+X -> s7669
+[s] *(*(*(*(*(is,the),lowest),point),of),colorado)
+[t] stateid('colorado')
+
+X -> s1234
+[s] *(*(live,in),austin)
+[t] cityid('austin',_)
+
+X -> s4719(X)
+[s] *(*(with,a),?1)
+[t] loc_1(?1)
+
+X -> s10034
+[s] *(through,missouri)
+[t] stateid('missouri')
+
+X -> s4146
+[s] capital
+[t] capital(all)
+
+X -> s10338
+[s] west
+[t] stateid('west virginia')
+
+X -> s4085(X)
+[s] *(*(?1,runs),through)
+[t] traverse_1(?1)
+
+X -> s11530(X)
+[s] *(*(*(*(states,border),the),state),?1)
+[t] state(?1)
+
+X -> s5636(X)
+[s] *(*(*(elevation,of),the),?1)
+[t] elevation_1(?1)
+
+X -> s4912
+[s] *(*(*(*(*(the,biggest),city),in),the),us)
+[t] countryid('usa')
+
+X -> s8069
+[s] *(of,arizona)
+[t] stateid('arizona')
+
+X -> s13022
+[s] *(*(denver,located),in)
+[t] cityid('denver',_)
+
+X -> s8416
+[s] *(*(of,portland),maine)
+[t] cityid('portland','me')
+
+X -> s5660(X)
+[s] *(*(height,of),?1)
+[t] elevation_1(?1)
+
+X -> s4354(X)
+[s] *(*(area,of),?1)
+[t] area_1(?1)
+
+X -> s12269
+[s] *(*(*(*(*(*(is,the),lowest),point),in),the),us)
+[t] countryid('usa')
+
+X -> s2291(X)
+[s] *(have,?1)
+[t] loc_1(?1)
+
+X -> s12963(X)
+[s] *(*(*(*(*(*(?1,has),the),smallest),average),urban),population)
+[t] density_1(?1)
+
+X -> s5509
+[s] of
+[t] stateid('washington')
+
+X -> s11851(X)
+[s] *(*(*(*(capital,that),is),the),?1)
+[t] capital(?1)
+
+X -> s9008(X)
+[s] *(size,?1)
+[t] size(?1)
+
+X -> s7911
+[s] *(*(of,south),dakota)
+[t] stateid('south dakota')
+
+X -> s2949
+[s] *(tell,me)
+[t] stateid('texas')
+
+X -> s1753
+[s] *(called,colorado)
+[t] riverid('colorado')
+
+X -> s189(X)
+[s] *(*(*(passes,through),the),?1)
+[t] traverse_2(?1)
+
+X -> s6677
+[s] *(*(*(*(*(is,the),largest),state),in),usa)
+[t] countryid('usa')
+
+X -> s3210(X)
+[s] *(*(*(that,border),the),?1)
+[t] next_to_2(?1)
+
+X -> s4507
+[s] *(south,carolina)
+[t] stateid('south carolina')
+
+X -> s1115
+[s] cities
+[t] city(all)
+
+X -> s2912(X)
+[s] *(*(*(*(*(me,all),the),major),lakes),?1)
+[t] lake(?1)
+
+X -> s2562
+[s] springfield
+[t] cityid('springfield',_)
+
+X -> s171
+[s] state
+[t] state(all)
+
+X -> s787
+[s] *(rhode,island)
+[t] stateid('rhode island')
+
+X -> s5094
+[s] *(*(*(*(is,the),capital),of),illinois)
+[t] stateid('illinois')
+
+X -> s260
+[s] *(is,massachusetts)
+[t] stateid('massachusetts')
+
+X -> s8029(X)
+[s] *(*(*(population,density),?1),wyoming)
+[t] density_1(?1)
+
+X -> s1959
+[s] than
+[t] riverid('red')
+
+X -> s481
+[s] louisiana
+[t] stateid('louisiana')
+
+X -> s1739(X)
+[s] *(*(*(*(many,residents),live),in),?1)
+[t] population_1(?1)
+
+X -> s12940(X)
+[s] *(*(*(*(*(state,has),the),smallest),area),?1)
+[t] state(?1)
+
+X -> s2020(X)
+[s] *(*(*(*(*(many,square),kilometers),in),the),?1)
+[t] area_1(?1)
+
+X -> s8542
+[s] *(tempe,arizona)
+[t] cityid('tempe','az')
+
+X -> s1534
+[s] *(in,texas)
+[t] stateid('texas')
+
+X -> s4271(X)
+[s] *(*(?1,least),population)
+[t] population_1(?1)
+
+X -> s136
+[s] *(*(*(which,are),in),texas)
+[t] stateid('texas')
+
+X -> s8222
+[s] erie
+[t] cityid('erie','pa')
+
+X -> s5730
+[s] *(of,wyoming)
+[t] stateid('wyoming')
+
+S! -> s2999(X)
+[s] *(*(what,are),?1)
+[t] answer(?1)
+
+X -> s5527
+[s] *(*(*(*(is,the),city),in),texas)
+[t] stateid('texas')
+
+X -> s2314(X)
+[s] *(?1,border)
+[t] next_to_1(?1)
+
+X -> s2431
+[s] *(*(mississippi,river),run)
+[t] riverid('mississippi')
+
+X -> s12445(X)
+[s] *(*(*(*(goes,through),the),most),?1)
+[t] traverse_2(?1)
+
+X -> s12731(X)
+[s] *(*(contains,most),?1)
+[t] loc_1(?1)
+
+X -> s10518(X)
+[s] *(*(*(*(?1,with),the),most),population)
+[t] population_1(?1)
+
+X -> s2142(X)
+[s] *(*(*(*(*(border,at),least),one),other),?1)
+[t] next_to_2(?1)
+
+X -> s6561(X)
+[s] *(*(*(largest,of),the),?1)
+[t] largest(?1)
+
+X -> s9990(X,X)
+[s] *(*(*(*(?1,do),not),run),?2)
+[t] exclude(?1,?2)
+
+X -> s1971(X)
+[s] *(?1,washington)
+[t] loc_2(?1)
+
+X -> s5472(X)
+[s] *(most,?1)
+[t] population_1(?1)
+
+X -> s4726(X)
+[s] *(with,?1)
+[t] loc_1(?1)
+
+X -> s911(X)
+[s] *(*(does,the),?1)
+[t] loc_2(?1)
+
+X -> s6046
+[s] *(*(*(*(*(the,highest),point),in),the),country)
+[t] countryid('usa')
+
+X -> s10976(X)
+[s] *(?1,biggest)
+[t] largest(?1)
+
+X -> s5222
+[s] *(*(*(*(*(is,the),capital),of),north),dakota)
+[t] stateid('north dakota')
+
+X -> s1372
+[s] *(*(*(live,in),minneapolis),minnesota)
+[t] cityid('minneapolis','mn')
+
+X -> s4645
+[s] *(*(of,the),texas)
+[t] stateid('texas')
+
+X -> s9406(X)
+[s] *(*(*(?1,contains),the),highest)
+[t] highest(?1)
+
+X -> s4011
+[s] *(of,indiana)
+[t] stateid('indiana')
+
+X -> s6302
+[s] *(*(the,largest),capital)
+[t] capital(all)
+
+X -> s8093
+[s] *(*(of,atlanta),ga)
+[t] cityid('atlanta','ga')
+
+X -> s445
+[s] delaware
+[t] stateid('delaware')
+
+X -> s1204
+[s] *(*(there,in),new)
+[t] stateid('new york')
+
+X -> s2529(X)
+[s] *(*(states,have),?1)
+[t] state(?1)
+
+X -> s12735(X)
+[s] *(*(*(*(?1,has),the),biggest),population)
+[t] population_1(?1)
+
+X -> s11
+[s] me
+[t] stateid('virginia')
+
+X -> s5000(X)
+[s] *(*(in,continental),?1)
+[t] loc_2(?1)
+
+X -> s10632
+[s] urban
+[t] state(all)
+
+X -> s7060(X)
+[s] *(*(flowing,through),?1)
+[t] traverse_2(?1)
+
+X -> s5836
+[s] *(*(*(*(*(the,highest),mountain),in),the),us)
+[t] countryid('usa')
+
+X -> s11588
+[s] dover
+[t] cityid('dover',_)
+
+X -> s13285(X)
+[s] *(*(longest,river),?1)
+[t] longest(?1)
+
+X -> s8545
+[s] *(*(of,tempe),arizona)
+[t] cityid('tempe','az')
+
+X -> s11955
+[s] named
+[t] cityid('rochester',_)
+
+X -> s11945
+[s] *(named,rochester)
+[t] cityid('rochester',_)
+
+X -> s12449(X)
+[s] *(*(river,goes),?1)
+[t] river(?1)
+
+X -> s1276
+[s] *(*(live,in),chicago)
+[t] cityid('chicago',_)
+
+X -> s8111
+[s] *(of,austin)
+[t] cityid('austin',_)
+
+X -> s4196
+[s] *(*(*(*(*(*(texas,have),the),highest),number),of),citizens)
+[t] stateid('texas')
+
+X -> s7455(X)
+[s] *(*(*(is,the),lowest),?1)
+[t] lowest(?1)
+
+X -> s8931
+[s] *(*(*(*(*(is,the),shortest),river),in),nebraska)
+[t] stateid('nebraska')
+
+X -> s207(X)
+[s] *(number,?1)
+[t] count(?1)
+
+X -> s3316
+[s] *(*(*(*(the,major),cities),in),missouri)
+[t] stateid('missouri')
+
+X -> s5253
+[s] *(*(*(*(that,have),cities),named),durham)
+[t] cityid('durham',_)
+
+X -> s13204(X)
+[s] *(do,?1)
+[t] traverse_1(?1)
+
+S! -> s5734(X)
+[s] *(*(*(*(what,is),the),high),?1)
+[t] answer(?1)
+
+X -> s9564
+[s] *(*(of,the),usa)
+[t] countryid('usa')
+
+X -> s9696
+[s] *(*(flows,through),kansas)
+[t] stateid('kansas')
+
+X -> s310
+[s] *(new,york)
+[t] cityid('new york',_)
+
+X -> s50
+[s] *(*(*(*(*(*(*(*(*(*(*(*(*(could,you),tell),me),what),is),the),highest),point),in),the),state),of),oregon)
+[t] stateid('oregon')
+
+S! -> s2995(X)
+[s] *(*(*(*(what,are),all),the),?1)
+[t] answer(?1)
+
+X -> s13150
+[s] *(*(*(which,the),mississippi),traverses)
+[t] riverid('mississippi')
+
+X -> s8900(X)
+[s] *(*(*(is,the),shortest),?1)
+[t] shortest(?1)
+
+X -> s12420(X)
+[s] *(*(*(*(*(*(of,the),?1),has),the),largest),population)
+[t] population_1(?1)
+
+X -> s13209(X)
+[s] *(*(*(do,?1),flow),through)
+[t] traverse_1(?1)
+
+X -> s11977(X,X)
+[s] *(*(*(?1,have),no),?2)
+[t] exclude(?1,?2)
+
+X -> s1606
+[s] wyoming
+[t] stateid('wyoming')
+
+X -> s1950(X)
+[s] *(longer,?1)
+[t] longer(?1)
+
+X -> s8553(X)
+[s] *(*(*(population,of),tempe),?1)
+[t] population_1(?1)
+
+X -> s11578(X)
+[s] *(*(*(*(states,border),the),states),?1)
+[t] state(?1)
+
+X -> s10540(X)
+[s] *(*(*(*(*(?1,has),the),greatest),population),density)
+[t] density_1(?1)
+
+X -> s6801
+[s] *(*(by,the),mississippi)
+[t] riverid('mississippi')
+
+X -> s10234
+[s] *(through,maine)
+[t] stateid('maine')
+
+X -> s2309(X)
+[s] *(*(does,?1),border)
+[t] next_to_1(?1)
+
+X -> s4343(X)
+[s] *(*(is,largest),?1)
+[t] largest(?1)
+
+X -> s771
+[s] pennsylvania
+[t] stateid('pennsylvania')
+
+X -> s9796
+[s] *(*(*(*(runs,through),the),most),states)
+[t] state(all)
+
+X -> s8881
+[s] *(over,ohio)
+[t] stateid('ohio')
+
+X -> s1896
+[s] *(*(there,in),texas)
+[t] stateid('texas')
+
+X -> s12034(X)
+[s] *(towns,?1)
+[t] city(?1)
+
+X -> s3146(X)
+[s] *(*(through,?1),runs)
+[t] traverse_1(?1)
+
+X -> s17(X)
+[s] *(*(*(high,points),of),?1)
+[t] high_point_1(?1)
+
+X -> s10964
+[s] pittsburgh
+[t] cityid('pittsburgh',_)
+
+X -> s8369
+[s] *(*(of,new),york)
+[t] stateid('new york')
+
+X -> s7121
+[s] *(*(*(*(*(is,the),longest),river),in),mississippi)
+[t] stateid('mississippi')
+
+X -> s11614(X)
+[s] *(*(?1,one),major)
+[t] major(?1)
+
+X -> s11482(X)
+[s] *(*(*(*(?1,border),the),most),populous)
+[t] population_1(?1)
+
+X -> s1770
+[s] *(*(found,in),colorado)
+[t] stateid('colorado')
+
+X -> s744(X)
+[s] *(shortest,?1)
+[t] shortest(?1)
+
+X -> s6293
+[s] *(*(*(*(*(the,highest),point),of),the),usa)
+[t] countryid('usa')
+
+X -> s7468
+[s] *(*(*(*(*(is,the),lowest),point),in),california)
+[t] stateid('california')
+
+X -> s388
+[s] montana
+[t] stateid('montana')
+
+X -> s3729(X)
+[s] *(*(*(*(populations,of),all),the),?1)
+[t] population_1(?1)
+
+X -> s2718(X)
+[s] *(*(*(*(in,what),state),is),?1)
+[t] loc_1(?1)
+
+X -> s3894
+[s] *(*(*(*(*(of,the),major),cities),of),texas)
+[t] stateid('texas')
+
+S! -> s9630(X)
+[s] *(*(what,length),?1)
+[t] answer(?1)
+
+X -> s990
+[s] *(in,boulder)
+[t] cityid('boulder',_)
+
+X -> s2672
+[s] *(does,texas)
+[t] stateid('texas')
+
+X -> s9715(X)
+[s] *(flows,?1)
+[t] traverse_2(?1)
+
+X -> s12005
+[s] named
+[t] riverid('colorado')
+
+X -> s9998
+[s] *(*(*(*(rivers,do),not),run),through)
+[t] river(all)
+
+X -> s8527
+[s] *(*(springfield,south),dakota)
+[t] cityid('springfield','sd')
+
+X -> s12755(X)
+[s] *(*(*(*(?1,has),the),greatest),population)
+[t] population_1(?1)
+
+X -> s11905
+[s] *(named,dallas)
+[t] cityid('dallas',_)
+
+X -> s7348
+[s] *(through,colorado)
+[t] stateid('colorado')
+
+X -> s10095(X)
+[s] *(*(*(*(*(*(*(*(?1,that),border),the),state),with),the),largest),population)
+[t] population_1(?1)
+
+X -> s2752(X)
+[s] *(?1,borders)
+[t] next_to_1(?1)
+
+X -> s10005(X)
+[s] *(*(flow,though),?1)
+[t] traverse_2(?1)
+
+X -> s10636
+[s] *(*(*(*(state,has),the),largest),urban)
+[t] state(all)
+
+X -> s13032
+[s] located
+[t] cityid('denver',_)
+
+X -> s9614
+[s] *(*(*(*(*(of,the),states),that),border),texas)
+[t] stateid('texas')
+
+X -> s2843(X)
+[s] *(*(*(*(which,have),no),surrounding),?1)
+[t] next_to_2(?1)
+
+X -> s11117
+[s] *(*(*(next,to),the),mississippi)
+[t] stateid('mississippi')
+
+X -> s6363
+[s] *(*(*(*(*(is,the),largest),city),in),alabama)
+[t] stateid('alabama')
+
+X -> s7989(X)
+[s] *(*(*(*(*(*(of,the),?1),with),the),smallest),area)
+[t] area_1(?1)
+
+X -> s8877
+[s] *(*(cross,over),ohio)
+[t] stateid('ohio')
+
+X -> s1213
+[s] boulder
+[t] cityid('boulder',_)
+
+X -> s1841
+[s] rivers
+[t] river(all)
+
+X -> s6632
+[s] *(*(*(*(the,largest),state),bordering),texas)
+[t] stateid('texas')
+
+X -> s229
+[s] utah
+[t] stateid('utah')
+
+X -> s2544
+[s] called
+[t] cityid('rochester',_)
+
+X -> s1015(X)
+[s] *(?1,rivers)
+[t] river(?1)
+
+X -> s11221(X)
+[s] *(*(*(states,border),states),?1)
+[t] state(?1)
+
+X -> s1318
+[s] houston
+[t] cityid('houston',_)
+
+X -> s13507(X)
+[s] *(*(*(*(*(*(us,?1),has),the),highest),population),density)
+[t] density_1(?1)
+
+X -> s2213(X)
+[s] *(*(*(?1,border),the),largest)
+[t] largest(?1)
+
+X -> s1393
+[s] *(in,montana)
+[t] stateid('montana')
+
+X -> s13(X)
+[s] *(*(*(me,the),cities),?1)
+[t] city(?1)
+
+X -> s7878
+[s] *(*(*(*(*(in,the),state),with),capital),austin)
+[t] cityid('austin',_)
+
+X -> s4263(X)
+[s] *(*(*(*(?1,has),the),least),population)
+[t] population_1(?1)
+
+X -> s975
+[s] citizens
+[t] stateid('alabama')
+
+X -> s2043
+[s] *(*(*(*(states,are),in),the),united)
+[t] countryid('usa')
+
+X -> s1212(X)
+[s] *(*(*(many,people),in),?1)
+[t] population_1(?1)
+
+X -> s5246
+[s] *(*(*(the,capital),of),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s5547(X)
+[s] *(*(is,the),?1)
+[t] smallest_one(?1)
+
+X -> s10955(X)
+[s] *(*(is,miami),?1)
+[t] loc_1(?1)
+
+X -> s1722
+[s] *(*(stay,in),utah)
+[t] stateid('utah')
+
+X -> s8867
+[s] *(*(of,washington),dc)
+[t] cityid('washington','dc')
+
+X -> s1294
+[s] *(*(*(people,live),in),detroit)
+[t] cityid('detroit',_)
+
+X -> s704(X)
+[s] *(*(?1,platte),river)
+[t] river(?1)
+
+X -> s8721
+[s] *(*(*(*(*(of,the),major),cities),in),wisconsin)
+[t] stateid('wisconsin')
+
+X -> s6426
+[s] *(*(*(*(*(is,the),largest),city),in),missouri)
+[t] stateid('missouri')
+
+X -> s4157(X)
+[s] *(*(*(*(capital,is),the),largest),?1)
+[t] capital(?1)
+
+X -> s1012
+[s] *(*(*(colorado,rivers),are),there)
+[t] riverid('colorado')
+
+X -> s4612(X)
+[s] *(*(*(*(*(*(*(of,the),?1),with),the),smallest),population),density)
+[t] density_1(?1)
+
+X -> s7635
+[s] *(*(colorado,river),runs)
+[t] riverid('colorado')
+
+X -> s3031(X)
+[s] *(*(*(are,the),biggest),?1)
+[t] longest(?1)
+
+X -> s13071(X)
+[s] *(adjoin,?1)
+[t] next_to_2(?1)
+
+X -> s6882(X)
+[s] *(*(*(that,runs),through),?1)
+[t] traverse_2(?1)
+
+X -> s10907
+[s] of
+[t] cityid('columbus',_)
+
+X -> s2411(X)
+[s] *(*(*(*(does,the),?1),run),through)
+[t] traverse_1(?1)
+
+X -> s1342
+[s] *(*(live,in),kalamazoo)
+[t] cityid('kalamazoo',_)
+
+X -> s343
+[s] *(guadalupe,peak)
+[t] placeid('guadalupe peak')
+
+X -> s2669
+[s] *(*(does,texas),have)
+[t] stateid('texas')
+
+X -> s8180
+[s] *(*(*(the,population),of),california)
+[t] stateid('california')
+
+S! -> s4362(X)
+[s] *(*(*(*(what,is),the),area),?1)
+[t] answer(?1)
+
+X -> s5157(X)
+[s] *(*(*(?1,the),capital),of)
+[t] loc_2(?1)
+
+X -> s1846(X)
+[s] *(*(?1,the),most)
+[t] most(?1)
+
+X -> s5400(X)
+[s] *(borders,?1)
+[t] next_to_2(?1)
+
+X -> s7258
+[s] *(*(*(*(*(the,longest),river),in),the),us)
+[t] countryid('usa')
+
+X -> s2932(X)
+[s] *(*(*(*(*(*(?1,the),state),with),the),largest),area)
+[t] area_1(?1)
+
+X -> s1326(X)
+[s] *(*(people,live),?1)
+[t] population_1(?1)
+
+X -> s2063
+[s] *(the,usa)
+[t] countryid('usa')
+
+X -> s10741(X)
+[s] *(*(*(?1,the),most),rivers)
+[t] loc_1(?1)
+
+X -> s1169
+[s] *(of,nevada)
+[t] stateid('nevada')
+
+X -> s875(X)
+[s] *(*(*(cities,are),?1),us)
+[t] city(?1)
+
+X -> s2101(X)
+[s] *(*(*(states,are),there),?1)
+[t] state(?1)
+
+X -> s13352
+[s] *(*(*(missouri,river),pass),through)
+[t] riverid('missouri')
+
+X -> s6563(X)
+[s] *(*(that,the),?1)
+[t] traverse_1(?1)
+
+X -> s2128
+[s] *(*(*(*(states,are),there),in),united)
+[t] countryid('usa')
+
+X -> s8009(X)
+[s] *(*(*(*(*(*(of,the),?1),with),the),smallest),population)
+[t] population_1(?1)
+
+X -> s1603(X)
+[s] *(smallest,?1)
+[t] smallest(?1)
+
+X -> s862
+[s] *(*(there,in),us)
+[t] countryid('usa')
+
+X -> s7627
+[s] *(*(*(colorado,river),runs),through)
+[t] riverid('colorado')
+
+X -> s1662
+[s] washington
+[t] stateid('washington')
+
+X -> s4408
+[s] *(of,florida)
+[t] stateid('florida')
+
+X -> s2162(X,X)
+[s] *(*(?1,and),?2)
+[t] intersection(?1,?2)
+
+X -> s7273(X,X)
+[s] *(*(*(*(?1,that),does),not),?2)
+[t] exclude(?1,?2)
+
+X -> s10944
+[s] miami
+[t] cityid('miami',_)
+
+X -> s946(X)
+[s] *(citizens,?1)
+[t] largest(?1)
+
+S! -> s2796(X)
+[s] *(*(*(name,the),"50"),?1)
+[t] answer(?1)
+
+S! -> s246(X)
+[s] *(how,?1)
+[t] answer(?1)
+
+X -> s3488
+[s] *(of,california)
+[t] stateid('california')
+
+X -> s9527(X)
+[s] *(tallest,?1)
+[t] highest(?1)
+
+X -> s11835
+[s] run
+[t] river(all)
+
+X -> s1997
+[s] *(through,texas)
+[t] stateid('texas')
+
+X -> s8554
+[s] arizona
+[t] cityid('tempe','az')
+
+X -> s1182(X)
+[s] *(*(*(*(*(many,people),are),there),in),?1)
+[t] population_1(?1)
+
+X -> s1510
+[s] *(*(in,spokane),washington)
+[t] cityid('spokane','wa')
+
+S! -> s7847(X)
+[s] *(*(*(*(*(*(what,is),the),name),of),the),?1)
+[t] answer(?1)
+
+X -> s4492
+[s] *(of,seattle)
+[t] cityid('seattle',_)
+
+X -> s895(X)
+[s] *(*(*(cities,are),?1),usa)
+[t] city(?1)
+
+X -> s11615
+[s] least
+[t] river(all)
+
+X -> s8837
+[s] *(of,utah)
+[t] stateid('utah')
+
+X -> s10968
+[s] in
+[t] cityid('pittsburgh',_)
+
+X -> s8807(X)
+[s] *(*(*(*(*(*(of,the),?1),with),the),largest),area)
+[t] area_1(?1)
+
+X -> s1049
+[s] arizona
+[t] stateid('arizona')
+
+X -> s12192
+[s] san
+[t] cityid('san jose',_)
+
+X -> s6835(X)
+[s] *(*(*(*(*(is,the),length),of),the),?1)
+[t] len(?1)
+
+X -> s6082
+[s] des
+[t] cityid('des moines',_)
+
+X -> s8461
+[s] *(*(of,san),antonio)
+[t] cityid('san antonio',_)
+
+X -> s10714
+[s] *(*(*(*(*(has,the),most),major),rivers),running)
+[t] river(all)
+
+X -> s4366(X)
+[s] *(?1,combined)
+[t] sum(?1)
+
+X -> s11077
+[s] *(to,arizona)
+[t] stateid('arizona')
+
+X -> s10705(X)
+[s] *(*(*(*(state,has),the),most),?1)
+[t] state(?1)
+
+X -> s10429(X)
+[s] *(*(*(borders,the),least),?1)
+[t] next_to_2(?1)
+
+X -> s10643(X)
+[s] *(*(*(*(*(?1,has),the),largest),urban),population)
+[t] population_1(?1)
+
+X -> s544
+[s] grande
+[t] riverid('rio grande')
+
+X -> s11744
+[s] *(missouri,run)
+[t] riverid('missouri')
+
+X -> s5572(X)
+[s] *(*(*(of,all),"50"),?1)
+[t] area_1(?1)
+
+X -> s6581(X)
+[s] *(largest,?1)
+[t] longest(?1)
+
+X -> s945(X)
+[s] *(many,?1)
+[t] population_1(?1)
+
+S! -> s12121(X)
+[s] *(where,?1)
+[t] answer(?1)
+
+X -> s4107
+[s] *(river,runs)
+[t] river(all)
+
+X -> s1881
+[s] idaho
+[t] stateid('idaho')
+
+X -> s12788(X)
+[s] *(*(*(*(highest,peak),in),the),?1)
+[t] highest(?1)
+
+X -> s8102
+[s] *(of,atlanta)
+[t] cityid('atlanta','ga')
+
+X -> s9215(X)
+[s] *(*(*(*(*(smallest,city),of),the),smallest),?1)
+[t] smallest(?1)
+
+X -> s158(X)
+[s] *(*(*(me,the),lakes),?1)
+[t] lake(?1)
+
+X -> s10017(X)
+[s] *(*(flow,through),?1)
+[t] traverse_2(?1)
+
+X -> s12254
+[s] in
+[t] stateid('maryland')
+
+X -> s11935
+[s] portland
+[t] cityid('portland',_)
+
+X -> s4977
+[s] *(*(*(*(*(is,the),biggest),river),in),illinois)
+[t] stateid('illinois')
+
+X -> s11055
+[s] *(texas,is)
+[t] stateid('texas')
+
+X -> s11780
+[s] go
+[t] riverid('ohio')
+
+X -> s1126(X)
+[s] *(*(*(major,cities),are),?1)
+[t] major(?1)
+
+X -> s9557(X)
+[s] *(*(*(*(total,area),of),the),?1)
+[t] area_1(?1)
+
+X -> s1240
+[s] *(austin,texas)
+[t] cityid('austin','tx')
+
+X -> s5382(X)
+[s] *(*(*(that,borders),the),?1)
+[t] next_to_2(?1)
+
+X -> s736(X)
+[s] *(*(?1,grande),river)
+[t] river(?1)
+
+X -> s2751(X)
+[s] *(*(*(?1,how),many),states)
+[t] state(?1)
+
+X -> s12951(X)
+[s] *(*(average,?1),population)
+[t] density_1(?1)
+
+X -> s1156(X)
+[s] *(cross,?1)
+[t] traverse_2(?1)
+
+X -> s6421
+[s] *(*(*(*(the,largest),city),in),missouri)
+[t] stateid('missouri')
+
+X -> s5234
+[s] *(*(*(the,capital),of),ohio)
+[t] stateid('ohio')
+
+X -> s9263(X)
+[s] *(*(?1,by),area)
+[t] area_1(?1)
+
+X -> s6237(X)
+[s] *(*(?1,largest),area)
+[t] area_1(?1)
+
+X -> s4907
+[s] *(*(*(*(*(*(is,the),biggest),city),in),the),us)
+[t] countryid('usa')
+
+X -> s5555(X)
+[s] *(combined,?1)
+[t] sum(?1)
+
+X -> s88
+[s] texas
+[t] stateid('texas')
+
+X -> s12183
+[s] san
+[t] cityid('san diego',_)
+
+X -> s13214(X)
+[s] *(*(*(do,colorado),?1),through)
+[t] traverse_1(?1)
+
+X -> s6204
+[s] *(*(*(*(the,highest),point),in),virginia)
+[t] stateid('virginia')
+
+X -> s8443
+[s] *(of,sacramento)
+[t] cityid('sacramento',_)
+
+X -> s10250
+[s] *(*(*(run,through),new),york)
+[t] stateid('new york')
+
+X -> s551
+[s] colorado
+[t] riverid('colorado')
+
+X -> s3246
+[s] *(*(*(*(the,major),cities),in),alabama)
+[t] stateid('alabama')
+
+X -> s7738(X)
+[s] *(dense,?1)
+[t] density_1(?1)
+
+X -> s6395(X)
+[s] *(largest,?1)
+[t] largest_one(?1)
+
+X -> s6189
+[s] *(*(*(*(*(*(is,the),highest),point),in),the),usa)
+[t] countryid('usa')
+
+X -> s5521
+[s] *(*(texas,with),the)
+[t] stateid('texas')
+
+X -> s4447
+[s] *(*(*(*(of,maryland),in),square),kilometers)
+[t] stateid('maryland')
+
+X -> s8876(X)
+[s] *(that,?1)
+[t] traverse_2(?1)
+
+X -> s5897
+[s] *(*(*(*(*(is,the),highest),point),in),florida)
+[t] stateid('florida')
+
+X -> s966
+[s] *(*(citizens,in),alabama)
+[t] stateid('alabama')
+
+X -> s3640(X)
+[s] *(*(in,united),?1)
+[t] loc_2(?1)
+
+X -> s7362(X)
+[s] *(*(passes,the),?1)
+[t] traverse_2(?1)
+
+X -> s11964(X)
+[s] *(*(cities,?1),city)
+[t] city(?1)
+
+X -> s3866
+[s] *(*(*(*(of,states),which),border),texas)
+[t] stateid('texas')
+
+S! -> s7903(X)
+[s] *(*(*(*(what,is),the),population),?1)
+[t] answer(?1)
+
+X -> s2319(X)
+[s] *(does,?1)
+[t] next_to_1(?1)
+
+X -> s6824(X)
+[s] *(*(*(?1,the),mississippi),river)
+[t] river(?1)
+
+X -> s5122
+[s] *(*(*(the,capital),of),iowa)
+[t] stateid('iowa')
+
+X -> s6399
+[s] *(minnesota,by)
+[t] stateid('minnesota')
+
+X -> s4692
+[s] *(*(*(square,km),in),pennsylvania)
+[t] stateid('pennsylvania')
+
+X -> s5086
+[s] *(*(*(*(is,the),capital),of),hawaii)
+[t] stateid('hawaii')
+
+X -> s3561
+[s] *(*(*(*(the,major),cities),in),vermont)
+[t] stateid('vermont')
+
+X -> s9572(X)
+[s] *(total,?1)
+[t] sum(?1)
+
+X -> s11834(X)
+[s] *(*(shortest,river),?1)
+[t] shortest(?1)
+
+X -> s2138
+[s] *(*(*(least,one),other),state)
+[t] state(all)
+
+X -> s2008(X)
+[s] *(*(through,the),?1)
+[t] traverse_2(?1)
+
+X -> s7423(X)
+[s] *(*(*(runs,through),a),?1)
+[t] traverse_2(?1)
+
+X -> s92
+[s] *(*(*(*(me,the),cities),in),texas)
+[t] stateid('texas')
+
+X -> s7071
+[s] *(*(*(flowing,through),new),york)
+[t] stateid('new york')
+
+X -> s9744(X)
+[s] *(*(*(*(river,is),the),longest),?1)
+[t] river(?1)
+
+X -> s9686(X)
+[s] *(*(river,flows),?1)
+[t] river(?1)
+
+X -> s9563(X)
+[s] *(*(total,area),?1)
+[t] area_1(?1)
+
+X -> s8135
+[s] texas
+[t] cityid('austin','tx')
+
+X -> s5831
+[s] *(*(*(*(*(*(is,the),highest),mountain),in),the),us)
+[t] countryid('usa')
+
+X -> s996
+[s] *(*(*(citizens,live),in),california)
+[t] stateid('california')
+
+X -> s9167
+[s] *(*(*(*(*(the,smallest),city),in),the),us)
+[t] countryid('usa')
+
+X -> s7868(X)
+[s] *(*(*(*(population,density),in),the),?1)
+[t] density_1(?1)
+
+X -> s10855(X)
+[s] *(?1,in)
+[t] loc_1(?1)
+
+X -> s1018(X)
+[s] *(*(many,colorado),?1)
+[t] count(?1)
+
+X -> s6828(X)
+[s] *(populous,?1)
+[t] population_1(?1)
+
+X -> s173(X)
+[s] *(*(*(me,the),largest),?1)
+[t] largest(?1)
+
+X -> s4069(X)
+[s] *(*(*(*(*(*(*(*(?1,that),border),the),state),with),the),greatest),population)
+[t] population_1(?1)
+
+X -> s7268(X)
+[s] *(*(*(*(*(that,does),not),run),through),?1)
+[t] traverse_2(?1)
+
+X -> s2903(X)
+[s] *(*(?1,is),in)
+[t] loc_1(?1)
+
+X -> s11655
+[s] *(*(*(delaware,river),run),through)
+[t] riverid('delaware')
+
+X -> s12279
+[s] *(*(*(*(*(is,the),lowest),spot),in),iowa)
+[t] stateid('iowa')
+
+X -> s1145
+[s] there
+[t] stateid('oregon')
+
+X -> s2677(X)
+[s] *(population,?1)
+[t] population_1(?1)
+
+X -> s8585(X)
+[s] *(*(*(*(*(of,the),capital),of),the),?1)
+[t] loc_2(?1)
+
+X -> s12090(X)
+[s] *(?1,maine)
+[t] next_to_2(?1)
+
+X -> s2335
+[s] *(missouri,border)
+[t] stateid('missouri')
+
+X -> s5098
+[s] of
+[t] stateid('illinois')
+
+X -> s3117
+[s] *(border,texas)
+[t] stateid('texas')
+
+X -> s7040(X)
+[s] *(*(*(traverses,the),most),?1)
+[t] traverse_2(?1)
+
+X -> s9125
+[s] *(*(*(*(the,smallest),city),in),arkansas)
+[t] stateid('arkansas')
+
+X -> s1046(X)
+[s] *(major,?1)
+[t] major(?1)
+
+S! -> s3071(X)
+[s] *(*(what,is),?1)
+[t] answer(?1)
+
+S! -> s73(X)
+[s] *(*(give,me),?1)
+[t] answer(?1)
+
+X -> s3411
+[s] island
+[t] stateid('rhode island')
+
+X -> s1668
+[s] *(*(*(people,live),in),washington)
+[t] stateid('washington')
+
+X -> s7710
+[s] *(*(*(*(*(the,lowest),point),of),the),us)
+[t] countryid('usa')
+
+X -> s7705
+[s] *(*(*(*(*(*(is,the),lowest),point),of),the),us)
+[t] countryid('usa')
+
+X -> s154(X)
+[s] *(lakes,?1)
+[t] lake(?1)
+
+X -> s8321
+[s] *(of,minnesota)
+[t] stateid('minnesota')
+
+X -> s1195
+[s] *(*(*(there,in),new),york)
+[t] stateid('new york')
+
+X -> s4413(X)
+[s] *(*(*(*(is,the),area),of),?1)
+[t] area_1(?1)
+
+X -> s4301(X)
+[s] *(*(*(*(*(*(?1,states),has),the),highest),population),density)
+[t] density_1(?1)
+
+X -> s9667
+[s] *(*(run,through),illinois)
+[t] stateid('illinois')
+
+X -> s1333
+[s] kalamazoo
+[t] cityid('kalamazoo',_)
+
+X -> s18(X)
+[s] *(states,?1)
+[t] state(?1)
+
+S! -> s33(X)
+[s] *(name,?1)
+[t] answer(?1)
+
+X -> s5927
+[s] *(*(*(*(*(is,the),highest),point),in),maine)
+[t] stateid('maine')
+
+X -> s13000
+[s] in
+[t] cityid('kalamazoo',_)
+
+X -> s10479
+[s] salem
+[t] cityid('salem',_)
+
+X -> s8494
+[s] *(of,seattle)
+[t] cityid('seattle','wa')
+
+X -> s1291
+[s] *(*(live,in),detroit)
+[t] cityid('detroit',_)
+
+X -> s4942
+[s] *(*(*(*(*(is,the),biggest),city),in),usa)
+[t] countryid('usa')
+
+X -> s6747(X)
+[s] *(*(*(*(*(*(*(*(?1,that),borders),the),state),with),the),highest),population)
+[t] population_1(?1)
+
+X -> s9449(X)
+[s] *(*(*(*(*(state,with),the),largest),density),?1)
+[t] state(?1)
+
+X -> s7453
+[s] *(*(*(*(*(is,the),lowest),point),in),arkansas)
+[t] stateid('arkansas')
+
+X -> s12129
+[s] baton
+[t] cityid('baton rouge',_)
+
+X -> s1468
+[s] riverside
+[t] cityid('riverside',_)
+
+S! -> s3061(X)
+[s] *(*(*(what,is),the),?1)
+[t] answer(?1)
+
+X -> s10026
+[s] *(*(flow,through),missouri)
+[t] stateid('missouri')
+
+X -> s971(X)
+[s] *(*(*(many,citizens),in),?1)
+[t] population_1(?1)
+
+X -> s287
+[s] *(*(is,north),dakota)
+[t] stateid('north dakota')
+
+X -> s11605
+[s] *(*(*(least,one),major),rivers)
+[t] river(all)
+
+X -> s10839(X)
+[s] *(*(*(*(?1,has),the),sparsest),population)
+[t] density_1(?1)
+
+X -> s1227(X)
+[s] *(*(*(many,people),live),?1)
+[t] population_1(?1)
+
+X -> s235(X)
+[s] *(*(states,that),?1)
+[t] state(?1)
+
+X -> s2073(X)
+[s] *(to,?1)
+[t] next_to_2(?1)
+
+X -> s72
+[s] usa
+[t] countryid('usa')
+
+X -> s263
+[s] is
+[t] stateid('massachusetts')
+
+X -> s9573(X)
+[s] *(*(*(*(*(*(length,of),all),?1),in),the),usa)
+[t] len(?1)
+
+X -> s3626
+[s] *(the,us)
+[t] countryid('usa')
+
+X -> s5230
+[s] *(*(*(*(is,the),capital),of),ohio)
+[t] stateid('ohio')
+
+X -> s1357
+[s] *(in,kansas)
+[t] stateid('kansas')
+
+X -> s1179(X)
+[s] *(*(*(many,people),are),?1)
+[t] population_1(?1)
+
+X -> s170(X)
+[s] *(largest,?1)
+[t] largest(?1)
+
+X -> s2325
+[s] *(iowa,border)
+[t] stateid('iowa')
+
+X -> s4130
+[s] *(*(*(*(*(*(*(*(can,you),tell),me),about),the),population),of),missouri)
+[t] stateid('missouri')
+
+X -> s5481
+[s] *(*(*(*(is,the),capital),of),utah)
+[t] stateid('utah')
+
+X -> s13450(X)
+[s] *(*(than,the),?1)
+[t] higher_2(?1)
+
+X -> s1209(X)
+[s] *(*(many,people),?1)
+[t] population_1(?1)
+
+X -> s10472(X)
+[s] *(*(has,no),?1)
+[t] loc_1(?1)
+
+X -> s13236
+[s] *(*(*(chattahoochee,river),run),through)
+[t] riverid('chattahoochee')
+
+X -> s10154
+[s] *(through,arizona)
+[t] stateid('arizona')
+
+X -> s4819
+[s] *(*(*(*(*(is,the),biggest),city),in),louisiana)
+[t] stateid('louisiana')
+
+X -> s842
+[s] *(*(*(there,in),the),us)
+[t] countryid('usa')
+
+X -> s11120(X)
+[s] *(*(*(next,to),the),?1)
+[t] next_to_2(?1)
+
+X -> s10827(X)
+[s] *(*(*(*(*(?1,has),the),smallest),urban),population)
+[t] population_1(?1)
+
+X -> s12356(X,X)
+[s] *(*(?1,not),?2)
+[t] exclude(?1,?2)
+
+X -> s4501
+[s] of
+[t] cityid('seattle',_)
+
+X -> s11765
+[s] *(*(ohio,river),go)
+[t] riverid('ohio')
+
+X -> s13476(X)
+[s] *(*(*(on,the),largest),?1)
+[t] longest(?1)
+
+X -> s10820
+[s] *(*(*(*(state,has),the),smallest),urban)
+[t] state(all)
+
+X -> s10680(X)
+[s] *(*(*(*(?1,has),the),lowest),population)
+[t] density_1(?1)
+
+X -> s13061(X)
+[s] *(?1,smallest)
+[t] smallest(?1)
+
+X -> s9799(X)
+[s] *(*(*(runs,through),the),?1)
+[t] traverse_2(?1)
+
+X -> s10655(X)
+[s] *(*(?1,population),density)
+[t] density_1(?1)
+
+X -> s6407(X)
+[s] *(*(*(is,the),largest),?1)
+[t] largest_one(?1)
+
+X -> s11670
+[s] run
+[t] riverid('delaware')
+
+X -> s2807
+[s] *(*(*(*("50",capitals),in),the),usa)
+[t] countryid('usa')
+
+X -> s10948
+[s] *(miami,in)
+[t] cityid('miami',_)
+
+X -> s10401(X)
+[s] *(*(*(borders,most),other),?1)
+[t] next_to_2(?1)
+
+X -> s2023(X)
+[s] *(*(*(*(square,kilometers),in),the),?1)
+[t] area_1(?1)
+
+X -> s10(X)
+[s] *(*(*(?1,the),cities),in)
+[t] loc_2(?1)
+
+X -> s9001
+[s] *(*(*(*(*(*(is,the),shortest),river),in),the),usa)
+[t] countryid('usa')
+
+X -> s6513
+[s] *(*(*(*(*(is,the),largest),city),in),texas)
+[t] stateid('texas')
+
+X -> s13467(X)
+[s] *(*(*(points,that),are),?1)
+[t] place(?1)
+
+X -> s2123
+[s] *(*(there,in),united)
+[t] countryid('usa')
+
+X -> s13167(X)
+[s] *(?1,traverses)
+[t] traverse_1(?1)
+
+X -> s8911
+[s] *(*(*(*(the,shortest),river),in),alaska)
+[t] stateid('alaska')
+
+X -> s3576
+[s] *(*(*(*(the,major),cities),in),wyoming)
+[t] stateid('wyoming')
+
+X -> s1886
+[s] there
+[t] stateid('idaho')
+
+S! -> s21(X)
+[s] *(*(name,the),?1)
+[t] answer(?1)
+
+X -> s3125
+[s] *(*(*(the,cities),in),california)
+[t] stateid('california')
+
+X -> s9843(X)
+[s] *(*(?1,through),virginia)
+[t] traverse_2(?1)
+
+X -> s7895(X)
+[s] *(*(*(population,density),of),?1)
+[t] density_1(?1)
+
+X -> s4021
+[s] of
+[t] stateid('indiana')
+
+X -> s5130
+[s] *(*(*(*(is,the),capital),of),maine)
+[t] stateid('maine')
+
+X -> s5041(X)
+[s] *(*(*(*(*(*(of,the),largest),state),in),the),?1)
+[t] loc_2(?1)
+
+X -> s5541
+[s] *(*(city,with),the)
+[t] city(all)
+
+X -> s8515
+[s] *(*(of,springfield),missouri)
+[t] cityid('springfield','mo')
+
+X -> s13347
+[s] *(*(missouri,river),pass)
+[t] riverid('missouri')
+
+X -> s4016
+[s] indiana
+[t] stateid('indiana')
+
+X -> s5982
+[s] *(*(*(*(*(is,the),highest),point),in),ohio)
+[t] stateid('ohio')
+
+X -> s11853
+[s] *(*(*(point,in),the),state)
+[t] place(all)
+
+X -> s9860(X)
+[s] *(*(*(*(which,borders),the),most),?1)
+[t] next_to_2(?1)
+
+X -> s9032(X)
+[s] *(of,?1)
+[t] size(?1)
+
+X -> s11076(X)
+[s] *(next,?1)
+[t] next_to_2(?1)
+
+X -> s3179(X)
+[s] *(*(of,all),?1)
+[t] loc_2(?1)
+
+X -> s11037(X)
+[s] *(*(*(?1,is),the),largest)
+[t] largest(?1)
+
+X -> s11965
+[s] *(*(named,salt),lake)
+[t] cityid('salt lake city',_)
+
+X -> s1876
+[s] *(*(there,in),idaho)
+[t] stateid('idaho')
+
+X -> s5622
+[s] *(death,valley)
+[t] placeid('death valley')
+
+X -> s3681
+[s] *(*(*(*(*(*(names,of),the),major),cities),in),illinois)
+[t] stateid('illinois')
+
+X -> s10708
+[s] *(*(*(rivers,running),through),it)
+[t] river(all)
+
+X -> s11455(X,X)
+[s] *(*(*(?1,and),have),?2)
+[t] intersection(?1,?2)
+
+X -> s9283
+[s] *(*(*(*(*(*(is,the),smallest),state),in),the),usa)
+[t] countryid('usa')
+
+X -> s5942
+[s] *(*(nevada,in),meters)
+[t] stateid('nevada')
+
+X -> s1315
+[s] *(in,houston)
+[t] cityid('houston',_)
+
+X -> s370
+[s] america
+[t] countryid('usa')
+
+X -> s8488
+[s] *(seattle,washington)
+[t] cityid('seattle','wa')
+
+X -> s8246
+[s] *(of,houston)
+[t] cityid('houston',_)
+
+X -> s5879
+[s] *(*(*(*(*(*(*(each,state),whose),lowest),point),is),sea),level)
+[t] elevation_2("0")
+
+
