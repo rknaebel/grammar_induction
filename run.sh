@@ -21,6 +21,7 @@ do
     scala -J-Xmx4G -cp ".:bin/alto-1.1-SNAPSHOT-jar-with-dependencies.jar"  \
           RunAll.scala $GDIR/grammar${i}.irtg data/string_funql.txt \
           $GDIR/grammar${i}_em.irtg data/string.txt $GDIR/parsed$i.txt
+
 done
 
 for i in 1 2 3

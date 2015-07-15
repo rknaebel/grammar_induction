@@ -15,7 +15,7 @@ import java.io._
 import java.util.Date
 import scala.collection.JavaConverters._
 
-//import scala.language.implicitConversions;
+import scala.language.implicitConversions;
 
 import ScalaShell._
 
@@ -42,7 +42,7 @@ object RunAll extends App {
 
     println("Compute parse charts and create charts.zip file")
     Charts.computeCharts(corpus, irtg, fostream("charts.zip"))
-    corpus.attachCharts(new Charts(new FileInputStreamSupplier(new File("charts.zip"))))
+    corpus.attachCharts("charts.zip")
 
     println("Start EM training")
     irtg.trainEM(corpus)
