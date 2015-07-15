@@ -7,18 +7,35 @@
 #
 
 class IntervalTree:
+    count = 1
+    
     def __init__(self):
+        self.idx = "r{}".format(IntervalTree.count)
         self.name = ""
         self.interval = None
         self.childNodes = []
         self.alignment = []
-
+        
+        IntervalTree.count += 1
+    
     def sortChildNodes(self):
         ##self.childNodes.sort(key=lambda t: t.interval.)
         pass
 
     def induceIrtgRules(self, sentence):
         pass
+
+    def funql(self):
+        if len(self.childNodes) == 0:
+            return self.name
+        else:
+            return "{}({})".format(self.name, ",".join(t.funql() for t in self.childNodes))
+
+    def derivation(self):
+        if len(self.childNodes) == 0:
+            return self.idx
+        else:
+            return "{}({})".format(self.idx, ",".join(t.derivation() for t in self.childNodes))
 
     def __str__(self):
         interval = "[{},{}]".format(self.interval.start,self.interval.end)

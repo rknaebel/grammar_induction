@@ -8,12 +8,12 @@ then
 fi
 mkdir ./$GDIR
 
-python induct/induct.py $ALIGNMENT left  nosplit   > $GDIR/grammar1.irtg
-python induct/induct.py $ALIGNMENT right nosplit   > $GDIR/grammar2.irtg
-python induct/induct.py $ALIGNMENT both  nosplit   > $GDIR/grammar3.irtg
-python induct/induct.py $ALIGNMENT left  semsplit  > $GDIR/grammar4.irtg
-python induct/induct.py $ALIGNMENT right semsplit  > $GDIR/grammar5.irtg
-python induct/induct.py $ALIGNMENT both  semsplit  > $GDIR/grammar6.irtg
+python induct/induct.py $ALIGNMENT left  nosplit   $GDIR/grammar1.irtg $GDIR/llmtrain1.txt 
+python induct/induct.py $ALIGNMENT right nosplit   $GDIR/grammar2.irtg $GDIR/llmtrain2.txt 
+python induct/induct.py $ALIGNMENT both  nosplit   $GDIR/grammar3.irtg $GDIR/llmtrain3.txt 
+python induct/induct.py $ALIGNMENT left  semsplit  $GDIR/grammar4.irtg /dev/null
+python induct/induct.py $ALIGNMENT right semsplit  $GDIR/grammar5.irtg /dev/null
+python induct/induct.py $ALIGNMENT both  semsplit  $GDIR/grammar6.irtg /dev/null
 
 for i in 1 2 3 4 5 6
 do
