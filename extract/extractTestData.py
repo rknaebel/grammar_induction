@@ -22,7 +22,8 @@ def main():
     soup = BeautifulSoup(open("../data/corpus.xml"), "xml")
     corpus = soup("example") 
   
-
+    gold = open("../data/gold").read().split("\n")
+    
     string_header = "# IRTG unannotated corpus file, v1.0\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n\n"
     em_header = "# IRTG unannotated corpus file, v1.0\n#\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n"
     stub_string = []
@@ -57,7 +58,9 @@ def main():
         for j in (range(len(corpus))):
             if j % 10 == i:
                 test_string.append(corpus[j].nl.string.replace(" ?","").replace(" .","").replace("\n","").replace("50","\"50\"").lower())
-                test_funql.append(corpus[j].mrl.string.replace("'","").replace("\n",""))
+                #test_funql.append(corpus[j].nl.string.replace(" ?","").replace(" .","").replace("\n","").replace("50","\"50\"").lower())
+                #test_funql.append(corpus[j].mrl.string.replace("\n","").replace("0","\"0\""))
+                test_funql.append(gold[j])
             else:
                 training_string.append(corpus[j].nl.string.replace(" ?","").replace(" .","").replace("\n","").lower())
                 training_funql.append(parseFunql(corpus[j].mrl.string.replace("\n","")).toMR())
