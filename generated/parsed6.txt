@@ -1,0 +1,4408 @@
+# IRTG annotated corpus file, v1.0
+# 
+# Parsed from null
+# at Wed Jul 15 17:16:17 CEST 2015
+# 
+# interpretation t: class de.up.ling.irtg.algebra.TreeAlgebra
+# interpretation s: class de.up.ling.irtg.algebra.StringAlgebra
+
+# parse_time=5ms
+answer(city(loc_2(stateid(virginia))))
+give me the cities in virginia
+s4(s5(s6(s7)))
+
+# parse_time=3ms
+answer(high_point_1(state(next_to_2(stateid(mississippi)))))
+what are the high points of states surrounding mississippi
+s16(s17(s18(s19(s20))))
+
+# parse_time=3ms
+answer(river(loc_2(stateid(arkansas))))
+name the rivers in arkansas
+s33(s13538(s6(s24)))
+
+# parse_time=3ms
+answer(river(loc_2(stateid(colorado))))
+name all the rivers in colorado
+s13556(s13538(s6(s32)))
+
+# could not parse: Instance{inputObjects={s=[can, you, tell, me, the, capital, of, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=7ms
+answer(highest(place(loc_2(state(stateid(oregon))))))
+could you tell me what is the highest point in the state of oregon
+s13560(s5748(s368(s6(s13564(s8401)))))
+
+# could not parse: Instance{inputObjects={s=[count, the, states, which, have, elevations, lower, than, what, alabama, has]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(loc_2(countryid(usa))))
+give me all the states of usa
+s73(s13597(s71(s72)))
+
+# parse_time=3ms
+answer(city(loc_2(stateid(texas))))
+give me the cities in texas
+s4(s5(s6(s88)))
+
+# could not parse: Instance{inputObjects={s=[give, me, the, cities, in, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(city(loc_2(stateid(virginia))))
+give me the cities in virginia
+s4(s5(s6(s7)))
+
+# parse_time=3ms
+answer(city(loc_2(stateid(texas))))
+give me the cities which are in texas
+s4(s138(s6(s88)))
+
+# could not parse: Instance{inputObjects={s=[give, me, the, lakes, in, california]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(all))
+give me the largest state
+s73(s6597)
+
+# could not parse: Instance{inputObjects={s=[give, me, the, longest, river, that, passes, through, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[give, me, the, number, of, rivers, in, california]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(next_to_2(stateid(utah))))
+give me the states that border utah
+s73(s15446(s228(s229)))
+
+# parse_time=1ms
+answer(size(stateid(alaska)))
+how big is alaska
+s246(s247(s248))
+
+# parse_time=1ms
+answer(size(stateid(massachusetts)))
+how big is massachusetts
+s246(s250(s260))
+
+# parse_time=0ms
+answer(size(stateid('new mexico')))
+how big is new mexico
+s246(s247(s269))
+
+# parse_time=0ms
+answer(size(stateid('north dakota')))
+how big is north dakota
+s246(s250(s287))
+
+# parse_time=1ms
+answer(size(stateid(texas)))
+how big is texas
+s246(s247(s88))
+
+# parse_time=3ms
+answer(size(city(cityid('new york',_))))
+how big is the city of new york
+s246(s304(s305(s306)))
+
+# could not parse: Instance{inputObjects={s=[how, high, are, the, highest, points, of, all, the, states]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(elevation_1(placeid('guadalupe peak')))
+how high is guadalupe peak
+s347(s348(s343))
+
+# parse_time=0ms
+answer(elevation_1(placeid('mount mckinley')))
+how high is mount mckinley
+s347(s348(s355))
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, in, america]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, in, montana]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, in, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, of, alabama]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, of, delaware]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, of, florida]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, high, is, the, highest, point, of, louisiana]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(size(stateid(alaska)))
+how large is alaska
+s246(s495(s248))
+
+# parse_time=0ms
+answer(size(stateid(texas)))
+how large is texas
+s246(s495(s88))
+
+# could not parse: Instance{inputObjects={s=[how, large, is, the, largest, city, in, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, long, is, rio, grande]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(len(river(riverid(colorado))))
+how long is the colorado river
+s560(s561(s550(s551)))
+
+# parse_time=2ms
+answer(len(river(riverid(delaware))))
+how long is the delaware river
+s560(s561(s550(s567)))
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, longest, river, in, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, longest, river, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(len(riverid(mississippi)))
+how long is the mississippi
+s560(s561(s624))
+
+# parse_time=2ms
+answer(len(river(riverid(mississippi))))
+how long is the mississippi river
+s560(s561(s550(s624)))
+
+# parse_time=2ms
+answer(len(riverid(mississippi)))
+how long is the mississippi river in miles
+s560(s561(s653))
+
+# parse_time=2ms
+answer(len(river(riverid(missouri))))
+how long is the missouri river
+s560(s561(s550(s673)))
+
+# parse_time=2ms
+answer(len(river(riverid('north platte'))))
+how long is the north platte river
+s560(s561(s550(s689)))
+
+# parse_time=2ms
+answer(len(river(riverid(ohio))))
+how long is the ohio river
+s560(s561(s550(s709)))
+
+# parse_time=2ms
+answer(len(river(riverid('rio grande'))))
+how long is the rio grande river
+s560(s561(s550(s535)))
+
+# could not parse: Instance{inputObjects={s=[how, long, is, the, shortest, river, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, big, cities, are, in, pennsylvania]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, capitals, does, rhode, island, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, are, in, louisiana]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, are, in, montana]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, are, there, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, are, there, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, are, there, in, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, are, there, in, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, does, texas, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, does, the, usa, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, cities, named, austin, are, there, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, citizens, does, the, biggest, city, have, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, citizens, in, alabama]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, citizens, in, boulder]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, citizens, live, in, california]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(count(river(all)))
+how many colorado rivers are there
+s2091(s1018(s1841))
+
+# could not parse: Instance{inputObjects={s=[how, many, inhabitants, does, montgomery, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, major, cities, are, in, arizona]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, major, cities, are, in, florida]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, major, cities, are, in, states, bordering, nebraska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, major, cities, are, in, states, bordering, utah]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, major, cities, are, in, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(count(major(city(all))))
+how many major cities are there
+s2091(s767(s1046(s1115)))
+
+# could not parse: Instance{inputObjects={s=[how, many, major, cities, are, there, in, oregon]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, major, rivers, cross, ohio]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(population_1(state(stateid(nevada))))
+how many people are in the state of nevada
+s1174(s1718(s14631(s1169)))
+
+# parse_time=1ms
+answer(population_1(stateid(iowa)))
+how many people are there in iowa
+s1174(s1718(s14650))
+
+# parse_time=1ms
+answer(population_1(stateid('new york')))
+how many people are there in new york
+s1174(s1188(s1195))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, in, boulder]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(cityid(austin,_)))
+how many people live in austin
+s1174(s1251(s1225))
+
+# parse_time=1ms
+answer(population_1(cityid(austin,tx)))
+how many people live in austin texas
+s1174(s1251(s1240))
+
+# parse_time=1ms
+answer(population_1(stateid(california)))
+how many people live in california
+s1174(s1718(s1261))
+
+# parse_time=1ms
+answer(population_1(cityid(chicago,_)))
+how many people live in chicago
+s1174(s1251(s1273))
+
+# parse_time=1ms
+answer(population_1(cityid(detroit,_)))
+how many people live in detroit
+s1174(s1251(s1288))
+
+# parse_time=1ms
+answer(population_1(stateid(hawaii)))
+how many people live in hawaii
+s1174(s1718(s1312))
+
+# parse_time=1ms
+answer(population_1(cityid(houston,_)))
+how many people live in houston
+s1174(s1251(s1318))
+
+# parse_time=1ms
+answer(population_1(cityid(kalamazoo,_)))
+how many people live in kalamazoo
+s1174(s1251(s1333))
+
+# parse_time=1ms
+answer(population_1(stateid(kansas)))
+how many people live in kansas
+s1174(s1718(s14815))
+
+# parse_time=1ms
+answer(population_1(cityid(minneapolis,mn)))
+how many people live in minneapolis minnesota
+s1174(s1326(s1360))
+
+# parse_time=1ms
+answer(population_1(stateid(mississippi)))
+how many people live in mississippi
+s1174(s1718(s1378))
+
+# parse_time=1ms
+answer(population_1(stateid(montana)))
+how many people live in montana
+s1174(s1718(s1399))
+
+# parse_time=1ms
+answer(population_1(stateid('new hampshire')))
+how many people live in new hampshire
+s1174(s1718(s1411))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, new, mexico]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(cityid('new york',_)))
+how many people live in new york
+s1174(s1251(s310))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, rhode, island]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(cityid(riverside,_)))
+how many people live in riverside
+s1174(s1251(s1468))
+
+# parse_time=1ms
+answer(population_1(cityid('san francisco',_)))
+how many people live in san francisco
+s1174(s1251(s1480))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, south, dakota]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(cityid(spokane,wa)))
+how many people live in spokane washington
+s1174(s1251(s1513))
+
+# parse_time=1ms
+answer(population_1(stateid(texas)))
+how many people live in texas
+s1174(s1718(s14995))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, biggest, city, in, new, york, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, capital, of, georgia]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, capital, of, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, smallest, state, bordering, wyoming]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, state, with, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, people, live, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(stateid(washington)))
+how many people live in washington
+s1174(s1718(s1671))
+
+# parse_time=1ms
+answer(population_1(cityid(washington,dc)))
+how many people live in washington dc
+s1174(s1251(s1677))
+
+# could not parse: Instance{inputObjects={s=[how, many, people, lived, in, austin]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(population_1(stateid(utah)))
+how many people reside in utah
+s1174(s1718(s1707))
+
+# parse_time=0ms
+answer(population_1(stateid(utah)))
+how many people stay in utah
+s1174(s1718(s1722))
+
+# could not parse: Instance{inputObjects={s=[how, many, residents, live, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, called, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, found, in, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, iowa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, missouri]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, new, york]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, the, state, that, has, the, most, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, the, state, with, the, highest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, in, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, there, in, idaho]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, there, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, are, there, in, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, do, not, traverse, the, state, with, the, capital, albany]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, does, alaska, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, does, colorado, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, in, texas, are, longer, than, the, red]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, in, washington]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, run, through, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, rivers, run, through, the, states, bordering, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, square, kilometers, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, are, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, are, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, are, next, to, major, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, are, there]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, are, there, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, are, there, in, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, at, least, one, other, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, colorado, and, border, new, mexico]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, hawaii]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, iowa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, on, the, state, whose, capital, is, boston]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, tennessee]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, border, the, state, that, borders, the, most, states]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(population_1(state(all)))
+how many states border the state with the largest population
+s1174(s2279(s328))
+
+# could not parse: Instance{inputObjects={s=[how, many, states, do, not, have, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, iowa, border]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, missouri, border]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, tennessee, border]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, colorado, river, flow, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, colorado, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, mississippi, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, mississippi, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, the, missouri, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, does, usa, have]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, have, a, city, called, rochester]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, have, a, city, named, springfield]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, have, a, higher, point, than, the, highest, point, of, the, state, with, the, largest, capital, city, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, have, cities, named, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, have, cities, or, towns, named, springfield]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, have, major, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[how, many, states, in, the, us, does, the, shortest, river, run, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(stateid(texas)))
+how much population does texas have
+s2676(s2677(s2669))
+
+# parse_time=0ms
+answer(elevation_1(placeid('mount mckinley')))
+how tall is mount mckinley
+s2688(s348(s355))
+
+# could not parse: Instance{inputObjects={s=[how, tall, is, the, highest, point, in, montana]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[in, what, state, is, mount, mckinley]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[in, which, state, does, the, highest, point, in, usa, exist]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[in, which, state, is, rochester]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[iowa, borders, how, many, states]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(all))
+list the states
+s2756(s2757)
+
+# could not parse: Instance{inputObjects={s=[name, all, the, lakes, of, us]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(river(loc_2(stateid(colorado))))
+name all the rivers in colorado
+s13556(s13538(s6(s32)))
+
+# could not parse: Instance{inputObjects={s=[name, the, 50, capitals, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[name, the, longest, river, in, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[name, the, major, lakes, in, michigan]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[name, the, major, rivers, in, florida]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(river(loc_2(stateid(arkansas))))
+name the rivers in arkansas
+s33(s13538(s6(s24)))
+
+# could not parse: Instance{inputObjects={s=[name, the, states, which, have, no, surrounding, states]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(population_1(cityid(boulder,_)))
+number of citizens in boulder
+s2856(s2857(s981))
+
+# parse_time=1ms
+answer(population_1(cityid(boulder,_)))
+number of people in boulder
+s2856(s2857(s1219))
+
+# could not parse: Instance{inputObjects={s=[number, of, states, bordering, iowa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[of, the, states, washed, by, the, mississippi, river, which, has, the, lowest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[people, in, boulder]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(population_1(cityid(boulder,_)))
+population of boulder
+s2881(s2857(s1213))
+
+# could not parse: Instance{inputObjects={s=[rivers, in, new, york]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[sacramento, is, the, capital, of, which, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(all))
+san antonio is in what state
+s16265(s171)
+
+# parse_time=0ms
+answer(major(city(loc_2(stateid(colorado)))))
+show major cities in colorado
+s2905(s1046(s5(s6(s32))))
+
+# could not parse: Instance{inputObjects={s=[show, me, all, the, major, lakes, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[state, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[states, bordering, iowa]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(city(loc_2(stateid(texas))))
+tell me what cities are in texas
+s16301(s769(s6(s88)))
+
+# could not parse: Instance{inputObjects={s=[through, which, states, does, the, longest, river, in, texas, run]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[through, which, states, does, the, mississippi, flow]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[through, which, states, does, the, mississippi, run]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(river(loc_2(stateid(texas))))
+what are all the rivers in texas
+s2999(s13546(s6(s88)))
+
+# could not parse: Instance{inputObjects={s=[what, are, major, rivers, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, biggest, rivers, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, capital, cities, of, the, states, which, border, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(texas))
+what is the capital city in texas
+s2712(s3070)
+
+# could not parse: Instance{inputObjects={s=[what, are, the, capitals, of, states, that, border, missouri]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, capitals, of, the, states, that, border, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, cities, in, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, cities, in, states, through, which, the, mississippi, runs]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, cities, of, the, state, with, the, highest, point]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(highest(place(loc_2(state(all)))))
+what are the highest points of all the states
+s16(s325(s326(s3179(s2757))))
+
+# could not parse: Instance{inputObjects={s=[what, are, the, highest, points, of, states, surrounding, mississippi]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, lakes, in, states, bordering, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, largest, cities, in, the, states, that, border, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, alabama]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, delaware]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, kansas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, missouri]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, new, mexico]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, new, york]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, north, carolina]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, ohio]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, oklahoma]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, rhode, island]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, states, through, which, the, mississippi, runs]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, the, smallest, state, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, the, state, of, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, the, states, through, which, the, major, river, in, virginia, runs]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, vermont]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, in, wyoming]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, of, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, of, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, cities, of, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, lakes, in, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, rivers, in, ohio]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, major, rivers, in, the, us]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(major(city(loc_2(stateid(illinois)))))
+what are the names of the major cities in illinois
+s3692(s17235(s5(s6(s4972))))
+
+# could not parse: Instance{inputObjects={s=[what, are, the, neighboring, states, for, michigan]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(all))
+what are the population densities of each us state
+s2712(s17059)
+
+# parse_time=2ms
+answer(density_1(stateid(mississippi)))
+what is the population of mississippi
+s7903(s5603(s20))
+
+# could not parse: Instance{inputObjects={s=[what, are, the, populations, of, all, the, major, cities, in, montana]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(state(traverse_1(river(riverid(mississippi)))))
+what are the populations of states through which the mississippi river runs
+s2712(s17110(s3146(s550(s3147))))
+
+# parse_time=4ms
+answer(state(traverse_1(river(riverid(mississippi)))))
+what are the populations of states through which the mississippi river runs
+s2712(s17110(s3146(s550(s3147))))
+
+# parse_time=4ms
+answer(state(traverse_1(riverid(mississippi))))
+what are the populations of states through which the mississippi runs
+s2712(s17110(s3146(s3147)))
+
+# parse_time=3ms
+answer(state(traverse_1(riverid(mississippi))))
+what are the populations of states through which the mississippi runs
+s2712(s17110(s3146(s3147)))
+
+# could not parse: Instance{inputObjects={s=[what, are, the, populations, of, states, which, border, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, populations, of, the, major, cities, of, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=5ms
+answer(state(traverse_1(river(riverid(mississippi)))))
+what are the populations of the states through which the mississippi river runs
+s2712(s17247(s3146(s550(s3147))))
+
+# parse_time=5ms
+answer(state(traverse_1(river(riverid(mississippi)))))
+what are the populations of the states through which the mississippi river runs
+s2712(s17247(s3146(s550(s3147))))
+
+# parse_time=4ms
+answer(state(traverse_1(riverid(mississippi))))
+what are the populations of the states through which the mississippi runs
+s2712(s17247(s3146(s3147)))
+
+# parse_time=5ms
+answer(state(traverse_1(riverid(mississippi))))
+what are the populations of the states through which the mississippi runs
+s2712(s17247(s3146(s3147)))
+
+# parse_time=3ms
+answer(river(loc_2(stateid(alaska))))
+what are the rivers in alaska
+s2999(s13538(s6(s248)))
+
+# parse_time=5ms
+answer(river(loc_2(state(stateid(indiana)))))
+what are the rivers in the state of indiana
+s2999(s13538(s6(s13564(s4011))))
+
+# parse_time=9ms
+answer(river(loc_2(state(stateid(texas)))))
+what are the rivers in the state of texas
+s2999(s13538(s6(s13564(s4026))))
+
+# could not parse: Instance{inputObjects={s=[what, are, the, rivers, of, montana]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(all))
+what are the states
+s2712(s4052)
+
+# could not parse: Instance{inputObjects={s=[what, are, the, states, that, border, the, state, with, the, greatest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, states, that, the, potomac, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, are, the, states, through, which, the, longest, river, runs]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(stateid(missouri))
+what can you tell me about the population of missouri
+s2712(s4130)
+
+# could not parse: Instance{inputObjects={s=[what, capital, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, capital, is, the, largest, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, cities, are, located, in, pennsylvania]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, cities, in, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, cities, in, texas, have, the, highest, number, of, citizens]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, cities, in, texas, have, the, highest, populations]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, has, the, least, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, has, the, most, people]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, city, in, the, united, states, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, capital, of, iowa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, capital, of, the, state, with, the, lowest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, largest, capital]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(next_to_2(stateid(california))))
+what is the adjacent state of california
+s2712(s17650(s17651(s156)))
+
+# parse_time=2ms
+answer(area_1(stateid(alaska)))
+what is the area of alaska
+s4362(s4363(s248))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, all, the, states, combined]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(area_1(stateid(california)))
+what is the area of california
+s4362(s4363(s156))
+
+# parse_time=2ms
+answer(area_1(stateid(florida)))
+what is the area of florida
+s4362(s4363(s463))
+
+# parse_time=2ms
+answer(area_1(stateid(idaho)))
+what is the area of idaho
+s4362(s4363(s1881))
+
+# parse_time=2ms
+answer(area_1(stateid(maine)))
+what is the area of maine
+s4362(s4363(s4432))
+
+# parse_time=3ms
+answer(area_1(stateid(maryland)))
+what is the area of maryland in square kilometers
+s4362(s4363(s4450))
+
+# parse_time=2ms
+answer(area_1(stateid('new mexico')))
+what is the area of new mexico
+s4362(s4363(s269))
+
+# parse_time=2ms
+answer(area_1(stateid(ohio)))
+what is the area of ohio
+s4362(s4363(s1157))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, seattle]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(area_1(stateid('south carolina')))
+what is the area of south carolina
+s4362(s4363(s4507))
+
+# parse_time=3ms
+answer(area_1(stateid(texas)))
+what is the area of texas
+s4362(s4363(s88))
+
+# parse_time=4ms
+answer(area_1(largest(state(all))))
+what is the area of the largest state
+s4362(s4552(s170(s171)))
+
+# parse_time=4ms
+answer(area_1(state(all)))
+what is the area of the smallest state
+s4362(s4363(s12414))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, the, state, with, the, capital, albany]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, the, state, with, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(area_1(state(all)))
+what is the area of the states
+s4362(s4363(s2757))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, area, of, the, texas, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(area_1(stateid(wisconsin)))
+what is the area of wisconsin
+s4362(s4363(s4656))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, average, population, of, the, us, by, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, average, population, per, square, km, in, pennsylvania]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, average, population, per, square, km, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, american, city, in, a, state, with, a, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, capital, city, in, the, us]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(arizona))
+what is the biggest city in arizona
+s2712(s4769)
+
+# parse_time=3ms
+answer(stateid(georgia))
+what is the biggest city in georgia
+s2712(s4784)
+
+# parse_time=3ms
+answer(stateid(kansas))
+what is the biggest city in kansas
+s2712(s4804)
+
+# parse_time=3ms
+answer(stateid(louisiana))
+what is the biggest city in louisiana
+s2712(s4819)
+
+# parse_time=3ms
+answer(stateid(nebraska))
+what is the biggest city in nebraska
+s2712(s4834)
+
+# parse_time=3ms
+answer(stateid(oregon))
+what is the biggest city in oregon
+s2712(s4859)
+
+# parse_time=3ms
+answer(stateid(texas))
+what is the biggest city in texas
+s2712(s4869)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, city, in, the, smallest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, city, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, city, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, city, in, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(wyoming))
+what is the biggest city in wyoming
+s2712(s4957)
+
+# parse_time=3ms
+answer(stateid(illinois))
+what is the biggest river in illinois
+s2712(s4977)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(loc_2(countryid(usa))))
+what is the biggest state in continental us
+s2712(s18304(s5000(s185)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, biggest, state, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, city, of, the, largest, state, in, the, us]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of california
+s3061(s1568(s5053(s5509)))
+
+# parse_time=2ms
+answer(stateid(colorado))
+what is the capital of colorado
+s2712(s5062)
+
+# parse_time=2ms
+answer(stateid(georgia))
+what is the capital of georgia
+s2712(s5074)
+
+# parse_time=2ms
+answer(stateid(hawaii))
+what is the capital of hawaii
+s2712(s5086)
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of illinois
+s3061(s1568(s5097(s5509)))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of indiana
+s3061(s1568(s5109(s5509)))
+
+# parse_time=2ms
+answer(stateid(iowa))
+what is the capital of iowa
+s2712(s5118)
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of maine
+s3061(s1568(s5133(s5509)))
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of maryland
+s3061(s1568(s5145(s5509)))
+
+# parse_time=2ms
+answer(stateid(massachusetts))
+what is the capital of massachusetts
+s2712(s5154)
+
+# parse_time=2ms
+answer(stateid(michigan))
+what is the capital of michigan
+s2712(s5166)
+
+# parse_time=2ms
+answer(stateid('new hampshire'))
+what is the capital of new hampshire
+s2712(s5182)
+
+# parse_time=2ms
+answer(stateid('new jersey'))
+what is the capital of new jersey
+s2712(s5198)
+
+# parse_time=2ms
+answer(capital(cityid('new york',_)))
+what is the capital of new york
+s3071(s3072(s306))
+
+# parse_time=2ms
+answer(stateid('north dakota'))
+what is the capital of north dakota
+s2712(s5222)
+
+# parse_time=3ms
+answer(stateid(ohio))
+what is the capital of ohio
+s2712(s5230)
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of pennsylvania
+s3061(s1568(s776(s5509)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, states, that, have, cities, named, durham]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of texas
+s3061(s1568(s5278(s5509)))
+
+# parse_time=4ms
+answer(capital(loc_2(state(stateid(alabama)))))
+what is the capital of the alabama state
+s3061(s1568(s2577(s1543(s427))))
+
+# parse_time=4ms
+answer(capital(loc_2(state(stateid(florida)))))
+what is the capital of the florida state
+s3061(s1568(s2577(s1543(s463))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, smallest, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(capital(loc_2(state(stateid(texas)))))
+what is the capital of the state texas
+s3061(s1568(s2577(s1168(s88))))
+
+# parse_time=9ms
+answer(capital(loc_2(state(next_to_2(state(all))))))
+what is the capital of the state that borders the most states
+s3061(s1568(s2577(s2240(s2241(s171)))))
+
+# parse_time=11ms
+answer(capital(loc_2(state(loc_2(next_to_2(stateid(texas)))))))
+what is the capital of the state that borders the state that borders texas
+s3061(s1568(s2577(s6790(s12847(s5400(s88))))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, highest, elevation]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, highest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, longest, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, capital, of, the, state, with, the, most, inhabitants]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(utah))
+what is the capital of utah
+s2712(s5481)
+
+# parse_time=2ms
+answer(stateid(vermont))
+what is the capital of vermont
+s2712(s5493)
+
+# parse_time=3ms
+answer(capital(loc_2(stateid(washington))))
+what is the capital of washington
+s3061(s1568(s1971(s5509)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, city, in, texas, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, city, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(all))
+what is the combined area of all 50 states
+s2712(s18815)
+
+# parse_time=3ms
+answer(state(all))
+what is the combined population of all 50 states
+s2712(s18835)
+
+# parse_time=2ms
+answer(density_1(stateid(texas)))
+what is the density of texas
+s5602(s5603(s88))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, density, of, the, new, york]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, elevation, of, death, valley]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, elevation, of, the, highest, point, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, height, of, mount, mckinley]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, height, of, the, highest, mountain, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, height, of, the, highest, point, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(high_point_1(stateid(wyoming)))
+what is the high point of wyoming
+s5734(s5735(s1606))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, elevation, in, new, mexico]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, elevation, in, south, carolina]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(texas))
+what is the highest elevation in texas
+s2712(s5776)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, elevation, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, mountain, in, alaska]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(texas))
+what is the highest mountain in texas
+s2712(s5816)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, mountain, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, mountain, in, us]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(stateid(colorado))
+what is the highest point in colorado
+s2712(s5856)
+
+# parse_time=4ms
+answer(stateid(delaware))
+what is the highest point in delaware
+s2712(s5871)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, each, state, whose, lowest, point, is, sea, level]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(florida))
+what is the highest point in florida
+s2712(s5897)
+
+# parse_time=3ms
+answer(stateid(iowa))
+what is the highest point in iowa
+s2712(s5907)
+
+# parse_time=3ms
+answer(stateid(kansas))
+what is the highest point in kansas
+s2712(s5917)
+
+# parse_time=3ms
+answer(stateid(maine))
+what is the highest point in maine
+s2712(s5927)
+
+# parse_time=3ms
+answer(stateid(montana))
+what is the highest point in montana
+s2712(s5937)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, nevada, in, meters]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, new, mexico]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(ohio))
+what is the highest point in ohio
+s2712(s5982)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, rhode, island]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, states, bordering, georgia]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(texas))
+what is the highest point in texas
+s2712(s6026)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, country]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, smallest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, state, with, capital, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, state, with, capital, des, moines]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, state, with, the, capital, des, moines]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, state, with, the, most, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, state, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, states, bordering, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(virginia))
+what is the highest point in virginia
+s2712(s6209)
+
+# parse_time=3ms
+answer(stateid(wyoming))
+what is the highest point in wyoming
+s2712(s6219)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, of, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, of, the, state, with, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, highest, point, of, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(capital(all))
+what is the largest capital
+s3071(s6302)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, capital, city, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, a, state, that, borders, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(alabama))
+what is the largest city in alabama
+s2712(s6363)
+
+# parse_time=4ms
+answer(stateid(california))
+what is the largest city in california
+s2712(s6373)
+
+# parse_time=3ms
+answer(stateid(michigan))
+what is the largest city in michigan
+s2712(s6388)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, minnesota, by, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(missouri))
+what is the largest city in missouri
+s2712(s6426)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, rhode, island]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, smallest, state, through, which, the, mississippi, runs]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, states, that, border, california]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(texas))
+what is the largest city in texas
+s2712(s6513)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, in, the, smallest, state, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(wisconsin))
+what is the largest city in wisconsin
+s2712(s6544)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, city, of, kansas]}}
+_null_
+_null_
+_null_
+
+# parse_time=8ms
+answer(state(traverse_1(riverid('rio grande'))))
+what is the largest of the states that the rio grande runs through
+s2712(s19818(s4097(s535)))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, river, in, washington, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, bordering, arkansas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, bordering, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, capital, in, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, in, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, that, borders, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, that, borders, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, that, borders, the, state, with, the, highest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, that, borders, the, state, with, the, lowest, point, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, largest, state, traversed, by, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, least, populous, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, colorado, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, colorado, river, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, longest, river, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, longest, river, that, runs, through, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, river, that, flows, through, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, river, that, runs, through, the, most, number, of, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, river, that, runs, through, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, length, of, the, river, that, traverses, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, flowing, through, new, york]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, america]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(california))
+what is the longest river in california
+s2712(s7101)
+
+# parse_time=4ms
+answer(stateid(florida))
+what is the longest river in florida
+s2712(s7111)
+
+# parse_time=3ms
+answer(stateid(mississippi))
+what is the longest river in mississippi
+s2712(s7121)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, new, york]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(pennsylvania))
+what is the longest river in pennsylvania
+s2712(s7141)
+
+# parse_time=4ms
+answer(stateid(texas))
+what is the longest river in texas
+s2712(s7151)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, smallest, state, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, state, with, the, highest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, state, with, the, most, major, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, states, that, border, nebraska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, that, does, not, run, through, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, that, flows, through, a, state, that, borders, indiana]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, that, flows, through, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, that, passes, the, states, that, border, the, state, that, borders, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, longest, river, that, runs, through, a, state, that, borders, tennessee]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(pennsylvania))
+what is the lowest elevation in pennsylvania
+s2712(s7443)
+
+# parse_time=3ms
+answer(stateid(arkansas))
+what is the lowest point in arkansas
+s2712(s7453)
+
+# parse_time=4ms
+answer(stateid(california))
+what is the lowest point in california
+s2712(s7468)
+
+# parse_time=3ms
+answer(stateid(louisiana))
+what is the lowest point in louisiana
+s2712(s7478)
+
+# parse_time=3ms
+answer(stateid(massachusetts))
+what is the lowest point in massachusetts
+s2712(s7488)
+
+# parse_time=3ms
+answer(stateid(mississippi))
+what is the lowest point in mississippi
+s2712(s7498)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, in, nebraska, in, meters]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, in, oregon]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(texas))
+what is the lowest point in texas
+s2712(s7538)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, in, the, state, of, california]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, in, the, state, of, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, in, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(wisconsin))
+what is the lowest point in wisconsin
+s2712(s7614)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, of, all, states, through, which, the, colorado, river, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(colorado))
+what is the lowest point of colorado
+s2712(s7669)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, of, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, lowest, point, of, the, us]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(montana))
+what is the major cities in montana
+s2712(s7720)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, maximum, elevation, of, san, francisco]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, dense, state, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populated, capital, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populated, state, bordering, oklahoma]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populous, city]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populous, city, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populous, city, in, wyoming]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populous, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populous, state, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, most, populous, state, through, which, the, mississippi, runs]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, name, of, the, state, with, the, lowest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, number, of, neighboring, states, for, kentucky]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, density, in, the, state, with, capital, austin]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(density_1(stateid(maine)))
+what is the population density of maine
+s7903(s5591(s4432))
+
+# parse_time=3ms
+answer(density_1(stateid('south dakota')))
+what is the population density of south dakota
+s7903(s5591(s1495))
+
+# parse_time=4ms
+answer(density_1(stateid(texas)))
+what is the population density of texas
+s7903(s5591(s88))
+
+# parse_time=6ms
+answer(density_1(state(all)))
+what is the population density of the largest state
+s7903(s5594(s7955))
+
+# parse_time=6ms
+answer(density_1(state(all)))
+what is the population density of the smallest state
+s7903(s5594(s7975))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, density, of, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, density, of, the, state, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid(wyoming)))
+what is the population density of wyoming
+s7903(s5591(s1606))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, in, boston]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid(alaska)))
+what is the population of alaska
+s7903(s5603(s248))
+
+# parse_time=4ms
+answer(density_1(stateid(arizona)))
+what is the population of arizona
+s7903(s5603(s1049))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, atlanta]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, atlanta, ga]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, austin, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, boston, massachusetts]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, boulder]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(density_1(stateid(california)))
+what is the population of california
+s7903(s5603(s156))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, dallas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, denver]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, erie, pennsylvania]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid(hawaii)))
+what is the population of hawaii
+s7903(s5603(s1300))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, houston]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(density_1(stateid(idaho)))
+what is the population of idaho
+s7903(s5603(s1881))
+
+# parse_time=4ms
+answer(density_1(stateid(illinois)))
+what is the population of illinois
+s7903(s5603(s4972))
+
+# parse_time=4ms
+answer(density_1(stateid(maine)))
+what is the population of maine
+s7903(s5603(s4432))
+
+# parse_time=4ms
+answer(density_1(stateid(maryland)))
+what is the population of maryland
+s7903(s5603(s5138))
+
+# parse_time=3ms
+answer(density_1(stateid(minnesota)))
+what is the population of minnesota
+s7903(s5603(s6405))
+
+# parse_time=3ms
+answer(density_1(stateid(montana)))
+what is the population of montana
+s7903(s5603(s388))
+
+# parse_time=3ms
+answer(density_1(stateid('new mexico')))
+what is the population of new mexico
+s7903(s5603(s269))
+
+# parse_time=4ms
+answer(density_1(stateid('new york')))
+what is the population of new york
+s7903(s5603(s1198))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, new, york, city]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid(oregon)))
+what is the population of oregon
+s7903(s5603(s1133))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, portland, maine]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(density_1(stateid('rhode island')))
+what is the population of rhode island
+s7903(s5603(s787))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, sacramento]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, san, antonio]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, seattle]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, seattle, washington]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid('south dakota')))
+what is the population of south dakota
+s7903(s5603(s1495))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, springfield, missouri]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, springfield, south, dakota]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, tempe, arizona]}}
+_null_
+_null_
+_null_
+
+# parse_time=5ms
+answer(density_1(stateid(texas)))
+what is the population of texas
+s7903(s5603(s88))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, capital, of, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, capital, of, the, largest, state, through, which, the, mississippi, runs]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, capital, of, the, smallest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, largest, city, in, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# parse_time=6ms
+answer(density_1(state(all)))
+what is the population of the largest state
+s7903(s5603(s6597))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, largest, state, that, borders, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, major, cities, in, wisconsin]}}
+_null_
+_null_
+_null_
+
+# parse_time=6ms
+answer(density_1(state(all)))
+what is the population of the smallest state
+s7903(s5603(s12414))
+
+# parse_time=10ms
+answer(density_1(state(next_to_2(state(all)))))
+what is the population of the state that borders the most states
+s7903(s5603(s2240(s2241(s18719))))
+
+# parse_time=7ms
+answer(density_1(state(all)))
+what is the population of the state with the highest population density
+s7903(s8777(s17910))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, tucson]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(density_1(stateid(utah)))
+what is the population of utah
+s7903(s5603(s229))
+
+# parse_time=4ms
+answer(density_1(stateid(washington)))
+what is the population of washington
+s7903(s5603(s1662))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, population, of, washington, dc]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, river, that, cross, over, ohio]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, shortest, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, shortest, river, in, alaska]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(iowa))
+what is the shortest river in iowa
+s2712(s8921)
+
+# parse_time=4ms
+answer(stateid(nebraska))
+what is the shortest river in nebraska
+s2712(s8931)
+
+# parse_time=4ms
+answer(stateid(texas))
+what is the shortest river in texas
+s2712(s8946)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, shortest, river, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, shortest, river, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, shortest, river, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(size(stateid(california)))
+what is the size of california
+s9031(s9032(s156))
+
+# parse_time=2ms
+answer(size(stateid(florida)))
+what is the size of florida
+s9031(s9032(s463))
+
+# parse_time=3ms
+answer(size(stateid(texas)))
+what is the size of texas
+s9031(s9032(s88))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, size, of, the, capital, of, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, size, of, the, largest, state, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, city, in, alaska]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(stateid(arkansas))
+what is the smallest city in arkansas
+s2712(s9115)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, city, in, hawaii]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, city, in, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, city, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, city, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(stateid(washington))
+what is the smallest city in washington
+s2712(s9197)
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, city, of, the, smallest, state, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, bordering, ohio]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, bordering, wyoming]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, by, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, that, borders, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, that, borders, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, that, the, mississippi, river, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, smallest, state, through, which, the, longest, river, runs]}}
+_null_
+_null_
+_null_
+
+# parse_time=7ms
+answer(state(loc_1(highest(place(all)))))
+what is the state that contains the highest point
+s2712(s22564(s22565(s13849(s1857))))
+
+# parse_time=8ms
+answer(state(loc_1(highest(place(loc_2(countryid(usa)))))))
+what is the state with the highest elevation in the united states
+s2712(s22564(s1855(s325(s5739(s2052(s2053))))))
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, largest, density, in, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, lowest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, lowest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, lowest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, tallest, mountain, in, america]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, tallest, mountain, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, total, area, of, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, total, length, of, all, rivers, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, is, the, total, population, of, the, states, that, border, texas]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(len(riverid(mississippi)))
+what length is the mississippi
+s9630(s561(s624))
+
+# could not parse: Instance{inputObjects={s=[what, major, cities, are, located, in, pennsylvania]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, major, rivers, run, through, illinois]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, mountains, are, in, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, flows, through, kansas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, flows, through, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, flows, through, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, is, the, longest, one, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, runs, through, illinois]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, runs, through, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, runs, through, the, state, with, the, most, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, runs, through, virginia]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, traverses, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, river, traverses, the, state, which, borders, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, in, nevada]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, in, new, mexico]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, in, oregon]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, in, states, that, border, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, in, utah]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, are, there, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, do, not, run, through, tennessee]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, though, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, missouri]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, states, that, alabama, borders]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, states, that, border, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, the, largest, state]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, flow, through, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, arizona]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, austin, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, louisiana]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, maine]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, new, york]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, the, state, with, the, lowest, point, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, the, states, that, border, the, state, with, the, capital, atlanta]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, run, through, west, virginia]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, rivers, traverses, the, state, which, borders, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, bordering, nevada, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, michigan]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, most, other, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, new, york]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(next_to_2(state(all))))
+what state borders the least states
+s2712(s10433(s10434(s171)))
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, the, least, states, excluding, alaska, and, excluding, hawaii]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(next_to_2(state(all))))
+what state borders the most states
+s2712(s2240(s10434(s171)))
+
+# could not parse: Instance{inputObjects={s=[what, state, borders, the, state, with, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, contains, the, highest, point, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, contains, the, highest, point, of, those, the, colorado, river, traverses]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, highest, elevation]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, no, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, capital, salem]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, city, flint]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, city, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=4ms
+answer(largest_one(population_1(city(all))))
+what state has the city with the most population
+s10637(s10499(s10518(s4248)))
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, greatest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, highest, elevation]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, highest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, capital]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, city]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, largest, urban, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, least, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, longest, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, lowest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, major, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, major, rivers, running, through, it]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, people]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, most, rivers, running, through, it]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, shortest, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, capital]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, smallest, urban, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, has, the, sparsest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_1(cityid(austin,_))))
+what state is austin in
+s2712(s10854(s10855(s1225)))
+
+# parse_time=3ms
+answer(state(loc_1(capital(cityid(austin,_)))))
+what state is austin the capital of
+s2712(s10854(s10874(s10860(s1225))))
+
+# parse_time=2ms
+answer(state(loc_1(cityid(boston,_))))
+what state is boston in
+s2712(s10854(s10855(s8036)))
+
+# parse_time=3ms
+answer(state(loc_1(capital(cityid(columbus,_)))))
+what state is columbus the capital of
+s2712(s10854(s10874(s10860(s10897))))
+
+# parse_time=2ms
+answer(state(loc_1(cityid(dallas,_))))
+what state is dallas in
+s2712(s10854(s10855(s8183)))
+
+# parse_time=2ms
+answer(state(loc_1(cityid('des moines',_))))
+what state is des moines located in
+s2712(s10854(s10855(s10928)))
+
+# parse_time=2ms
+answer(state(loc_1(cityid(miami,_))))
+what state is miami in
+s2712(s10854(s10855(s10944)))
+
+# parse_time=1ms
+answer(state(loc_1(cityid(pittsburgh,_))))
+what state is pittsburgh in
+s2712(s10854(s10855(s10964)))
+
+# parse_time=2ms
+answer(largest(stateid(massachusetts)))
+what state is the biggest
+s10637(s10973(s263))
+
+# parse_time=5ms
+answer(largest_one(population_1(cityid(pittsburgh,_))))
+what state is the largest in population
+s10637(s6407(s6396(s10968)))
+
+# could not parse: Instance{inputObjects={s=[what, state, is, the, state, with, the, most, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, that, borders, texas, has, the, highest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, that, borders, texas, is, the, largest]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, which, the, mississippi, runs, through, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, are, next, to, arizona]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, are, next, to, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, are, next, to, the, mississippi]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alaska))))
+what states border alaska
+s2712(s18(s236(s248)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(arkansas))))
+what states border arkansas
+s2712(s18(s236(s24)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(delaware))))
+what states border delaware
+s2712(s18(s236(s445)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(florida))))
+what states border florida
+s2712(s18(s236(s463)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(georgia))))
+what states border georgia
+s2712(s18(s236(s1570)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(hawaii))))
+what states border hawaii
+s2712(s18(s236(s1300)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(indiana))))
+what states border indiana
+s2712(s18(s236(s4016)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(kentucky))))
+what states border kentucky
+s2712(s18(s236(s11153)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(michigan))))
+what states border michigan
+s2712(s18(s236(s2817)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(missouri))))
+what states border missouri
+s2712(s18(s236(s1805)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(montana))))
+what states border montana
+s2712(s18(s236(s388)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('new hampshire'))))
+what states border new hampshire
+s2712(s18(s236(s1405)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('new jersey'))))
+what states border new jersey
+s2712(s18(s236(s5186)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(ohio))))
+what states border ohio
+s2712(s18(s236(s1157)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('rhode island'))))
+what states border rhode island
+s2712(s18(s236(s787)))
+
+# parse_time=1ms
+answer(state(next_to_2(state(next_to_2(stateid(colorado))))))
+what states border states that border colorado
+s2712(s18(s236(s18(s228(s32)))))
+
+# parse_time=1ms
+answer(state(next_to_2(state(next_to_2(stateid(mississippi))))))
+what states border states that border mississippi
+s2712(s18(s236(s18(s228(s20)))))
+
+# parse_time=1ms
+answer(state(next_to_2(state(next_to_2(state(next_to_2(stateid(florida))))))))
+what states border states that border states that border florida
+s2712(s18(s236(s18(s228(s18(s228(s463)))))))
+
+# parse_time=4ms
+answer(state(next_to_2(state(next_to_2(state(next_to_2(state(next_to_2(stateid(texas))))))))))
+what states border states that border states that border states that border texas
+s2712(s18(s236(s18(s228(s18(s228(s18(s228(s88)))))))))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, states, that, border, the, state, with, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(next_to_2(state(traverse_1(riverid(mississippi))))))
+what states border states that the mississippi runs through
+s2712(s18(s236(s4100(s4085(s624)))))
+
+# parse_time=5ms
+answer(state(next_to_2(state(traverse_1(riverid(ohio))))))
+what states border states that the ohio runs through
+s2712(s18(s236(s4100(s4085(s709)))))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, states, which, the, mississippi, runs, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(stateid(texas))))
+what states border texas
+s2712(s18(s236(s88)))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, texas, and, have, a, major, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, mississippi, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, most, populous, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=6ms
+answer(state(loc_2(next_to_2(state(all)))))
+what states border the state that borders the most states
+s2712(s11530(s12847(s2257(s328))))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, state, with, the, most, cities]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(state(loc_1(major(city(all)))))
+what states border the state with the most major cities
+s2712(s11530(s7188(s1046(s1115))))
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, border, the, states, with, the, most, cities]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(wisconsin))))
+what states border wisconsin
+s2712(s18(s236(s4656)))
+
+# parse_time=1ms
+answer(state(capital_2(cityid(dover,_))))
+what state 's capital is dover
+s2712(s11590(s11591(s11588)))
+
+# could not parse: Instance{inputObjects={s=[what, states, contain, at, least, one, major, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, colorado, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, delaware, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, mississippi, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, mississippi, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, missouri, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, missouri, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, ohio, river, go, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, ohio, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, does, the, shortest, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, a, capital, that, is, the, highest, point, in, the, state]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(loc_1(city(cityid(austin,_)))))
+what states have a city named austin
+s2712(s2529(s2530(s2561(s1225))))
+
+# could not parse: Instance{inputObjects={s=[what, states, have, cities, named, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, cities, named, dallas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, cities, named, plano]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, cities, named, portland]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, cities, named, rochester]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, cities, named, salt, lake, city]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(state(all))))
+what states have no bordering state
+s2712(s18(s24925(s171)))
+
+# could not parse: Instance{inputObjects={s=[what, states, have, rivers, named, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, rivers, running, through, them]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, have, towns, named, springfield]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, state, 's, high, point, is, higher, than, that, of, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, states, in, the, united, states, have, a, city, of, springfield]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(maine))))
+what states neighbor maine
+s2712(s18(s12086(s4432)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(kentucky))))
+what states surround kentucky
+s2712(s18(s12094(s11153)))
+
+# could not parse: Instance{inputObjects={s=[what, texas, city, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[what, 's, the, largest, city]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, are, mountains]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, baton, rouge]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, dallas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, fort, wayne]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, houston]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, indianapolis]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, massachusetts]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(loc_1(placeid('mount whitney')))
+where is mount whitney
+s12121(s2714(s12150))
+
+# parse_time=0ms
+answer(loc_1(placeid('mount whitney')))
+where is mount whitney located
+s12121(s2714(s12156))
+
+# could not parse: Instance{inputObjects={s=[where, is, new, hampshire]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, new, orleans]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, portland]}}
+_null_
+_null_
+_null_
+
+# parse_time=0ms
+answer(loc_1(cityid('san diego',_)))
+where is san diego
+s12121(s12185(s12186))
+
+# parse_time=0ms
+answer(loc_1(cityid('san jose',_)))
+where is san jose
+s12121(s12185(s12195))
+
+# could not parse: Instance{inputObjects={s=[where, is, scotts, valley]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, springfield]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(loc_1(river(riverid(chattahoochee))))
+where is the chattahoochee river
+s12206(s12207(s550(s12205)))
+
+# could not parse: Instance{inputObjects={s=[where, is, the, highest, mountain, of, the, united, states]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid(hawaii)))))
+where is the highest point in hawaii
+s12210(s325(s368(s6(s1300))))
+
+# parse_time=3ms
+answer(highest(place(loc_2(stateid(montana)))))
+where is the highest point in montana
+s12210(s325(s368(s6(s388))))
+
+# could not parse: Instance{inputObjects={s=[where, is, the, lowest, point, in, maryland]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, the, lowest, point, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, the, lowest, spot, in, iowa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, the, most, populated, area, of, new, mexico]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[where, is, the, smallest, city]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, capitals, are, in, the, states, that, border, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, capitals, are, not, major, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, city, in, california, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, is, the, density, of, the, state, that, the, largest, river, in, the, united, states, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, is, the, highest, peak, not, in, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, is, the, longest, river, in, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, is, the, lowest, point, of, the, states, that, the, mississippi, runs, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, is, the, shortest, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(smallest(state(all)))
+which is the smallest state
+s12412(s16832(s171))
+
+# could not parse: Instance{inputObjects={s=[which, of, the, states, bordering, pennsylvania, has, the, largest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, river, goes, through, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, river, runs, through, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, river, runs, through, the, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, river, traverses, most, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, are, in, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, do, not, run, through, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, do, not, run, through, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, flow, through, alaska]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, run, through, states, bordering, new, mexico]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, run, through, states, that, border, the, state, with, the, capital, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, run, through, states, with, fewest, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, run, through, the, state, with, the, largest, city, in, the, us]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, rivers, run, through, the, state, with, the, lowest, elevation, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, border, kentucky]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, borders, florida]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, borders, hawaii]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(state(all))))
+which state borders most states
+s2720(s12699(s10434(s171)))
+
+# parse_time=2ms
+answer(state(next_to_2(state(all))))
+which state borders the most states
+s2720(s2240(s10434(s171)))
+
+# could not parse: Instance{inputObjects={s=[which, state, capital, has, the, smallest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, contains, most, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, biggest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, greatest, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, greatest, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, highest, elevation]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, highest, peak, in, the, country]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, highest, point]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, largest, city]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, largest, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, least, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, longest, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, lowest, elevation]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, lowest, point, that, borders, idaho]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, lowest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, major, cities]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, major, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, major, rivers, running, through, it]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, people]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, rivers]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, most, rivers, running, through, it]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, red, river]}}
+_null_
+_null_
+_null_
+
+# parse_time=5ms
+answer(state(next_to_2(stateid(texas))))
+which state has the smallest area that borders texas
+s2720(s12940(s5384(s88)))
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, smallest, average, urban, population]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, smallest, population, density]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, has, the, sparsest, population, density]}}
+_null_
+_null_
+_null_
+
+# parse_time=2ms
+answer(state(loc_1(cityid(kalamazoo,_))))
+which state is kalamazoo in
+s2720(s10854(s10855(s1333)))
+
+# could not parse: Instance{inputObjects={s=[which, state, is, mount, mckinley, in]}}
+_null_
+_null_
+_null_
+
+# parse_time=5ms
+answer(state(loc_1(city(cityid(denver,_)))))
+which state is the city denver located in
+s2720(s10854(s10855(s23611(s13017))))
+
+# could not parse: Instance{inputObjects={s=[which, state, is, the, largest, city, in, montana, in]}}
+_null_
+_null_
+_null_
+
+# parse_time=3ms
+answer(smallest(stateid(massachusetts)))
+which state is the smallest
+s12716(s13058(s263))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alabama))))
+which states adjoin alabama
+s2720(s18(s13071(s427)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alabama))))
+which states border alabama
+s2720(s18(s236(s427)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(alaska))))
+which states border alaska
+s2720(s18(s236(s248)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(arizona))))
+which states border arizona
+s2720(s18(s236(s1049)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(colorado))))
+which states border colorado
+s2720(s18(s236(s32)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(hawaii))))
+which states border hawaii
+s2720(s18(s236(s1300)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(illinois))))
+which states border illinois
+s2720(s18(s236(s4972)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid(iowa))))
+which states border iowa
+s2720(s18(s236(s1183)))
+
+# parse_time=1ms
+answer(state(next_to_2(stateid(kentucky))))
+which states border kentucky
+s2720(s18(s236(s11153)))
+
+# parse_time=1ms
+answer(state(next_to_2(stateid(michigan))))
+which states border michigan
+s2720(s18(s236(s2817)))
+
+# parse_time=1ms
+answer(state(next_to_2(stateid('new york'))))
+which states border new york
+s2720(s18(s236(s1198)))
+
+# parse_time=1ms
+answer(state(next_to_2(state(all))))
+which states border no other states
+s2720(s18(s13119(s328)))
+
+# parse_time=0ms
+answer(state(next_to_2(stateid('south dakota'))))
+which states border south dakota
+s2720(s18(s236(s1495)))
+
+# could not parse: Instance{inputObjects={s=[which, states, border, states, through, which, the, mississippi, traverses]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(stateid(texas))))
+which states border texas
+s2720(s18(s236(s88)))
+
+# could not parse: Instance{inputObjects={s=[which, states, border, the, longest, river, in, the, usa]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, border, the, missouri, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, border, the, state, with, the, smallest, area]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, state, 's, capital, city, is, the, largest]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, do, colorado, river, flow, through]}}
+_null_
+_null_
+_null_
+
+# parse_time=1ms
+answer(state(next_to_2(stateid(texas))))
+which states does not border texas
+s2720(s18(s26086(s88)))
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, chattahoochee, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, colorado, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, longest, river, cross]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, longest, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, mississippi, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, mississippi, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, missouri, river, pass, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, does, the, missouri, river, run, through]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, have, a, major, city, named, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, have, a, river]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, have, cities, named, austin]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, have, points, higher, than, the, highest, point, in, colorado]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, have, points, that, are, higher, than, the, highest, point, in, texas]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, states, lie, on, the, largest, river, in, the, united, states]}}
+_null_
+_null_
+_null_
+
+# could not parse: Instance{inputObjects={s=[which, us, city, has, the, highest, population, density]}}
+_null_
+_null_
+_null_
+

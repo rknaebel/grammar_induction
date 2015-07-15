@@ -26,7 +26,7 @@ done
 
 for i in 1 2 3
 do
-    echo "-- Generate grammar with $i splits"
+    echo "-- Generate loglinear grammar $i"
     python induct/prepareLogLinModel.py $GDIR/grammar${i}.irtg > $GDIR/grammar${i}_llm.irtg
 done
 
