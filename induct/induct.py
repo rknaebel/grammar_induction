@@ -125,7 +125,7 @@ def induceRule1(tree, s, split=False):
             #
             # create rule label
             #
-            r.label = getLabel(label, r.i, arguments)
+            r.label = getLabel(label, node.idx, arguments)
             #
             # create string representation
             #
@@ -157,7 +157,9 @@ def induceRule1(tree, s, split=False):
     return rules
 
 def getLabel(start, idx, args):
-    return (start + " -> s" + str(idx) +
+    assert type(idx) == str
+    
+    return (start + " -> " + idx +
             ("({})".format(",".join(args)) if args else ""))
 
 def induceRule2(tree, s, split=False):
@@ -200,7 +202,7 @@ def induceRule2(tree, s, split=False):
             #
             # create rule label
             #
-            r.label = getLabel(label, r.i, arguments)
+            r.label = getLabel(label, node.idx, arguments)
             #
             # create string representation
             #
@@ -254,16 +256,20 @@ def ruleInduction(raw_alignments, induceMethod=induceRule1, split=False):
     string, funql = separateInput(raw_alignments)
     
     ruleSet = set()
+    derivationList = []
     
     for (s,f) in zip(string,funql):
+        rules = set()
         funqls  = extractMeanings(f)
         extendLabels(funqls)
         tree    = shiftReduceParse(funqls)
         if not tree: continue
         rules   = induceMethod(tree, s, split)
+        if rules:
+            derivationList.append((" ".join(s),tree.funql(),tree.derivation()))
         ruleSet = ruleSet | rules
-
-    return ruleSet
+        
+    return ruleSet, derivationList
 
 def storeRules(filename, ruleSet):
     header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
@@ -289,21 +295,37 @@ def main():
     nonterminalSplit = ""
     splitSize = 0
 
-    alignmentFile    = sys.argv[1]
-    ruleSplit        = sys.argv[2] if sys.argv[2] in ("left", "right", "both") else "both"
-    nonterminalSplit = sys.argv[3] if sys.argv[3] in ("nosplit", "semsplit") else "nosplit"
-
+    alignmentFile       = sys.argv[1]
+    ruleSplit           = sys.argv[2] if sys.argv[2] in ("left", "right", "both") else "both"
+    nonterminalSplit    = sys.argv[3] if sys.argv[3] in ("nosplit", "semsplit") else "nosplit"
+    grammarOutput       = sys.argv[4]
+    llmtrainingOutput   = sys.argv[5]
+    
     ruleSet = set()
+    trainingCorpus = []
     
     # read alignments and save to string and funql lists
     raw_alignments = open(alignmentFile, "r").read().split("\n")
     split = (nonterminalSplit == "semsplit")
     if ruleSplit in ("left",  "both"):
-        ruleSet = ruleSet | ruleInduction(raw_alignments, induceRule1, split)
+        rules, train = ruleInduction(raw_alignments, induceRule1, split)
+        ruleSet = ruleSet | rules
+        trainingCorpus.extend(train)
     if ruleSplit in ("right", "both"):
-        ruleSet = ruleSet | ruleInduction(raw_alignments, induceRule2, split)
+        rules, train = ruleInduction(raw_alignments, induceRule2, split)
+        ruleSet = ruleSet | rules
+        trainingCorpus.extend(train)
 
-    printRules(ruleSet)
+    storeRules(grammarOutput, ruleSet)
+
+    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
+    # write grammar to file
+    trainLLM = open(llmtrainingOutput, "w")
+    trainLLM.write(header)
+    for r in trainingCorpus:
+        trainLLM.write("\n".join(r)+"\n")
+    trainLLM.close()
+    
     
     sys.stderr.write("number of exceptions:" + str(EXCEPTIONS) + "\n")
     sys.stderr.write("number of invalids:" + str(INVALIDS) + "\n")

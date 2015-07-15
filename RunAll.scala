@@ -66,11 +66,11 @@ object RunAll extends App {
 
     output.close
     
-//    val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
-//    println(parsedCorpus)
-//    parsedCorpus.asInstanceOf[Interable].foreach {
-//        instance => println(instance)
-//    }
+    //val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
+    //println(parsedCorpus)
+    //parsedCorpus.asInstanceOf[Interable].foreach {
+    //    instance => println(instance)
+    //}
 
     //for (ins : Instance <- parsedCorpus) {
     //    println(ins)
