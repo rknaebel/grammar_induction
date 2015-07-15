@@ -15,7 +15,7 @@ def makeRule(lhs, idx, args, prob, stringRule, semanticRule):
         lhs,
         str(idx),
         ("(" + ", ".join(args) + ")") if args else "",
-        abs(prob + (random.randint(0,1)*2-1)*(random.random()/10.0)),
+        (prob * random.uniform(0.1,1.0)),
         stringRule.strip(),
         semanticRule.strip()
     )
@@ -30,7 +30,10 @@ def induceRules(rule, inductionSize):
     match = re.match(r"([\w!]+)\s+->\s+s(\d+)(\((\w[, ]*)+\))?\s+(\[[-.0-9E]+\])?", ruleHead)
     if match:
         lhs, idx, args, _, prob = match.groups()
-        prob = float(prob[1:-1])
+        try:
+            prob = float(prob[1:-1])
+        except:
+            prob = 0.0
         argNum = len(re.findall(r"[A-Z][a-zA-Z0-9]*",args)) if args else 0
         newArgs = ["X{}".format(i+1) for i in range(inductionSize)]
         if lhs == "S!":

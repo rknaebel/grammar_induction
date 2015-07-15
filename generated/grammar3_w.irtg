@@ -443,7 +443,7 @@ Cou -> s822 [0.0]
 
 Sta -> s5987 [0.0]
   [t] stateid(ohio)
-  [s] *(*(*(*(the,highest),point),in),ohio)
+  [s] *(*(*(*(the,highest),point),in),ohio)Start
 
 Pla -> s11841 [0.0]
   [t] place(all)
