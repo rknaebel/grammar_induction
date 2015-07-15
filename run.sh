@@ -1,17 +1,17 @@
 
 ALIGNMENT=data/string2geo.A3.final5BEST
 
-python induct/induct.py $ALIGNMENT left  nosplit   > generated/grammar1.irtg
-python induct/induct.py $ALIGNMENT right nosplit   > generated/grammar2.irtg
-python induct/induct.py $ALIGNMENT both  nosplit   > generated/grammar3.irtg
-python induct/induct.py $ALIGNMENT left  semsplit  > generated/grammar4.irtg
-python induct/induct.py $ALIGNMENT right semsplit  > generated/grammar5.irtg
-python induct/induct.py $ALIGNMENT both  semsplit  > generated/grammar6.irtg
+#python induct/induct.py $ALIGNMENT left  nosplit   > generated/grammar1.irtg
+#python induct/induct.py $ALIGNMENT right nosplit   > generated/grammar2.irtg
+#python induct/induct.py $ALIGNMENT both  nosplit   > generated/grammar3.irtg
+#python induct/induct.py $ALIGNMENT left  semsplit  > generated/grammar4.irtg
+#python induct/induct.py $ALIGNMENT right semsplit  > generated/grammar5.irtg
+#python induct/induct.py $ALIGNMENT both  semsplit  > generated/grammar6.irtg
 
 for i in 1 2 3 4 5 6
 do
     scala -cp ".:bin/alto-1.1-SNAPSHOT-jar-with-dependencies.jar"  \
-          RunAll generated/grammar${i}.irtg data/string_funql.txt \
+          RunAll.scala generated/grammar${i}.irtg data/string_funql.txt \
           generated/grammar${i}_w.irtg data/string.txt generated/parsed$i.txt -Xmx4G
 done
 

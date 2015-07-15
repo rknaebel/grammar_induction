@@ -15,7 +15,7 @@ import java.io._
 import java.util.Date
 import scala.collection.JavaConverters._
 
-//import scala.language.implicitConversions;
+import scala.language.implicitConversions;
 
 import ScalaShell._
 
@@ -42,7 +42,7 @@ object RunAll extends App {
 
     println("Compute parse charts and create charts.zip file")
     Charts.computeCharts(corpus, irtg, fostream("charts.zip"))
-    corpus.attachCharts(new Charts(new FileInputStreamSupplier(new File("charts.zip"))))
+    corpus.attachCharts("charts.zip")
 
     println("Start EM training")
     irtg.trainEM(corpus)
@@ -66,11 +66,11 @@ object RunAll extends App {
 
     output.close
     
-    val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
-    println(parsedCorpus)
-    parsedCorpus.asInstanceOf[Interable].foreach {
-        instance => println(instance)
-    }
+//    val parsedCorpus = irtg.readCorpus(file(parsedStringFile))
+//    println(parsedCorpus)
+//    parsedCorpus.asInstanceOf[Interable].foreach {
+//        instance => println(instance)
+//    }
 
     //for (ins : Instance <- parsedCorpus) {
     //    println(ins)
@@ -80,7 +80,7 @@ object RunAll extends App {
     //}
 }
 
-//RunAll.main(args)
+RunAll.main(args)
 
 
 
