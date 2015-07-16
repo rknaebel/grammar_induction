@@ -1,6 +1,11 @@
 
 ALIGNMENT=data/string2geo.A3.final5BEST
-GDIR=generated
+GDIR=$1
+SCALA=scala
+JAVA=java
+JAVAC=javac
+PY=python
+ALTO=bin/alto-1.1-SNAPSHOT-jar-with-dependencies.jar
 
 if [ -d $GDIR ]
 then
@@ -8,31 +13,33 @@ then
 fi
 mkdir ./$GDIR
 
-python induct/induct.py $ALIGNMENT left  nosplit   $GDIR/grammar1.irtg $GDIR/llmtrain1.txt 
-python induct/induct.py $ALIGNMENT right nosplit   $GDIR/grammar2.irtg $GDIR/llmtrain2.txt 
-python induct/induct.py $ALIGNMENT both  nosplit   $GDIR/grammar3.irtg $GDIR/llmtrain3.txt 
-python induct/induct.py $ALIGNMENT left  semsplit  $GDIR/grammar4.irtg /dev/null
-python induct/induct.py $ALIGNMENT right semsplit  $GDIR/grammar5.irtg /dev/null
-python induct/induct.py $ALIGNMENT both  semsplit  $GDIR/grammar6.irtg /dev/null
+$JAVAC -cp $ALTO -d $GDIR  $GDIR/ConvertToLisp.java
+
+$PY induct/induct.py $ALIGNMENT left  nosplit   $GDIR/grammar1.irtg $GDIR/llmtrain1.txt 
+$PY induct/induct.py $ALIGNMENT right nosplit   $GDIR/grammar2.irtg $GDIR/llmtrain2.txt 
+$PY induct/induct.py $ALIGNMENT both  nosplit   $GDIR/grammar3.irtg $GDIR/llmtrain3.txt 
+$PY induct/induct.py $ALIGNMENT left  semsplit  $GDIR/grammar4.irtg /dev/null
+$PY induct/induct.py $ALIGNMENT right semsplit  $GDIR/grammar5.irtg /dev/null
+$PY induct/induct.py $ALIGNMENT both  semsplit  $GDIR/grammar6.irtg /dev/null
 
 for i in 1 2 3 4 5 6
 do
     echo "-- Generate weighted grammar $i"
-    scala -J-Xmx4G -cp ".:bin/alto-1.1-SNAPSHOT-jar-with-dependencies.jar"  \
+    $SCALA -J-Xmx4G -cp ".:$ALTO"  \
           RunAll.scala $GDIR/grammar${i}.irtg data/string_funql.txt \
           $GDIR/grammar${i}_em.irtg data/string.txt $GDIR/parsed$i.txt
-
+    $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/grammar${i}_em.irtg $GDIR/parsed${i}.txt > $GDIR/parsed$i.lisp.txt
 done
 
 for i in 1 2 3
 do
     echo "-- Generate loglinear grammar $i"
-    python induct/prepareLogLinModel.py $GDIR/grammar${i}.irtg > $GDIR/grammar${i}_llm.irtg
+    $PY induct/prepareLogLinModel.py $GDIR/grammar${i}.irtg > $GDIR/grammar${i}_llm.irtg
 done
 
 for i in 2 3 4 5 6 7 8 9 10
 do
     echo "-- Generate grammar with $i splits"
-    python induct/readIrtg.py $GDIR/grammar3_em.irtg $i > $GDIR/grammar3_split$i.irtg
+    $PY induct/readIrtg.py $GDIR/grammar3_em.irtg $i > $GDIR/grammar3_split$i.irtg
 done
 

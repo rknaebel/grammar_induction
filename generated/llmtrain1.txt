@@ -1,11 +1,11 @@
-/*
-Induced grammar from aligned sentences
-s = tokenized string from geoquery corpus
-t = tree elements from geoquery function query language (variable-free)
-*/
-
-interpretation s: de.up.ling.irtg.algebra.StringAlgebra
-interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
+# IRTG annotated corpus file, v1.0
+#
+# Induced grammar from aligned sentences
+# s = tokenized string from geoquery corpus
+# t = tree elements from geoquery function query language (variable-free)
+#
+# interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
 
 
 give me the cities in virginia
@@ -3894,10 +3894,10 @@ what is the highest point in delaware
 answer(highest(place(loc_2(stateid('delaware')))))
 r7446(r7445(r7444(r7443(r7442))))
 what is the highest point in each state whose lowest point is sea level
-answer(highest(place(loc_2(state(loc_1(place(elevation_2(0))))))))
+answer(highest(place(loc_2(state(loc_1(place(elevation_2('0'))))))))
 r7457(r7456(r7455(r7454(r7453(r7452(r7451(r7450)))))))
 what is the highest point in each state whose lowest point is sea level
-answer(highest(place(loc_2(state(loc_1(place(elevation_2(0))))))))
+answer(highest(place(loc_2(state(loc_1(place(elevation_2('0'))))))))
 r7465(r7464(r7463(r7462(r7461(r7460(r7459(r7458)))))))
 what is the highest point in florida
 answer(highest(place(loc_2(stateid('florida')))))

@@ -26,10 +26,12 @@ class IntervalTree:
         pass
 
     def funql(self):
-        if len(self.childNodes) == 0:
-            return self.name
-        else:
-            return "{}({})".format(self.name, ",".join(t.funql() for t in self.childNodes))
+        def helper(tree):
+            if len(tree.childNodes) == 0:
+                return tree.name
+            else:
+                return "{}({})".format(tree.name, ",".join(helper(t) for t in tree.childNodes))
+        return helper(self).replace("+"," ").replace("0","\"0\"")
 
     def derivation(self):
         if len(self.childNodes) == 0:

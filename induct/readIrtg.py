@@ -23,11 +23,14 @@ def makeRule(lhs, idx, args, prob, stringRule, semanticRule):
 def wait(s):
     print s
     raw_input()
+def wait(s):
+    pass
 
 def induceRules(rule, inductionSize):
     newRules = []
     (ruleHead,stringRule,semanticRule) = rule.split("\n")
-    match = re.match(r"([\w!]+)\s+->\s+s(\d+)(\((\w[, ]*)+\))?\s+(\[[-.0-9E]+\])?", ruleHead)
+    wait(ruleHead)
+    match = re.match(r"([\w!]+)\s+->\s+\w(\d+)(\((\w[, ]*)+\))?\s+(\[[-.0-9E]+\])?", ruleHead)
     if match:
         lhs, idx, args, _, prob = match.groups()
         try:
@@ -78,6 +81,7 @@ def main():
     irtg_file = open(irtg_path, "r").read().strip("\n").split("\n\n")
 
     rules = []
+    
     for rule in irtg_file[1:]:
         rules.extend(induceRules(rule,splitsize))
     print irtg_file[0], "\n\n"

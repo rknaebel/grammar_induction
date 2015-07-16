@@ -16,6 +16,17 @@ DELETES = 0
 INVALIDS = 0
 EXCEPTIONS = 0
 
+HEADER = """
+# Induced grammar from aligned sentences
+# s = tokenized string from geoquery corpus
+# t = tree elements from geoquery function query language (variable-free)
+#
+# interpretation s: de.up.ling.irtg.algebra.StringAlgebra
+# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
+
+
+"""
+
 LabelDict = dict()
 
 def shiftReduceParse(linearTree):
@@ -113,8 +124,9 @@ def induceRule1(tree, s, split=False):
     
     rules = set()
     treeBuffer = [(tree,'S!')]
-    while treeBuffer:
-        try:
+    try:
+        while treeBuffer:
+        
             r = Rule()
             node, label = treeBuffer.pop()
             
@@ -139,20 +151,20 @@ def induceRule1(tree, s, split=False):
             if len(node.childNodes) != interval.flatten().count(-1):
                 #print "Invalid number of arguments"
                 INVALIDS += 1
-                continue
+                return set()
             if r.s in ("?1", "*(?1,?2)"):
                 #print "deleting homomorphism..."
                 #print r
                 #raw_input()
                 DELETES += 1
-                continue
+                return set()
             
             rules.add(r)
 
-        except Exception as e:
-            print traceback.format_exc()
-            raw_input()
-            pass
+    except Exception as e:
+        print traceback.format_exc()
+        raw_input()
+        return set()
 
     return rules
 
@@ -215,11 +227,11 @@ def induceRule2(tree, s, split=False):
             if len(node.childNodes) != interval.flatten().count(-1):
                 #print "Invalid number of arguments"
                 INVALIDS += 1
-                continue
+                return set()
             if r.s in ("?1", "*(?1,?2)"):
                 #print "deleting homomorphism..."
                 DELETES += 1
-                continue
+                return set()
             
             rules.add(r)
 
@@ -227,7 +239,7 @@ def induceRule2(tree, s, split=False):
         #print traceback.format_exc()[:30], "..."
         #raw_input()
         EXCEPTIONS += 1
-        pass
+        return set()
 
     return rules
 
@@ -272,17 +284,15 @@ def ruleInduction(raw_alignments, induceMethod=induceRule1, split=False):
     return ruleSet, derivationList
 
 def storeRules(filename, ruleSet):
-    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
     # write grammar to file
     grammar_irtg = open(filename, "w")
-    grammar_irtg.write(header)
+    grammar_irtg.write(HEADER)
     for r in ruleSet:
         grammar_irtg.write(str(r)+"\n")
     grammar_irtg.close()
 
 def printRules(ruleSet):
-    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
-    print header
+    print HEADER
     for r in ruleSet:
         print r
 
@@ -318,10 +328,10 @@ def main():
 
     storeRules(grammarOutput, ruleSet)
 
-    header = "/*\nInduced grammar from aligned sentences\ns = tokenized string from geoquery corpus\nt = tree elements from geoquery function query language (variable-free)\n*/\n\ninterpretation s: de.up.ling.irtg.algebra.StringAlgebra\ninterpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n"
     # write grammar to file
     trainLLM = open(llmtrainingOutput, "w")
-    trainLLM.write(header)
+    trainLLM.write("# IRTG annotated corpus file, v1.0\n#")
+    trainLLM.write(HEADER)
     for r in trainingCorpus:
         trainLLM.write("\n".join(r)+"\n")
     trainLLM.close()
@@ -330,22 +340,6 @@ def main():
     sys.stderr.write("number of exceptions:" + str(EXCEPTIONS) + "\n")
     sys.stderr.write("number of invalids:" + str(INVALIDS) + "\n")
     sys.stderr.write("number of deletions:" + str(DELETES) + "\n")
-
-#def main():
-    ## read alignments and save to string and funql lists
-    #raw_alignments = open("../data/string2geo.A3.final5BEST").read().split("\n")
-    
-    #ruleSet1 = ruleInduction(raw_alignments, induceRule1)
-    #storeRules("../data/grammar1.irtg", ruleSet1)
-    
-    #ruleSet2 = ruleInduction(raw_alignments, induceRule2)
-    #storeRules("../data/grammar2.irtg", ruleSet2)
-
-    #storeRules("../data/grammar3.irtg", ruleSet1 | ruleSet2)
-    
-    #print "number of exceptions:", EXCEPTIONS
-    #print "number of invalids:", INVALIDS
-    #print "number of deletions:", DELETES
     
 if __name__ == "__main__":
     main()
