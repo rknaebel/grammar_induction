@@ -55,6 +55,6 @@ done
 for i in 2 3 4 5 6 7 8 9 10
 do
     echo "-- Generate grammar with $i splits"
-    $PY induct/readIrtg.py $GDIR/grammar3_em.irtg $i > $GDIR/grammar3_split$i.irtg
+    $PY induct/splitGrammar.py $GDIR/grammar3_em.irtg $i > $GDIR/grammar3_split$i.irtg
 done
 
