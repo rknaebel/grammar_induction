@@ -1,5 +1,10 @@
 
 ALIGNMENT=data/string2geo.A3.final5BEST
+
+export JAVA_HOME=/cl-tools/jdk1.8.0_05/
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/cl-tools/scala-2.11.7/bin/:$PATH 
+
 GDIR=$1
 SCALA=scala
 JAVA=java
@@ -13,7 +18,7 @@ then
 fi
 mkdir ./$GDIR
 
-$JAVAC -cp $ALTO -d $GDIR  $GDIR/ConvertToLisp.java
+$JAVAC -cp $ALTO -d $GDIR  extract/ConvertToLisp.java
 
 $PY induct/induct.py $ALIGNMENT left  nosplit   $GDIR/grammar1.irtg $GDIR/llmtrain1.txt 
 $PY induct/induct.py $ALIGNMENT right nosplit   $GDIR/grammar2.irtg $GDIR/llmtrain2.txt 
@@ -25,9 +30,12 @@ $PY induct/induct.py $ALIGNMENT both  semsplit  $GDIR/grammar6.irtg /dev/null
 for i in 1 2 3 4 5 6
 do
     echo "-- Generate weighted grammar $i"
-    $SCALA -J-Xmx4G -cp ".:$ALTO"  \
-          RunAll.scala $GDIR/grammar${i}.irtg data/string_funql.txt \
-          $GDIR/grammar${i}_em.irtg data/string.txt $GDIR/parsed$i.txt
+    $SCALA -J-Xmx4G -cp $ALTO RunAll.scala \
+            $GDIR/grammar${i}.irtg \
+            data/string_funql.txt \
+            $GDIR/grammar${i}_em.irtg \
+            data/string.txt \
+            $GDIR/parsed$i.txt
     $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/grammar${i}_em.irtg $GDIR/parsed${i}.txt > $GDIR/parsed$i.lisp.txt
 done
 

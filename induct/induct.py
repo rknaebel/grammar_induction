@@ -16,15 +16,14 @@ DELETES = 0
 INVALIDS = 0
 EXCEPTIONS = 0
 
-HEADER = """
+HEADER = """/*
 # Induced grammar from aligned sentences
 # s = tokenized string from geoquery corpus
 # t = tree elements from geoquery function query language (variable-free)
 #
 # interpretation s: de.up.ling.irtg.algebra.StringAlgebra
 # interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
-
-
+*/
 """
 
 LabelDict = dict()
@@ -287,12 +286,18 @@ def storeRules(filename, ruleSet):
     # write grammar to file
     grammar_irtg = open(filename, "w")
     grammar_irtg.write(HEADER)
+    grammar_irtg.write("interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n")
+    grammar_irtg.write("interpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n")
+    grammar_irtg.write("\n\n")
     for r in ruleSet:
         grammar_irtg.write(str(r)+"\n")
     grammar_irtg.close()
 
 def printRules(ruleSet):
     print HEADER
+    print "interpretation s: de.up.ling.irtg.algebra.StringAlgebra"
+    print "interpretation t: de.up.ling.irtg.algebra.TreeAlgebra"
+    print "\n\n"
     for r in ruleSet:
         print r
 
