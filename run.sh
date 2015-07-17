@@ -20,23 +20,30 @@ mkdir ./$GDIR
 
 $JAVAC -cp $ALTO -d $GDIR  extract/ConvertToLisp.java
 
+echo "-- Generate grammar 1 left  nosplit"
 $PY induct/induct.py $ALIGNMENT left  nosplit   $GDIR/grammar1.irtg $GDIR/llmtrain1.txt 
+echo "-- Generate grammar 2 right nosplit"
 $PY induct/induct.py $ALIGNMENT right nosplit   $GDIR/grammar2.irtg $GDIR/llmtrain2.txt 
+echo "-- Generate grammar 3 both  nosplit"
 $PY induct/induct.py $ALIGNMENT both  nosplit   $GDIR/grammar3.irtg $GDIR/llmtrain3.txt 
+echo "-- Generate grammar 4 left  semsplit"
 $PY induct/induct.py $ALIGNMENT left  semsplit  $GDIR/grammar4.irtg /dev/null
+echo "-- Generate grammar 5 right semsplit"
 $PY induct/induct.py $ALIGNMENT right semsplit  $GDIR/grammar5.irtg /dev/null
+echo "-- Generate grammar 6 both  semsplit"
 $PY induct/induct.py $ALIGNMENT both  semsplit  $GDIR/grammar6.irtg /dev/null
 
 for i in 1 2 3 4 5 6
 do
-    echo "-- Generate weighted grammar $i"
+    echo "-- Generate weighted grammar $i + bulk parsing"
     $SCALA -J-Xmx4G -cp $ALTO RunAll.scala \
             $GDIR/grammar${i}.irtg \
             data/string_funql.txt \
             $GDIR/grammar${i}_em.irtg \
             data/string.txt \
             $GDIR/parsed$i.txt
-    $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/grammar${i}_em.irtg $GDIR/parsed${i}.txt > $GDIR/parsed$i.lisp.txt
+    echo "-- Generate lisp format for parse $i"
+    $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/grammar${i}.irtg $GDIR/parsed${i}.txt > $GDIR/parsed$i.lisp.txt
 done
 
 for i in 1 2 3

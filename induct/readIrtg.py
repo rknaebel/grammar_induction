@@ -70,7 +70,6 @@ def induceRules(rule, inductionSize):
 
 # Main
 def main():
-    #irtg_file = open("../data/weighten_alto.irtg").read().strip("\n").split("\n\n")
     if len(sys.argv) < 2:
         raise Exception("wrong usage! readIrtg.py grammar [splitsize]")
     if len(sys.argv) == 2:
@@ -84,6 +83,7 @@ def main():
     
     for rule in irtg_file[1:]:
         rules.extend(induceRules(rule,splitsize))
+    print "# IRTG annotated corpus file, v1.0\n#"
     print irtg_file[0], "\n\n"
     print "\n".join(rules)
 
