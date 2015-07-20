@@ -83,7 +83,6 @@ def main():
     
     for rule in irtg_file[1:]:
         rules.extend(induceRules(rule,splitsize))
-    print "# IRTG annotated corpus file, v1.0\n#"
     print irtg_file[0], "\n\n"
     print "\n".join(rules)
 

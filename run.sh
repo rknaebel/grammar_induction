@@ -24,6 +24,7 @@ $JAVAC -cp $ALTO -d $GDIR  extract/ConvertToLisp.java
 for fold in 0 1 2 3 4 5 6 7 8 9
 do
     echo "==> Start of fold ${fold}"
+    mkdir $GDIR/$fold
     
     echo "-- Generate grammar 1 left  nosplit"
     $PY induct/induct.py $ALIGNMENT left  nosplit   $GDIR/$fold/grammar1.irtg $GDIR/$fold/llmtrain1.txt 
@@ -43,9 +44,9 @@ do
         echo "-- Generate weighted grammar $i + bulk parsing"
         $SCALA -J-Xmx4G -cp $ALTO RunAll.scala \
                 $GDIR/$fold/grammar${i}.irtg \
-                data/string_funql.txt \
+                $EVAL/$fold/emtraining.$fold \
                 $GDIR/$fold/grammar${i}_em.irtg \
-                data/string.txt \
+                $EVAL/$fold/teststring.$fold \
                 $GDIR/$fold/parsed$i.txt
         echo "-- Generate lisp format for parse $i"
         $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}.irtg $GDIR/$fold/parsed${i}.txt > $GDIR/$fold/parsed$i.lisp.txt
@@ -58,13 +59,13 @@ do
         echo "-- Generate features weights for grammar $i + bulk parsing"
         $SCALA -J-Xmx4G -cp $ALTO RunLogLin.scala \
                 $GDIR/$fold/grammar${i}_llm.irtg \
-                data/string_funql.txt \
+                $GDIR/$fold/llmtrain$i.txt \
                 $GDIR/$fold/grammar${i}_features.irtg \
-                data/string.txt \
+                $EVAL/$fold/teststring.$fold \
                 $GDIR/$fold/parsed$i_llm.txt
 
         echo "-- Generate lisp format for llm parse $i"
-        $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}.irtg $GDIR/$fold/parsed${i}.txt > $GDIR/$fold/parsed$i_llm.lisp.txt
+        $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}.irtg $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.lisp.txt
 
     done
 
@@ -73,7 +74,36 @@ do
         echo "-- Generate grammar with $i splits"
         $PY induct/splitGrammar.py $GDIR/$fold/grammar3_em.irtg $i > $GDIR/$fold/grammar3_split$i.irtg
     done
+
+    for i in 2 3 4 5 6 7 8 9 10
+    do
+        echo "-- Reweight EM grammar $i + bulk parsing"
+        $SCALA -J-Xmx4G -cp $ALTO RunAll.scala \
+                $GDIR/$fold/grammar3_split$i.irtg \
+                $EVAL/$fold/emtraining.$fold \
+                $GDIR/$fold/grammar3_split$i_em.irtg \
+                $EVAL/$fold/teststring.$fold \
+                $GDIR/$fold/parsed3_split$i.txt
+        echo "-- Generate lisp format for parse $i"
+        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar3_split$i_em.irtg $GDIR/$fold/parsed3_split$i.txt > $GDIR/$fold/parsed3_split$i.lisp.txt
+    done
     
 done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

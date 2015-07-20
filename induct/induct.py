@@ -249,7 +249,7 @@ def separateInput(raw_alignments):
     # get just the lines with actual alignments, not the summary line
     for i in range(len(raw_alignments)):
         if (i+2)%3==0:
-            string.append(raw_alignments[i].split())
+            string.append(raw_alignments[i].replace("'s","s").split())
         elif (i+1)%3==0:
             funql.append(raw_alignments[i])
         else:
@@ -322,7 +322,7 @@ def main():
     # read alignments and save to string and funql lists
     raw_alignments = open(alignmentFile, "r").read().split("\n")
     split = (nonterminalSplit == "semsplit")
-    if ruleSplit in ("left",  "both"):
+    if ruleSplit in ("left", "both"):
         rules, train = ruleInduction(raw_alignments, induceRule1, split)
         ruleSet = ruleSet | rules
         trainingCorpus.extend(train)

@@ -34,14 +34,14 @@ object RunAll extends App {
     println("Reading the grammar")
     val irtg = loadIrtg(grammarFile).asInstanceOf[MaximumEntropyIrtg]
     
-    println("Read the EM training corpus")
+    println("Read the ME training corpus")
     val corpus = irtg.readCorpus(file(trainingCorpusFile))
 
     println("Compute parse charts and create charts.zip file")
     Charts.computeCharts(corpus, irtg, fostream("charts.zip"))
     corpus.attachCharts("charts.zip")
 
-    println("Start EM training")
+    println("Start ME training")
     irtg.trainMaxent(corpus)
 
     new File("charts.zip").delete()
