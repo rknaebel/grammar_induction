@@ -7,7 +7,7 @@ export PATH=/cl-tools/scala-2.11.7/bin/:$PATH
 
 GDIR=./generate
 EVAL=./evaluate
-SCALA=scala
+SCALA="scala -J-Xmx16G"
 JAVA=java
 JAVAC=javac
 PY=python
@@ -42,7 +42,7 @@ do
     for i in 1 2 3 4 5 6
     do
         echo "-- Generate weighted grammar $i + bulk parsing"
-        $SCALA -J-Xmx4G -cp $ALTO RunAll.scala \
+        $SCALA  -cp $ALTO RunAll.scala \
                 $GDIR/$fold/grammar${i}.irtg \
                 $EVAL/$fold/emtraining.$fold \
                 $GDIR/$fold/grammar${i}_em.irtg \
@@ -57,7 +57,7 @@ do
         echo "-- Generate loglinear grammar $i"
         $PY induct/prepareLogLinModel.py $GDIR/$fold/grammar${i}.irtg > $GDIR/$fold/grammar${i}_llm.irtg
         echo "-- Generate features weights for grammar $i + bulk parsing"
-        $SCALA -J-Xmx4G -cp $ALTO RunLogLin.scala \
+        $SCALA -cp $ALTO RunLogLin.scala \
                 $GDIR/$fold/grammar${i}_llm.irtg \
                 $GDIR/$fold/llmtrain$i.txt \
                 $GDIR/$fold/grammar${i}_features.irtg \
@@ -78,7 +78,7 @@ do
     for i in 2 3 4 5 6 7 8 9 10
     do
         echo "-- Reweight EM grammar $i + bulk parsing"
-        $SCALA -J-Xmx4G -cp $ALTO RunAll.scala \
+        $SCALA -cp $ALTO RunAll.scala \
                 $GDIR/$fold/grammar3_split$i.irtg \
                 $EVAL/$fold/emtraining.$fold \
                 $GDIR/$fold/grammar3_split$i_em.irtg \
