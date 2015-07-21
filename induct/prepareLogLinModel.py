@@ -16,7 +16,7 @@ def wait(s):
 # Procedures
 def extractFeatures(irtg):
     features = []
-    matches = re.findall(r"[\w!]+\s+->\s+(s\d+)(\((\w[, ]*)+\))?\s+(\[[-.0-9E]+\])?", irtg)
+    matches = re.findall(r"[\w!]+\s+->\s+(\w\d+)(\((\w[, ]*)+\))?\s+(\[[-.0-9E]+\])?", irtg)
     for idx,(ruleName, _, _, _) in enumerate(matches):
         features.append("feature f{}: de.up.ling.irtg.maxent.RuleNameFeature('{}')".format(idx, ruleName))
     return features

@@ -7,7 +7,6 @@
 
 // package
 
-
 // import
 import de.up.ling.irtg.corpus.Corpus;
 import de.up.ling.irtg.InterpretedTreeAutomaton;

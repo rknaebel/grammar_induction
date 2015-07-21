@@ -18,7 +18,7 @@ class Rule(object):
     
     # the __hash__ and __eq__ is used to idenfity duplicate rules later
     def __hash__(self):
-        return hash((self.s,self.t))
+        return hash((self.label,self.s,self.t))
     
     def __str__(self):
         return "{}\n[s] {}\n[t] {}\n".format(self.label, self.s, self.t)
