@@ -35,11 +35,11 @@ def shiftReduceParse(linearTree, string):
     # if not then remove the tree
     lastIndex = len(string)
     if not isAligned(1):
-        logging.info("Align first word to first sementic node")
-        linearTree[0][2].append(1)
+        logging.info("Align first word to first semantic node")
+        linearTree[0][2] += (1,)
     if not isAligned(lastIndex):
-        logging.info("Align first word to first sementic node")
-        linearTree[-1][2].append(lastIndex)
+        logging.info("Align first word to first semantic node")
+        linearTree[-1][2] += (lastIndex,)
 
     
     for node in reversed(linearTree):

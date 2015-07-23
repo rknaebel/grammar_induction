@@ -39,7 +39,7 @@ def main():
     fscore = (recall + float(precision)) / 2
     spr += str(round(fscore,2)) + "\n"
 
-    full_results = open(directory + "/results", "a")
+    full_results = open(directory, "a")
     full_results.write(spr)
     full_results.close()    
 

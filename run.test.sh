@@ -1,4 +1,6 @@
-python induct/induct.py data/string2geo.test.5BEST left nosplit ./grammar.irtg ./llmtrain.txt
+#python induct/induct.py data/string2geo.test.5BEST left nosplit ./grammar.irtg ./llmtrain.txt
+python induct/induct.py data/string2geo.A3.final5BEST both nosplit ./grammar.irtg ./llmtrain.txt
+
 
 python induct/prepareLogLinModel.py grammar.irtg > grammar.llm.irtg
 

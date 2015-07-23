@@ -47,9 +47,14 @@ do
                 $EVAL/$fold/emtraining.$fold \
                 $GDIR/$fold/grammar${i}_em.irtg \
                 $EVAL/$fold/teststring.$fold \
-                $GDIR/$fold/parsed$i.txt
-        echo "-- Generate lisp format for parse $i"
-        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}.irtg $GDIR/$fold/parsed${i}.txt > $GDIR/$fold/parsed$i.lisp.txt
+                $GDIR/$fold/parsed$i_em.txt
+        
+        echo "== Evaluating result for em grammar $i"
+        $PY extract/parsedToLisp.py $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.tolisp
+        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}_em.irtg     $GDIR/$fold/parsed$i_em.tolisp > $GDIR/$fold/parsed$i_em.lisp
+        $PY extract/lispToEvalb.py $GDIR/$fold/parsed$i_em.lisp > $GDIR/$fold/parsed$i_em.eval
+        ./bin/evalb -p sample.prm $EVAL/$fold/testfunql.$fold $GDIR/$fold/parsed$i_em.eval > $GDIR/$fold/parsed$i_em.results
+        $PY extract/extractResults.py $GDIR/$fold/parsed$i_em.results $GDIR/$fold/results
     done
 
     for i in 1 2 3
@@ -66,7 +71,13 @@ do
 
         echo "-- Generate lisp format for llm parse $i"
         $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}.irtg $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.lisp.txt
-
+        
+        echo "== Evaluating result for llm grammar $i"
+        $PY extract/parsedToLisp.py $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.tolisp
+        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}_llm.irtg $GDIR/$fold/parsed$i_llm.tolisp > $GDIR/$fold/parsed$i_llm.lisp
+        $PY extract/lispToEvalb.py $GDIR/$fold/parsed$i_llm.lisp > $GDIR/$fold/parsed$i_llm.eval
+        ./bin/evalb -p sample.prm $EVAL/$fold/testfunql.$fold $GDIR/$fold/parsed$i_llm.eval > $GDIR/$fold/parsed$i_llm.results
+        $PY extract/extractResults.py $GDIR/$fold/parsed$i_llm.results $GDIR/$fold/results
     done
 
     for i in 2 3 4 5 6 7 8 9 10
@@ -94,7 +105,10 @@ done
 
 
 
+for i in 2
+do
 
+done
 
 
 

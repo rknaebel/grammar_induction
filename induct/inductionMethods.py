@@ -80,7 +80,7 @@ def topDownInduction(tree, s, split=False):
                 interval = interval.without(child.interval)
             logging.debug("Interval:".format(interval))
             r.s = getStringRule(interval, s)
-            print r.s
+            #print r.s
             #
             # create meaning representation
             #
