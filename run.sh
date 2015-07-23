@@ -21,82 +21,82 @@ mkdir ./$GDIR
 
 $JAVAC -cp $ALTO -d $GDIR  extract/ConvertToLisp.java
 
-for fold in 0 1 2 3 4 5 6 7 8 9
+for fold in 0 # 1 2 3 4 5 6 7 8 9
 do
     echo "==> Start of fold ${fold}"
-    mkdir $GDIR/$fold
+    mkdir $GDIR/${fold}
     
     echo "-- Generate grammar 1 left  nosplit"
-    $PY induct/induct.py $ALIGNMENT left  nosplit   $GDIR/$fold/grammar1.irtg $GDIR/$fold/llmtrain1.txt 
+    $PY induct/induct.py $ALIGNMENT left  nosplit   $GDIR/${fold}/grammar1.irtg $GDIR/${fold}/llmtrain1.txt 
     echo "-- Generate grammar 2 right nosplit"
-    $PY induct/induct.py $ALIGNMENT right nosplit   $GDIR/$fold/grammar2.irtg $GDIR/$fold/llmtrain2.txt 
+    $PY induct/induct.py $ALIGNMENT right nosplit   $GDIR/${fold}/grammar2.irtg $GDIR/${fold}/llmtrain2.txt 
     echo "-- Generate grammar 3 both  nosplit"
-    $PY induct/induct.py $ALIGNMENT both  nosplit   $GDIR/$fold/grammar3.irtg $GDIR/$fold/llmtrain3.txt 
+    $PY induct/induct.py $ALIGNMENT both  nosplit   $GDIR/${fold}/grammar3.irtg $GDIR/${fold}/llmtrain3.txt 
     echo "-- Generate grammar 4 left  semsplit"
-    $PY induct/induct.py $ALIGNMENT left  semsplit  $GDIR/$fold/grammar4.irtg /dev/null
+    $PY induct/induct.py $ALIGNMENT left  semsplit  $GDIR/${fold}/grammar4.irtg /dev/null
     echo "-- Generate grammar 5 right semsplit"
-    $PY induct/induct.py $ALIGNMENT right semsplit  $GDIR/$fold/grammar5.irtg /dev/null
+    $PY induct/induct.py $ALIGNMENT right semsplit  $GDIR/${fold}/grammar5.irtg /dev/null
     echo "-- Generate grammar 6 both  semsplit"
-    $PY induct/induct.py $ALIGNMENT both  semsplit  $GDIR/$fold/grammar6.irtg /dev/null
+    $PY induct/induct.py $ALIGNMENT both  semsplit  $GDIR/${fold}/grammar6.irtg /dev/null
     
     for i in 1 2 3 4 5 6
     do
-        echo "-- Generate weighted grammar $i + bulk parsing"
+        echo "-- Generate weighted grammar ${i} + bulk parsing"
         $SCALA  -cp $ALTO RunAll.scala \
-                $GDIR/$fold/grammar${i}.irtg \
-                $EVAL/$fold/emtraining.$fold \
-                $GDIR/$fold/grammar${i}_em.irtg \
-                $EVAL/$fold/teststring.$fold \
-                $GDIR/$fold/parsed$i_em.txt
+                $GDIR/${fold}/grammar${i}.irtg \
+                $EVAL/${fold}/emtraining.${fold} \
+                $GDIR/${fold}/grammar${i}_em.irtg \
+                $EVAL/${fold}/teststring.${fold} \
+                $GDIR/${fold}/parsed${i}_em.txt
         
-        echo "== Evaluating result for em grammar $i"
-        $PY extract/parsedToLisp.py $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.tolisp
-        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}_em.irtg     $GDIR/$fold/parsed$i_em.tolisp > $GDIR/$fold/parsed$i_em.lisp
-        $PY extract/lispToEvalb.py $GDIR/$fold/parsed$i_em.lisp > $GDIR/$fold/parsed$i_em.eval
-        ./bin/evalb -p sample.prm $EVAL/$fold/testfunql.$fold $GDIR/$fold/parsed$i_em.eval > $GDIR/$fold/parsed$i_em.results
-        $PY extract/extractResults.py $GDIR/$fold/parsed$i_em.results $GDIR/$fold/results
+        echo "== Evaluating result for em grammar ${i}"
+        $PY extract/parsedToLisp.py $GDIR/${fold}/parsed${i}_llm.txt > $GDIR/${fold}/parsed${i}_llm.tolisp
+        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/grammar${i}_em.irtg     $GDIR/${fold}/parsed${i}_em.tolisp > $GDIR/${fold}/parsed${i}_em.lisp
+        $PY extract/lispToEvalb.py $GDIR/${fold}/parsed${i}_em.lisp > $GDIR/${fold}/parsed${i}_em.eval
+        ./bin/evalb -p bin/EVALB/sample/sample.prm $EVAL/${fold}/testfunql.${fold} $GDIR/${fold}/parsed${i}_em.eval > $GDIR/${fold}/parsed${i}_em.results
+        $PY extract/extractResults.py $GDIR/${fold}/parsed${i}_em.results $GDIR/${fold}/results_em${i}
     done
 
     for i in 1 2 3
     do
-        echo "-- Generate loglinear grammar $i"
-        $PY induct/prepareLogLinModel.py $GDIR/$fold/grammar${i}.irtg > $GDIR/$fold/grammar${i}_llm.irtg
-        echo "-- Generate features weights for grammar $i + bulk parsing"
+        echo "-- Generate loglinear grammar ${i}"
+        $PY induct/prepareLogLinModel.py $GDIR/${fold}/grammar${i}.irtg > $GDIR/${fold}/grammar${i}_llm.irtg
+        echo "-- Generate features weights for grammar ${i} + bulk parsing"
         $SCALA -cp $ALTO RunLogLin.scala \
-                $GDIR/$fold/grammar${i}_llm.irtg \
-                $GDIR/$fold/llmtrain$i.txt \
-                $GDIR/$fold/grammar${i}_features.irtg \
-                $EVAL/$fold/teststring.$fold \
-                $GDIR/$fold/parsed$i_llm.txt
+                $GDIR/${fold}/grammar${i}_llm.irtg \
+                $GDIR/${fold}/llmtrain${i}.txt \
+                $GDIR/${fold}/grammar${i}_features.irtg \
+                $EVAL/${fold}/teststring.${fold} \
+                $GDIR/${fold}/parsed${i}_llm.txt
 
-        echo "-- Generate lisp format for llm parse $i"
-        $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}.irtg $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.lisp.txt
+        echo "-- Generate lisp format for llm parse ${i}"
+        $JAVA -cp $GDIR/:$ALTO ConvertToLisp $GDIR/${fold}/grammar${i}.irtg $GDIR/${fold}/parsed${i}_llm.txt > $GDIR/${fold}/parsed${i}_llm.lisp.txt
         
-        echo "== Evaluating result for llm grammar $i"
-        $PY extract/parsedToLisp.py $GDIR/$fold/parsed$i_llm.txt > $GDIR/$fold/parsed$i_llm.tolisp
-        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar${i}_llm.irtg $GDIR/$fold/parsed$i_llm.tolisp > $GDIR/$fold/parsed$i_llm.lisp
-        $PY extract/lispToEvalb.py $GDIR/$fold/parsed$i_llm.lisp > $GDIR/$fold/parsed$i_llm.eval
-        ./bin/evalb -p sample.prm $EVAL/$fold/testfunql.$fold $GDIR/$fold/parsed$i_llm.eval > $GDIR/$fold/parsed$i_llm.results
-        $PY extract/extractResults.py $GDIR/$fold/parsed$i_llm.results $GDIR/$fold/results
+        echo "== Evaluating result for llm grammar ${i}"
+        $PY extract/parsedToLisp.py $GDIR/${fold}/parsed${i}_llm.txt > $GDIR/${fold}/parsed${i}_llm.tolisp
+        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/grammar${i}_llm.irtg $GDIR/${fold}/parsed${i}_llm.tolisp > $GDIR/${fold}/parsed${i}_llm.lisp
+        $PY extract/lispToEvalb.py $GDIR/${fold}/parsed${i}_llm.lisp > $GDIR/${fold}/parsed${i}_llm.eval
+        ./bin/evalb -p bin/EVALB/sample/sample.prm $EVAL/${fold}/testfunql.${fold} $GDIR/${fold}/parsed${i}_llm.eval > $GDIR/${fold}/parsed${i}_llm.results
+        $PY extract/extractResults.py $GDIR/${fold}/parsed${i}_llm.results $GDIR/${fold}/results
     done
 
     for i in 2 3 4 5 6 7 8 9 10
     do
-        echo "-- Generate grammar with $i splits"
-        $PY induct/splitGrammar.py $GDIR/$fold/grammar3_em.irtg $i > $GDIR/$fold/grammar3_split$i.irtg
+        echo "-- Generate grammar with ${i} splits"
+        $PY induct/splitGrammar.py $GDIR/${fold}/grammar3_em.irtg ${i} > $GDIR/${fold}/grammar3_split${i}.irtg
     done
 
     for i in 2 3 4 5 6 7 8 9 10
     do
-        echo "-- Reweight EM grammar $i + bulk parsing"
+        echo "-- Reweight EM grammar ${i} + bulk parsing"
         $SCALA -cp $ALTO RunAll.scala \
-                $GDIR/$fold/grammar3_split$i.irtg \
-                $EVAL/$fold/emtraining.$fold \
-                $GDIR/$fold/grammar3_split$i_em.irtg \
-                $EVAL/$fold/teststring.$fold \
-                $GDIR/$fold/parsed3_split$i.txt
-        echo "-- Generate lisp format for parse $i"
-        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/$fold/grammar3_split$i_em.irtg $GDIR/$fold/parsed3_split$i.txt > $GDIR/$fold/parsed3_split$i.lisp.txt
+                $GDIR/${fold}/grammar3_split${i}.irtg \
+                $EVAL/${fold}/emtraining.${fold} \
+                $GDIR/${fold}/grammar3_split${i}_em.irtg \
+                $EVAL/${fold}/teststring.${fold} \
+                $GDIR/${fold}/parsed3_split${i}.txt
+        echo "-- Generate lisp format for parse ${i}"
+        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/grammar3_split${i}_em.irtg $GDIR/${fold}/parsed3_split${i}.txt > $GDIR/${fold}/parsed3_split${i}.lisp.txt
     done
     
 done
