@@ -3,37 +3,45 @@
 """
 Induct grammar from sentence alignments between tokenized strings and tokenized trees
 """
-import traceback
 import sys
 
 import re
+import logging
+
 
 from Rule import Rule
 from IntervalTree import IntervalTree
 from IntervalTree import Interval
 
-DELETES = 0
-INVALIDS = 0
-EXCEPTIONS = 0
+from inductionMethods import topDownInduction, bottomUpInduction, getErrors
 
-HEADER = """/*
-# Induced grammar from aligned sentences
-# s = tokenized string from geoquery corpus
-# t = tree elements from geoquery function query language (variable-free)
-#
-# interpretation s: de.up.ling.irtg.algebra.StringAlgebra
-# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra
-*/
-"""
+
+HEADER = ""
 
 LabelDict = dict()
 
-def shiftReduceParse(linearTree):
+def shiftReduceParse(linearTree, string):
     """ 
     parse listed tree items from right to left (shift reduce)
     returns a tree or None, if some nodes are not aligned
     """
+    def isAligned(idx):
+        alignment = [item for node in linearTree for item in node[2]]
+        return idx in alignment
+    
     treeBuffer = []
+    
+    # check whether first and last word are aligned
+    # if not then remove the tree
+    lastIndex = len(string)
+    if not isAligned(1):
+        logging.info("Align first word to first sementic node")
+        linearTree[0][2].append(1)
+    if not isAligned(lastIndex):
+        logging.info("Align first word to first sementic node")
+        linearTree[-1][2].append(lastIndex)
+
+    
     for node in reversed(linearTree):
         #print "buffer:", treeBuffer
         t = IntervalTree()
@@ -83,165 +91,6 @@ def extractMeanings(f):
         funqls.append(funql)
     return funqls
 
-def getStringRule(interval, string):
-    s = dict(enumerate(string))
-    flatInterval = interval.flatten()
-    
-    stringRule  = s[flatInterval[0]] if flatInterval[0] >= 0 else "?1"
-    varIdx      =   1                if flatInterval[0] >= 0 else   2
-    for i in flatInterval[1:]:
-        if i >= 0:
-            stringRule = "*({},{})".format(stringRule, s[i])
-        else:
-            stringRule = "*({},?{})".format(stringRule, varIdx)
-            varIdx += 1
-    return stringRule.replace("\'s",'\"\'s\"').replace("50","\"50\"")
-
-def getMeaningRule(name, argnum):
-    if argnum > 0:
-        return name.replace("+"," ").replace("0","\"0\"") + "({})".format(",".join("?"+str(i+1) for i in range(argnum)))
-    else:
-        return name.replace("+"," ").replace("0","\"0\"")
-
-def mergeTreeNodes(n1, n2):
-    treeNode = IntervalTree()
-
-def splitTree1(node):
-    interval = node.interval
-    for child in node.childNodes:
-        interval = interval.without(child.interval)
-    return interval
-
-def splitTree2(cNode, pNode):
-    pass
-
-def induceRule1(tree, s, split=False):
-    """
-    Rule Generation
-    """
-    global INVALIDS, DELETES
-    
-    rules = set()
-    treeBuffer = [(tree,'S!')]
-    try:
-        while treeBuffer:
-        
-            r = Rule()
-            node, label = treeBuffer.pop()
-            
-            arguments = ['X'] * len(node.childNodes) if not split else [LabelDict[child.name] for child in node.childNodes]
-            
-            for idx,child in enumerate(node.childNodes):
-                treeBuffer.append((child,arguments[idx]))
-            #
-            # create rule label
-            #
-            r.label = getLabel(label, node.idx, arguments)
-            #
-            # create string representation
-            #
-            interval = splitTree1(node)
-            r.s = getStringRule(interval, s)
-            #
-            # create meaning representation
-            #
-            r.t = getMeaningRule(node.name,len(node.childNodes))
-            
-            if len(node.childNodes) != interval.flatten().count(-1):
-                #print "Invalid number of arguments"
-                INVALIDS += 1
-                return set()
-            if r.s in ("?1", "*(?1,?2)"):
-                #print "deleting homomorphism..."
-                #print r
-                #raw_input()
-                DELETES += 1
-                return set()
-            
-            rules.add(r)
-
-    except Exception as e:
-        print traceback.format_exc()
-        raw_input()
-        return set()
-
-    return rules
-
-def getLabel(start, idx, args):
-    assert type(idx) == str
-    
-    return (start + " -> " + idx +
-            ("({})".format(",".join(args)) if args else ""))
-
-def induceRule2(tree, s, split=False):
-    """
-    Rule Generation
-    """
-    global INVALIDS, DELETES, EXCEPTIONS
-    
-    rules = set()
-    treeBuffer = [(tree,tree.interval,'S!')]
-
-    try:
-        while treeBuffer:
-            r = Rule()
-            node, nodeInterval, label = treeBuffer.pop()
-            arguments = ['X'] * len(node.childNodes) if not split else [LabelDict[child.name] for child in node.childNodes]
-            if len(node.alignment) == 1:
-                alignedWord = node.alignment[0]
-                tmpInterval = Interval(nodeInterval.first(), alignedWord)
-            else:
-                minWord, maxWord = min(node.alignment), max(node.alignment)
-                tmpInterval = Interval(minWord-1, maxWord)
-            
-            childsInterval = nodeInterval.without(tmpInterval)
-            interval = tmpInterval
-            
-            if node.childNodes:
-                splitIdx = node.childNodes[0].interval.last()
-                tmpInterval = Interval(childsInterval.first(),splitIdx+1)
-                
-                treeBuffer.append((node.childNodes[0],tmpInterval,arguments[0]))
-                for idx,child in enumerate(node.childNodes[1:]):
-                    oldSplit = splitIdx
-                    splitIdx = child.interval.last()
-                    tmpInterval = Interval(oldSplit+1,splitIdx+1)
-                    treeBuffer.append((child,tmpInterval,arguments[idx+1]))
-            
-            for _ in range(len(node.childNodes)): interval.addPlaceholder()
-            
-            #
-            # create rule label
-            #
-            r.label = getLabel(label, node.idx, arguments)
-            #
-            # create string representation
-            #
-            r.s = getStringRule(interval, s)
-            #
-            # create meaning representation
-            #
-            r.t = getMeaningRule(node.name,len(node.childNodes))
-            
-            if len(node.childNodes) != interval.flatten().count(-1):
-                #print "Invalid number of arguments"
-                INVALIDS += 1
-                return set()
-            if r.s in ("?1", "*(?1,?2)"):
-                #print "deleting homomorphism..."
-                DELETES += 1
-                return set()
-            
-            rules.add(r)
-
-    except Exception as e:
-        #print traceback.format_exc()[:30], "..."
-        #raw_input()
-        EXCEPTIONS += 1
-        return set()
-
-    return rules
-
 def separateInput(raw_alignments):
     string = []
     funql = []
@@ -263,22 +112,33 @@ def extendLabels(funqls):
         if name not in LabelDict: # int(args) > 0 and 
             LabelDict[name] = name.capitalize()[:3]
 
-def ruleInduction(raw_alignments, induceMethod=induceRule1, split=False):
+def ruleInduction(raw_alignments, induceMethod=topDownInduction, split=False):
     string, funql = separateInput(raw_alignments)
     
     ruleSet = set()
     derivationList = []
-    
-    for (s,f) in zip(string,funql):
+    logging.debug("=."*55)
+    for idx,(s,f) in enumerate(zip(string,funql)):
+        logging.debug("Alignment no. {}".format(idx+1))
+        logging.debug("String: {}".format(s))
+        logging.debug("Alignment: {}".format(f))
         rules = set()
         funqls  = extractMeanings(f)
+        logging.debug("Semantic: {}".format(funqls))
         extendLabels(funqls)
-        tree    = shiftReduceParse(funqls)
-        if not tree: continue
+        tree    = shiftReduceParse(funqls, s)
+        if not tree:
+            logging.info("Empty tree")
+            continue
         rules   = induceMethod(tree, s, split)
         if rules:
             derivationList.append((" ".join(s),tree.funql(),tree.derivation()))
         ruleSet = ruleSet | rules
+        
+        strSet = set(s for r in rules for s in r.s.split(" "))
+        
+        logging.debug(strSet) 
+        logging.debug("=."*55)
         
     return ruleSet, derivationList
 
@@ -302,6 +162,8 @@ def printRules(ruleSet):
         print r
 
 def main():
+    logging.basicConfig(filename='induction.log', filemode='w', level=logging.DEBUG, format='%(asctime)s (%(levelname)s): %(message)s')
+    
     if len(sys.argv) < 3:
         raise Exception("Unexpected number of arguments")
 
@@ -318,33 +180,42 @@ def main():
     
     ruleSet = set()
     trainingCorpus = []
+
+    logging.info("Init through user input")
     
     # read alignments and save to string and funql lists
     raw_alignments = open(alignmentFile, "r").read().split("\n")
     split = (nonterminalSplit == "semsplit")
     if ruleSplit in ("left", "both"):
-        rules, train = ruleInduction(raw_alignments, induceRule1, split)
+        logging.info("top-down induction")
+        rules, train = ruleInduction(raw_alignments, topDownInduction, split)
         ruleSet = ruleSet | rules
         trainingCorpus.extend(train)
     if ruleSplit in ("right", "both"):
-        rules, train = ruleInduction(raw_alignments, induceRule2, split)
+        logging.info("bottom-up induction")
+        rules, train = ruleInduction(raw_alignments, bottomUpInduction, split)
         ruleSet = ruleSet | rules
         trainingCorpus.extend(train)
 
+    logging.info("store inducted rules in '{}'".format(grammarOutput))
     storeRules(grammarOutput, ruleSet)
 
+    logging.info("store the llm training corpus to '{}'".format(llmtrainingOutput))
     # write grammar to file
     trainLLM = open(llmtrainingOutput, "w")
-    trainLLM.write("# IRTG annotated corpus file, v1.0\n#")
+    trainLLM.write("# IRTG annotated corpus file, v1.0\n")
+    trainLLM.write("# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n")
+    trainLLM.write("# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n\n\n")
     trainLLM.write(HEADER)
     for r in trainingCorpus:
         trainLLM.write("\n".join(r)+"\n")
     trainLLM.close()
-    
-    
-    sys.stderr.write("number of exceptions:" + str(EXCEPTIONS) + "\n")
-    sys.stderr.write("number of invalids:" + str(INVALIDS) + "\n")
-    sys.stderr.write("number of deletions:" + str(DELETES) + "\n")
+
+    logging.info("Statistical output")
+    DELETES, INVALIDS, EXCEPTIONS = getErrors()
+    logging.info("number of exceptions:" + str(EXCEPTIONS))
+    logging.info("number of invalids:" + str(INVALIDS))
+    logging.info("number of deletions:" + str(DELETES))
     
 if __name__ == "__main__":
     main()
