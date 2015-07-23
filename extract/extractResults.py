@@ -4,13 +4,7 @@ from __future__ import division
 import sys
 import re
 
-def list_to_txt(xml_list):
-    txt = ""
-    for item in xml_list:
-        txt = txt + item + "\n"
-    # have to remove last newline for Giza++
-    return txt[:(len(txt)-1)]
-
+import csv
 
 def main():
   
@@ -32,16 +26,11 @@ def main():
     valid = re.search("Number\sof\sValid\ssentence(\s+)=(\s+)([0-9\.]+)", results)
     total = re.search("Number\sof\ssentence(\s+)=(\s+)([0-9\.]+)", results)  
     recall = ((float(valid.group(3)) * (float(precision))/100) / float(total.group(3))) * 100
-    
-    spr += str(round(recall,2)) + "\t"
-    spr += precision + "\t"
-    
     fscore = (recall + float(precision)) / 2
-    spr += str(round(fscore,2)) + "\n"
-
-    full_results = open(directory, "a")
-    full_results.write(spr)
-    full_results.close()    
+    
+    # appending generated informations to the results csv
+    full_results = csv.writer(open(directory, "a"))
+    full_results.writerow((results_path, round(recall,2), precision, round(fscore,2)))
 
 if __name__ == "__main__":
     main()

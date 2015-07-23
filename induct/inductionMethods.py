@@ -46,7 +46,7 @@ def getMeaningRule(name, argnum):
         return name.replace("+"," ").replace("0","\"0\"")
 
 
-def topDownInduction(tree, s, split=False):
+def topDownInduction(tree, s, split=False, LabelDict=None):
     """
     Rule Generation
     """
@@ -108,7 +108,7 @@ def topDownInduction(tree, s, split=False):
     return rules
 
 
-def bottomUpInduction(tree, s, split=False):
+def bottomUpInduction(tree, s, split=False, LabelDict=None):
     """
     Rule Generation
     """

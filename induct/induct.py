@@ -130,7 +130,7 @@ def ruleInduction(raw_alignments, induceMethod=topDownInduction, split=False):
         if not tree:
             logging.info("Empty tree")
             continue
-        rules   = induceMethod(tree, s, split)
+        rules   = induceMethod(tree, s, split, LabelDict)
         if rules:
             derivationList.append((" ".join(s),tree.funql(),tree.derivation()))
         ruleSet = ruleSet | rules
@@ -162,7 +162,7 @@ def printRules(ruleSet):
         print r
 
 def main():
-    logging.basicConfig(filename='induction.log', filemode='w', level=logging.DEBUG, format='%(asctime)s (%(levelname)s): %(message)s')
+    logging.basicConfig(filename='induction.log', filemode='a', level=logging.INFO, format='%(asctime)s (%(levelname)s): %(message)s')
     
     if len(sys.argv) < 3:
         raise Exception("Unexpected number of arguments")
@@ -180,8 +180,8 @@ def main():
     
     ruleSet = set()
     trainingCorpus = []
-
     logging.info("Init through user input")
+    logging.info("config: {} {} {} {} {}".format(alignmentFile, ruleSplit, nonterminalSplit, grammarOutput, llmtrainingOutput))
     
     # read alignments and save to string and funql lists
     raw_alignments = open(alignmentFile, "r").read().split("\n")
