@@ -20,11 +20,11 @@ def main():
     
     # get just the lines with actual parsed trees
     string.append("# IRTG unannotated corpus file, v1.0\n#\n# interpretation t: de.up.ling.irtg.algebra.TreeAlgebra\n# interpretation s: de.up.ling.irtg.algebra.StringAlgebra\n")
-    for i in range(6,len(parsed)):
-        if (i%5)==4 or (i%5)==0:
-            string.append(parsed[i])
+    for line in parsed:
+        if line != "" and line[0] != "#":
+            string.append(line)
         else:
-            pass
+            continue
 
     print list_to_txt(string) 
 

@@ -12,7 +12,7 @@ SCALA="scala -J-Xmx16G"
 JAVA=java
 JAVAC=javac
 PY=python
-ALTO=bin/alto-2.0-SNAPSHOT-2015-07-21.jar
+ALTO=bin/alto-2.0.jar
 
 if [ -d $GDIR ]
 then
@@ -24,11 +24,8 @@ touch $RESULTS
 
 $JAVAC -cp $ALTO -d $GDIR  extract/ConvertToLisp.java
 
-for fold in 0 1 2 3 4 5 6 7 8 9
-do
-    echo "==> Start of fold ${fold}"
-    mkdir $GDIR/${fold}
-    
+generateGrammars () {
+    fold=$1
     echo "-- Generate grammar 1 left  nosplit"
     $PY induct/induct.py $EVAL/${fold}/${ALIGNMENT}.${fold} left  nosplit   $GDIR/${fold}/grammar1.irtg $GDIR/${fold}/llmtrain1.txt 
     echo "-- Generate grammar 2 right nosplit"
@@ -41,6 +38,43 @@ do
     $PY induct/induct.py $EVAL/${fold}/${ALIGNMENT}.${fold} right semsplit  $GDIR/${fold}/grammar5.irtg /dev/null &
     echo "-- Generate grammar 6 both  semsplit"
     $PY induct/induct.py $EVAL/${fold}/${ALIGNMENT}.${fold} both  semsplit  $GDIR/${fold}/grammar6.irtg /dev/null &
+}
+
+splitAndTrain () {
+    fold=$1
+    i=$2
+    grammar=$3
+    splittedGrammar=$4
+    
+    echo "-- Generate grammar with ${i} splits"
+    $PY induct/splitGrammar.py $GDIR/${fold}/${grammar}.irtg ${i} > $GDIR/${fold}/grammar3_split${i}.irtg
+    
+    echo "-- Reweight EM grammar with ${i} splits + bulk parsing"
+    $SCALA -cp $ALTO RunAll.scala \
+            $GDIR/${fold}/grammar3_split${i}.irtg \
+            $EVAL/${fold}/emtraining.${fold} \
+            $GDIR/${fold}/grammar3_split${i}_em.irtg \
+            $EVAL/${fold}/teststring.${fold} \
+            $GDIR/${fold}/parsed3_split${i}.txt
+    echo "-- Generate lisp format for parse ${i}"
+    $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/grammar3_split${i}_em.irtg $GDIR/${fold}/parsed3_split${i}.txt > $GDIR/${fold}/parsed3_split${i}.lisp.txt
+    
+    echo "== Evaluating result for splitted grammar ${i}"
+    $PY extract/parsedToLisp.py $GDIR/${fold}/parsed3_split${i}.txt > $GDIR/${fold}/parsed3_split${i}.tolisp
+    $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/parsed3_split${i}.irtg $GDIR/${fold}/parsed3_split${i}.tolisp > $GDIR/${fold}/parsed3_split${i}.lisp
+    $PY extract/lispToEvalb.py $GDIR/${fold}/parsed3_split${i}.lisp > $GDIR/${fold}/parsed3_split${i}.eval
+    ./bin/evalb -p bin/EVALB/sample/sample.prm $EVAL/${fold}/testfunql.${fold} $GDIR/${fold}/parsed3_split${i}.eval > $GDIR/${fold}/parsed3_split${i}.results
+    $PY extract/extractResults.py $GDIR/${fold}/parsed3_split${i}.results $RESULTS
+}
+
+
+
+for fold in 0 1 2 3 4 5 6 7 8 9
+do
+    echo "==> Start of fold ${fold}"
+    mkdir $GDIR/${fold}
+    
+    generateGrammars $fold
     
     for i in 1 2 3 4 5 6
     do
@@ -85,28 +119,7 @@ do
 
     for i in 2 3 4 #5 6 7 8 9 10
     do
-        echo "-- Generate grammar with ${i} splits"
-        $PY induct/splitGrammar.py $GDIR/${fold}/grammar3_em.irtg ${i} > $GDIR/${fold}/grammar3_split${i}.irtg
-    done
-
-    for i in 2 3 4 #5 6 7 8 9 10
-    do
-        echo "-- Reweight EM grammar with ${i} splits + bulk parsing"
-        $SCALA -cp $ALTO RunAll.scala \
-                $GDIR/${fold}/grammar3_split${i}.irtg \
-                $EVAL/${fold}/emtraining.${fold} \
-                $GDIR/${fold}/grammar3_split${i}_em.irtg \
-                $EVAL/${fold}/teststring.${fold} \
-                $GDIR/${fold}/parsed3_split${i}.txt
-        echo "-- Generate lisp format for parse ${i}"
-        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/grammar3_split${i}_em.irtg $GDIR/${fold}/parsed3_split${i}.txt > $GDIR/${fold}/parsed3_split${i}.lisp.txt
-        
-        echo "== Evaluating result for splitted grammar ${i}"
-        $PY extract/parsedToLisp.py $GDIR/${fold}/parsed3_split${i}.txt > $GDIR/${fold}/parsed3_split${i}.tolisp
-        $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/parsed3_split${i}.irtg $GDIR/${fold}/parsed3_split${i}.tolisp > $GDIR/${fold}/parsed3_split${i}.lisp
-        $PY extract/lispToEvalb.py $GDIR/${fold}/parsed3_split${i}.lisp > $GDIR/${fold}/parsed3_split${i}.eval
-        ./bin/evalb -p bin/EVALB/sample/sample.prm $EVAL/${fold}/testfunql.${fold} $GDIR/${fold}/parsed3_split${i}.eval > $GDIR/${fold}/parsed3_split${i}.results
-        $PY extract/extractResults.py $GDIR/${fold}/parsed3_split${i}.results $RESULTS
+        splitAndTrain $fold $i &
     done
     
 done
