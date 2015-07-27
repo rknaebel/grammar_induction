@@ -2,7 +2,7 @@ ALIGNMENT=alignment-5best
 
 export JAVA_HOME=/cl-tools/jdk1.8.0_05/
 export PATH=$JAVA_HOME/bin:$PATH
-export PATH=/cl-tools/scala-2.11.7/bin/:$PATH 
+export PATH=/cl-tools/scala-2.11.7/bin/:$PATH
 
 GDIR=./generate
 EVAL=./evaluate
@@ -12,7 +12,7 @@ SCALA="scala -J-Xmx16G"
 JAVA=java
 JAVAC=javac
 PY=python
-ALTO=bin/alto-1.1-SNAPSHOT-jar-with-dependencies.jar
+ALTO=bin/alto-2.0-SNAPSHOT-2015-07-21.jar
 
 if [ -d $GDIR ]
 then
@@ -24,7 +24,7 @@ touch $RESULTS
 
 $JAVAC -cp $ALTO -d $GDIR  extract/ConvertToLisp.java
 
-for fold in 0 # 1 2 3 4 5 6 7 8 9
+for fold in 0 1 2 3 4 5 6 7 8 9
 do
     echo "==> Start of fold ${fold}"
     mkdir $GDIR/${fold}
@@ -106,7 +106,7 @@ do
         $JAVA -cp $GDIR:$ALTO ConvertToLisp $GDIR/${fold}/parsed3_split${i}.irtg $GDIR/${fold}/parsed3_split${i}.tolisp > $GDIR/${fold}/parsed3_split${i}.lisp
         $PY extract/lispToEvalb.py $GDIR/${fold}/parsed3_split${i}.lisp > $GDIR/${fold}/parsed3_split${i}.eval
         ./bin/evalb -p bin/EVALB/sample/sample.prm $EVAL/${fold}/testfunql.${fold} $GDIR/${fold}/parsed3_split${i}.eval > $GDIR/${fold}/parsed3_split${i}.results
-        $PY extract/extractResults.py $GDIR/${fold}/parsed3_split${i}.results $RESULTS   
+        $PY extract/extractResults.py $GDIR/${fold}/parsed3_split${i}.results $RESULTS
     done
     
 done
